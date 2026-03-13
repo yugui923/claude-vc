@@ -16,15 +16,15 @@ Venture capital analysis toolkit. Routes to specialized sub-skills based on the 
 
 ## Commands
 
-| Command | What it does |
-| --- | --- |
-| `/vc screen <url or file>` | Screen a startup from URL or pitch deck PDF |
-| `/vc memo` | Generate a structured investment memo |
-| `/vc terms <file>` | Analyze a term sheet, SAFE, or convertible note |
-| `/vc captable` | Model cap table, dilution, and waterfall distributions |
-| `/vc compare <url1> <url2>` | Side-by-side company comparison |
-| `/vc diligence` | Generate a due diligence checklist |
-| `/vc portfolio` | Generate portfolio reports from provided data |
+| Command                     | What it does                                           |
+| --------------------------- | ------------------------------------------------------ |
+| `/vc screen <url or file>`  | Screen a startup from URL or pitch deck PDF            |
+| `/vc memo`                  | Generate a structured investment memo                  |
+| `/vc terms <file>`          | Analyze a term sheet, SAFE, or convertible note        |
+| `/vc captable`              | Model cap table, dilution, and waterfall distributions |
+| `/vc compare <url1> <url2>` | Side-by-side company comparison                        |
+| `/vc diligence`             | Generate a due diligence checklist                     |
+| `/vc portfolio`             | Generate portfolio reports from provided data          |
 
 ## Routing Logic
 
@@ -33,7 +33,7 @@ When the user provides arguments after `/vc`, determine the command:
 1. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `compare`, `diligence`, `portfolio`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, etc.) using the Skill tool, passing any remaining arguments.
 
 2. If no recognized command is given, analyze the user's intent:
-   - URL or file path provided -> route to `vc-screen`
+   - URL or file path provided -> run the **default workflow** (see below)
    - Mentions "memo" or "write-up" -> route to `vc-memo`
    - Mentions "terms", "SAFE", "convertible" -> route to `vc-terms`
    - Mentions "cap table", "dilution", "ownership" -> route to `vc-captable`
@@ -43,6 +43,20 @@ When the user provides arguments after `/vc`, determine the command:
    - Otherwise, ask the user which workflow they need
 
 3. If the user invokes `/vc` with no arguments, display the commands table above and ask what they'd like to do.
+
+## Default Workflow (URL or Pitch Deck)
+
+When the user provides `/vc <url>` or `/vc <file>` without a command name, run screening, memo, and diligence in serial:
+
+1. **Screen**: Perform the `vc-screen` workflow on the input. Present the Deal Score and screening results.
+2. **Memo**: Perform the `vc-memo` workflow using the screening results as context. Generate the full investment memo.
+3. **Diligence**: Perform the `vc-diligence` workflow to generate a due diligence checklist tailored to the company's stage and sector.
+
+This gives the user a complete analysis in one command. Read the sub-skill files to get the full instructions:
+
+- `${CLAUDE_SKILL_DIR}/../skills/vc-screen/SKILL.md`
+- `${CLAUDE_SKILL_DIR}/../skills/vc-memo/SKILL.md`
+- `${CLAUDE_SKILL_DIR}/../skills/vc-diligence/SKILL.md`
 
 ## Full Screening Orchestration
 

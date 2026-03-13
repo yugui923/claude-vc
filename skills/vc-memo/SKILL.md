@@ -20,6 +20,7 @@ Determine the input source from `$ARGUMENTS` and conversation context:
 3. **URL**: Fetch the company website, then build the memo from public information supplemented by web research.
 4. **`--comprehensive`**: Triggers full parallel analysis (same as `/vc screen --full`) before generating the memo.
 5. **No arguments and no prior context**: Ask the user for the company name and any available information.
+6. **`--docx [filename]`**: After generating the memo, also export it as a formatted Word document (see DOCX Export below).
 
 ## Memo Structure
 
@@ -130,6 +131,20 @@ Include: market risks, execution risks, technical risks, regulatory risks, compe
 - Use data over adjectives. Numbers and metrics over "strong", "impressive", "significant"
 - Keep each section concise. The full memo should be readable in 10-15 minutes
 - Use tables for structured data (metrics, comparisons, risks)
+
+## DOCX Export (`--docx`)
+
+If `--docx` or `--docx <filename>` is present in arguments:
+
+1. Generate the memo as markdown normally (displayed in terminal)
+2. Write the full memo markdown (including disclaimer) to a temporary file
+3. Run the conversion script:
+
+```bash
+python3 "${CLAUDE_SKILL_DIR}/../vc/scripts/memo_to_docx.py" --input <temp_file> --output <filename>
+```
+
+If no filename is given, default to `sourcing-memo-<company-name>-<YYYY-MM-DD>.docx` in the current directory. Tell the user where the file was saved.
 
 ## Disclaimer
 
