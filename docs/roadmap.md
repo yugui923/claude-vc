@@ -8,14 +8,14 @@ Goal: Core skill infrastructure and two highest-impact workflows.
 
 ### Deliverables
 
-- [ ] Orchestrator (`vc/SKILL.md`) with routing table and progressive disclosure
-- [ ] Deal screening sub-skill (`vc-screen/SKILL.md`) -- quick screen mode (URL + pitch deck PDF)
-- [ ] Investment memo sub-skill (`vc-memo/SKILL.md`)
-- [ ] Reference files: `investment-criteria.md`, `valuation-methods.md`
-- [ ] Reference file: `disclaimers.md` (regulatory compliance)
-- [ ] `install.sh` and `uninstall.sh`
-- [ ] `.claude-plugin/plugin.json` manifest
-- [ ] README with installation and usage instructions
+- [x] Orchestrator (`vc/SKILL.md`) with routing table and progressive disclosure
+- [x] Deal screening sub-skill (`vc-screen/SKILL.md`) -- quick screen mode (URL + pitch deck PDF)
+- [x] Investment memo sub-skill (`vc-memo/SKILL.md`)
+- [x] Reference files: `investment-criteria.md`, `valuation-methods.md`
+- [x] Reference file: `disclaimers.md` (regulatory compliance)
+- [x] `install.sh` and `uninstall.sh`
+- [x] `.claude-plugin/plugin.json` manifest
+- [x] README with installation and usage instructions
 
 ### Success Criteria
 
