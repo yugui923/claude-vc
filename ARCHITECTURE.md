@@ -8,6 +8,8 @@ Claude-VC is a Claude Code skill ecosystem for venture capital workflows. It fol
 
 The system is installed into `~/.claude/` and invoked via `/vc` slash commands. It is **not** an MCP server or standalone application -- it is a collection of markdown-based skills, agent definitions, Python computation scripts, and on-demand reference files that extend Claude Code's capabilities for VC professionals.
 
+**Design principle**: The value of this tool is _judgment_, not data access. Like claude-seo, the inputs are public data and user-provided documents. The intelligence is knowing what to check, how to score, and what to recommend. Data infrastructure (CRM, dashboards, scheduled pipelines) belongs in a proper application, not a CLI skill. See [ADR-004](docs/decisions/004-scope-boundaries.md) for full scope boundaries.
+
 ## System Architecture
 
 ```text
@@ -17,6 +19,7 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
 │              /vc memo                                       │
 │              /vc terms <file>                               │
 │              /vc captable                                   │
+│              /vc compare <url1> <url2>                      │
 │              /vc portfolio                                  │
 └─────────────────┬───────────────────────────────────────────┘
                   │
@@ -88,6 +91,7 @@ claude-vc/
 │   ├── vc-memo/SKILL.md
 │   ├── vc-terms/SKILL.md
 │   ├── vc-captable/SKILL.md
+│   ├── vc-compare/SKILL.md
 │   ├── vc-diligence/SKILL.md
 │   └── vc-portfolio/SKILL.md
 ├── agents/                             # PARALLEL SUBAGENTS
@@ -139,6 +143,7 @@ After `install.sh`, files are copied to:
 │   ├── vc-memo/SKILL.md
 │   ├── vc-terms/SKILL.md
 │   ├── vc-captable/SKILL.md
+│   ├── vc-compare/SKILL.md
 │   ├── vc-diligence/SKILL.md
 │   └── vc-portfolio/SKILL.md
 └── agents/
@@ -172,6 +177,31 @@ Financial modeling, cap table calculations, and data fetching are implemented as
 
 Optional extensions (Crunchbase, SEC EDGAR) integrate external data via MCP servers. Each extension has its own installer, skills, agents, and MCP configuration. Extensions are fully independent -- the core system works without them.
 
+## Scope Boundaries
+
+Claude-VC is the **analysis and report generation layer**, not the data infrastructure layer.
+
+**In scope** (judgment-heavy, text in/text out):
+
+- Analyze startup websites and products (public pages)
+- Parse and score pitch deck PDFs (Claude reads PDFs natively)
+- Generate deal memos from provided data
+- Analyze term sheets and SAFEs against market standards
+- Model cap tables and dilution scenarios
+- Parse SEC/EDGAR public filings
+- Compare companies side-by-side (parallel subagent pattern)
+- Generate DD checklists
+
+**Out of scope** (data infrastructure, needs a proper app):
+
+- CRM/pipeline tracking (needs persistent state, OAuth)
+- Portfolio monitoring dashboards (needs a UI runtime)
+- Scheduled/automated data pulls (needs a cron process)
+- Large dataset processing (context window limits)
+- Real-time deal flow alerts (needs push notifications)
+
+See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
+
 ## Data Flow
 
 ### Deal Screening (`/vc screen <url>`)
@@ -202,6 +232,20 @@ Optional extensions (Crunchbase, SEC EDGAR) integrate external data via MCP serv
 3. Flags non-standard or founder-unfriendly terms
 4. Generates annotated analysis with market comparisons
 
+### Company Comparison (`/vc compare <url1> <url2>`)
+
+1. Orchestrator spawns one screening subagent per company (parallel)
+2. Each subagent independently analyzes its company
+3. Results are aggregated into a side-by-side comparison matrix
+4. Dimensions compared: market, team, product, financials, competitive position
+
+### Pitch Deck Analysis (`/vc screen <file.pdf>`)
+
+1. `vc-screen` sub-skill detects PDF input (Claude reads PDFs natively)
+2. Extracts structured data: team, market, product, financials, ask
+3. Scores against investment criteria framework
+4. Optionally spawns parallel agents for deep analysis (`--full`)
+
 ## Technology Stack
 
 | Component       | Technology                          | Rationale                                       |
@@ -228,5 +272,6 @@ Optional extensions (Crunchbase, SEC EDGAR) integrate external data via MCP serv
 - [ADR-001: Skill Architecture](docs/decisions/001-skill-architecture.md)
 - [ADR-002: Data Sources](docs/decisions/002-data-sources.md)
 - [ADR-003: Regulatory Disclaimers](docs/decisions/003-regulatory-disclaimers.md)
+- [ADR-004: Scope Boundaries](docs/decisions/004-scope-boundaries.md)
 - [Skill System Spec](docs/specs/skill-system.md)
 - [Roadmap](docs/roadmap.md)

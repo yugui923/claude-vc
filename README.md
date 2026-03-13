@@ -16,8 +16,9 @@ It is **not** a standalone app or MCP server. It installs into `~/.claude/` and 
 | `/vc memo`         | Generate a structured investment memo                  |
 | `/vc terms <file>` | Analyze a term sheet, SAFE, or convertible note        |
 | `/vc captable`     | Model cap table, dilution, and waterfall distributions |
+| `/vc compare`      | Side-by-side company comparison                        |
 | `/vc diligence`    | Generate a due diligence checklist                     |
-| `/vc portfolio`    | Aggregate portfolio updates and KPIs                   |
+| `/vc portfolio`    | Generate portfolio reports from provided data          |
 
 ## Installation
 
@@ -55,23 +56,37 @@ Enrich analysis with external data sources:
 
 ### Quick Screen
 
-```
+```text
 /vc screen https://example-startup.com
 ```
 
 Claude fetches the company website, analyzes it against a [configurable scoring framework](docs/specs/skill-system.md#investment-criteriamd-target-100-lines), and produces a Deal Score (0-100) with a Pass / Further Diligence / Strong Interest recommendation.
 
+Also works with pitch deck PDFs -- Claude reads them natively:
+
+```text
+/vc screen /path/to/pitch-deck.pdf
+```
+
 ### Full Screen
 
-```
+```text
 /vc screen https://example-startup.com --full
 ```
 
 Spawns 6 parallel subagents (financial, market, technical, legal, competitive, team) for comprehensive analysis. Results are aggregated into a detailed investment memo.
 
+### Compare Companies
+
+```text
+/vc compare https://company-a.com https://company-b.com
+```
+
+Spawns parallel agents to analyze each company independently, then generates a side-by-side comparison matrix across all investment dimensions.
+
 ### Cap Table Modeling
 
-```
+```text
 /vc captable
 ```
 
@@ -79,7 +94,7 @@ Interactively build or import a cap table. Model new rounds, SAFE conversions, o
 
 ### Term Sheet Analysis
 
-```
+```text
 /vc terms /path/to/term-sheet.pdf
 ```
 
@@ -89,10 +104,10 @@ Compares each provision against NVCA model terms and current market standards. F
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full system design.
 
-```
+```text
 claude-vc/
 ├── vc/                     # Orchestrator skill + reference files
-├── skills/                 # 6 sub-skills (screen, memo, terms, ...)
+├── skills/                 # 7 sub-skills (screen, memo, terms, compare, ...)
 ├── agents/                 # 6 parallel subagents (financial, market, ...)
 ├── scripts/                # Python computation (cap table, DCF, ...)
 ├── extensions/             # Optional data source integrations

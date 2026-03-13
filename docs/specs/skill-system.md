@@ -2,7 +2,9 @@
 
 ## Overview
 
-Claude-VC consists of 1 orchestrator skill, 6 sub-skills, 6 parallel subagents, 6 reference files, 3 Python scripts, and 2+ optional extensions. This document specifies each component.
+Claude-VC consists of 1 orchestrator skill, 7 sub-skills, 6 parallel subagents, 6 reference files, 3 Python scripts, and 2+ optional extensions. This document specifies each component.
+
+**Design principle**: The value is _judgment_, not data access. All core workflows operate on public data and user-provided documents. External data sources are optional extensions that supplement analysis, never a prerequisite.
 
 ## Orchestrator: `vc/SKILL.md`
 
@@ -16,8 +18,9 @@ description: >
   generation, cap table modeling, term sheet analysis, due diligence
   checklists, and portfolio monitoring. Use when user says "vc",
   "deal screening", "investment memo", "cap table", "term sheet",
-  "due diligence", "portfolio", "startup analysis", "valuation",
-  "SAFE", "convertible note", or "funding round".
+  "due diligence", "portfolio", "compare", "pitch deck",
+  "startup analysis", "valuation", "SAFE", "convertible note",
+  or "funding round".
 ---
 ```
 
@@ -29,6 +32,7 @@ description: >
 | `/vc memo`         | `vc-memo`      | Generate structured investment memo     |
 | `/vc terms <file>` | `vc-terms`     | Analyze term sheet or SAFE              |
 | `/vc captable`     | `vc-captable`  | Model cap table and dilution            |
+| `/vc compare`      | `vc-compare`   | Side-by-side company comparison         |
 | `/vc diligence`    | `vc-diligence` | Generate and track DD checklist         |
 | `/vc portfolio`    | `vc-portfolio` | Aggregate and report on portfolio       |
 
@@ -74,7 +78,8 @@ description: >
 **Inputs**:
 
 - Company URL (fetched via WebFetch)
-- Pitch deck file path (read via Read tool)
+- Pitch deck PDF (Claude reads PDFs natively via the Read tool -- no parsing script needed)
+- Pitch deck file path (other formats read via Read tool)
 - Natural language company description
 - Optional: `--full` flag for parallel agent screening
 - Optional: `--criteria <file>` for custom scoring criteria
@@ -203,6 +208,40 @@ description: >
 - Waterfall distribution at multiple exit valuations
 - Option pool analysis (size, available, burn rate)
 
+### `vc-compare` -- Company Comparison
+
+```yaml
+---
+name: vc-compare
+description: >
+  Compare two or more companies side-by-side across all investment
+  dimensions. Spawns parallel subagents (one per company) and
+  generates a comparison matrix. Use when user says "compare",
+  "versus", "side by side", "which is better", or "compare deals".
+---
+```
+
+**Inputs**:
+
+- 2-4 company URLs, pitch decks, or descriptions
+- Optional: `--dimensions market,team,product` to focus comparison
+
+**Workflow**:
+
+1. For each company, spawn a screening subagent in parallel (same as `/vc screen`)
+2. Collect structured results from each agent
+3. Generate side-by-side comparison matrix across all dimensions
+4. Highlight relative strengths and weaknesses
+5. Provide a ranked recommendation with rationale
+
+**Outputs**:
+
+- Comparison matrix table (Dimension | Company A | Company B | ...)
+- Dimension scores per company
+- Relative advantages/disadvantages
+- Overall ranking with confidence level
+- Standard disclaimer
+
 ### `vc-diligence` -- Due Diligence
 
 ```yaml
@@ -238,16 +277,18 @@ description: >
 - Team DD (backgrounds, references, org structure)
 - Market DD (TAM validation, competitive dynamics)
 
-### `vc-portfolio` -- Portfolio Monitoring
+### `vc-portfolio` -- Portfolio Reporting
 
 ```yaml
 ---
 name: vc-portfolio
 description: >
-  Aggregate portfolio company data and generate reports. Parse
-  company updates, track KPIs against benchmarks, produce LP-ready
-  summaries. Use when user says "portfolio", "portfolio review",
-  "LP report", "company updates", "KPIs", or "quarterly report".
+  Generate portfolio reports from provided company data. Parse
+  company updates, compare KPIs against benchmarks, produce
+  LP-ready narrative summaries. One-shot report generation, not
+  continuous monitoring (use a proper app for dashboards). Use
+  when user says "portfolio", "portfolio review", "LP report",
+  "company updates", "KPIs", or "quarterly report".
 ---
 ```
 
@@ -389,11 +430,11 @@ You are a <role>. When given company information:
 
 ### `scripts/financial_model.py`
 
-**Purpose**: Financial calculations that require precision (DCF, revenue projections, unit economics).
+**Purpose**: Financial calculations that require precision (DCF, revenue projections, unit economics). Note: this generates starting-point models and CSV output. The real tool for interactive financial modeling is a spreadsheet -- Claude-VC generates the foundation, not the final model.
 
 **CLI Interface**:
 
-```
+```bash
 python financial_model.py dcf --revenue 5000000 --growth-rate 0.8 --discount-rate 0.25 --terminal-multiple 10 --years 5
 python financial_model.py unit-economics --cac 500 --ltv 5000 --payback-months 12 --churn-rate 0.05
 python financial_model.py revenue-projection --current-arr 2000000 --growth-rates 1.0,0.8,0.6,0.4,0.3
@@ -409,7 +450,7 @@ python financial_model.py revenue-projection --current-arr 2000000 --growth-rate
 
 **CLI Interface**:
 
-```
+```bash
 python captable.py ownership --input cap_table.json
 python captable.py dilution --input cap_table.json --new-round '{"pre_money": 20000000, "investment": 5000000}'
 python captable.py waterfall --input cap_table.json --exit-values 50000000,100000000,200000000
@@ -426,7 +467,7 @@ python captable.py safe-convert --safe '{"invested": 500000, "cap": 10000000, "d
 
 **CLI Interface**:
 
-```
+```bash
 python fetch_company.py --url https://example.com
 python fetch_company.py --domain example.com --sources web,linkedin
 ```
@@ -494,7 +535,7 @@ All reference files live under `vc/references/` and are loaded on-demand by sub-
 
 ### Extension Structure
 
-```
+```text
 extensions/<name>/
 ├── README.md               # Setup documentation
 ├── install.sh              # Installer (configures MCP server)

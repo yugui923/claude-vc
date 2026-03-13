@@ -9,7 +9,7 @@ Goal: Core skill infrastructure and two highest-impact workflows.
 ### Deliverables
 
 - [ ] Orchestrator (`vc/SKILL.md`) with routing table and progressive disclosure
-- [ ] Deal screening sub-skill (`vc-screen/SKILL.md`) -- quick screen mode
+- [ ] Deal screening sub-skill (`vc-screen/SKILL.md`) -- quick screen mode (URL + pitch deck PDF)
 - [ ] Investment memo sub-skill (`vc-memo/SKILL.md`)
 - [ ] Reference files: `investment-criteria.md`, `valuation-methods.md`
 - [ ] Reference file: `disclaimers.md` (regulatory compliance)
@@ -19,7 +19,7 @@ Goal: Core skill infrastructure and two highest-impact workflows.
 
 ### Success Criteria
 
-- `/vc screen <url>` produces a scored Deal Score with recommendation
+- `/vc screen <url>` and `/vc screen <file.pdf>` produce a scored Deal Score with recommendation
 - `/vc memo` generates a structured 10-section investment memo
 - Install script works on macOS and Linux
 - All outputs include regulatory disclaimers
@@ -52,6 +52,7 @@ Goal: Concurrent subagent analysis for comprehensive deal evaluation.
 
 - [ ] 6 parallel subagents: `vc-financial`, `vc-market`, `vc-technical`, `vc-legal`, `vc-competitive`, `vc-team`
 - [ ] Full screening mode (`/vc screen --full`) with parallel orchestration
+- [ ] Company comparison sub-skill (`vc-compare/SKILL.md`) -- parallel per-company agents
 - [ ] Aggregated Deal Score with dimension breakdown
 - [ ] Due diligence sub-skill (`vc-diligence/SKILL.md`)
 - [ ] Reference file: `due-diligence-checklist.md`
@@ -60,6 +61,7 @@ Goal: Concurrent subagent analysis for comprehensive deal evaluation.
 
 - 6 agents execute concurrently and return structured results
 - Full screening produces comprehensive investment memo
+- `/vc compare` generates side-by-side matrix for 2-4 companies
 - DD checklist customizable by stage and sector
 
 ## Phase 4: Portfolio and Extensions
@@ -68,7 +70,7 @@ Goal: Portfolio monitoring and external data integration.
 
 ### Deliverables
 
-- [ ] Portfolio monitoring sub-skill (`vc-portfolio/SKILL.md`)
+- [ ] Portfolio reporting sub-skill (`vc-portfolio/SKILL.md`) -- one-shot report generation, not continuous monitoring
 - [ ] SEC EDGAR extension (`extensions/sec-edgar/`)
 - [ ] Crunchbase extension (`extensions/crunchbase/`)
 - [ ] `scripts/fetch_company.py` for data normalization
@@ -98,10 +100,20 @@ Goal: Production quality, documentation, and community readiness.
 
 Items not currently planned but worth tracking:
 
-- **Pitch deck parser**: Extract structured data from PDF pitch decks
 - **Fund modeling**: LP/GP economics, management fees, carry calculations
-- **Deal room integration**: Sync with common data room platforms
-- **Affinity CRM extension**: Deal flow tracking integration
 - **PitchBook extension**: Premium data source integration
 - **Multi-language**: Localization for non-English markets
 - **Custom scoring models**: ML-trained scoring on user's historical deals
+
+## Explicitly Out of Scope
+
+These belong in a proper application using the Claude API, not a CLI skill:
+
+- CRM/pipeline tracking (needs persistent state, OAuth, database)
+- Portfolio monitoring dashboards (needs a UI runtime)
+- Scheduled/automated data pulls (needs a cron process)
+- Large dataset processing (context window limits)
+- Real-time deal flow alerts (needs push notifications)
+- Multi-user collaboration features
+
+See [ADR-004](decisions/004-scope-boundaries.md) for rationale.
