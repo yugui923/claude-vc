@@ -64,10 +64,10 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
        ▼
 ┌─────────────────────────────────────────┐
 │  Extensions (optional MCP servers)      │
-│  - Crunchbase (free tier)               │
-│  - SEC EDGAR (free)                     │
-│  - PitchBook (paid, optional)           │
-│  - Affinity CRM (paid, optional)        │
+│  - Octagon AI ($17/mo, priority)        │
+│  - SEC EDGAR (free, raw filings)        │
+│  - Crunchbase (Enterprise, ~$10K+/yr)   │
+│  - PitchBook (institutional)            │
 └─────────────────────────────────────────┘
 ```
 
@@ -106,11 +106,11 @@ claude-vc/
 │   ├── captable.py
 │   └── fetch_company.py
 ├── extensions/                         # OPTIONAL MCP ADD-ONS
-│   ├── crunchbase/
+│   ├── octagon/                       # Priority: $17/mo, broadest VC data
 │   │   ├── install.sh
-│   │   ├── skills/vc-crunchbase/SKILL.md
-│   │   └── agents/vc-crunchbase.md
-│   └── sec-edgar/
+│   │   ├── skills/vc-octagon/SKILL.md
+│   │   └── agents/vc-octagon.md
+│   └── sec-edgar/                     # Free, raw filing access
 │       ├── install.sh
 │       ├── skills/vc-edgar/SKILL.md
 │       └── agents/vc-edgar.md
@@ -175,7 +175,7 @@ Financial modeling, cap table calculations, and data fetching are implemented as
 
 ### 5. Extension System
 
-Optional extensions (Crunchbase, SEC EDGAR) integrate external data via MCP servers. Each extension has its own installer, skills, agents, and MCP configuration. Extensions are fully independent -- the core system works without them.
+Optional extensions integrate external data via MCP servers. **Octagon AI** ($17/mo) is the priority extension -- it provides private company data, funding rounds, investor profiles, and SEC analysis through a single MCP server. SEC EDGAR is free for raw filing access. Each extension has its own installer, skills, agents, and MCP configuration. Extensions are fully independent -- the core system works without them.
 
 ## Scope Boundaries
 

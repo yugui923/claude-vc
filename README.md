@@ -45,11 +45,11 @@ cd claude-vc
 Enrich analysis with external data sources:
 
 ```bash
-# SEC EDGAR (free, no API key needed)
-./extensions/sec-edgar/install.sh
+# Octagon AI (recommended, $17/mo -- private companies, funding, investors)
+./extensions/octagon/install.sh
 
-# Crunchbase (free tier, requires API key)
-./extensions/crunchbase/install.sh
+# SEC EDGAR (free, no API key needed -- raw public filings)
+./extensions/sec-edgar/install.sh
 ```
 
 ## How It Works

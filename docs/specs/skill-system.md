@@ -548,28 +548,42 @@ extensions/<name>/
 
 ### Planned Extensions
 
-**Crunchbase (Tier 2 -- free API key)**:
+**Octagon AI (Tier 2 -- priority, $17/mo Plus plan)**:
 
-- Company profiles and funding rounds
-- Investor and people lookup
-- Trend data and market maps
-- Rate limit: 200 requests/day on free tier
+- 3M+ private company profiles with financials, revenue, valuations, employee counts
+- 500K+ funding deals with 70+ queryable fields (deal size, pre/post-money, investors, terms)
+- Investor profiles: fund sizes, investment criteria, portfolio data, dry powder
+- SEC filings analysis (10-K, 10-Q, 8-K, S-1) for 8K+ public companies
+- Earnings call transcripts (10yr history), 13F institutional holdings
+- Stock market data (10K+ tickers, historical + current)
+- Deep research: multi-source web aggregation and synthesis
+- MCP server: `npx -y octagon-mcp` (already published, MIT-licensed)
+- Natural language queries -- Claude composes queries without learning a structured API
+- 200 credits/mo on Plus plan (1-3 credits per query depending on type)
 
-**SEC EDGAR (Tier 2 -- free, no key needed)**:
+**SEC EDGAR (Tier 1 -- free, no key needed, built-in)**:
 
 - Public company filings (10-K, 10-Q, S-1, 8-K)
 - XBRL financial data extraction
 - Company search and CIK lookup
 - Rate limit: 10 requests/second with User-Agent header
+- Note: Octagon AI also covers SEC filings with AI-synthesized analysis. SEC EDGAR extension provides direct access to raw filing text
 
-**PitchBook (Tier 3 -- paid subscription)**:
+**Crunchbase (Tier 3 -- Enterprise pricing ~$10K+/year)**:
+
+- Company profiles and funding rounds
+- Investor and people lookup
+- Note: The free web tier has no API access. API requires Enterprise subscription
+- Consider only if user already has Crunchbase Enterprise access
+
+**PitchBook (Tier 3 -- institutional subscription)**:
 
 - Comprehensive private company data
 - Deal and fund data
 - Investor profiles
 - Requires institutional subscription
 
-**Affinity CRM (Tier 3 -- paid subscription)**:
+**Affinity CRM (Tier 3 -- team subscription)**:
 
 - Deal flow tracking
 - Relationship intelligence

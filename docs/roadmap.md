@@ -71,16 +71,17 @@ Goal: Portfolio monitoring and external data integration.
 ### Deliverables
 
 - [ ] Portfolio reporting sub-skill (`vc-portfolio/SKILL.md`) -- one-shot report generation, not continuous monitoring
-- [ ] SEC EDGAR extension (`extensions/sec-edgar/`)
-- [ ] Crunchbase extension (`extensions/crunchbase/`)
+- [ ] Octagon AI extension (`extensions/octagon/`) -- priority data source ($17/mo, 3M+ companies, 500K+ deals, investor profiles)
+- [ ] SEC EDGAR extension (`extensions/sec-edgar/`) -- free raw filing access
 - [ ] `scripts/fetch_company.py` for data normalization
 - [ ] `npx skills` distribution support
 - [ ] Windows installer (`install.ps1`)
 
 ### Success Criteria
 
-- `/vc portfolio` aggregates multi-company updates into LP-ready summary
-- Extensions enrich screening with real funding/filing data
+- `/vc portfolio` generates LP-ready summary from provided company data
+- Octagon AI extension provides private company data, funding rounds, and investor profiles
+- SEC EDGAR extension provides raw filing text access
 - Installable via `npx skills add` for cross-agent compatibility
 
 ## Phase 5: Polish and Community
