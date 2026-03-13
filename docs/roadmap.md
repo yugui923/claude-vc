@@ -30,12 +30,12 @@ Goal: Cap table modeling and term sheet analysis -- the two workflows with no go
 
 ### Deliverables
 
-- [ ] Cap table sub-skill (`vc-captable/SKILL.md`)
-- [ ] `scripts/captable.py` -- ownership, dilution, waterfall calculations
-- [ ] Term sheet analysis sub-skill (`vc-terms/SKILL.md`)
-- [ ] Reference files: `term-sheet-terms.md`, `safe-mechanics.md`
-- [ ] `scripts/financial_model.py` -- DCF, unit economics, projections
-- [ ] Reference file: `industry-multiples.md`
+- [x] Cap table sub-skill (`vc-captable/SKILL.md`)
+- [x] `scripts/captable.py` -- ownership, dilution, waterfall calculations
+- [x] Term sheet analysis sub-skill (`vc-terms/SKILL.md`)
+- [x] Reference files: `term-sheet-terms.md`, `safe-mechanics.md`
+- [x] `scripts/financial_model.py` -- DCF, unit economics, projections
+- [x] Reference file: `industry-multiples.md`
 
 ### Success Criteria
 
