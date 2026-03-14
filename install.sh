@@ -33,14 +33,9 @@ for old_agent in "${AGENTS_DIR}"/vc-*.md; do
     fi
 done
 
-# Create target directories
-mkdir -p "${SKILLS_DIR}/vc/references"
-
-# Copy orchestrator and references
-cp "${SCRIPT_DIR}/vc/SKILL.md" "${SKILLS_DIR}/vc/SKILL.md"
-if compgen -G "${SCRIPT_DIR}/vc/references/*.md" >/dev/null 2>&1; then
-    cp "${SCRIPT_DIR}"/vc/references/*.md "${SKILLS_DIR}/vc/references/"
-fi
+# Copy orchestrator (includes references and scripts)
+mkdir -p "${SKILLS_DIR}"
+cp -r "${SCRIPT_DIR}/skills/vc" "${SKILLS_DIR}/vc"
 
 # Copy sub-skills
 for skill_dir in "${SCRIPT_DIR}"/skills/vc-*/; do
@@ -50,12 +45,6 @@ for skill_dir in "${SCRIPT_DIR}"/skills/vc-*/; do
         cp "${skill_dir}/SKILL.md" "${SKILLS_DIR}/${skill_name}/SKILL.md"
     fi
 done
-
-# Copy scripts (if any .py files exist)
-if compgen -G "${SCRIPT_DIR}/scripts/*.py" >/dev/null 2>&1; then
-    mkdir -p "${SKILLS_DIR}/vc/scripts"
-    cp "${SCRIPT_DIR}"/scripts/*.py "${SKILLS_DIR}/vc/scripts/"
-fi
 
 # Copy agents (if any .md files exist)
 if compgen -G "${SCRIPT_DIR}/agents/*.md" >/dev/null 2>&1; then

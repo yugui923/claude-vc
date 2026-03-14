@@ -105,7 +105,7 @@ Goal: Production quality, documentation, and community readiness.
 - [ ] User guide and workflow tutorials
 - [ ] Video demos
 - [ ] Contributing guide
-- [ ] Plugin marketplace submission
+- [x] Plugin marketplace submission
 - [ ] Community feedback integration
 
 ## Future Considerations

@@ -24,6 +24,15 @@ It is **not** a standalone app or MCP server. It installs into `~/.claude/` and 
 
 ## Installation
 
+### Plugin Marketplace (recommended)
+
+```text
+/plugin marketplace add yugui923/claude-vc
+/plugin install claude-vc@claude-vc
+```
+
+### Shell Script
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yugui923/claude-vc/main/install.sh | bash
 ```
@@ -124,10 +133,12 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the full system design.
 
 ```text
 claude-vc/
-├── vc/                     # Orchestrator skill + reference files
-├── skills/                 # 9 sub-skills (screen, memo, terms, captable, model, kpi, ...)
+├── skills/
+│   ├── vc/                 # Orchestrator skill + references + Python scripts
+│   ├── vc-screen/          # Sub-skills (screen, memo, terms, captable, model, kpi, ...)
+│   └── ...
 ├── agents/                 # 6 parallel subagents (financial, market, ...)
-├── scripts/                # Python computation (cap table, DCF, ...)
+├── .claude-plugin/         # Plugin manifest + marketplace metadata
 ├── extensions/             # Optional data source integrations
 └── docs/                   # ADRs, specs, roadmap
 ```

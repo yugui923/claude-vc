@@ -22,8 +22,8 @@ explain implications.
 ### Step 1: Read References
 
 Load these reference files (on-demand, not all at once):
-- `references/term-sheet-terms.md` — NVCA baseline and market norms
-- `references/safe-mechanics.md` — if analyzing a SAFE or convertible note
+- `${CLAUDE_SKILL_DIR}/../vc/references/term-sheet-terms.md` — NVCA baseline and market norms
+- `${CLAUDE_SKILL_DIR}/../vc/references/safe-mechanics.md` — if analyzing a SAFE or convertible note
 
 ### Step 2: Extract Terms
 
@@ -145,7 +145,7 @@ overall.
 
 ## Disclaimers
 
-Read `references/disclaimers.md` and append the **enhanced disclaimer**
+Read `${CLAUDE_SKILL_DIR}/../vc/references/disclaimers.md` and append the **enhanced disclaimer**
 (term sheet analysis involves legal and financial provisions).
 
 Remind the user: "This analysis identifies terms that deviate from market

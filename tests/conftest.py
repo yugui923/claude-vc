@@ -8,10 +8,10 @@ from pathlib import Path
 import pytest
 
 PROJECT_ROOT = Path(__file__).parent.parent
-SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+SCRIPTS_DIR = PROJECT_ROOT / "skills" / "vc" / "scripts"
 TESTS_DIR = Path(__file__).parent
 
-# Add scripts/ and tests/ to sys.path so that:
+# Add skills/vc/scripts/ and tests/ to sys.path so that:
 # - test files can `import captable` / `import financial_model` directly
 # - subdirectory tests can `from helpers import ...`
 sys.path.insert(0, str(SCRIPTS_DIR))

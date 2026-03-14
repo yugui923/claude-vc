@@ -6,7 +6,7 @@ Claude-VC consists of 1 orchestrator skill, 9 sub-skills, 6 parallel subagents, 
 
 **Design principle**: The value is _judgment_, not data access. All core workflows operate on public data and user-provided documents. External data sources are optional extensions that supplement analysis, never a prerequisite.
 
-## Orchestrator: `vc/SKILL.md`
+## Orchestrator: `skills/vc/SKILL.md`
 
 ### Frontmatter
 
@@ -204,7 +204,7 @@ description: >
 1. Parse current ownership structure (supports OCF-informed data model)
 2. If SAFEs/notes: resolve MFN to lowest cap, apply capitalization definitions
 3. If new round: apply conversion mechanics and new investment
-4. Invoke `scripts/captable.py` for precise calculations
+4. Invoke `skills/vc/scripts/captable.py` for precise calculations
 5. Generate ownership tables, dilution analysis, waterfall distributions
 
 **Commands**: `model`, `dilution`, `waterfall`, `convert`, `scenarios`
@@ -244,7 +244,7 @@ description: >
 1. Gather company data from context or user input
 2. Derive reasonable assumptions for missing inputs (stage/sector benchmarks)
 3. Load `references/industry-multiples.md` for sector benchmarks
-4. Build JSON scenario, invoke `scripts/financial_model.py three_statement`
+4. Build JSON scenario, invoke `skills/vc/scripts/financial_model.py three_statement`
 5. Present 3 markdown tables + analysis (break-even, runway, sensitivities)
 
 **Outputs**:
@@ -277,7 +277,7 @@ description: >
 **Workflow**:
 
 1. Parse company data and auto-detect business model type
-2. For SaaS: invoke `scripts/financial_model.py unit_economics` + compute additional KPIs
+2. For SaaS: invoke `skills/vc/scripts/financial_model.py unit_economics` + compute additional KPIs
 3. For other types: compute KPIs directly
 4. Load `references/industry-multiples.md` for benchmarking
 5. Assign health status per metric (Healthy / Watch / Concerning)
@@ -518,7 +518,7 @@ You are a <role>. When given company information:
 
 ## Python Scripts
 
-### `scripts/financial_model.py`
+### `skills/vc/scripts/financial_model.py`
 
 **Purpose**: Financial calculations that require precision (DCF, revenue projections, unit economics, 3-statement models). Generates starting-point models and structured JSON output. The real tool for interactive financial modeling is a spreadsheet -- Claude-VC generates the foundation, not the final model.
 
@@ -553,7 +553,7 @@ python financial_model.py three_statement --input scenario.json
 
 **Dependencies**: stdlib only (no external packages).
 
-### `scripts/captable.py`
+### `skills/vc/scripts/captable.py`
 
 **Purpose**: Cap table calculations, SAFE/note conversions, multi-series waterfall distributions, exit scenario analysis. Data model informed by the Open Cap Table Format (OCF) standard.
 
@@ -590,7 +590,7 @@ python captable.py scenarios --input cap_table.json
 
 ## Reference Files
 
-All reference files live under `vc/references/` and are loaded on-demand by sub-skills via the Read tool.
+All reference files live under `skills/vc/references/` and are loaded on-demand by sub-skills via the Read tool.
 
 ### `valuation-methods.md` (target: ~150 lines)
 
@@ -653,7 +653,7 @@ All reference files live under `vc/references/` and are loaded on-demand by sub-
 
 | Component | Status | Notes |
 |-----------|--------|-------|
-| Orchestrator (`vc/SKILL.md`) | Complete | Routes 9 commands |
+| Orchestrator (`skills/vc/SKILL.md`) | Complete | Routes 9 commands |
 | `vc-screen` | Complete | Quick + full screen modes |
 | `vc-memo` | Complete | 12-section memo, native DOCX export |
 | `vc-terms` | Complete | NVCA baseline comparison |

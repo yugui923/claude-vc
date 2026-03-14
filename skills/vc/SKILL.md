@@ -63,9 +63,9 @@ When the user provides `/vc <url>` or `/vc <file>` without a command name, run s
 
 This gives the user a complete analysis in one command. Read the sub-skill files to get the full instructions:
 
-- `${CLAUDE_SKILL_DIR}/../skills/vc-screen/SKILL.md`
-- `${CLAUDE_SKILL_DIR}/../skills/vc-memo/SKILL.md`
-- `${CLAUDE_SKILL_DIR}/../skills/vc-diligence/SKILL.md`
+- `${CLAUDE_SKILL_DIR}/../vc-screen/SKILL.md`
+- `${CLAUDE_SKILL_DIR}/../vc-memo/SKILL.md`
+- `${CLAUDE_SKILL_DIR}/../vc-diligence/SKILL.md`
 
 ## Full Screening Orchestration
 

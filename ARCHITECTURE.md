@@ -27,7 +27,7 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
                   │
                   ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              Orchestrator (vc/SKILL.md)                     │
+│           Orchestrator (skills/vc/SKILL.md)                 │
 │                                                             │
 │  Routes commands to sub-skills or spawns parallel agents    │
 │  Loads reference files on demand                            │
@@ -77,19 +77,23 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
 ```text
 claude-vc/
 ├── .claude-plugin/
-│   └── plugin.json                     # Plugin manifest
-├── vc/                                 # ORCHESTRATOR
-│   ├── SKILL.md                        # Entry point + routing table
-│   └── references/                     # On-demand domain knowledge
-│       ├── valuation-methods.md
-│       ├── due-diligence-checklist.md
-│       ├── term-sheet-terms.md
-│       ├── safe-mechanics.md
-│       ├── industry-multiples.md
-│       ├── investment-criteria.md
-│       └── disclaimers.md
-├── skills/                             # SUB-SKILLS
-│   ├── vc-screen/SKILL.md
+│   ├── plugin.json                     # Plugin manifest
+│   └── marketplace.json                # Marketplace catalog
+├── skills/                             # ALL SKILLS
+│   ├── vc/                             # ORCHESTRATOR
+│   │   ├── SKILL.md                    # Entry point + routing table
+│   │   ├── references/                 # On-demand domain knowledge
+│   │   │   ├── valuation-methods.md
+│   │   │   ├── due-diligence-checklist.md
+│   │   │   ├── term-sheet-terms.md
+│   │   │   ├── safe-mechanics.md
+│   │   │   ├── industry-multiples.md
+│   │   │   ├── investment-criteria.md
+│   │   │   └── disclaimers.md
+│   │   └── scripts/                    # Python computation
+│   │       ├── financial_model.py
+│   │       └── captable.py
+│   ├── vc-screen/SKILL.md              # SUB-SKILLS
 │   ├── vc-memo/SKILL.md
 │   ├── vc-terms/SKILL.md
 │   ├── vc-captable/SKILL.md
@@ -105,9 +109,6 @@ claude-vc/
 │   ├── vc-legal.md
 │   ├── vc-competitive.md
 │   └── vc-team.md
-├── scripts/                            # PYTHON COMPUTATION
-│   ├── financial_model.py
-│   └── captable.py
 ├── extensions/                         # OPTIONAL MCP ADD-ONS
 │   ├── octagon/                       # Priority: $17/mo, broadest VC data
 │   │   ├── install.sh
@@ -117,10 +118,8 @@ claude-vc/
 │       ├── install.sh
 │       ├── skills/vc-edgar/SKILL.md
 │       └── agents/vc-edgar.md
-├── install.sh                          # Unix/macOS installer
-├── install.ps1                         # Windows installer
+├── install.sh                          # Unix/macOS installer (fallback)
 ├── uninstall.sh
-├── requirements.txt                    # Python dependencies
 ├── docs/                               # Documentation
 │   ├── decisions/                      # ADRs
 │   ├── specs/                          # Skill specifications
@@ -133,12 +132,12 @@ claude-vc/
 
 ### Installed Layout
 
-After `install.sh`, files are copied to:
+The repository's `skills/` directory maps directly to the installed layout. The plugin marketplace copies the repo as-is; `install.sh` replicates the same structure under `~/.claude/skills/`.
 
 ```text
 ~/.claude/
 ├── skills/
-│   ├── vc/                             # Orchestrator + references
+│   ├── vc/                             # Orchestrator + references + scripts
 │   │   ├── SKILL.md
 │   │   ├── references/
 │   │   └── scripts/
@@ -227,29 +226,29 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 
 1. Sub-skill loads, prompts for current cap table data
 2. Claude parses input (CSV, JSON, or natural language)
-3. Invokes `scripts/captable.py` for mathematical computation
+3. Invokes `skills/vc/scripts/captable.py` for mathematical computation
 4. Returns ownership breakdown, dilution scenarios, waterfall analysis
 
 ### Financial Model (`/vc model`)
 
 1. Sub-skill loads, gathers company data (pitch deck context, raw financials, or assumptions)
 2. Claude derives reasonable defaults for missing inputs based on stage and sector
-3. Loads `references/industry-multiples.md` for sector benchmarks
-4. Invokes `scripts/financial_model.py three_statement` for computation
+3. Loads `skills/vc/references/industry-multiples.md` for sector benchmarks
+4. Invokes `skills/vc/scripts/financial_model.py three_statement` for computation
 5. Returns 3-statement model (income statement, balance sheet, cash flow) with analysis
 
 ### KPI Report (`/vc kpi`)
 
 1. Sub-skill loads, parses company data (JSON, CSV, verbal, or prior context)
 2. Auto-detects company type (SaaS, marketplace, consumer, fintech)
-3. For SaaS: invokes `scripts/financial_model.py unit_economics` for core calculations
-4. Loads `references/industry-multiples.md` for benchmark comparison
+3. For SaaS: invokes `skills/vc/scripts/financial_model.py unit_economics` for core calculations
+4. Loads `skills/vc/references/industry-multiples.md` for benchmark comparison
 5. Returns structured KPI report with traffic-light health assessment
 
 ### Term Sheet Analysis (`/vc terms <file>`)
 
 1. Sub-skill loads, reads the term sheet file
-2. Loads `references/term-sheet-terms.md` for NVCA baseline comparison
+2. Loads `skills/vc/references/term-sheet-terms.md` for NVCA baseline comparison
 3. Flags non-standard or founder-unfriendly terms
 4. Generates annotated analysis with market comparisons
 
@@ -274,7 +273,7 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 | Skills & agents | Markdown + YAML frontmatter         | Claude Code native format                       |
 | Computation     | Python 3.13+ (stdlib only)          | Financial calculations Claude can't do natively |
 | Extensions      | MCP servers                         | Standard Claude Code extension pattern          |
-| Distribution    | `install.sh` + `npx skills`         | Multiple installation paths                     |
+| Distribution    | Plugin marketplace, `install.sh`    | Marketplace preferred; shell script as fallback  |
 | License         | MIT                                 | Matches claude-seo precedent                    |
 
 ## Constraints

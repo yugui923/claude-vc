@@ -1,0 +1,32 @@
+{
+  "name": "claude-vc",
+  "owner": {
+    "name": "Yuri Gui"
+  },
+  "metadata": {
+    "description": "Venture capital analysis toolkit for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "claude-vc",
+      "source": "./",
+      "description": "Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio reporting.",
+      "version": "1.2.0",
+      "author": {
+        "name": "Yuri Gui"
+      },
+      "repository": "https://github.com/yugui923/claude-vc",
+      "license": "MIT",
+      "keywords": [
+        "venture-capital",
+        "deal-screening",
+        "cap-table",
+        "term-sheet",
+        "financial-model",
+        "kpi"
+      ],
+      "category": "finance",
+      "tags": ["vc", "finance", "startup", "investment"]
+    }
+  ]
+}

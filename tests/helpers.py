@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 PROJECT_ROOT = Path(__file__).parent.parent
-SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+SCRIPTS_DIR = PROJECT_ROOT / "skills" / "vc" / "scripts"
 
 
 def load_fixture(name: str) -> dict[str, Any]:
