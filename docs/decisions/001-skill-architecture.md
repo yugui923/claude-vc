@@ -23,7 +23,7 @@ Adopt the **orchestrator + sub-skills pattern** from [claude-seo](https://github
 
 | Component       | Claude-SEO                              | Claude-VC                            |
 | --------------- | --------------------------------------- | ------------------------------------ |
-| Orchestrator    | `seo/SKILL.md`                          | `vc/SKILL.md`                        |
+| Orchestrator    | `seo/SKILL.md`                          | `skills/vc/SKILL.md`                 |
 | Sub-skills      | 12 (`seo-audit`, `seo-schema`, ...)     | 6 (`vc-screen`, `vc-memo`, ...)      |
 | Parallel agents | 7 (`seo-technical`, `seo-content`, ...) | 6 (`vc-financial`, `vc-market`, ...) |
 | Reference files | 4 (`cwv-thresholds.md`, ...)            | 6 (`valuation-methods.md`, ...)      |

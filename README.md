@@ -1,12 +1,12 @@
 # Claude-VC
 
-A Claude Code skill ecosystem for venture capital workflows. Deal screening, investment memo generation, cap table modeling, term sheet analysis, and portfolio monitoring -- all from your terminal.
+A Claude Code plugin for venture capital workflows. Deal screening, investment memo generation, cap table modeling, term sheet analysis, and portfolio monitoring -- all inside Claude Code (CLI or IDE).
 
 ## What Is This?
 
 Claude-VC is a set of [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/skills) that extend Claude with VC-specific domain knowledge and computational tools. It follows the [orchestrator + sub-skills pattern](docs/decisions/001-skill-architecture.md) proven by [claude-seo](https://github.com/AgriciDaniel/claude-seo).
 
-It is **not** a standalone app or MCP server. It installs into `~/.claude/` and is invoked via `/vc` slash commands inside Claude Code.
+It is **not** a standalone app or MCP server. It is invoked via `/vc` slash commands inside Claude Code. Install via the plugin marketplace or the shell script below.
 
 ## Commands
 
@@ -26,12 +26,24 @@ It is **not** a standalone app or MCP server. It installs into `~/.claude/` and 
 
 ### Plugin Marketplace (recommended)
 
+The fastest way to install. Works in both **Claude Code CLI** and **Claude Code in your IDE** (VS Code, JetBrains).
+
+Run these commands in the Claude Code input:
+
 ```text
 /plugin marketplace add yugui923/claude-vc
 /plugin install claude-vc@claude-vc
 ```
 
-### Shell Script
+To update later:
+
+```text
+/plugin marketplace update
+```
+
+### Shell Script (CLI only)
+
+If you prefer a manual install or don't use the plugin marketplace:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yugui923/claude-vc/main/install.sh | bash
@@ -45,11 +57,32 @@ cd claude-vc
 ./install.sh
 ```
 
+To update: run `./update.sh` from the cloned repo.
+
+### Team Setup (auto-install for your org)
+
+Add claude-vc to your project's `.claude/settings.json` so team members are automatically prompted to install it when they open the project:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "claude-vc": {
+      "source": {
+        "source": "github",
+        "repo": "yugui923/claude-vc"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "claude-vc@claude-vc": true
+  }
+}
+```
+
 ### Requirements
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed and configured
-- Python 3.13+ (for computation scripts)
-- Git
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (CLI or IDE extension)
+- Python 3.13+ (for financial computation scripts)
 
 ### Optional Extensions
 
