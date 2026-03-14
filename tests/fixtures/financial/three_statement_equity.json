@@ -1,0 +1,28 @@
+{
+  "company_name": "FundedCo",
+  "projection_years": 3,
+  "income_statement": {
+    "revenue_year_0": 500000,
+    "revenue_growth_rates": [1.5, 1.0, 0.8],
+    "cogs_pct_of_revenue": 0.25,
+    "opex_breakdown": {
+      "sales_marketing_pct": 0.50,
+      "research_development_pct": 0.30,
+      "general_admin_pct": 0.15
+    },
+    "opex_improvement_per_year": 0.03,
+    "depreciation_pct_of_revenue": 0.02,
+    "tax_rate": 0.0
+  },
+  "balance_sheet": {
+    "starting_cash": 2000000,
+    "accounts_receivable_days": 30,
+    "accounts_payable_days": 30,
+    "equity_injections": [
+      {"year": 2, "amount": 10000000}
+    ]
+  },
+  "cash_flow": {
+    "capex_pct_of_revenue": 0.03
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "company_name": "TestCo",
+  "projection_years": 5,
+  "income_statement": {
+    "revenue_year_0": 1200000,
+    "revenue_growth_rates": [1.0, 0.8, 0.6, 0.4, 0.3],
+    "cogs_pct_of_revenue": 0.20,
+    "cogs_improvement_per_year": 0.01,
+    "opex_breakdown": {
+      "sales_marketing_pct": 0.40,
+      "research_development_pct": 0.25,
+      "general_admin_pct": 0.15
+    },
+    "opex_improvement_per_year": 0.03,
+    "depreciation_pct_of_revenue": 0.02,
+    "interest_expense_annual": 0,
+    "tax_rate": 0.0
+  },
+  "balance_sheet": {
+    "starting_cash": 5000000,
+    "accounts_receivable_days": 45,
+    "accounts_payable_days": 30,
+    "debt_balance": 0,
+    "other_assets": 0,
+    "equity_injections": []
+  },
+  "cash_flow": {
+    "capex_pct_of_revenue": 0.03
+  }
+}

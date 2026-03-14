@@ -1,0 +1,8 @@
+{
+  "cash_flows": [100000, 200000, 350000, 500000, 700000],
+  "discount_rate": 0.50,
+  "terminal_growth_rate": 0.03,
+  "terminal_method": "gordon",
+  "net_debt": 0,
+  "shares_outstanding": 10000000
+}

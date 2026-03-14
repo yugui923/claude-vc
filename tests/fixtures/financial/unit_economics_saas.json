@@ -1,0 +1,9 @@
+{
+  "monthly_revenue": 100000,
+  "total_customers": 500,
+  "new_customers_per_month": 50,
+  "monthly_churn_rate": 0.03,
+  "gross_margin": 0.80,
+  "sales_marketing_spend_monthly": 75000,
+  "expansion_revenue_monthly": 5000
+}

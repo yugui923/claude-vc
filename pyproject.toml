@@ -1,0 +1,26 @@
+[project]
+name = "claude-vc"
+version = "1.1.0"
+requires-python = ">=3.13"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-xdist>=3.5",
+    "ruff>=0.9",
+    "pyright>=1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "smoke: marks Layer 2 smoke tests using claude -p (deselect with '-m \"not smoke\"')",
+]
+addopts = "-m 'not smoke'"
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "standard"
+include = ["scripts", "tests"]
+extraPaths = ["scripts", "tests"]

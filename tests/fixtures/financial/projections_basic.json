@@ -1,0 +1,9 @@
+{
+  "current_arr": 1200000,
+  "growth_rates": [1.0, 0.8, 0.6, 0.4, 0.3],
+  "gross_margin": 0.80,
+  "opex_pct_of_revenue": 0.90,
+  "opex_improvement_per_year": 0.05,
+  "starting_cash": 5000000,
+  "monthly_burn": 150000
+}

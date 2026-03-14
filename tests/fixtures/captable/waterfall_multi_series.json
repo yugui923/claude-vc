@@ -1,0 +1,15 @@
+{
+  "exit_value": 50000000,
+  "total_shares": 10000000,
+  "stock_classes": [
+    {"class_id": "common", "name": "Common", "instrument_type": "common", "seniority": 1},
+    {"class_id": "series_a", "name": "Series A", "instrument_type": "preferred", "seniority": 2, "liquidation_multiple": 1, "participating": false},
+    {"class_id": "series_b", "name": "Series B", "instrument_type": "preferred", "seniority": 3, "liquidation_multiple": 1.5, "participating": true, "participation_cap": 3}
+  ],
+  "holders": [
+    {"name": "Founders", "instrument": "common", "shares": 5000000, "investment": 0, "stock_class_id": "common"},
+    {"name": "ESOP", "instrument": "options", "shares": 1000000, "investment": 0},
+    {"name": "Series A", "instrument": "preferred", "shares": 2000000, "investment": 5000000, "stock_class_id": "series_a"},
+    {"name": "Series B", "instrument": "preferred", "shares": 2000000, "investment": 10000000, "stock_class_id": "series_b"}
+  ]
+}

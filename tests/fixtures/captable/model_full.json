@@ -1,0 +1,23 @@
+{
+  "founders": [
+    {"name": "Alice", "shares": 4000000},
+    {"name": "Bob", "shares": 4000000}
+  ],
+  "option_pool": {"shares": 2000000},
+  "safes": [
+    {"name": "SAFE Investor", "investment": 500000, "valuation_cap": 10000000, "is_post_money": true}
+  ],
+  "notes": [
+    {
+      "name": "Note Holder",
+      "investment": 200000,
+      "valuation_cap": 12000000,
+      "interest_rate": 0.06,
+      "interest_type": "simple",
+      "months_outstanding": 12
+    }
+  ],
+  "rounds": [
+    {"name": "Series A", "investment": 5000000, "pre_money": 20000000, "stock_class_id": "series_a"}
+  ]
+}

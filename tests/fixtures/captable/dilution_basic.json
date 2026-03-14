@@ -1,0 +1,13 @@
+{
+  "total_shares": 10000000,
+  "existing_holders": [
+    {"name": "Alice", "instrument": "common", "shares": 6000000},
+    {"name": "Bob", "instrument": "common", "shares": 3000000},
+    {"name": "ESOP", "instrument": "options", "shares": 1000000}
+  ],
+  "new_round": {
+    "name": "Series A",
+    "investment": 5000000,
+    "pre_money": 20000000
+  }
+}

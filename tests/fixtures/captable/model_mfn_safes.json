@@ -1,0 +1,12 @@
+{
+  "founders": [
+    {"name": "Alice", "shares": 5000000},
+    {"name": "Bob", "shares": 5000000}
+  ],
+  "option_pool": {"shares": 1000000},
+  "safes": [
+    {"name": "SAFE A", "investment": 500000, "valuation_cap": 10000000, "is_post_money": true},
+    {"name": "SAFE B", "investment": 300000, "valuation_cap": 8000000, "is_post_money": true},
+    {"name": "SAFE MFN", "investment": 200000, "is_post_money": true, "mfn": true}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "founders": [
+    {"name": "Alice", "shares": 6000000},
+    {"name": "Bob", "shares": 4000000}
+  ],
+  "option_pool": {"name": "ESOP", "shares": 1000000}
+}

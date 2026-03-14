@@ -1,0 +1,20 @@
+{
+  "target": {
+    "name": "TargetCo",
+    "arr": 5000000,
+    "revenue": 4500000,
+    "ebitda": -500000,
+    "yoy_growth": 0.80,
+    "gross_margin": 0.82
+  },
+  "comparables": [
+    {"name": "CompA", "ev_revenue": 12, "ev_arr": 14, "yoy_growth": 0.50, "gross_margin": 0.78},
+    {"name": "CompB", "ev_revenue": 10, "ev_arr": 12, "yoy_growth": 0.40, "gross_margin": 0.75},
+    {"name": "CompC", "ev_revenue": 15, "ev_arr": 18, "yoy_growth": 0.60, "gross_margin": 0.85}
+  ],
+  "adjustments": {
+    "private_discount": 0.25,
+    "growth_premium": true,
+    "size_discount": 0.15
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "founders": [
+    {"name": "Alice", "shares": 5000000},
+    {"name": "Bob", "shares": 5000000}
+  ],
+  "option_pool": {"shares": 1000000},
+  "notes": [
+    {
+      "name": "Note Holder",
+      "investment": 300000,
+      "valuation_cap": 10000000,
+      "discount": 0.2,
+      "interest_rate": 0.08,
+      "interest_type": "simple",
+      "months_outstanding": 12
+    }
+  ]
+}

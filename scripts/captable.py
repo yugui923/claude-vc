@@ -241,16 +241,22 @@ def _get_capitalization(
         return total_shares
     if cap_def == CapDefinition.SHARES_ONLY:
         return sum(
-            h.shares
-            for h in holders
-            if h.instrument in (InstrumentType.COMMON, InstrumentType.PREFERRED)
+            (
+                h.shares
+                for h in holders
+                if h.instrument in (InstrumentType.COMMON, InstrumentType.PREFERRED)
+            ),
+            Decimal(0),
         )
     # SHARES_AND_OPTIONS
     return sum(
-        h.shares
-        for h in holders
-        if h.instrument
-        in (InstrumentType.COMMON, InstrumentType.PREFERRED, InstrumentType.OPTIONS)
+        (
+            h.shares
+            for h in holders
+            if h.instrument
+            in (InstrumentType.COMMON, InstrumentType.PREFERRED, InstrumentType.OPTIONS)
+        ),
+        Decimal(0),
     )
 
 

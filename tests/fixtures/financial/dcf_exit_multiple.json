@@ -1,0 +1,8 @@
+{
+  "cash_flows": [100000, 200000, 350000, 500000, 700000],
+  "discount_rate": 0.50,
+  "terminal_method": "exit_multiple",
+  "exit_multiple": 10,
+  "net_debt": 500000,
+  "shares_outstanding": 10000000
+}

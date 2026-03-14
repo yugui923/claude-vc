@@ -422,7 +422,7 @@ def calc_multiples(scenario: dict[str, Any]) -> dict[str, Any]:
         results["valuation_range"] = {
             "low": _fmt(min(vals)),
             "high": _fmt(max(vals)),
-            "midpoint": _fmt(sum(vals) / len(vals)),
+            "midpoint": _fmt(sum(vals, Decimal(0)) / len(vals)),
         }
         results["adjustments_applied"] = {k: v for k, v in adj.items() if v}
 
