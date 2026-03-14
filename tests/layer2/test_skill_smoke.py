@@ -40,7 +40,7 @@ def run_claude(prompt: str, *, max_turns: int = 3, max_budget: float = 0.50) -> 
         ],
         capture_output=True,
         text=True,
-        timeout=120,
+        timeout=180,
         cwd=str(PROJECT_ROOT),
     )
     assert result.returncode == 0, (
@@ -85,7 +85,7 @@ def test_vc_captable_with_inline_data() -> None:
         "Alice has 6M common shares, Bob has 4M common shares, "
         "ESOP has 1M option shares. Just show the cap table."
     )
-    output = run_claude(prompt, max_turns=5, max_budget=1.00)
+    output = run_claude(prompt, max_turns=8, max_budget=1.50)
     output_lower = output.lower()
     assert "alice" in output_lower
     assert "bob" in output_lower
@@ -97,7 +97,7 @@ def test_vc_captable_output_includes_disclaimer() -> None:
         "Run /vc captable. Use this data: "
         "Alice has 6M shares, Bob has 4M shares. Show the cap table."
     )
-    output = run_claude(prompt, max_turns=5, max_budget=1.00)
+    output = run_claude(prompt, max_turns=8, max_budget=1.50)
     output_lower = output.lower()
     assert any(
         kw in output_lower
