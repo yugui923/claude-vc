@@ -137,14 +137,13 @@ Include: market risks, execution risks, technical risks, regulatory risks, compe
 If `--docx` or `--docx <filename>` is present in arguments:
 
 1. Generate the memo as markdown normally (displayed in terminal)
-2. Write the full memo markdown (including disclaimer) to a temporary file
-3. Run the conversion script:
-
-```bash
-python3 "${CLAUDE_SKILL_DIR}/../vc/scripts/memo_to_docx.py" --input <temp_file> --output <filename>
-```
-
-If no filename is given, default to `sourcing-memo-<company-name>-<YYYY-MM-DD>.docx` in the current directory. Tell the user where the file was saved.
+2. Use Claude's native file-writing capabilities to generate a formatted
+   Word document (.docx) directly. Apply professional formatting: Calibri
+   font, structured headings, tables with header styling, and appropriate
+   spacing. Do not use any external scripts for DOCX generation.
+3. If no filename is given, default to
+   `sourcing-memo-<company-name>-<YYYY-MM-DD>.docx` in the current directory.
+   Tell the user where the file was saved.
 
 ## Disclaimer
 

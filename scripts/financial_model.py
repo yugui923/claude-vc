@@ -430,17 +430,242 @@ def calc_multiples(scenario: dict[str, Any]) -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
+# Three-Statement Financial Model
+# ---------------------------------------------------------------------------
+
+
+def calc_three_statement(scenario: dict[str, Any]) -> dict[str, Any]:
+    """Generate a simplified 3-statement financial model.
+
+    Expected JSON:
+    {
+        "company_name": "ExampleCo",
+        "projection_years": 5,
+        "income_statement": {
+            "revenue_year_0": 1200000,
+            "revenue_growth_rates": [1.0, 0.8, 0.6, 0.4, 0.3],
+            "cogs_pct_of_revenue": 0.20,
+            "cogs_improvement_per_year": 0.01,
+            "opex_breakdown": {
+                "sales_marketing_pct": 0.40,
+                "research_development_pct": 0.25,
+                "general_admin_pct": 0.15
+            },
+            "opex_improvement_per_year": 0.03,
+            "depreciation_pct_of_revenue": 0.02,
+            "interest_expense_annual": 0,
+            "tax_rate": 0.0
+        },
+        "balance_sheet": {
+            "starting_cash": 5000000,
+            "accounts_receivable_days": 45,
+            "accounts_payable_days": 30,
+            "debt_balance": 0,
+            "other_assets": 0,
+            "equity_injections": []
+        },
+        "cash_flow": {
+            "capex_pct_of_revenue": 0.03,
+            "working_capital_change_auto": true
+        }
+    }
+    """
+    is_cfg = scenario.get("income_statement", {})
+    bs_cfg = scenario.get("balance_sheet", {})
+    cf_cfg = scenario.get("cash_flow", {})
+
+    revenue = _d(is_cfg.get("revenue_year_0", 0))
+    growth_rates = [_d(g) for g in is_cfg.get("revenue_growth_rates", [])]
+    n_years = int(scenario.get("projection_years", len(growth_rates)))
+
+    # Pad growth rates if needed
+    while len(growth_rates) < n_years:
+        growth_rates.append(growth_rates[-1] if growth_rates else Decimal("0.2"))
+
+    cogs_pct = _d(is_cfg.get("cogs_pct_of_revenue", "0.20"))
+    cogs_improve = _d(is_cfg.get("cogs_improvement_per_year", 0))
+    opex_bk = is_cfg.get("opex_breakdown", {})
+    sm_pct = _d(opex_bk.get("sales_marketing_pct", "0.40"))
+    rd_pct = _d(opex_bk.get("research_development_pct", "0.25"))
+    ga_pct = _d(opex_bk.get("general_admin_pct", "0.15"))
+    opex_improve = _d(is_cfg.get("opex_improvement_per_year", "0.03"))
+    dep_pct = _d(is_cfg.get("depreciation_pct_of_revenue", "0.02"))
+    interest = _d(is_cfg.get("interest_expense_annual", 0))
+    tax_rate = _d(is_cfg.get("tax_rate", 0))
+
+    starting_cash = _d(bs_cfg.get("starting_cash", 0))
+    ar_days = _d(bs_cfg.get("accounts_receivable_days", 45))
+    ap_days = _d(bs_cfg.get("accounts_payable_days", 30))
+    debt = _d(bs_cfg.get("debt_balance", 0))
+    other_assets = _d(bs_cfg.get("other_assets", 0))
+    equity_injections = bs_cfg.get("equity_injections", [])
+
+    capex_pct = _d(cf_cfg.get("capex_pct_of_revenue", "0.03"))
+
+    income_statements = []
+    balance_sheets = []
+    cash_flows = []
+
+    cash = starting_cash
+    prev_ar = Decimal(0)
+    prev_ap = Decimal(0)
+    cumulative_net_income = Decimal(0)
+
+    for i in range(n_years):
+        year = i + 1
+        revenue = revenue * (1 + growth_rates[i])
+
+        # Income Statement
+        cogs = revenue * cogs_pct
+        gross_profit = revenue - cogs
+        gm = gross_profit / revenue * 100 if revenue > 0 else Decimal(0)
+
+        sm_exp = revenue * sm_pct
+        rd_exp = revenue * rd_pct
+        ga_exp = revenue * ga_pct
+        total_opex = sm_exp + rd_exp + ga_exp
+
+        ebitda = gross_profit - total_opex
+        ebitda_margin = ebitda / revenue * 100 if revenue > 0 else Decimal(0)
+
+        depreciation = revenue * dep_pct
+        ebit = ebitda - depreciation
+        ebt = ebit - interest
+        tax = max(Decimal(0), ebt * tax_rate)
+        net_income = ebt - tax
+
+        income_statements.append(
+            {
+                "year": year,
+                "revenue": _fmt(revenue),
+                "cogs": _fmt(cogs),
+                "gross_profit": _fmt(gross_profit),
+                "gross_margin_pct": _fmt(gm, 1) + "%",
+                "sales_marketing": _fmt(sm_exp),
+                "research_development": _fmt(rd_exp),
+                "general_admin": _fmt(ga_exp),
+                "total_opex": _fmt(total_opex),
+                "ebitda": _fmt(ebitda),
+                "ebitda_margin_pct": _fmt(ebitda_margin, 1) + "%",
+                "depreciation": _fmt(depreciation),
+                "ebit": _fmt(ebit),
+                "interest_expense": _fmt(interest),
+                "ebt": _fmt(ebt),
+                "tax": _fmt(tax),
+                "net_income": _fmt(net_income),
+            }
+        )
+
+        # Balance Sheet
+        ar = revenue * ar_days / Decimal(365)
+        cogs_annual = cogs
+        ap = cogs_annual * ap_days / Decimal(365)
+
+        # Equity injection for this year
+        yr_injection = Decimal(0)
+        for inj in equity_injections:
+            if int(inj.get("year", 0)) == year:
+                yr_injection = _d(inj["amount"])
+
+        # Cash Flow Statement
+        change_ar = ar - prev_ar
+        change_ap = ap - prev_ap
+        operating_cf = net_income + depreciation - change_ar + change_ap
+
+        capex = revenue * capex_pct
+        investing_cf = -capex
+
+        financing_cf = yr_injection
+        net_change = operating_cf + investing_cf + financing_cf
+        cash = cash + net_change
+
+        cumulative_net_income += net_income
+
+        total_assets = cash + ar + other_assets
+        total_liabilities = ap + debt
+        equity = total_assets - total_liabilities
+
+        balance_sheets.append(
+            {
+                "year": year,
+                "cash": _fmt(cash),
+                "accounts_receivable": _fmt(ar),
+                "other_assets": _fmt(other_assets),
+                "total_assets": _fmt(total_assets),
+                "accounts_payable": _fmt(ap),
+                "debt": _fmt(debt),
+                "total_liabilities": _fmt(total_liabilities),
+                "equity": _fmt(equity),
+                "total_liabilities_equity": _fmt(total_liabilities + equity),
+            }
+        )
+
+        cash_flows.append(
+            {
+                "year": year,
+                "net_income": _fmt(net_income),
+                "depreciation_add_back": _fmt(depreciation),
+                "change_in_ar": _fmt(-change_ar),
+                "change_in_ap": _fmt(change_ap),
+                "operating_cash_flow": _fmt(operating_cf),
+                "capex": _fmt(-capex),
+                "investing_cash_flow": _fmt(investing_cf),
+                "equity_raised": _fmt(yr_injection),
+                "debt_change": "0",
+                "financing_cash_flow": _fmt(financing_cf),
+                "net_change_in_cash": _fmt(net_change),
+                "ending_cash": _fmt(cash),
+            }
+        )
+
+        prev_ar = ar
+        prev_ap = ap
+
+        # Improve margins over time
+        cogs_pct = max(Decimal("0.05"), cogs_pct - cogs_improve)
+        sm_pct = max(Decimal("0.10"), sm_pct - opex_improve * Decimal("0.5"))
+        rd_pct = max(Decimal("0.10"), rd_pct - opex_improve * Decimal("0.3"))
+        ga_pct = max(Decimal("0.05"), ga_pct - opex_improve * Decimal("0.2"))
+
+    # Summary
+    breakeven_year = None
+    for stmt in income_statements:
+        if Decimal(stmt["net_income"]) > 0:
+            breakeven_year = stmt["year"]
+            break
+
+    return {
+        "company_name": scenario.get("company_name", ""),
+        "income_statement": income_statements,
+        "balance_sheet": balance_sheets,
+        "cash_flow_statement": cash_flows,
+        "summary": {
+            "projection_years": n_years,
+            "starting_revenue": _fmt(_d(is_cfg.get("revenue_year_0", 0))),
+            "ending_revenue": income_statements[-1]["revenue"]
+            if income_statements
+            else "0",
+            "break_even_year": breakeven_year,
+            "ending_cash": balance_sheets[-1]["cash"] if balance_sheets else "0",
+            "terminal_ebitda_margin": income_statements[-1]["ebitda_margin_pct"]
+            if income_statements
+            else "0%",
+        },
+    }
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Financial modeling: DCF, unit economics, projections, multiples."
+        description="Financial modeling: DCF, unit economics, projections, multiples, 3-statement."
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    for cmd in ["dcf", "unit_economics", "projections", "multiples"]:
+    for cmd in ["dcf", "unit_economics", "projections", "multiples", "three_statement"]:
         p = sub.add_parser(cmd)
         p.add_argument("--input", required=True, help="Path to JSON scenario file")
 
@@ -454,6 +679,7 @@ def main() -> None:
         "unit_economics": calc_unit_economics,
         "projections": calc_projections,
         "multiples": calc_multiples,
+        "three_statement": calc_three_statement,
     }
 
     result = commands[args.command](scenario)

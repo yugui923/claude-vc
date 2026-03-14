@@ -4,7 +4,7 @@
 
 ## Overview
 
-Claude-VC is a Claude Code skill ecosystem for venture capital workflows. It follows the **orchestrator + sub-skills** pattern established by [claude-seo](https://github.com/AgriciDaniel/claude-seo), adapted for deal screening, investment memo generation, cap table modeling, term sheet analysis, and portfolio monitoring.
+Claude-VC is a Claude Code skill ecosystem for venture capital workflows. It follows the **orchestrator + sub-skills** pattern established by [claude-seo](https://github.com/AgriciDaniel/claude-seo), adapted for deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio monitoring.
 
 The system is installed into `~/.claude/` and invoked via `/vc` slash commands. It is **not** an MCP server or standalone application -- it is a collection of markdown-based skills, agent definitions, Python computation scripts, and on-demand reference files that extend Claude Code's capabilities for VC professionals.
 
@@ -19,6 +19,8 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
 │              /vc memo                                       │
 │              /vc terms <file>                               │
 │              /vc captable                                   │
+│              /vc model                                      │
+│              /vc kpi                                        │
 │              /vc compare <url1> <url2>                      │
 │              /vc portfolio                                  │
 └─────────────────┬───────────────────────────────────────────┘
@@ -58,7 +60,6 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
 │  Python Scripts (via Bash tool)         │
 │  - financial_model.py                   │
 │  - captable.py                          │
-│  - fetch_company.py                     │
 └─────────────────────────────────────────┘
        │
        ▼
@@ -85,12 +86,15 @@ claude-vc/
 │       ├── term-sheet-terms.md
 │       ├── safe-mechanics.md
 │       ├── industry-multiples.md
-│       └── investment-criteria.md
+│       ├── investment-criteria.md
+│       └── disclaimers.md
 ├── skills/                             # SUB-SKILLS
 │   ├── vc-screen/SKILL.md
 │   ├── vc-memo/SKILL.md
 │   ├── vc-terms/SKILL.md
 │   ├── vc-captable/SKILL.md
+│   ├── vc-model/SKILL.md
+│   ├── vc-kpi/SKILL.md
 │   ├── vc-compare/SKILL.md
 │   ├── vc-diligence/SKILL.md
 │   └── vc-portfolio/SKILL.md
@@ -103,8 +107,7 @@ claude-vc/
 │   └── vc-team.md
 ├── scripts/                            # PYTHON COMPUTATION
 │   ├── financial_model.py
-│   ├── captable.py
-│   └── fetch_company.py
+│   └── captable.py
 ├── extensions/                         # OPTIONAL MCP ADD-ONS
 │   ├── octagon/                       # Priority: $17/mo, broadest VC data
 │   │   ├── install.sh
@@ -143,6 +146,8 @@ After `install.sh`, files are copied to:
 │   ├── vc-memo/SKILL.md
 │   ├── vc-terms/SKILL.md
 │   ├── vc-captable/SKILL.md
+│   ├── vc-model/SKILL.md
+│   ├── vc-kpi/SKILL.md
 │   ├── vc-compare/SKILL.md
 │   ├── vc-diligence/SKILL.md
 │   └── vc-portfolio/SKILL.md
@@ -225,6 +230,22 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 3. Invokes `scripts/captable.py` for mathematical computation
 4. Returns ownership breakdown, dilution scenarios, waterfall analysis
 
+### Financial Model (`/vc model`)
+
+1. Sub-skill loads, gathers company data (pitch deck context, raw financials, or assumptions)
+2. Claude derives reasonable defaults for missing inputs based on stage and sector
+3. Loads `references/industry-multiples.md` for sector benchmarks
+4. Invokes `scripts/financial_model.py three_statement` for computation
+5. Returns 3-statement model (income statement, balance sheet, cash flow) with analysis
+
+### KPI Report (`/vc kpi`)
+
+1. Sub-skill loads, parses company data (JSON, CSV, verbal, or prior context)
+2. Auto-detects company type (SaaS, marketplace, consumer, fintech)
+3. For SaaS: invokes `scripts/financial_model.py unit_economics` for core calculations
+4. Loads `references/industry-multiples.md` for benchmark comparison
+5. Returns structured KPI report with traffic-light health assessment
+
 ### Term Sheet Analysis (`/vc terms <file>`)
 
 1. Sub-skill loads, reads the term sheet file
@@ -251,9 +272,7 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 | Component       | Technology                          | Rationale                                       |
 | --------------- | ----------------------------------- | ----------------------------------------------- |
 | Skills & agents | Markdown + YAML frontmatter         | Claude Code native format                       |
-| Computation     | Python 3.13+ (stdlib only for core) | Financial calculations Claude can't do natively |
-| Data fetching   | Python httpx (async)                | External API integration                        |
-| Data modeling   | Pydantic                            | Structured output validation                    |
+| Computation     | Python 3.13+ (stdlib only)          | Financial calculations Claude can't do natively |
 | Extensions      | MCP servers                         | Standard Claude Code extension pattern          |
 | Distribution    | `install.sh` + `npx skills`         | Multiple installation paths                     |
 | License         | MIT                                 | Matches claude-seo precedent                    |

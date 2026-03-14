@@ -2,7 +2,7 @@
 
 ## Overview
 
-Claude-VC consists of 1 orchestrator skill, 7 sub-skills, 6 parallel subagents, 6 reference files, 3 Python scripts, and 2+ optional extensions. This document specifies each component.
+Claude-VC consists of 1 orchestrator skill, 9 sub-skills, 6 parallel subagents, 7 reference files, 2 Python scripts, and 2+ optional extensions. This document specifies each component.
 
 **Design principle**: The value is _judgment_, not data access. All core workflows operate on public data and user-provided documents. External data sources are optional extensions that supplement analysis, never a prerequisite.
 
@@ -15,12 +15,17 @@ Claude-VC consists of 1 orchestrator skill, 7 sub-skills, 6 parallel subagents, 
 name: vc
 description: >
   Venture capital analysis toolkit. Deal screening, investment memo
-  generation, cap table modeling, term sheet analysis, due diligence
-  checklists, and portfolio monitoring. Use when user says "vc",
-  "deal screening", "investment memo", "cap table", "term sheet",
-  "due diligence", "portfolio", "compare", "pitch deck",
-  "startup analysis", "valuation", "SAFE", "convertible note",
-  or "funding round".
+  generation, cap table modeling, term sheet analysis, financial
+  modeling, KPI reporting, due diligence checklists, and portfolio
+  reporting. Use when user says "vc", "deal screening",
+  "investment memo", "cap table", "term sheet", "due diligence",
+  "portfolio", "compare", "pitch deck", "startup analysis",
+  "valuation", "SAFE", "convertible note", "funding round",
+  "financial model", "3-statement", "projections", "P&L",
+  "income statement", "balance sheet", "cash flow", "KPIs",
+  "metrics", "SaaS metrics", "unit economics report",
+  "burn multiple", "magic number", "Rule of 40",
+  or "KPI dashboard".
 ---
 ```
 
@@ -32,6 +37,8 @@ description: >
 | `/vc memo`         | `vc-memo`      | Generate structured investment memo     |
 | `/vc terms <file>` | `vc-terms`     | Analyze term sheet or SAFE              |
 | `/vc captable`     | `vc-captable`  | Model cap table and dilution            |
+| `/vc model`        | `vc-model`     | Generate 3-statement financial model    |
+| `/vc kpi`          | `vc-kpi`       | Generate KPI report with benchmarks     |
 | `/vc compare`      | `vc-compare`   | Side-by-side company comparison         |
 | `/vc diligence`    | `vc-diligence` | Generate and track DD checklist         |
 | `/vc portfolio`    | `vc-portfolio` | Aggregate and report on portfolio       |
@@ -40,7 +47,7 @@ description: >
 
 The orchestrator handles two modes:
 
-1. **Direct routing**: For single-skill commands (`/vc terms`, `/vc captable`), load the sub-skill and hand off.
+1. **Direct routing**: For single-skill commands (`/vc terms`, `/vc captable`, `/vc model`, `/vc kpi`), load the sub-skill and hand off.
 2. **Parallel orchestration**: For `/vc screen --full` or `/vc memo --comprehensive`, spawn 6 subagents concurrently, collect results, and synthesize.
 
 ### Reference File Loading
@@ -179,34 +186,117 @@ description: >
 ---
 name: vc-captable
 description: >
-  Model cap tables, dilution scenarios, and waterfall distributions.
-  Parse existing cap tables or build from scratch. Supports common
-  stock, preferred stock, SAFEs, convertible notes, and option pools.
-  Use when user says "cap table", "dilution", "waterfall", "ownership",
-  "option pool", or "pro forma".
+  Cap table modeling -- ownership, dilution, SAFE conversion,
+  multi-series liquidation waterfall, exit scenario analysis.
+  Informed by the Open Cap Table Format (OCF) standard.
 ---
 ```
 
 **Inputs**:
 
 - Existing cap table (CSV, JSON, or natural language)
+- Stock classes with seniority, liquidation multiples, participation rights
+- SAFE/note conversion parameters (including MFN status, capitalization definition)
 - Proposed round terms (for pro forma modeling)
-- SAFE/note conversion parameters
 
 **Workflow**:
 
-1. Parse current ownership structure
-2. If new round: apply conversion mechanics and new investment
-3. Invoke `scripts/captable.py` for precise calculations
-4. Generate ownership tables and dilution analysis
+1. Parse current ownership structure (supports OCF-informed data model)
+2. If SAFEs/notes: resolve MFN to lowest cap, apply capitalization definitions
+3. If new round: apply conversion mechanics and new investment
+4. Invoke `scripts/captable.py` for precise calculations
+5. Generate ownership tables, dilution analysis, waterfall distributions
+
+**Commands**: `model`, `dilution`, `waterfall`, `convert`, `scenarios`
 
 **Outputs**:
 
-- Current ownership table (Shareholder | Shares | % Ownership | $ Value)
+- Current ownership table (Holder | Class | Shares | Ownership % | Investment)
 - Pro forma table (post-round)
 - Dilution impact by shareholder class
-- Waterfall distribution at multiple exit valuations
-- Option pool analysis (size, available, burn rate)
+- Multi-series waterfall distribution with seniority ordering
+- SAFE/note conversion details (cap vs discount, MFN resolution, accrued interest)
+- Multi-exit scenario matrix (payout per holder at different exit values)
+
+### `vc-model` -- Financial Model Generation
+
+```yaml
+---
+name: vc-model
+description: >
+  Generate a simplified 3-statement financial model (income statement,
+  balance sheet, cash flow). Accepts pitch deck data, company financials,
+  or assumptions. Projects 3-5 years forward. Use when user says
+  "financial model", "3-statement", "projections", "P&L",
+  "income statement", "balance sheet", or "cash flow".
+---
+```
+
+**Inputs**:
+
+- Pitch deck context, raw financials, or verbal assumptions
+- Minimum: current revenue, growth rate, gross margin
+- Optional: OpEx breakdown, cash on hand, projection period
+- Optional: `--docx [filename]` for Word export
+
+**Workflow**:
+
+1. Gather company data from context or user input
+2. Derive reasonable assumptions for missing inputs (stage/sector benchmarks)
+3. Load `references/industry-multiples.md` for sector benchmarks
+4. Build JSON scenario, invoke `scripts/financial_model.py three_statement`
+5. Present 3 markdown tables + analysis (break-even, runway, sensitivities)
+
+**Outputs**:
+
+- Income Statement (Revenue → COGS → Gross Profit → OpEx → EBITDA → Net Income)
+- Balance Sheet (Cash, AR, Assets, AP, Equity with A=L+E consistency)
+- Cash Flow Statement (Operating, Investing, Financing, Ending Cash)
+- Analysis: break-even timing, cash runway, margin progression, key sensitivities
+- Optional: bull/base/bear scenario comparison
+
+### `vc-kpi` -- KPI Reporting
+
+```yaml
+---
+name: vc-kpi
+description: >
+  Generate KPI reports from company data. Auto-detects company type
+  (SaaS, marketplace, consumer, fintech) and calculates relevant
+  metrics with industry benchmarks. Use when user says "KPIs",
+  "metrics", "SaaS metrics", "unit economics report", "burn multiple",
+  "magic number", "Rule of 40", or "KPI dashboard".
+---
+```
+
+**Inputs**:
+
+- Company data (JSON, CSV, verbal description, or prior context)
+- Company type auto-detected or user-specified
+
+**Workflow**:
+
+1. Parse company data and auto-detect business model type
+2. For SaaS: invoke `scripts/financial_model.py unit_economics` + compute additional KPIs
+3. For other types: compute KPIs directly
+4. Load `references/industry-multiples.md` for benchmarking
+5. Assign health status per metric (Healthy / Watch / Concerning)
+
+**KPI sets by type**:
+
+- **SaaS**: ARR, NRR, CAC, LTV, LTV:CAC, churn, payback, magic number, burn multiple, Rule of 40, gross margin, revenue/employee
+- **Marketplace**: GMV, take rate, liquidity ratio, repeat rate, contribution margin
+- **Consumer**: DAU/MAU, retention (D1/D7/D30), viral coefficient, ARPU
+- **Fintech**: NIM, NPL ratio, CAC payback, take rate
+- **General** (always included): Revenue growth, burn rate, runway, headcount
+
+**Outputs**:
+
+- KPI Report with company type, reporting period, data source
+- Key metrics summary table (Metric | Value | Benchmark | Status)
+- Detailed analysis by category (growth, unit economics, efficiency)
+- Flags: Healthy metrics, Concerning metrics with explanations
+- Recommendation synthesis
 
 ### `vc-compare` -- Company Comparison
 
@@ -430,51 +520,73 @@ You are a <role>. When given company information:
 
 ### `scripts/financial_model.py`
 
-**Purpose**: Financial calculations that require precision (DCF, revenue projections, unit economics). Note: this generates starting-point models and CSV output. The real tool for interactive financial modeling is a spreadsheet -- Claude-VC generates the foundation, not the final model.
+**Purpose**: Financial calculations that require precision (DCF, revenue projections, unit economics, 3-statement models). Generates starting-point models and structured JSON output. The real tool for interactive financial modeling is a spreadsheet -- Claude-VC generates the foundation, not the final model.
 
 **CLI Interface**:
 
 ```bash
-python financial_model.py dcf --revenue 5000000 --growth-rate 0.8 --discount-rate 0.25 --terminal-multiple 10 --years 5
-python financial_model.py unit-economics --cac 500 --ltv 5000 --payback-months 12 --churn-rate 0.05
-python financial_model.py revenue-projection --current-arr 2000000 --growth-rates 1.0,0.8,0.6,0.4,0.3
+# All commands use JSON-in/JSON-out via --input flag
+python financial_model.py dcf --input scenario.json
+python financial_model.py unit_economics --input scenario.json
+python financial_model.py projections --input scenario.json
+python financial_model.py multiples --input scenario.json
+python financial_model.py three_statement --input scenario.json
 ```
 
-**Output**: JSON with calculation results and methodology notes.
+**Commands**:
+
+| Command | Description |
+|---------|-------------|
+| `dcf` | Discounted cash flow valuation |
+| `unit_economics` | CAC, LTV, LTV:CAC, payback, magic number, NRR |
+| `projections` | Revenue projections with growth decay |
+| `multiples` | Valuation via revenue/EBITDA multiples |
+| `three_statement` | Income statement, balance sheet, cash flow (internally consistent) |
+
+**`three_statement` details**: Produces a 3-5 year projection with:
+- Income Statement: Revenue, COGS, gross profit, S&M, R&D, G&A, EBITDA, D&A, EBIT, interest, tax, net income
+- Balance Sheet: Cash, AR, total assets, AP, debt, equity (A=L+E enforced)
+- Cash Flow: Operating CF (net income + D&A + WC changes), investing CF (capex), financing CF, ending cash
+- Summary: break-even year, ending cash, terminal EBITDA margin
+
+**Output**: JSON with calculation results.
 
 **Dependencies**: stdlib only (no external packages).
 
 ### `scripts/captable.py`
 
-**Purpose**: Cap table calculations, SAFE/note conversions, waterfall distributions.
+**Purpose**: Cap table calculations, SAFE/note conversions, multi-series waterfall distributions, exit scenario analysis. Data model informed by the Open Cap Table Format (OCF) standard.
 
 **CLI Interface**:
 
 ```bash
-python captable.py ownership --input cap_table.json
-python captable.py dilution --input cap_table.json --new-round '{"pre_money": 20000000, "investment": 5000000}'
-python captable.py waterfall --input cap_table.json --exit-values 50000000,100000000,200000000
-python captable.py safe-convert --safe '{"invested": 500000, "cap": 10000000, "discount": 0.2}' --round '{"pre_money": 15000000}'
+# All commands use JSON-in/JSON-out via --input flag
+python captable.py model --input cap_table.json
+python captable.py dilution --input cap_table.json
+python captable.py waterfall --input cap_table.json
+python captable.py convert --input cap_table.json
+python captable.py scenarios --input cap_table.json
 ```
 
-**Output**: JSON with ownership tables, dilution percentages, and waterfall distributions.
+**Commands**:
+
+| Command | Description |
+|---------|-------------|
+| `model` | Build and display cap table with ownership percentages |
+| `dilution` | Show dilution impact from a new round |
+| `waterfall` | Liquidation waterfall distribution at a given exit value |
+| `convert` | SAFE and convertible note conversion details |
+| `scenarios` | Run waterfall at multiple exit values for comparison |
+
+**Key features** (OCF-informed):
+- **Stock classes**: `StockClass` with seniority, liquidation multiple, participating/non-participating, participation cap
+- **Multi-series waterfall**: Preferences paid in seniority order (highest first), non-participating preferred converts if as-common payout is higher
+- **MFN SAFE resolution**: Scans non-MFN SAFEs for lowest cap, applies to MFN SAFEs
+- **Capitalization definitions**: `all_outstanding`, `shares_only`, `shares_and_options` — controls SAFE conversion denominator
+- **Compound interest**: Notes support simple and compound interest with configurable compounding frequency
+**Output**: JSON with ownership tables, dilution percentages, waterfall distributions, and conversion details.
 
 **Dependencies**: stdlib only.
-
-### `scripts/fetch_company.py`
-
-**Purpose**: Fetch and normalize company data from public sources.
-
-**CLI Interface**:
-
-```bash
-python fetch_company.py --url https://example.com
-python fetch_company.py --domain example.com --sources web,linkedin
-```
-
-**Output**: JSON with normalized company profile (name, description, team, funding, metrics).
-
-**Dependencies**: `httpx` (async HTTP client).
 
 ## Reference Files
 
@@ -530,6 +642,41 @@ All reference files live under `vc/references/` and are loaded on-demand by sub-
 - Customization instructions: how users can override weights and criteria
 - Stage-specific scoring adjustments
 - Red flag checklist (automatic dealbreakers)
+
+### `disclaimers.md` (target: ~50 lines)
+
+- Standard disclaimer for screening, memos, portfolio reports
+- Enhanced disclaimer for valuations, term sheet analysis, cap table outputs, financial projections
+- Regulatory compliance language (not investment advice, not registered)
+
+## Implementation Status
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Orchestrator (`vc/SKILL.md`) | Complete | Routes 9 commands |
+| `vc-screen` | Complete | Quick + full screen modes |
+| `vc-memo` | Complete | 12-section memo, native DOCX export |
+| `vc-terms` | Complete | NVCA baseline comparison |
+| `vc-captable` | Complete | OCF-informed, multi-series waterfall |
+| `vc-model` | Complete | 3-statement model generation |
+| `vc-kpi` | Complete | Auto-detect type, benchmarks, health assessment |
+| `vc-compare` | Planned (Phase 3) | Parallel per-company agents |
+| `vc-diligence` | Planned (Phase 3) | Stage/sector-customized checklists |
+| `vc-portfolio` | Planned (Phase 4) | One-shot report generation |
+| `captable.py` | Complete | 5 commands, stock classes, MFN, compound interest |
+| `financial_model.py` | Complete | 5 commands including three_statement |
+| Parallel subagents | Planned (Phase 3) | 6 specialist agents |
+| Octagon AI extension | Planned (Phase 4) | MCP server integration |
+| SEC EDGAR extension | Planned (Phase 4) | Free raw filing access |
+
+## Error Handling
+
+Python scripts follow these patterns:
+- Invalid JSON input → clear error message with expected format
+- Missing required fields → error listing which fields are missing
+- Invalid numeric values → error with field name and constraint
+- All errors output as JSON: `{"error": "message"}`
+- Exit code 1 on error, 0 on success
 
 ## Extension System
 

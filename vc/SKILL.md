@@ -2,12 +2,17 @@
 name: vc
 description: >
   Venture capital analysis toolkit. Deal screening, investment memo
-  generation, cap table modeling, term sheet analysis, due diligence
-  checklists, and portfolio reporting. Use when user says "vc",
-  "deal screening", "investment memo", "cap table", "term sheet",
-  "due diligence", "portfolio", "compare", "pitch deck",
-  "startup analysis", "valuation", "SAFE", "convertible note",
-  or "funding round".
+  generation, cap table modeling, term sheet analysis, financial
+  modeling, KPI reporting, due diligence checklists, and portfolio
+  reporting. Use when user says "vc", "deal screening",
+  "investment memo", "cap table", "term sheet", "due diligence",
+  "portfolio", "compare", "pitch deck", "startup analysis",
+  "valuation", "SAFE", "convertible note", "funding round",
+  "financial model", "3-statement", "projections", "P&L",
+  "income statement", "balance sheet", "cash flow", "KPIs",
+  "metrics", "SaaS metrics", "unit economics report",
+  "burn multiple", "magic number", "Rule of 40",
+  or "KPI dashboard".
 ---
 
 # Claude-VC
@@ -22,6 +27,8 @@ Venture capital analysis toolkit. Routes to specialized sub-skills based on the 
 | `/vc memo`                  | Generate a structured investment memo                  |
 | `/vc terms <file>`          | Analyze a term sheet, SAFE, or convertible note        |
 | `/vc captable`              | Model cap table, dilution, and waterfall distributions |
+| `/vc model`                 | Generate a simplified 3-statement financial model      |
+| `/vc kpi`                   | Generate KPI reports with benchmarks and health scores |
 | `/vc compare <url1> <url2>` | Side-by-side company comparison                        |
 | `/vc diligence`             | Generate a due diligence checklist                     |
 | `/vc portfolio`             | Generate portfolio reports from provided data          |
@@ -30,13 +37,15 @@ Venture capital analysis toolkit. Routes to specialized sub-skills based on the 
 
 When the user provides arguments after `/vc`, determine the command:
 
-1. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `compare`, `diligence`, `portfolio`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, etc.) using the Skill tool, passing any remaining arguments.
+1. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `model`, `kpi`, `compare`, `diligence`, `portfolio`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, `vc-model`, `vc-kpi`, etc.) using the Skill tool, passing any remaining arguments.
 
 2. If no recognized command is given, analyze the user's intent:
    - URL or file path provided -> run the **default workflow** (see below)
    - Mentions "memo" or "write-up" -> route to `vc-memo`
    - Mentions "terms", "SAFE", "convertible" -> route to `vc-terms`
    - Mentions "cap table", "dilution", "ownership" -> route to `vc-captable`
+   - Mentions "financial model", "3-statement", "projections", "P&L", "income statement", "balance sheet", "cash flow" -> route to `vc-model`
+   - Mentions "KPIs", "metrics", "SaaS metrics", "unit economics report", "burn multiple", "magic number", "Rule of 40", "KPI dashboard" -> route to `vc-kpi`
    - Mentions "compare", "versus", "side by side" -> route to `vc-compare`
    - Mentions "diligence", "DD", "checklist" -> route to `vc-diligence`
    - Mentions "portfolio", "LP report", "KPIs" -> route to `vc-portfolio`

@@ -36,13 +36,24 @@ Goal: Cap table modeling and term sheet analysis -- the two workflows with no go
 - [x] Reference files: `term-sheet-terms.md`, `safe-mechanics.md`
 - [x] `scripts/financial_model.py` -- DCF, unit economics, projections
 - [x] Reference file: `industry-multiples.md`
+- [x] Financial model sub-skill (`vc-model/SKILL.md`) -- 3-statement model generation
+- [x] KPI reporting sub-skill (`vc-kpi/SKILL.md`) -- auto-detect company type, benchmark KPIs
+- [x] OCF-informed `captable.py` rewrite -- stock classes, multi-series waterfall, MFN SAFEs, compound interest, scenarios command
+- [x] `financial_model.py` `three_statement` command -- income statement, balance sheet, cash flow with internal consistency
+- [x] Removed `memo_to_docx.py` -- Claude generates DOCX natively
+- [x] Updated `vc-memo/SKILL.md` to use Claude's native DOCX generation
 
 ### Success Criteria
 
 - `/vc captable` correctly models SAFE conversions and multi-round dilution
+- `/vc captable` supports multi-series liquidation waterfall with seniority ordering
+- `/vc captable` resolves MFN SAFEs and supports compound interest on notes
 - `/vc terms` identifies non-standard provisions against NVCA baseline
+- `/vc model` generates internally consistent 3-statement model (A=L+E, cash flows match)
+- `/vc kpi` auto-detects company type and benchmarks metrics with health assessment
 - Python scripts produce verified-correct financial calculations
 - All cap table math validated against manual spreadsheet calculations
+- Python scripts pass ruff check and ruff format
 
 ## Phase 3: Parallel Agents and Full Screening
 
@@ -101,6 +112,8 @@ Goal: Production quality, documentation, and community readiness.
 
 Items not currently planned but worth tracking:
 
+- **OCF import/export**: Full Open Cap Table Format JSON import and export for interoperability with cap table management tools
+- **Vesting schedule modeling**: DAG-based vesting with cliff, acceleration, and milestone triggers (informed by OCF VestingTerms)
 - **Fund modeling**: LP/GP economics, management fees, carry calculations
 - **PitchBook extension**: Premium data source integration
 - **Multi-language**: Localization for non-English markets

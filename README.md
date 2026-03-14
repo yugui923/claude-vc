@@ -16,6 +16,8 @@ It is **not** a standalone app or MCP server. It installs into `~/.claude/` and 
 | `/vc memo`         | Generate a structured investment memo                  |
 | `/vc terms <file>` | Analyze a term sheet, SAFE, or convertible note        |
 | `/vc captable`     | Model cap table, dilution, and waterfall distributions |
+| `/vc model`        | Generate a simplified 3-statement financial model      |
+| `/vc kpi`          | Generate KPI reports with benchmarks and health scores |
 | `/vc compare`      | Side-by-side company comparison                        |
 | `/vc diligence`    | Generate a due diligence checklist                     |
 | `/vc portfolio`    | Generate portfolio reports from provided data          |
@@ -100,6 +102,22 @@ Interactively build or import a cap table. Model new rounds, SAFE conversions, o
 
 Compares each provision against NVCA model terms and current market standards. Flags non-standard or unusual provisions with severity ratings.
 
+### Financial Model
+
+```text
+/vc model
+```
+
+Generate a simplified 3-statement financial model (income statement, balance sheet, cash flow) from pitch deck data, company financials, or verbal assumptions. Projects 3-5 years forward with stage-appropriate defaults. Supports bull/base/bear scenario comparison.
+
+### KPI Report
+
+```text
+/vc kpi
+```
+
+Generate a KPI report from company data. Auto-detects company type (SaaS, marketplace, consumer, fintech) and calculates relevant metrics with industry benchmarks and health assessments (Healthy / Watch / Concerning).
+
 ## Architecture
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full system design.
@@ -107,7 +125,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the full system design.
 ```text
 claude-vc/
 ├── vc/                     # Orchestrator skill + reference files
-├── skills/                 # 7 sub-skills (screen, memo, terms, compare, ...)
+├── skills/                 # 9 sub-skills (screen, memo, terms, captable, model, kpi, ...)
 ├── agents/                 # 6 parallel subagents (financial, market, ...)
 ├── scripts/                # Python computation (cap table, DCF, ...)
 ├── extensions/             # Optional data source integrations
