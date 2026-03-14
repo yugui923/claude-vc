@@ -1,12 +1,40 @@
 # Claude-VC
 
-A Claude Code plugin for venture capital workflows. Deal screening, investment memo generation, cap table modeling, term sheet analysis, and portfolio monitoring -- all inside Claude Code (CLI or IDE).
+A plugin for venture capital workflows. Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio monitoring -- inside Claude Code and Claude Cowork.
+
+## Quick Start
+
+### Claude Cowork (desktop app)
+
+1. Open the Claude desktop app and go to the **Cowork** tab
+2. Click **Customize** in the left sidebar, then **Browse plugins**
+3. Search for **claude-vc** and click **Install**
+
+Once installed, type `/` or click **+** to see available skills. Use `/vc screen`, `/vc memo`, `/vc captable`, and more.
+
+### Claude Code (CLI)
+
+```bash
+claude plugin marketplace add yugui923/claude-vc
+claude plugin install claude-vc@claude-vc
+```
+
+Then use `/vc` commands in your Claude Code session.
+
+### Claude Code (IDE -- VS Code, JetBrains)
+
+Run these in the Claude Code panel input:
+
+```text
+/plugin marketplace add yugui923/claude-vc
+/plugin install claude-vc@claude-vc
+```
 
 ## What Is This?
 
-Claude-VC is a set of [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/skills) that extend Claude with VC-specific domain knowledge and computational tools. It follows the [orchestrator + sub-skills pattern](docs/decisions/001-skill-architecture.md) proven by [claude-seo](https://github.com/AgriciDaniel/claude-seo).
+Claude-VC is a [Claude plugin](https://code.claude.com/docs/en/plugins) that extends Claude with VC-specific domain knowledge and computational tools. It follows the [orchestrator + sub-skills pattern](docs/decisions/001-skill-architecture.md) proven by [claude-seo](https://github.com/AgriciDaniel/claude-seo).
 
-It is **not** a standalone app or MCP server. It is invoked via `/vc` slash commands inside Claude Code. Install via the plugin marketplace or the shell script below.
+It is **not** a standalone app or MCP server. It bundles skills, agents, and Python computation scripts into a plugin that works across Claude Cowork and Claude Code.
 
 ## Commands
 
@@ -22,28 +50,17 @@ It is **not** a standalone app or MCP server. It is invoked via `/vc` slash comm
 | `/vc diligence`    | Generate a due diligence checklist                     |
 | `/vc portfolio`    | Generate portfolio reports from provided data          |
 
-## Installation
+## Installation Details
 
-### Plugin Marketplace (recommended)
+### Updating
 
-The fastest way to install. Works in both **Claude Code CLI** and **Claude Code in your IDE** (VS Code, JetBrains).
+**Cowork**: Plugin updates appear automatically in the Customize panel.
 
-Run these commands in the Claude Code input:
+**Claude Code**: Run `/plugin marketplace update` or enable auto-updates in the `/plugin` Marketplaces tab.
 
-```text
-/plugin marketplace add yugui923/claude-vc
-/plugin install claude-vc@claude-vc
-```
+### Shell Script (alternative for CLI)
 
-To update later:
-
-```text
-/plugin marketplace update
-```
-
-### Shell Script (CLI only)
-
-If you prefer a manual install or don't use the plugin marketplace:
+If you prefer a manual install without the plugin marketplace:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yugui923/claude-vc/main/install.sh | bash
@@ -81,8 +98,10 @@ Add claude-vc to your project's `.claude/settings.json` so team members are auto
 
 ### Requirements
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (CLI or IDE extension)
 - Python 3.13+ (for financial computation scripts)
+- One of:
+  - [Claude desktop app](https://claude.com/download) with Cowork (Pro, Max, Team, or Enterprise plan)
+  - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI or IDE extension
 
 ### Optional Extensions
 
