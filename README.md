@@ -8,13 +8,14 @@ A plugin for venture capital workflows. Deal screening, investment memo generati
 
 1. Open the Claude desktop app and go to the **Cowork** tab
 2. Click **Customize** in the left sidebar, then **Browse plugins**
-3. Click **Upload plugin** and paste the GitHub repo URL:
+3. Go to the **Personal** tab, then click **Add marketplace from GitHub**
+4. Paste the repository URL:
    ```
    https://github.com/yugui923/claude-vc
    ```
-4. Click **Install**
+5. After installation, make sure the plugin is **enabled**
 
-Once installed, type `/` or click **+** to see available skills. Use `/vc screen`, `/vc memo`, `/vc captable`, and more.
+Once enabled, type `/` or click **+** to see available skills. Use `/vc screen`, `/vc memo`, `/vc captable`, and more.
 
 ### Claude Code (CLI)
 
