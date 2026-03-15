@@ -7,7 +7,7 @@ script tests from slower skill-level integration tests.
 
 **Location:** `tests/layer1/`
 **Run:** `uv run pytest` (default, runs automatically)
-**Requirements:** Python 3.13+, dev dependencies (`uv sync`)
+**Requirements:** Python 3.10+, dev dependencies (`uv sync`)
 
 Layer 1 tests exercise the Python scripts (`captable.py`, `financial_model.py`)
 directly — both by importing functions and by running the CLI as a subprocess.

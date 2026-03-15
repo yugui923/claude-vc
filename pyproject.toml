@@ -1,7 +1,7 @@
 [project]
 name = "claude-vc"
 version = "1.2.0"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 
 [dependency-groups]
 dev = [
@@ -20,7 +20,7 @@ markers = [
 addopts = "-m 'not smoke'"
 
 [tool.pyright]
-pythonVersion = "3.13"
+pythonVersion = "3.10"
 typeCheckingMode = "standard"
 include = ["skills/vc/scripts", "tests"]
 extraPaths = ["skills/vc/scripts", "tests"]

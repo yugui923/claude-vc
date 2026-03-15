@@ -102,7 +102,7 @@ Add claude-vc to your project's `.claude/settings.json` so team members are auto
 
 ### Requirements
 
-- Python 3.13+ (for financial computation scripts)
+- Python 3.10+ (for financial computation scripts)
 - One of:
   - [Claude desktop app](https://claude.com/download) with Cowork (Pro, Max, Team, or Enterprise plan)
   - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI or IDE extension
