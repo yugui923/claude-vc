@@ -8,7 +8,7 @@
 
 The SEO plugin works because **the hard part is judgment, not data access**. The data is a public webpage. The value is knowing what to check, how to score it, and what to recommend.
 
-For VC workflows, the same question applies: **is the bottleneck data access or analysis?** Some VC tasks are judgment-heavy (analyzing a pitch deck, comparing term sheets, writing memos) and map perfectly to a Claude Code skill. Others are data-infrastructure tasks (CRM pipelines, scheduled monitoring, large dataset processing) that belong in a proper application.
+For VC workflows, the same question applies: **is the bottleneck data access or analysis?** Some VC tasks are judgment-heavy (analyzing a pitch deck, comparing term sheets, writing memos) and map perfectly to a Claude Cowork or Claude Code plugin. Others are data-infrastructure tasks (CRM pipelines, scheduled monitoring, large dataset processing) that belong in a proper application.
 
 This ADR defines the boundary.
 
@@ -43,23 +43,23 @@ These workflows match the claude-seo pattern: public or user-provided inputs, ju
 
 ### Weak Fit (out of scope)
 
-These workflows require capabilities Claude Code does not have. They belong in a proper application using the Claude API directly.
+These workflows require capabilities that Claude Cowork and Claude Code do not have. They belong in a proper application using the Claude API directly.
 
 | Workflow                                      | Why It Doesn't Fit                                                                                                             |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Pull from PitchBook/Crunchbase/CB Insights    | Proprietary APIs, persistent auth, rate limits. Better as MCP extensions that _supplement_ analysis, not as core functionality |
-| CRM integration (deal pipeline tracking)      | Needs OAuth flows, persistent state, database. Claude Code is stateless                                                        |
-| Portfolio monitoring dashboards               | Claude Code is CLI/interactive, not a dashboard runtime                                                                        |
-| Scheduled/automated data pulls                | Claude Code is on-demand, not a cron job                                                                                       |
+| CRM integration (deal pipeline tracking)      | Needs OAuth flows, persistent state, database. Cowork/Code is stateless                                                        |
+| Portfolio monitoring dashboards               | Cowork/Code is interactive, not a dashboard runtime                                                                            |
+| Scheduled/automated data pulls                | Cowork/Code is on-demand, not a cron job                                                                                       |
 | Large dataset processing (1000s of companies) | Context window limits, no persistent storage                                                                                   |
 | Real-time deal flow alerts                    | Requires persistent process, push notifications                                                                                |
-| Multi-user collaboration                      | Claude Code is single-user by design                                                                                           |
+| Multi-user collaboration                      | Cowork/Code is single-user by design                                                                                           |
 
 ### The Three-Layer Architecture
 
 For teams that need the out-of-scope capabilities, the recommended approach is layered:
 
-1. **MCP servers** for authenticated data sources (Crunchbase, PitchBook, internal DB). These give Claude Code access without baking credentials into skills. They are optional extensions, not core.
+1. **MCP servers** for authenticated data sources (Crunchbase, PitchBook, internal DB). These give Claude Cowork / Code access without baking credentials into skills. They are optional extensions, not core.
 
 2. **Claude-VC skills** for the analysis layer. This is the judgment-heavy work: screening, memos, comparisons, term analysis, cap table modeling. All inputs are public data, user-provided documents, or data surfaced by MCP servers.
 
@@ -69,7 +69,7 @@ For teams that need the out-of-scope capabilities, the recommended approach is l
 
 ### Positive
 
-- Clear scope prevents feature creep into areas where Claude Code is the wrong tool
+- Clear scope prevents feature creep into areas where Cowork/Code is the wrong tool
 - Core functionality works immediately without any API keys or external services
 - Teams with existing data infrastructure can layer MCP extensions on top
 - Avoids the trap of building a mediocre version of Carta, Visible, or Affinity inside a CLI tool

@@ -2,9 +2,10 @@
 
 ## Project Overview
 
-Claude-VC is a Claude Code skill plugin for venture capital analysis. It
-provides deal screening, investment memos, cap table modeling, term sheet
-analysis, financial modeling, and KPI reporting through the `/vc` command.
+Claude-VC is a Claude Cowork and Claude Code plugin for venture capital
+analysis. It provides deal screening, investment memos, cap table modeling,
+term sheet analysis, financial modeling, and KPI reporting through the `/vc`
+command.
 
 ## Key Paths
 

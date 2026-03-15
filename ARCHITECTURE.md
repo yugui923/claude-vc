@@ -4,9 +4,9 @@
 
 ## Overview
 
-Claude-VC is a Claude Code skill ecosystem for venture capital workflows. It follows the **orchestrator + sub-skills** pattern established by [claude-seo](https://github.com/AgriciDaniel/claude-seo), adapted for deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio monitoring.
+Claude-VC is a Claude Cowork and Claude Code plugin for venture capital workflows. It follows the **orchestrator + sub-skills** pattern established by [claude-seo](https://github.com/AgriciDaniel/claude-seo), adapted for deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio monitoring.
 
-The system is installed into `~/.claude/` and invoked via `/vc` slash commands. It is **not** an MCP server or standalone application -- it is a collection of markdown-based skills, agent definitions, Python computation scripts, and on-demand reference files that extend Claude Code's capabilities for VC professionals.
+The system is installed into `~/.claude/` and invoked via `/vc` slash commands. It is **not** an MCP server or standalone application -- it is a collection of markdown-based skills, agent definitions, Python computation scripts, and on-demand reference files that extend Claude's capabilities for VC professionals. It works across both Claude Cowork (desktop app) and Claude Code (CLI and IDE).
 
 **Design principle**: The value of this tool is _judgment_, not data access. Like claude-seo, the inputs are public data and user-provided documents. The intelligence is knowing what to check, how to score, and what to recommend. Data infrastructure (CRM, dashboards, scheduled pipelines) belongs in a proper application, not a CLI skill. See [ADR-004](docs/decisions/004-scope-boundaries.md) for full scope boundaries.
 
@@ -270,9 +270,9 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 
 | Component       | Technology                       | Rationale                                       |
 | --------------- | -------------------------------- | ----------------------------------------------- |
-| Skills & agents | Markdown + YAML frontmatter      | Claude Code native format                       |
+| Skills & agents | Markdown + YAML frontmatter      | Claude Cowork / Code native format              |
 | Computation     | Python 3.10+ (stdlib only)       | Financial calculations Claude can't do natively |
-| Extensions      | MCP servers                      | Standard Claude Code extension pattern          |
+| Extensions      | MCP servers                      | Standard Claude Cowork / Code extension pattern |
 | Distribution    | Plugin marketplace, `install.sh` | Marketplace preferred; shell script as fallback |
 | License         | MIT                              | Matches claude-seo precedent                    |
 
@@ -281,7 +281,7 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 - SKILL.md files must stay under 500 lines / 5000 tokens
 - Reference files must stay under 200 lines
 - Python scripts must use only stdlib for core functionality (httpx/pydantic for optional features)
-- Subagents cannot spawn other subagents (Claude Code limitation)
+- Subagents cannot spawn other subagents (Claude Cowork / Code limitation)
 - All financial outputs include regulatory disclaimers (see ADR-003)
 - No investment advice -- tool is for analysis and information only
 

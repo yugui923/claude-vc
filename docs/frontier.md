@@ -1,4 +1,4 @@
-# The AI Frontier
+# The AI Frontier in Venture Capital
 
 > Where AI capability ends and human judgment begins — a living record.
 

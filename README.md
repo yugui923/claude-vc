@@ -1,6 +1,6 @@
 # Claude-VC
 
-A plugin for venture capital workflows. Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio monitoring -- inside Claude Code and Claude Cowork.
+A plugin for venture capital workflows. Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio monitoring -- inside Claude Cowork and Claude Code.
 
 ## Quick Start
 
@@ -38,7 +38,7 @@ Run these in the Claude Code panel input:
 
 Claude-VC is a [Claude plugin](https://code.claude.com/docs/en/plugins) that extends Claude with VC-specific domain knowledge and computational tools. It follows the [orchestrator + sub-skills pattern](docs/decisions/001-skill-architecture.md) proven by [claude-seo](https://github.com/AgriciDaniel/claude-seo).
 
-It is **not** a standalone app or MCP server. It bundles skills, agents, and Python computation scripts into a plugin that works across Claude Cowork and Claude Code.
+It is **not** a standalone app or MCP server. It bundles skills, agents, and Python computation scripts into a plugin that works across Claude Cowork (desktop app) and Claude Code (CLI and IDE).
 
 ## Commands
 
@@ -53,6 +53,10 @@ It is **not** a standalone app or MCP server. It bundles skills, agents, and Pyt
 | `/vc compare`      | Side-by-side company comparison                        |
 | `/vc diligence`    | Generate a due diligence checklist                     |
 | `/vc portfolio`    | Generate portfolio reports from provided data          |
+
+## The AI Frontier in Venture Capital
+
+See [docs/frontier.md](docs/frontier.md) — a living tracker of what AI can and cannot reliably do across venture capital workflows today, covering all state-of-the-art tools on the market (including but not limited to claude-vc).
 
 ## Installation Details
 
@@ -104,8 +108,8 @@ Add claude-vc to your project's `.claude/settings.json` so team members are auto
 
 - Python 3.10+ (for financial computation scripts)
 - One of:
-  - [Claude desktop app](https://claude.com/download) with Cowork (Pro, Max, Team, or Enterprise plan)
-  - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI or IDE extension
+  - [Claude Cowork](https://claude.com/download) (desktop app — Pro, Max, Team, or Enterprise plan)
+  - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (CLI or IDE extension)
 
 ### Optional Extensions
 

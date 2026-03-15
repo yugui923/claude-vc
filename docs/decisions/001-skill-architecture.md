@@ -6,7 +6,7 @@
 
 ## Context
 
-We need an architecture for a Claude Code extension that provides venture capital workflow automation. The key requirements are:
+We need an architecture for a Claude Cowork / Claude Code plugin that provides venture capital workflow automation. The key requirements are:
 
 1. Multiple distinct workflows (screening, memos, cap tables, terms, portfolio)
 2. Some workflows benefit from parallel analysis (e.g., screening needs financial, market, technical, and legal analysis simultaneously)
@@ -52,7 +52,7 @@ Build a standalone MCP server that exposes VC tools.
 
 ### Standalone CLI Application
 
-Build a Python CLI that Claude Code invokes as a single tool.
+Build a Python CLI that Claude invokes as a single tool.
 
 **Rejected because**: This puts the orchestration logic outside Claude, losing the benefit of LLM judgment in routing and synthesis. It also makes the system opaque to users who want to customize workflows.
 
