@@ -4,23 +4,26 @@
 
 This document tracks what AI can and cannot reliably do in venture capital
 analysis. It reflects the **state of the art across all AI tools on the
-market** — not only what claude-vc provides.
+market** — not only what [claude-vc](https://github.com/yugui923/claude-vc)
+provides.
 
-## Scope of claude-vc
+## Scope of [claude-vc](https://github.com/yugui923/claude-vc)
 
-Claude-vc is an open-source Claude Code skill plugin focused on deal screening,
-investment memos, cap table modeling, term sheet analysis, financial modeling,
-and KPI reporting. It does not intend to be an all-encompassing VC platform. It
-will gradually expand, but it does not aim to replicate proprietary tools like
-Harmonic (deal sourcing), Affinity (CRM), PitchBook (data), Luminance (legal
-review), or Standard Metrics (portfolio monitoring).
+[Claude-vc](https://github.com/yugui923/claude-vc) is an open-source Claude
+Code skill plugin focused on deal screening, investment memos, cap table
+modeling, term sheet analysis, financial modeling, and KPI reporting. It does
+not intend to be an all-encompassing VC platform. It will gradually expand, but
+it does not aim to replicate proprietary tools like Harmonic (deal sourcing),
+Affinity (CRM), PitchBook (data), Luminance (legal review), or Standard
+Metrics (portfolio monitoring).
 
 Achieving state-of-the-art performance in venture capital AI today requires
 integrating a dozen or more MCP servers, proprietary data subscriptions, and
 specialized platforms. Without a larger maintainer community, it is not feasible
 for a single open-source plugin to maintain those integrations. This document
 therefore serves as a map — it tells you what is possible with the right
-combination of tools, even where claude-vc does not yet cover it.
+combination of tools, even where
+[claude-vc](https://github.com/yugui923/claude-vc) does not yet cover it.
 
 ## Status key
 
