@@ -268,13 +268,13 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 
 ## Technology Stack
 
-| Component       | Technology                          | Rationale                                       |
-| --------------- | ----------------------------------- | ----------------------------------------------- |
-| Skills & agents | Markdown + YAML frontmatter         | Claude Code native format                       |
-| Computation     | Python 3.10+ (stdlib only)          | Financial calculations Claude can't do natively |
-| Extensions      | MCP servers                         | Standard Claude Code extension pattern          |
-| Distribution    | Plugin marketplace, `install.sh`    | Marketplace preferred; shell script as fallback  |
-| License         | MIT                                 | Matches claude-seo precedent                    |
+| Component       | Technology                       | Rationale                                       |
+| --------------- | -------------------------------- | ----------------------------------------------- |
+| Skills & agents | Markdown + YAML frontmatter      | Claude Code native format                       |
+| Computation     | Python 3.10+ (stdlib only)       | Financial calculations Claude can't do natively |
+| Extensions      | MCP servers                      | Standard Claude Code extension pattern          |
+| Distribution    | Plugin marketplace, `install.sh` | Marketplace preferred; shell script as fallback |
+| License         | MIT                              | Matches claude-seo precedent                    |
 
 ## Constraints
 

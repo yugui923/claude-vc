@@ -535,15 +535,16 @@ python financial_model.py three_statement --input scenario.json
 
 **Commands**:
 
-| Command | Description |
-|---------|-------------|
-| `dcf` | Discounted cash flow valuation |
-| `unit_economics` | CAC, LTV, LTV:CAC, payback, magic number, NRR |
-| `projections` | Revenue projections with growth decay |
-| `multiples` | Valuation via revenue/EBITDA multiples |
+| Command           | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `dcf`             | Discounted cash flow valuation                                     |
+| `unit_economics`  | CAC, LTV, LTV:CAC, payback, magic number, NRR                      |
+| `projections`     | Revenue projections with growth decay                              |
+| `multiples`       | Valuation via revenue/EBITDA multiples                             |
 | `three_statement` | Income statement, balance sheet, cash flow (internally consistent) |
 
 **`three_statement` details**: Produces a 3-5 year projection with:
+
 - Income Statement: Revenue, COGS, gross profit, S&M, R&D, G&A, EBITDA, D&A, EBIT, interest, tax, net income
 - Balance Sheet: Cash, AR, total assets, AP, debt, equity (A=L+E enforced)
 - Cash Flow: Operating CF (net income + D&A + WC changes), investing CF (capex), financing CF, ending cash
@@ -570,21 +571,22 @@ python captable.py scenarios --input cap_table.json
 
 **Commands**:
 
-| Command | Description |
-|---------|-------------|
-| `model` | Build and display cap table with ownership percentages |
-| `dilution` | Show dilution impact from a new round |
+| Command     | Description                                              |
+| ----------- | -------------------------------------------------------- |
+| `model`     | Build and display cap table with ownership percentages   |
+| `dilution`  | Show dilution impact from a new round                    |
 | `waterfall` | Liquidation waterfall distribution at a given exit value |
-| `convert` | SAFE and convertible note conversion details |
-| `scenarios` | Run waterfall at multiple exit values for comparison |
+| `convert`   | SAFE and convertible note conversion details             |
+| `scenarios` | Run waterfall at multiple exit values for comparison     |
 
 **Key features** (OCF-informed):
+
 - **Stock classes**: `StockClass` with seniority, liquidation multiple, participating/non-participating, participation cap
 - **Multi-series waterfall**: Preferences paid in seniority order (highest first), non-participating preferred converts if as-common payout is higher
 - **MFN SAFE resolution**: Scans non-MFN SAFEs for lowest cap, applies to MFN SAFEs
 - **Capitalization definitions**: `all_outstanding`, `shares_only`, `shares_and_options` — controls SAFE conversion denominator
 - **Compound interest**: Notes support simple and compound interest with configurable compounding frequency
-**Output**: JSON with ownership tables, dilution percentages, waterfall distributions, and conversion details.
+  **Output**: JSON with ownership tables, dilution percentages, waterfall distributions, and conversion details.
 
 **Dependencies**: stdlib only.
 
@@ -651,27 +653,28 @@ All reference files live under `skills/vc/references/` and are loaded on-demand 
 
 ## Implementation Status
 
-| Component | Status | Notes |
-|-----------|--------|-------|
-| Orchestrator (`skills/vc/SKILL.md`) | Complete | Routes 9 commands |
-| `vc-screen` | Complete | Quick + full screen modes |
-| `vc-memo` | Complete | 12-section memo, native DOCX export |
-| `vc-terms` | Complete | NVCA baseline comparison |
-| `vc-captable` | Complete | OCF-informed, multi-series waterfall |
-| `vc-model` | Complete | 3-statement model generation |
-| `vc-kpi` | Complete | Auto-detect type, benchmarks, health assessment |
-| `vc-compare` | Planned (Phase 3) | Parallel per-company agents |
-| `vc-diligence` | Planned (Phase 3) | Stage/sector-customized checklists |
-| `vc-portfolio` | Planned (Phase 4) | One-shot report generation |
-| `captable.py` | Complete | 5 commands, stock classes, MFN, compound interest |
-| `financial_model.py` | Complete | 5 commands including three_statement |
-| Parallel subagents | Planned (Phase 3) | 6 specialist agents |
-| Octagon AI extension | Planned (Phase 4) | MCP server integration |
-| SEC EDGAR extension | Planned (Phase 4) | Free raw filing access |
+| Component                           | Status            | Notes                                             |
+| ----------------------------------- | ----------------- | ------------------------------------------------- |
+| Orchestrator (`skills/vc/SKILL.md`) | Complete          | Routes 9 commands                                 |
+| `vc-screen`                         | Complete          | Quick + full screen modes                         |
+| `vc-memo`                           | Complete          | 12-section memo, native DOCX export               |
+| `vc-terms`                          | Complete          | NVCA baseline comparison                          |
+| `vc-captable`                       | Complete          | OCF-informed, multi-series waterfall              |
+| `vc-model`                          | Complete          | 3-statement model generation                      |
+| `vc-kpi`                            | Complete          | Auto-detect type, benchmarks, health assessment   |
+| `vc-compare`                        | Planned (Phase 3) | Parallel per-company agents                       |
+| `vc-diligence`                      | Planned (Phase 3) | Stage/sector-customized checklists                |
+| `vc-portfolio`                      | Planned (Phase 4) | One-shot report generation                        |
+| `captable.py`                       | Complete          | 5 commands, stock classes, MFN, compound interest |
+| `financial_model.py`                | Complete          | 5 commands including three_statement              |
+| Parallel subagents                  | Planned (Phase 3) | 6 specialist agents                               |
+| Octagon AI extension                | Planned (Phase 4) | MCP server integration                            |
+| SEC EDGAR extension                 | Planned (Phase 4) | Free raw filing access                            |
 
 ## Error Handling
 
 Python scripts follow these patterns:
+
 - Invalid JSON input → clear error message with expected format
 - Missing required fields → error listing which fields are missing
 - Invalid numeric values → error with field name and constraint

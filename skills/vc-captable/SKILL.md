@@ -29,6 +29,7 @@ Parse the user's request to determine the operation:
 If the user hasn't provided enough detail, ask for the minimum required:
 
 ### For `model` (full cap table):
+
 - Founders and their share counts
 - Option pool size
 - SAFEs: amount, valuation cap, type (post-money/pre-money), discount,
@@ -38,12 +39,14 @@ If the user hasn't provided enough detail, ask for the minimum required:
 - Priced rounds: investment, pre-money valuation, option pool %
 
 ### For `waterfall`:
+
 - Exit value (or multiple exit values for scenarios)
 - Stock classes: name, seniority (higher = more senior), liquidation
   multiple, participating/non-participating, participation cap
 - All holders: shares, stock class, investment amount
 
 ### For `convert`:
+
 - Founders and shares
 - SAFE/note details including MFN status and capitalization definition
 - Priced round terms
@@ -72,11 +75,29 @@ series, define stock classes in the JSON:
 ```json
 {
   "stock_classes": [
-    {"class_id": "common", "name": "Common", "instrument_type": "common", "seniority": 1},
-    {"class_id": "series_a", "name": "Series A", "instrument_type": "preferred",
-     "seniority": 2, "liquidation_multiple": 1, "participating": false},
-    {"class_id": "series_b", "name": "Series B", "instrument_type": "preferred",
-     "seniority": 3, "liquidation_multiple": 1.5, "participating": true, "participation_cap": 3}
+    {
+      "class_id": "common",
+      "name": "Common",
+      "instrument_type": "common",
+      "seniority": 1
+    },
+    {
+      "class_id": "series_a",
+      "name": "Series A",
+      "instrument_type": "preferred",
+      "seniority": 2,
+      "liquidation_multiple": 1,
+      "participating": false
+    },
+    {
+      "class_id": "series_b",
+      "name": "Series B",
+      "instrument_type": "preferred",
+      "seniority": 3,
+      "liquidation_multiple": 1.5,
+      "participating": true,
+      "participation_cap": 3
+    }
   ]
 }
 ```
@@ -89,33 +110,35 @@ stock class via `stock_class_id`.
 ### Cap Table (`model`)
 
 | Holder | Class | Shares | Ownership % | Investment |
-|--------|-------|--------|-------------|------------|
-| ... | ... | ... | ... | ... |
+| ------ | ----- | ------ | ----------- | ---------- |
+| ...    | ...   | ...    | ...         | ...        |
 
 ### Waterfall (`waterfall`)
 
 Explain the distribution steps:
+
 1. Liquidation preferences paid in seniority order (most senior first)
 2. Participation rights (if applicable, with caps)
 3. Non-participating preferred: convert if as-common payout is higher
 4. Remaining distributed pro-rata to common holders
 
 | Holder | Class | Investment | Payout | Multiple | ROI |
-|--------|-------|------------|--------|----------|-----|
+| ------ | ----- | ---------- | ------ | -------- | --- |
 
 ### Scenarios (`scenarios`)
 
 Present a matrix showing each holder's payout at different exit values:
 
 | Exit Value | Founder | ESOP | Series A | Series B |
-|------------|---------|------|----------|----------|
-| $10M | ... | ... | ... | ... |
-| $25M | ... | ... | ... | ... |
-| $50M | ... | ... | ... | ... |
+| ---------- | ------- | ---- | -------- | -------- |
+| $10M       | ...     | ...  | ...      | ...      |
+| $25M       | ...     | ...  | ...      | ...      |
+| $50M       | ...     | ...  | ...      | ...      |
 
 ### Conversion (`convert`)
 
 Show each instrument's conversion details:
+
 - Price from cap vs price from discount
 - Which price was used and why
 - MFN resolution (if applicable)
@@ -127,6 +150,7 @@ Then show the resulting cap table.
 ## Validation
 
 After presenting results, verify:
+
 - All ownership percentages sum to 100%
 - Liquidation preferences don't exceed exit value
 - Share counts are internally consistent

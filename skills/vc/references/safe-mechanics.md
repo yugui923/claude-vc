@@ -28,13 +28,13 @@ Ownership depends on how much total capital converts.
 
 ### Key Differences
 
-| Aspect | Post-Money | Pre-Money |
-|--------|-----------|-----------|
-| Cap basis | Includes SAFE amount | Excludes SAFE amount |
-| Investor ownership | Known at signing | Unknown until conversion |
-| Multiple SAFEs | Don't dilute each other | Dilute each other |
-| Founder dilution | More dilutive per SAFE | Less dilutive per SAFE |
-| Market prevalence | Standard (2018+) | Legacy; still seen occasionally |
+| Aspect             | Post-Money              | Pre-Money                       |
+| ------------------ | ----------------------- | ------------------------------- |
+| Cap basis          | Includes SAFE amount    | Excludes SAFE amount            |
+| Investor ownership | Known at signing        | Unknown until conversion        |
+| Multiple SAFEs     | Don't dilute each other | Dilute each other               |
+| Founder dilution   | More dilutive per SAFE  | Less dilutive per SAFE          |
+| Market prevalence  | Standard (2018+)        | Legacy; still seen occasionally |
 
 ## Conversion Mechanics
 
@@ -72,11 +72,13 @@ The option pool (ESOP) is typically set or increased **before** conversion:
 ### Scenario: Two Post-Money SAFEs + Priced Round
 
 Given:
+
 - SAFE A: $500K at $5M cap → owns 10% ($500K / $5M)
 - SAFE B: $1M at $10M cap → owns 10% ($1M / $10M)
 - Series A: $3M at $15M pre-money
 
 Result:
+
 - SAFE A owns 10% (fixed at signing)
 - SAFE B owns 10% (fixed at signing)
 - Series A owns ~16.7% ($3M / $18M post-money)
@@ -85,6 +87,7 @@ Result:
 ### Scenario: Two Pre-Money SAFEs + Priced Round
 
 Same amounts but with pre-money caps:
+
 - SAFE A: $500K at $5M cap
 - SAFE B: $1M at $10M cap
 - Conversion prices depend on total shares at conversion time
@@ -119,6 +122,7 @@ Key metrics to compute after each round:
 ### Discount + Cap
 
 Investor gets the **better** of:
+
 - Cap-derived price: `valuation_cap / capitalization`
 - Discounted price: `round_price * (1 - discount_rate)`
 

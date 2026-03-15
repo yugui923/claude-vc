@@ -22,6 +22,7 @@ explain implications.
 ### Step 1: Read References
 
 Load these reference files (on-demand, not all at once):
+
 - `${CLAUDE_SKILL_DIR}/../vc/references/term-sheet-terms.md` — NVCA baseline and market norms
 - `${CLAUDE_SKILL_DIR}/../vc/references/safe-mechanics.md` — if analyzing a SAFE or convertible note
 
@@ -30,6 +31,7 @@ Load these reference files (on-demand, not all at once):
 Parse the document and extract key terms into structured categories:
 
 **Economics**:
+
 - Pre-money / post-money valuation
 - Investment amount and price per share
 - Liquidation preference (multiple, participating/non-participating, cap)
@@ -39,6 +41,7 @@ Parse the document and extract key terms into structured categories:
 - Valuation cap and discount (SAFEs/notes)
 
 **Control**:
+
 - Board composition
 - Protective provisions (list each)
 - Drag-along / tag-along rights
@@ -46,18 +49,21 @@ Parse the document and extract key terms into structured categories:
 - Voting rights
 
 **Founder Terms**:
+
 - Vesting schedule and cliff
 - Acceleration (single/double trigger)
 - Non-compete / non-solicit
 - IP assignment
 
 **Investor Rights**:
+
 - Pro-rata rights and major investor threshold
 - ROFR and co-sale
 - Registration rights
 - Redemption rights
 
 **Other**:
+
 - No-shop / exclusivity period
 - Conditions to closing
 - Legal fees allocation
@@ -67,13 +73,14 @@ Parse the document and extract key terms into structured categories:
 
 For each extracted term, compare against the reference baseline:
 
-| Term | Proposed | Market Standard | Assessment |
-|------|----------|----------------|------------|
-| Liquidation pref | 1x participating | 1x non-participating | Investor-favorable |
-| Anti-dilution | Full ratchet | Broad-based weighted avg | Aggressive |
-| ... | ... | ... | ... |
+| Term             | Proposed         | Market Standard          | Assessment         |
+| ---------------- | ---------------- | ------------------------ | ------------------ |
+| Liquidation pref | 1x participating | 1x non-participating     | Investor-favorable |
+| Anti-dilution    | Full ratchet     | Broad-based weighted avg | Aggressive         |
+| ...              | ...              | ...                      | ...                |
 
 Assessment categories:
+
 - **Standard**: Matches NVCA model / market norm
 - **Investor-favorable**: Benefits investor beyond market standard
 - **Founder-favorable**: Benefits founder beyond market standard
@@ -83,12 +90,14 @@ Assessment categories:
 ### Step 4: Flag Non-Standard Provisions
 
 For each non-standard term:
+
 1. **What it says**: Quote or paraphrase the specific provision
 2. **Why it matters**: Concrete impact on founders/company
 3. **Market context**: How common this is and when it's typically seen
 4. **Negotiation suggestion**: What to propose instead
 
 Prioritize flags by impact:
+
 - **High impact**: Liquidation preferences >1x, full ratchet, investor
   board majority at early stage, aggressive protective provisions,
   no acceleration on CIC
@@ -104,6 +113,7 @@ Provide a summary section:
 **Overall Assessment**: [Founder-favorable / Balanced / Investor-favorable / Aggressive]
 
 **Top 3 Negotiation Priorities**:
+
 1. Most impactful non-standard term → suggested counter
 2. Second most impactful → suggested counter
 3. Third most impactful → suggested counter
@@ -134,11 +144,11 @@ When analyzing a SAFE or convertible note specifically:
 
 If the user provides multiple term sheets (e.g., competing offers):
 
-| Term | Offer A | Offer B | Offer C |
-|------|---------|---------|---------|
-| Pre-money | $15M | $12M | $18M |
-| Liq pref | 1x non-part | 1x part | 1x non-part |
-| ... | ... | ... | ... |
+| Term      | Offer A     | Offer B | Offer C     |
+| --------- | ----------- | ------- | ----------- |
+| Pre-money | $15M        | $12M    | $18M        |
+| Liq pref  | 1x non-part | 1x part | 1x non-part |
+| ...       | ...         | ...     | ...         |
 
 Highlight which offer is most founder-friendly on each dimension and
 overall.

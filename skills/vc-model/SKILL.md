@@ -53,16 +53,19 @@ decisions Claude must make:
 
 **Revenue growth**: Use company-provided projections if available.
 Otherwise estimate based on stage:
+
 - Seed: 100-200% Y1, decaying 20-30% per year
 - Series A: 80-120% Y1, decaying 15-25% per year
 - Series B: 50-80% Y1, decaying 10-20% per year
 
 **COGS / Gross margin**: Derive from business model:
+
 - SaaS: 75-85% gross margin (COGS = hosting, support)
 - Marketplace: 60-75% (COGS = payment processing, fulfillment)
 - Hardware: 30-50% (COGS = manufacturing, materials)
 
 **OpEx breakdown** (as % of revenue, improving over time):
+
 - S&M: 30-50% early, declining to 15-25% at scale
 - R&D: 20-35% early, declining to 15-20% at scale
 - G&A: 10-20% early, declining to 5-10% at scale
@@ -84,36 +87,36 @@ Parse the JSON output and present as three markdown tables:
 
 **Income Statement**
 
-| Line Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
-|-----------|--------|--------|--------|--------|--------|
-| Revenue | ... | ... | ... | ... | ... |
-| COGS | ... | ... | ... | ... | ... |
-| **Gross Profit** | ... | ... | ... | ... | ... |
-| S&M | ... | ... | ... | ... | ... |
-| R&D | ... | ... | ... | ... | ... |
-| G&A | ... | ... | ... | ... | ... |
-| **EBITDA** | ... | ... | ... | ... | ... |
-| D&A | ... | ... | ... | ... | ... |
-| **Net Income** | ... | ... | ... | ... | ... |
+| Line Item        | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+| ---------------- | ------ | ------ | ------ | ------ | ------ |
+| Revenue          | ...    | ...    | ...    | ...    | ...    |
+| COGS             | ...    | ...    | ...    | ...    | ...    |
+| **Gross Profit** | ...    | ...    | ...    | ...    | ...    |
+| S&M              | ...    | ...    | ...    | ...    | ...    |
+| R&D              | ...    | ...    | ...    | ...    | ...    |
+| G&A              | ...    | ...    | ...    | ...    | ...    |
+| **EBITDA**       | ...    | ...    | ...    | ...    | ...    |
+| D&A              | ...    | ...    | ...    | ...    | ...    |
+| **Net Income**   | ...    | ...    | ...    | ...    | ...    |
 
 **Balance Sheet** (simplified)
 
-| Line Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
-|-----------|--------|--------|--------|--------|--------|
-| Cash | ... | ... | ... | ... | ... |
-| Accounts Receivable | ... | ... | ... | ... | ... |
-| **Total Assets** | ... | ... | ... | ... | ... |
-| Accounts Payable | ... | ... | ... | ... | ... |
-| **Equity** | ... | ... | ... | ... | ... |
+| Line Item           | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+| ------------------- | ------ | ------ | ------ | ------ | ------ |
+| Cash                | ...    | ...    | ...    | ...    | ...    |
+| Accounts Receivable | ...    | ...    | ...    | ...    | ...    |
+| **Total Assets**    | ...    | ...    | ...    | ...    | ...    |
+| Accounts Payable    | ...    | ...    | ...    | ...    | ...    |
+| **Equity**          | ...    | ...    | ...    | ...    | ...    |
 
 **Cash Flow Statement** (simplified)
 
-| Line Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
-|-----------|--------|--------|--------|--------|--------|
-| Operating CF | ... | ... | ... | ... | ... |
-| CapEx | ... | ... | ... | ... | ... |
-| **Net Change** | ... | ... | ... | ... | ... |
-| Ending Cash | ... | ... | ... | ... | ... |
+| Line Item      | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+| -------------- | ------ | ------ | ------ | ------ | ------ |
+| Operating CF   | ...    | ...    | ...    | ...    | ...    |
+| CapEx          | ...    | ...    | ...    | ...    | ...    |
+| **Net Change** | ...    | ...    | ...    | ...    | ...    |
+| Ending Cash    | ...    | ...    | ...    | ...    | ...    |
 
 ### Step 4: Analysis
 

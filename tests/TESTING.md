@@ -15,22 +15,22 @@ They require no API keys, no network access, and no Claude CLI.
 
 ### What Layer 1 covers
 
-| Test file | Script | Command | Tests |
-|-----------|--------|---------|-------|
-| `test_captable_helpers.py` | `captable.py` | — | `_d()`, `_fmt()`, `_calc_accrued_interest()`, `_parse_stock_classes()`, `_parse_safe_terms()`, `_parse_note_terms()`, `_get_capitalization()` |
-| `test_captable_model.py` | `captable.py` | `model` | Founders-only, SAFEs (post/pre-money), MFN resolution, notes with interest, full stack |
-| `test_captable_dilution.py` | `captable.py` | `dilution` | Dilution percentages, share counts, price per share |
-| `test_captable_waterfall.py` | `captable.py` | `waterfall` | Non-participating preferred, multi-series seniority, participating with cap, zero exit |
-| `test_captable_convert.py` | `captable.py` | `convert` | SAFE cap-vs-discount, note compound interest, resulting cap table |
-| `test_captable_scenarios.py` | `captable.py` | `scenarios` | Multiple exit values, preference-vs-conversion crossover |
-| `test_captable_cli.py` | `captable.py` | all | CLI JSON output validity, error handling (missing flags, bad JSON, unknown commands) |
-| `test_financial_helpers.py` | `financial_model.py` | — | `_d()`, `_fmt()` |
-| `test_financial_dcf.py` | `financial_model.py` | `dcf` | Gordon growth, exit multiple, error cases |
-| `test_financial_unit_economics.py` | `financial_model.py` | `unit_economics` | ARPU, CAC, LTV/CAC, Rule of 40, NRR |
-| `test_financial_projections.py` | `financial_model.py` | `projections` | Revenue growth, break-even, runway |
-| `test_financial_multiples.py` | `financial_model.py` | `multiples` | EV/Revenue, EV/ARR, adjustments, valuation range |
-| `test_financial_three_statement.py` | `financial_model.py` | `three_statement` | A=L+E consistency, cash flow linkage, net income flow, equity injections |
-| `test_financial_cli.py` | `financial_model.py` | all | CLI JSON output validity, error handling |
+| Test file                           | Script               | Command           | Tests                                                                                                                                         |
+| ----------------------------------- | -------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `test_captable_helpers.py`          | `captable.py`        | —                 | `_d()`, `_fmt()`, `_calc_accrued_interest()`, `_parse_stock_classes()`, `_parse_safe_terms()`, `_parse_note_terms()`, `_get_capitalization()` |
+| `test_captable_model.py`            | `captable.py`        | `model`           | Founders-only, SAFEs (post/pre-money), MFN resolution, notes with interest, full stack                                                        |
+| `test_captable_dilution.py`         | `captable.py`        | `dilution`        | Dilution percentages, share counts, price per share                                                                                           |
+| `test_captable_waterfall.py`        | `captable.py`        | `waterfall`       | Non-participating preferred, multi-series seniority, participating with cap, zero exit                                                        |
+| `test_captable_convert.py`          | `captable.py`        | `convert`         | SAFE cap-vs-discount, note compound interest, resulting cap table                                                                             |
+| `test_captable_scenarios.py`        | `captable.py`        | `scenarios`       | Multiple exit values, preference-vs-conversion crossover                                                                                      |
+| `test_captable_cli.py`              | `captable.py`        | all               | CLI JSON output validity, error handling (missing flags, bad JSON, unknown commands)                                                          |
+| `test_financial_helpers.py`         | `financial_model.py` | —                 | `_d()`, `_fmt()`                                                                                                                              |
+| `test_financial_dcf.py`             | `financial_model.py` | `dcf`             | Gordon growth, exit multiple, error cases                                                                                                     |
+| `test_financial_unit_economics.py`  | `financial_model.py` | `unit_economics`  | ARPU, CAC, LTV/CAC, Rule of 40, NRR                                                                                                           |
+| `test_financial_projections.py`     | `financial_model.py` | `projections`     | Revenue growth, break-even, runway                                                                                                            |
+| `test_financial_multiples.py`       | `financial_model.py` | `multiples`       | EV/Revenue, EV/ARR, adjustments, valuation range                                                                                              |
+| `test_financial_three_statement.py` | `financial_model.py` | `three_statement` | A=L+E consistency, cash flow linkage, net income flow, equity injections                                                                      |
+| `test_financial_cli.py`             | `financial_model.py` | all               | CLI JSON output validity, error handling                                                                                                      |
 
 ### Key invariants tested
 
@@ -71,13 +71,13 @@ appropriately, and script output is surfaced to the user.
 
 ### What Layer 2 covers
 
-| Test | Skill | Validates |
-|------|-------|-----------|
-| `test_vc_displays_commands_table` | `/vc` | Orchestrator shows available commands |
-| `test_vc_model_prompts_for_inputs` | `/vc model` | Sub-skill asks for financial assumptions |
-| `test_vc_kpi_prompts_for_data` | `/vc kpi` | Sub-skill asks for company data |
-| `test_vc_captable_with_inline_data` | `/vc captable` | End-to-end cap table from inline data |
-| `test_vc_captable_output_includes_disclaimer` | `/vc captable` | Disclaimer present in output |
+| Test                                          | Skill          | Validates                                |
+| --------------------------------------------- | -------------- | ---------------------------------------- |
+| `test_vc_displays_commands_table`             | `/vc`          | Orchestrator shows available commands    |
+| `test_vc_model_prompts_for_inputs`            | `/vc model`    | Sub-skill asks for financial assumptions |
+| `test_vc_kpi_prompts_for_data`                | `/vc kpi`      | Sub-skill asks for company data          |
+| `test_vc_captable_with_inline_data`           | `/vc captable` | End-to-end cap table from inline data    |
+| `test_vc_captable_output_includes_disclaimer` | `/vc captable` | Disclaimer present in output             |
 
 ### Running Layer 2
 

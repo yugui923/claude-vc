@@ -44,72 +44,72 @@ python3 "${CLAUDE_SKILL_DIR}/../vc/scripts/financial_model.py" unit_economics --
 
 Present script output plus these additional KPIs (computed by Claude):
 
-| Metric | How to Compute | Benchmark |
-|--------|---------------|-----------|
-| ARR | MRR x 12 | Stage-dependent |
-| MRR Growth | (MRR_now - MRR_prior) / MRR_prior | >10% m/m (seed), >5% (A) |
-| Net Revenue Retention | (from script output) | >120% excellent, >100% good |
-| Gross Churn | Lost MRR / Starting MRR | <2% monthly, <5% acceptable |
-| CAC | (from script output) | Varies by ACV |
-| LTV | (from script output) | Minimum 3x CAC |
-| CAC Payback | (from script output) | <12mo good, <18mo acceptable |
-| Magic Number | (from script output) | >0.75 efficient |
-| Burn Multiple | Net burn / Net new ARR | <1x excellent, <2x good |
-| Rule of 40 | Revenue growth % + FCF margin % | >40 healthy |
-| Gross Margin | (Revenue - COGS) / Revenue | >75% SaaS standard |
-| Revenue per Employee | ARR / headcount | >$100K seed, >$200K A |
+| Metric                | How to Compute                    | Benchmark                    |
+| --------------------- | --------------------------------- | ---------------------------- |
+| ARR                   | MRR x 12                          | Stage-dependent              |
+| MRR Growth            | (MRR_now - MRR_prior) / MRR_prior | >10% m/m (seed), >5% (A)     |
+| Net Revenue Retention | (from script output)              | >120% excellent, >100% good  |
+| Gross Churn           | Lost MRR / Starting MRR           | <2% monthly, <5% acceptable  |
+| CAC                   | (from script output)              | Varies by ACV                |
+| LTV                   | (from script output)              | Minimum 3x CAC               |
+| CAC Payback           | (from script output)              | <12mo good, <18mo acceptable |
+| Magic Number          | (from script output)              | >0.75 efficient              |
+| Burn Multiple         | Net burn / Net new ARR            | <1x excellent, <2x good      |
+| Rule of 40            | Revenue growth % + FCF margin %   | >40 healthy                  |
+| Gross Margin          | (Revenue - COGS) / Revenue        | >75% SaaS standard           |
+| Revenue per Employee  | ARR / headcount                   | >$100K seed, >$200K A        |
 
 ### Marketplace KPIs
 
 Compute directly (no script needed):
 
-| Metric | How to Compute | Benchmark |
-|--------|---------------|-----------|
-| GMV | Total transaction volume | Stage-dependent |
-| GMV Growth | (GMV_now - GMV_prior) / GMV_prior | >20% m/m early |
-| Take Rate | Revenue / GMV | 5-30% varies by category |
-| Liquidity | Completed / Listed transactions | >30% healthy |
-| Supply Growth | New sellers or listings | Balanced with demand |
-| Demand Growth | New buyers or orders | Balanced with supply |
-| Contribution Margin | (Revenue - variable costs) / transaction | Positive at scale |
-| Repeat Rate | Repeat buyers / total buyers | >30% good |
+| Metric              | How to Compute                           | Benchmark                |
+| ------------------- | ---------------------------------------- | ------------------------ |
+| GMV                 | Total transaction volume                 | Stage-dependent          |
+| GMV Growth          | (GMV_now - GMV_prior) / GMV_prior        | >20% m/m early           |
+| Take Rate           | Revenue / GMV                            | 5-30% varies by category |
+| Liquidity           | Completed / Listed transactions          | >30% healthy             |
+| Supply Growth       | New sellers or listings                  | Balanced with demand     |
+| Demand Growth       | New buyers or orders                     | Balanced with supply     |
+| Contribution Margin | (Revenue - variable costs) / transaction | Positive at scale        |
+| Repeat Rate         | Repeat buyers / total buyers             | >30% good                |
 
 ### Consumer KPIs
 
 Compute directly:
 
-| Metric | How to Compute | Benchmark |
-|--------|---------------|-----------|
-| DAU / MAU | Daily and monthly active users | Stage-dependent |
-| DAU/MAU Ratio | Stickiness metric | >25% good, >50% great |
-| D1 Retention | Users returning day 1 | >40% good |
-| D7 Retention | Users returning day 7 | >20% good |
-| D30 Retention | Users returning day 30 | >10% good |
-| Session Frequency | Sessions per user per day | Category-dependent |
-| ARPU | Revenue / active users | Category-dependent |
-| Viral Coefficient | Invites sent x conversion rate | >1 viral growth |
+| Metric            | How to Compute                 | Benchmark             |
+| ----------------- | ------------------------------ | --------------------- |
+| DAU / MAU         | Daily and monthly active users | Stage-dependent       |
+| DAU/MAU Ratio     | Stickiness metric              | >25% good, >50% great |
+| D1 Retention      | Users returning day 1          | >40% good             |
+| D7 Retention      | Users returning day 7          | >20% good             |
+| D30 Retention     | Users returning day 30         | >10% good             |
+| Session Frequency | Sessions per user per day      | Category-dependent    |
+| ARPU              | Revenue / active users         | Category-dependent    |
+| Viral Coefficient | Invites sent x conversion rate | >1 viral growth       |
 
 ### Fintech KPIs
 
 Compute directly:
 
-| Metric | How to Compute | Benchmark |
-|--------|---------------|-----------|
-| NIM | (Interest earned - Interest paid) / assets | >3% for lending |
-| NPL Ratio | Non-performing loans / total loans | <5% healthy |
-| CAC Payback | CAC / monthly profit per customer | <12mo |
-| Take Rate | Revenue / transaction volume | Varies by product |
-| Regulatory Capital | Capital / risk-weighted assets | Above minimums |
+| Metric             | How to Compute                             | Benchmark         |
+| ------------------ | ------------------------------------------ | ----------------- |
+| NIM                | (Interest earned - Interest paid) / assets | >3% for lending   |
+| NPL Ratio          | Non-performing loans / total loans         | <5% healthy       |
+| CAC Payback        | CAC / monthly profit per customer          | <12mo             |
+| Take Rate          | Revenue / transaction volume               | Varies by product |
+| Regulatory Capital | Capital / risk-weighted assets             | Above minimums    |
 
 ### General KPIs (Always Included)
 
-| Metric | How to Compute | Benchmark |
-|--------|---------------|-----------|
-| Revenue | Monthly or annual | Stage-dependent |
-| Revenue Growth | YoY or MoM | Stage-dependent |
-| Burn Rate | Monthly net cash outflow | Relative to revenue |
-| Runway | Cash / monthly burn | >12 months |
-| Headcount | Total employees | Context-dependent |
+| Metric         | How to Compute           | Benchmark           |
+| -------------- | ------------------------ | ------------------- |
+| Revenue        | Monthly or annual        | Stage-dependent     |
+| Revenue Growth | YoY or MoM               | Stage-dependent     |
+| Burn Rate      | Monthly net cash outflow | Relative to revenue |
+| Runway         | Cash / monthly burn      | >12 months          |
+| Headcount      | Total employees          | Context-dependent   |
 
 ## Benchmarking
 
@@ -135,30 +135,36 @@ Assign each metric a status:
 
 ## Key Metrics Summary
 
-| Metric | Value | Benchmark | Status |
-|--------|-------|-----------|--------|
-| ... | ... | ... | Healthy / Watch / Concerning |
+| Metric | Value | Benchmark | Status                       |
+| ------ | ----- | --------- | ---------------------------- |
+| ...    | ...   | ...       | Healthy / Watch / Concerning |
 
 ## Detailed Analysis
 
 ### Growth Metrics
+
 [metrics with trend analysis]
 
 ### Unit Economics
+
 [metrics with assessment]
 
 ### Efficiency Metrics
+
 [metrics with assessment]
 
 ## Flags
 
 ### Healthy
+
 - [metrics that look good, brief explanation]
 
 ### Concerning
+
 - [metrics that need attention, brief explanation]
 
 ## Recommendation
+
 [brief synthesis of KPI health and areas to monitor]
 ```
 
