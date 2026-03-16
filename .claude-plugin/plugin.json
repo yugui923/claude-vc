@@ -1,6 +1,6 @@
 {
   "name": "claude-vc",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Venture capital analysis toolkit for Claude Code. Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio reporting.",
   "author": {
     "name": "Yuri Gui"

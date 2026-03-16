@@ -90,6 +90,9 @@ logs/
 log/
 cache/
 
+# === Test Results (non-deterministic LLM outputs) ===
+tests/real-data/test-results/
+
 # === Claude/MCP ===
 .claude/settings.local.json
 .claude/todos.local.json
