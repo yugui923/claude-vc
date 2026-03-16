@@ -162,6 +162,40 @@ def test_vc_diligence_generates_checklist() -> None:
     assert any(kw in output_lower for kw in ["checklist", "diligence", "[ ]", "[x]"])
 
 
+# ---------------------------------------------------------------------------
+# Phase 4 smoke tests: portfolio
+# ---------------------------------------------------------------------------
+
+
+def test_vc_portfolio_prompts_for_data() -> None:
+    """Invoking /vc portfolio with no data should ask for portfolio data."""
+    output = run_claude("Run /vc portfolio", max_turns=2)
+    output_lower = output.lower()
+    assert any(
+        kw in output_lower
+        for kw in ["portfolio", "company", "data", "provide", "need", "list"]
+    )
+
+
+def test_vc_portfolio_with_inline_data() -> None:
+    """Invoking /vc portfolio with inline company data should produce a report."""
+    prompt = (
+        "Run /vc portfolio. Here is my portfolio data: "
+        "Company A: SaaS, Series A, invested $2M in 2024, current valuation $20M, "
+        "$5M ARR, 40 employees, status active. "
+        "Company B: Fintech, Seed, invested $500K in 2023, current valuation $8M, "
+        "$1M ARR, 12 employees, status active. "
+        "Company C: Consumer, Series A, invested $1.5M in 2022, written off."
+    )
+    output = run_claude(prompt, max_turns=6, max_budget=1.50)
+    output_lower = output.lower()
+    assert "company a" in output_lower or "saas" in output_lower
+    assert any(
+        kw in output_lower
+        for kw in ["portfolio", "invested", "valuation", "summary", "total"]
+    )
+
+
 def test_vc_screen_full_produces_comprehensive_output() -> None:
     """Invoking /vc screen --full should reference parallel analysis."""
     prompt = (

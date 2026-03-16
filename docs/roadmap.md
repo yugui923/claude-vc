@@ -81,9 +81,9 @@ Goal: Portfolio monitoring and external data integration.
 
 ### Deliverables
 
-- [ ] Portfolio reporting sub-skill (`vc-portfolio/SKILL.md`) -- one-shot report generation, not continuous monitoring
-- [ ] Octagon AI extension (`extensions/octagon/`) -- priority data source ($17/mo, 3M+ companies, 500K+ deals, investor profiles)
-- [ ] SEC EDGAR extension (`extensions/sec-edgar/`) -- free raw filing access
+- [x] Portfolio reporting sub-skill (`vc-portfolio/SKILL.md`) -- one-shot report generation, not continuous monitoring
+- [x] Octagon AI extension (`extensions/octagon/`) -- priority data source ($17/mo, 3M+ companies, 500K+ deals, investor profiles)
+- [x] SEC EDGAR extension (`extensions/sec-edgar/`) -- free raw filing access
 - [ ] `scripts/fetch_company.py` for data normalization
 - [ ] `npx skills` distribution support
 - [ ] Windows installer (`install.ps1`)
