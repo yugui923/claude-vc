@@ -35,7 +35,7 @@ combination of tools, even where
 - **Enabler**[^1]: The AI advancement or product that made or would make this
   possible
 
-Last reviewed: 2026-03-15
+Last reviewed: 2026-03-16
 
 ---
 
@@ -71,9 +71,9 @@ Last reviewed: 2026-03-15
 | Public company profiling from web sources          |   ✓    |     |        | Web search tool use                           |
 | Report generation (DOCX and markdown)              |   ✓    |     |        | Native file generation                        |
 | Private company data access                        |   ✓    |     |        | PitchBook Navigator, Crunchbase, Grata        |
-| Deal screening with structured scoring (0-100)     |        |  ✓  |        | Extended thinking, Harmonic scoring           |
-| Investment memo generation (10-section format)     |        |  ✓  |        | Long-context generation, extended thinking    |
-| KPI benchmarking by auto-detected company type     |        |  ✓  |        | Python tool use, extended thinking            |
+| Deal screening with structured scoring (0-100)     |   ✓    |     |        | Parallel subagents, extended thinking         |
+| Investment memo generation (10-section format)     |   ✓    |     |        | Parallel subagents, long-context generation   |
+| KPI benchmarking by auto-detected company type     |   ✓    |     |        | Python tool use, extended thinking            |
 | Comparable company analysis with market data       |        |  ✓  |        | PitchBook comps, Grata precedent transactions |
 | Factual claim verification against primary sources |        |  ✓  |        | Web search with source citations              |
 | Systematic data room cross-referencing             |        |  ✓  |        | Hebbia Matrix, Luminance                      |
@@ -170,7 +170,7 @@ Last reviewed: 2026-03-15
 | Ongoing portfolio monitoring          |        |  ✓  |        | Standard Metrics, Chronograph, ChatFin         |
 | Scheduled recurring reports           |        |  ✓  |        | Standard Metrics, Visible.vc automation        |
 | Anomaly detection and alerts          |        |  ✓  |        | ChatFin anomaly engine                         |
-| LP reporting preparation              |        |  ✓  |        | Standard Metrics, Chronograph                  |
+| LP reporting preparation              |   ✓    |     |        | claude-vc portfolio skill, Standard Metrics    |
 
 ### Investment Decision & Closing
 
@@ -220,6 +220,10 @@ or feature shipped, not when adoption reached maturity.
 | 2026-02 | Full data room in single context              | Systematic data room cross-referencing         | Human -> Can Do | 1M token context (Claude 4.6)        |
 | 2026-03 | PitchBook data in conversational AI           | Comparable company analysis, precedent txns    | WIP -> Can Do   | PitchBook + Perplexity MCP           |
 | 2026-03 | claude-vc v1.2.0 baseline                     | --                                             | --              | Initial AI Frontier assessment       |
+| 2026-03 | Parallel multi-agent deal screening           | Full screening with 6 concurrent agents        | WIP -> Can Do   | claude-vc v1.3.0 parallel agents     |
+| 2026-03 | Side-by-side company comparison               | Structured comparison of 2-4 companies         | WIP -> Can Do   | claude-vc v1.3.0 vc-compare          |
+| 2026-03 | Customizable due diligence checklists         | Stage+sector-specific DD checklist generation  | Cannot -> Can Do | claude-vc v1.3.0 vc-diligence       |
+| 2026-03 | One-shot portfolio reporting for LPs          | LP-ready portfolio summary from provided data  | Cannot -> Can Do | claude-vc v1.3.0 vc-portfolio       |
 
 ---
 
