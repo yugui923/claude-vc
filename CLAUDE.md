@@ -36,6 +36,15 @@ map of state-of-the-art capability. When you add or improve a capability:
 
 The frontier is a living record. Keep it honest.
 
+## Audience
+
+This project serves both **non-technical users** (VCs, analysts, founders)
+and **technical users** (developers, contributors). When writing documentation
+(README, user guide, skill descriptions), use plain language first — avoid
+jargon, explain acronyms on first use, and include concrete examples. A
+partner at a VC firm who has never used a CLI should be able to follow the
+README and User Guide without confusion.
+
 ## Development
 
 - **Python 3.10+**, stdlib only (no third-party runtime deps)

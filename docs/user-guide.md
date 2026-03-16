@@ -1,267 +1,261 @@
 # User Guide
 
-Detailed documentation for every claude-vc command. For installation and
-quick start, see the [README](../README.md).
+Everything you need to know about each Claude-VC command. For installation,
+see the [README](../README.md).
 
 ---
 
-## `/vc` — Full Pipeline
+## `/vc` — Analyze a Company (All-in-One)
 
-Runs screen + memo + diligence in one command.
+The simplest way to use Claude-VC. Give it a company and it does the rest —
+screens the deal, writes an investment memo, and creates a diligence checklist.
 
-```text
+```
 /vc https://example-startup.com
 /vc /path/to/pitch-deck.pdf
 /vc "B2B SaaS company doing $5M ARR in developer tools"
 ```
 
-Accepts a URL, file path, or natural language description. With no arguments,
-shows the available commands table.
+Works with website URLs, pitch deck PDFs, or plain-text descriptions. With
+no arguments, it shows a list of all available commands.
 
 ---
 
-## `/vc screen` — Deal Screening
+## `/vc screen` — Score a Startup
 
-Score a startup 0-100 across five investment dimensions.
+Evaluates a company across five dimensions and gives it a Deal Score from
+0 to 100.
 
-```text
+```
 /vc screen https://company.com
 /vc screen /path/to/deck.pdf
-/vc screen "description of the company"
 ```
 
-**Output**: Deal Score table, key findings, red flags, recommendation,
-comparable companies, disclaimer.
+**What you get**: a scoring table, key findings, red flags, a recommendation
+(Pass / Cautious / Further Diligence / Strong Interest), and a list of
+comparable companies.
 
-| Dimension | Max Points |
-| --- | --- |
-| Market Opportunity | 25 |
-| Team & Execution | 25 |
-| Product & Technology | 20 |
-| Financials & Biz Model | 20 |
-| Timing & Momentum | 10 |
+The five scoring dimensions:
 
-| Score | Recommendation |
-| --- | --- |
-| 80+ | Strong Interest — proceed to full diligence |
-| 60-79 | Further Diligence — worth deeper investigation |
-| 40-59 | Cautious — significant concerns |
-| 0-39 | Pass |
+| Dimension | Max Points | What It Looks At |
+| --- | --- | --- |
+| Market Opportunity | 25 | Market size, growth rate, timing |
+| Team & Execution | 25 | Founder backgrounds, team gaps, domain fit |
+| Product & Technology | 20 | Differentiation, technical moat, maturity |
+| Financials & Business Model | 20 | Revenue, margins, unit economics, burn |
+| Timing & Momentum | 10 | Why now, traction trajectory |
 
-### Flags
+What the scores mean:
 
-| Flag | Effect |
-| --- | --- |
-| `--full` | Spawn 6 parallel subagents (financial, market, technical, legal, competitive, team) for comprehensive analysis |
-| `--criteria <file>` | Use custom scoring weights from a file |
+| Score | Recommendation | What To Do |
+| --- | --- | --- |
+| 80+ | Strong Interest | Move to full due diligence immediately |
+| 60-79 | Further Diligence | Worth a deeper look — address the concerns first |
+| 40-59 | Cautious | Significant issues — only pursue if strategic fit |
+| 0-39 | Pass | Does not meet investment criteria |
+
+**Options**:
+- `--full` — runs a deeper analysis using 6 specialist agents in parallel
+  (financial, market, technical, legal, competitive, team). More thorough,
+  uses more tokens.
+- `--criteria <file>` — use your own scoring weights instead of the defaults.
 
 ---
 
-## `/vc memo` — Investment Memo
+## `/vc memo` — Write an Investment Memo
 
-Generate a structured 12-section investment memo.
+Generates a structured investment memo — the kind you'd present to an
+investment committee.
 
-```text
-/vc memo                           # From prior screening context
-/vc memo /path/to/deck.pdf        # From a pitch deck
-/vc memo https://company.com      # From a URL
+```
+/vc memo
+/vc memo /path/to/deck.pdf
 ```
 
-**Sections**: Executive Summary, Company Overview, Market Opportunity,
-Product & Technology, Team & Organization, Business Model & Unit Economics,
-Competitive Landscape, Traction & Metrics, Financial Projections & Valuation,
-Key Risks & Mitigants, Terms & Structure, Recommendation.
+Best used after `/vc screen` in the same conversation. The memo automatically
+draws on the screening results, so you don't need to re-enter company info.
 
-Best used after `/vc screen` in the same conversation — the memo draws on
-the screening results automatically.
+**The 12 sections**: Executive Summary, Company Overview, Market Opportunity,
+Product & Technology, Team, Business Model & Unit Economics, Competitive
+Landscape, Traction & Metrics, Financial Projections, Key Risks, Terms &
+Structure, Recommendation.
 
-### Flags
-
-| Flag | Effect |
-| --- | --- |
-| `--comprehensive` | Run full parallel screening before generating memo |
-| `--docx [filename]` | Export as a Word document |
+**Options**:
+- `--comprehensive` — runs a full screening first, then writes the memo.
+  Equivalent to `/vc screen --full` followed by `/vc memo`.
+- `--docx` — saves the memo as a Word document you can share or edit.
 
 ---
 
-## `/vc terms` — Term Sheet Analysis
+## `/vc terms` — Review a Term Sheet
 
-Analyze a term sheet, SAFE, or convertible note against NVCA baseline terms.
+Reads a term sheet, SAFE agreement, or convertible note and compares every
+provision against industry-standard (NVCA) terms. Flags anything unusual.
 
-```text
+```
 /vc terms /path/to/term-sheet.pdf
-/vc terms /path/to/safe.docx
+/vc terms /path/to/safe-agreement.docx
 ```
 
-**Output**: Extracted terms table with market standard comparison, assessment
-per term (Standard / Investor-favorable / Founder-favorable / Aggressive /
-Missing), detailed flags on non-standard provisions with negotiation
-suggestions, overall assessment, top 3 negotiation priorities.
+**What you get**: a table showing each term, the proposed value, the market
+standard, and an assessment (Standard, Investor-favorable, Founder-favorable,
+Aggressive, or Missing). Non-standard terms get a detailed explanation of
+why they matter and what to negotiate instead.
 
-Supports: priced round term sheets, post-money SAFEs, pre-money SAFEs,
-convertible notes, side letters. Also supports side-by-side comparison of
-multiple competing offers.
+Also works for comparing multiple competing offers side by side.
 
 ---
 
-## `/vc captable` — Cap Table Modeling
+## `/vc captable` — Model a Cap Table
 
-Model ownership, dilution, SAFE/note conversion, and liquidation waterfalls.
+Calculates ownership percentages, shows how new funding rounds dilute
+existing shareholders, and models what everyone gets at different exit
+prices.
 
-```text
+```
 /vc captable
 ```
 
-Provide data inline or interactively. Supports five operations:
+You can type in your data interactively or provide it inline. The five
+things it can do:
 
 | Operation | What It Does |
 | --- | --- |
-| `model` | Build cap table from founders, ESOP, SAFEs, notes, priced rounds |
-| `dilution` | Show ownership impact of a new round |
-| `waterfall` | Liquidation payouts with multi-series seniority ordering |
-| `convert` | SAFE and note conversion details (cap vs discount) |
-| `scenarios` | Payouts across multiple exit valuations |
+| Model | Build a cap table from founders, employee stock pool, SAFEs, notes, and priced rounds |
+| Dilution | Show how a new funding round changes everyone's ownership |
+| Waterfall | Calculate who gets paid what at exit, respecting liquidation preferences |
+| Convert | Show how SAFEs and convertible notes convert to equity |
+| Scenarios | Compare payouts across different exit prices (e.g., $50M, $200M, $1B) |
 
-**Supported instruments**: Common stock, preferred stock (with stock classes),
-post-money SAFEs, pre-money SAFEs, MFN SAFEs, convertible notes (simple and
-compound interest), options, warrants. Supports participating preferred with
-caps and non-participating preferred.
+Handles all common instruments: common stock, preferred stock, post-money
+SAFEs, pre-money SAFEs, MFN (most-favored-nation) SAFEs, convertible notes
+with interest, stock options, and warrants. Supports participating preferred
+with caps.
 
-All math runs in Python (`captable.py`) for Decimal-precision arithmetic.
+All calculations run in Python for precision — not LLM estimation.
 
 ---
 
-## `/vc model` — Financial Model
+## `/vc model` — Build a Financial Model
 
-Generate a 3-statement financial model (income statement, balance sheet,
-cash flow) projecting 3-5 years forward.
+Creates a 3-statement financial model: income statement (P&L), balance
+sheet, and cash flow statement. Projects 3-5 years into the future.
 
-```text
-/vc model                              # Interactive — asks for inputs
-/vc model /path/to/financials.md      # From a file
+```
+/vc model
+/vc model /path/to/financials.md
 ```
 
-**Minimum inputs needed**: current revenue, growth rate, gross margin. The
-model fills in reasonable defaults for everything else based on stage and
-sector.
+At minimum, you need to provide the company's current revenue, growth rate,
+and gross margin. Claude fills in reasonable defaults for everything else
+based on the company's stage and industry.
 
-**Output**: Three markdown tables (income statement, balance sheet, cash flow
-statement), assumptions table with sources, analysis section covering
-break-even timing, runway, margin progression, and key sensitivities.
+**What you get**: three financial tables, an assumptions summary showing
+where each number came from, and an analysis covering when the company
+reaches profitability, how long the cash lasts, and which assumptions
+matter most.
 
-All math runs in Python (`financial_model.py`) with balance sheet identity
-verification (Assets = Liabilities + Equity).
-
-### Flags
-
-| Flag | Effect |
-| --- | --- |
-| `--docx [filename]` | Export as a Word document |
+**Options**:
+- `--docx` — saves the model as a Word document.
 
 ---
 
-## `/vc kpi` — KPI Report
+## `/vc kpi` — Create a KPI Dashboard
 
-Generate a KPI report with industry benchmarks and health assessments.
+Generates a metrics report with industry benchmarks and a health check for
+each metric (Healthy, Watch, or Concerning).
 
-```text
-/vc kpi                             # Interactive — asks for data
-/vc kpi /path/to/metrics.md       # From a file
+```
+/vc kpi
+/vc kpi /path/to/metrics.md
 ```
 
-Auto-detects company type and applies the right metrics:
+Claude automatically detects the type of company and picks the right
+metrics:
 
-| Type | Key Metrics |
+| Company Type | Example Metrics |
 | --- | --- |
-| **SaaS** | ARR, MRR growth, NRR, gross churn, CAC, LTV, CAC payback, Magic Number, burn multiple, Rule of 40, gross margin |
-| **Marketplace** | GMV, take rate, liquidity, supply/demand growth, contribution margin, repeat rate |
-| **Consumer** | DAU/MAU, stickiness, D1/D7/D30 retention, session frequency, ARPU, viral coefficient |
-| **Fintech** | NIM, NPL ratio, CAC payback, take rate, regulatory capital |
+| **SaaS** (software subscriptions) | ARR, churn, net retention, CAC, LTV, burn multiple, Rule of 40 |
+| **Marketplace** | GMV, take rate, liquidity, repeat rate |
+| **Consumer** | DAU/MAU, retention curves, viral coefficient |
+| **Fintech** | Net interest margin, default rate, take rate |
 
-Each metric gets a health status: **Healthy**, **Watch**, or **Concerning**
-based on industry benchmarks. The report includes a flags section and
-actionable recommendations.
+Each metric is compared against benchmarks for the company's stage and
+sector, so you can quickly spot what's strong and what needs attention.
 
 ---
 
-## `/vc compare` — Company Comparison
+## `/vc compare` — Compare Companies Side by Side
 
-Side-by-side comparison of 2-4 companies.
+Evaluates 2-4 companies in parallel and produces a comparison matrix.
 
-```text
+```
 /vc compare https://company-a.com https://company-b.com
 /vc compare /path/to/deck-a.pdf /path/to/deck-b.pdf
 ```
 
-Spawns parallel agents to analyze each company independently, then produces
-a comparison matrix across six dimensions (market, team, product, financials,
-traction, valuation). Includes a winner-by-dimension assessment and overall
+Compares across six dimensions: market, team, product, financials, traction,
+and valuation. Highlights a winner for each dimension and gives an overall
 recommendation.
 
-### Flags
-
-| Flag | Effect |
-| --- | --- |
-| `--criteria <file>` | Use custom scoring weights |
+**Options**:
+- `--criteria <file>` — use your own scoring weights.
 
 ---
 
-## `/vc diligence` — Due Diligence Checklist
+## `/vc diligence` — Generate a Due Diligence Checklist
 
-Generate a customizable due diligence checklist.
+Creates a customized checklist of everything you should verify before
+investing, tailored to the company's stage and industry.
 
-```text
-/vc diligence                                    # Interactive
-/vc diligence --stage seed --sector fintech     # Specify stage and sector
+```
+/vc diligence
+/vc diligence --stage seed --sector fintech
 ```
 
-Produces a categorized checklist across 6 areas: Financial, Legal, Technical,
-Commercial, Team & HR, Regulatory. Each item is tagged by priority:
+Covers six areas: Financial, Legal, Technical, Commercial, Team & HR, and
+Regulatory. Each item is marked by priority:
 
-- `[!]` Critical — must complete before closing
-- `[*]` Important — should complete, flag if not possible
-- `[-]` Nice-to-have — complete if time allows
+- **[!] Critical** — must complete before closing
+- **[*] Important** — should complete; flag if not possible
+- **[-] Nice-to-have** — complete if time allows
 
-After a screening, red flags are automatically added as company-specific
-items. Includes a suggested 3-week timeline and key management questions.
+If you've already run `/vc screen`, any red flags from the screening are
+automatically added as company-specific checklist items.
 
-### Flags
-
-| Flag | Effect |
-| --- | --- |
-| `--stage <stage>` | Override stage detection (seed, series-a, series-b, growth) |
-| `--sector <sector>` | Override sector detection (saas, fintech, deeptech, consumer, healthtech, marketplace) |
+**Options**:
+- `--stage <stage>` — seed, series-a, series-b, or growth
+- `--sector <sector>` — saas, fintech, deeptech, consumer, healthtech, or
+  marketplace
 
 ---
 
-## `/vc portfolio` — Portfolio Report
+## `/vc portfolio` — Create a Portfolio Report
 
-Generate an LP-ready portfolio report from provided company data.
+Generates a professional portfolio report suitable for LP (limited partner)
+updates.
 
-```text
+```
 /vc portfolio /path/to/portfolio.csv
 /vc portfolio /path/to/portfolio.json
 ```
 
-**Required fields per company**: name, sector, stage, investment_amount,
-current_valuation, status (active/exited/written_off/dead), investment_date.
+Provide a spreadsheet or data file with your portfolio companies. Each
+company needs: name, sector, stage, amount invested, current valuation,
+status (active, exited, or written off), and investment date.
 
-**Optional fields**: arr_or_revenue, headcount, last_round_date,
-ownership_pct, board_seat, follow_on_reserved, notes.
+**The report includes**:
 
-The 8-section report covers:
+1. **Portfolio Summary** — total invested, current value, return multiple
+   (MOIC), estimated IRR
+2. **Composition** — breakdown by sector, stage, and year of investment
+3. **Performance Dashboard** — each company's key metrics and trajectory
+4. **Cohort Analysis** — how different investment vintages are performing
+5. **Concentration Risk** — flags if too much is riding on one company or
+   sector
+6. **Follow-On Needs** — which companies will need more capital
+7. **Exits & Write-Offs** — realized returns and losses
+8. **LP Summary** — a professional narrative paragraph for your update letter
 
-1. **Portfolio Summary** — total invested, current value, MOIC, IRR estimate
-2. **Portfolio Composition** — by sector, stage, vintage year
-3. **Performance Dashboard** — per-company metrics with trajectory indicators
-4. **Cohort Analysis** — by vintage year and entry stage
-5. **Risk Concentration** — sector, stage, and single-company concentration
-6. **Follow-On Analysis** — estimated capital needs
-7. **Exits & Write-Offs** — realized returns and loss patterns
-8. **LP Executive Summary** — professional narrative for LP updates
-
-### Flags
-
-| Flag | Effect |
-| --- | --- |
-| `--docx [filename]` | Export as a Word document |
+**Options**:
+- `--docx` — saves the report as a Word document.
