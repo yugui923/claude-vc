@@ -1,0 +1,432 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 2842 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(PayLoop ? Seed-Stage Monthly KPI Report) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(Period: January 2026) Tj
+ET
+BT
+/F1 15.0 Tf
+54 677.1 Td
+(Company Type: Fintech \(Contractor Payments / Payroll\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 643.6 Td
+(Revenue Metrics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 620.7 Td
+(  ? MRR: $480,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 603.7 Td
+(  ? ARR: $5,760,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 586.7 Td
+(  ? MRR Growth \(MoM\): 9.1%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 569.7 Td
+(  ? ARR Growth \(YoY\): 195%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 552.7 Td
+(  ? New MRR: $72,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 535.7 Td
+(  ? Expansion MRR: $14,500) Tj
+ET
+BT
+/F1 10.0 Tf
+54 518.7 Td
+(  ? Churned MRR: $42,600 \(6.0% monthly ? see note below\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 501.7 Td
+(  ? Net New MRR: $43,900) Tj
+ET
+BT
+/F1 10.0 Tf
+54 484.7 Td
+(  ? Take Rate: 3.2% on gross payment volume of $15.0M/month) Tj
+ET
+BT
+/F1 13.0 Tf
+54 461.7 Td
+(Currency Exposure) Tj
+ET
+BT
+/F1 10.0 Tf
+54 438.8 Td
+(  ? USD Revenue: 60% \($288K MRR\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 421.8 Td
+(  ? BRL Revenue: 34% \($163K MRR\) ? exposed to BRL/USD volatility) Tj
+ET
+BT
+/F1 10.0 Tf
+54 404.8 Td
+(  ? Other \(COP, PEN\): 6% \($29K MRR\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 387.8 Td
+(  ? BRL depreciated 8.2% vs USD in trailing 90 days ? recognized $18K FX loss) Tj
+ET
+BT
+/F1 10.0 Tf
+54 370.8 Td
+(  ? FX hedging cost: $6,200/month \(partial hedge on BRL, 40% notional\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 347.8 Td
+(Customer Metrics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 324.9 Td
+(  ? Total Active Contractors on Platform: 1,200) Tj
+ET
+BT
+/F1 10.0 Tf
+54 307.9 Td
+(  ? Paying Employer Clients: 87) Tj
+ET
+BT
+/F1 10.0 Tf
+54 290.9 Td
+(  ? New Clients \(month\): 14) Tj
+ET
+BT
+/F1 10.0 Tf
+54 273.9 Td
+(  ? Churned Clients \(month\): 6 \(6.9% monthly logo churn\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 256.9 Td
+(  ? Average Contractors per Client: 13.8) Tj
+ET
+BT
+/F1 10.0 Tf
+54 239.9 Td
+(  ? Revenue per Contractor: $400/month) Tj
+ET
+BT
+/F1 10.0 Tf
+54 222.9 Td
+(  ? Average Revenue per Client: $5,517/month) Tj
+ET
+BT
+/F1 13.0 Tf
+54 199.9 Td
+(Unit Economics ? WARNING: NEGATIVE TRAJECTORY) Tj
+ET
+BT
+/F1 10.0 Tf
+54 177.0 Td
+(  ? Customer Acquisition Cost \(CAC\): $340 per contractor) Tj
+ET
+BT
+/F1 10.0 Tf
+54 160.0 Td
+(  ? Average Contractor Lifetime: 5.0 months \(high turnover in gig/contract labor\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 143.0 Td
+(  ? Lifetime Value \(LTV\) per Contractor: $768 \(5.0 months x $400/mo x 38.4% contribution margin\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 126.0 Td
+(  ? LTV/CAC Ratio: 2.26x \(target >3.0x\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 109.0 Td
+(  ? CAC Payback Period: 2.2 months \(on revenue\), 5.8 months \(on contribution margin\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 92.0 Td
+(  ? Gross Margin: 58% \(after payment processing, FX costs, banking rails\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 75.0 Td
+(  ? Contribution Margin: 38.4% \(after direct support, compliance, FX hedge\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 2778 >>
+stream
+BT
+/F1 13.0 Tf
+54 738.0 Td
+(Churn Analysis ? Key Concern) Tj
+ET
+BT
+/F1 10.0 Tf
+54 715.1 Td
+(  ? Monthly Contractor Churn: 6.0% \(72% annualized\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 698.1 Td
+(  ? Monthly Client Logo Churn: 6.9%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 681.1 Td
+(  ? Primary Churn Driver: Contract completion \(42% of churn\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 664.1 Td
+(  ? Secondary: Competitor switch to Deel/Remote \(23%\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 647.1 Td
+(  ? Tertiary: Client bankruptcy/insolvency \(18% ? LatAm SMB fragility\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 630.1 Td
+(  ? Involuntary churn \(payment failures\): 17%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 613.1 Td
+(  ? Cohort data: Nov 2025 cohort at 78% retention after 60 days, Oct 2025 at 64% after 90 days) Tj
+ET
+BT
+/F1 13.0 Tf
+54 590.1 Td
+(Compliance Costs ? Eating Into Margin) Tj
+ET
+BT
+/F1 10.0 Tf
+54 567.2 Td
+(  ? Total compliance spend: $72,000/month \(15.0% of revenue\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 550.2 Td
+(  ? Breakdown:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 533.2 Td
+(  ? KYC/AML screening: $18,000 \(per-contractor onboarding cost rising\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 516.2 Td
+(  ? Regulatory licensing \(multi-country\): $22,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 499.2 Td
+(  ? Legal/advisory \(labor law compliance, 4 jurisdictions\): $19,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 482.2 Td
+(  ? Audit and reporting: $13,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 465.2 Td
+(  ? New Brazil PIX regulation \(effective March 2026\) expected to add $8K/month) Tj
+ET
+BT
+/F1 13.0 Tf
+54 442.2 Td
+(Cash & Runway) Tj
+ET
+BT
+/F1 10.0 Tf
+54 419.3 Td
+(  ? Cash on Hand: $2,100,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 402.3 Td
+(  ? Monthly Burn: $310,000 \(net of revenue\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 385.3 Td
+(  ? Gross Burn: $790,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 368.3 Td
+(  ? Runway: 6.8 months) Tj
+ET
+BT
+/F1 10.0 Tf
+54 351.3 Td
+(  ? Series A timing: Targeting close by June 2026 ? must show LTV/CAC > 3.0x) Tj
+ET
+BT
+/F1 13.0 Tf
+54 328.3 Td
+(Headcount) Tj
+ET
+BT
+/F1 10.0 Tf
+54 305.4 Td
+(  ? Total: 24) Tj
+ET
+BT
+/F1 10.0 Tf
+54 288.4 Td
+(  ? Engineering: 10) Tj
+ET
+BT
+/F1 10.0 Tf
+54 271.4 Td
+(  ? Operations/Compliance: 6) Tj
+ET
+BT
+/F1 10.0 Tf
+54 254.4 Td
+(  ? Sales & Partnerships: 5) Tj
+ET
+BT
+/F1 10.0 Tf
+54 237.4 Td
+(  ? G&A: 3) Tj
+ET
+BT
+/F1 10.0 Tf
+54 220.4 Td
+(  ? Revenue per Employee: $240,000 \(annual\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 197.4 Td
+(Expense Breakdown) Tj
+ET
+BT
+/F1 10.0 Tf
+54 174.5 Td
+(  ? COGS \(payment processing, banking, FX\): 42% of revenue) Tj
+ET
+BT
+/F1 10.0 Tf
+54 157.5 Td
+(  ? Sales & Marketing: 22% of revenue) Tj
+ET
+BT
+/F1 10.0 Tf
+54 140.5 Td
+(  ? Compliance & Legal: 15% of revenue) Tj
+ET
+BT
+/F1 10.0 Tf
+54 123.5 Td
+(  ? R&D \(salaries, infra\): 38% of revenue) Tj
+ET
+BT
+/F1 10.0 Tf
+54 106.5 Td
+(  ? G&A: 10% of revenue) Tj
+ET
+BT
+/F1 10.0 Tf
+54 89.5 Td
+(  ? Total Operating Expenses: $790,000/month) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 488 >>
+stream
+BT
+/F1 13.0 Tf
+54 738.0 Td
+(Key Risks) Tj
+ET
+BT
+/F1 10.0 Tf
+54 715.1 Td
+(  1. LTV/CAC below 2.5x makes Series A fundraise difficult) Tj
+ET
+BT
+/F1 10.0 Tf
+54 698.1 Td
+(  2. BRL exposure without full hedge creates revenue volatility) Tj
+ET
+BT
+/F1 10.0 Tf
+54 681.1 Td
+(  3. Regulatory changes in Brazil and Colombia could increase compliance costs 15-20%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 664.1 Td
+(  4. High churn rate masks underlying growth ? gross adds are strong but net retention is weak) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000133 00000 n 
+0000000230 00000 n 
+0000003124 00000 n 
+0000003250 00000 n 
+0000006080 00000 n 
+0000006206 00000 n 
+0000006745 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+6871
+%%EOF

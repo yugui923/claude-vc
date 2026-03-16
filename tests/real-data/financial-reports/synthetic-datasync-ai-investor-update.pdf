@@ -1,0 +1,297 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 2999 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(DataSync AI ? Monthly Investor Update) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(February 2026) Tj
+ET
+BT
+/F1 10.0 Tf
+54 671.1 Td
+(Hi investors,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 648.1 Td
+(Here's our February update. Big month ? we crossed $5M ARR and signed our first) Tj
+ET
+BT
+/F1 10.0 Tf
+54 631.1 Td
+($500K+ ACV deal.) Tj
+ET
+BT
+/F1 13.0 Tf
+54 608.1 Td
+(Highlights) Tj
+ET
+BT
+/F1 10.0 Tf
+54 585.2 Td
+(  ? Closed $5.1M ARR \(up from $4.2M in December, +21% in 2 months\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 568.2 Td
+(  ? Signed Acme Corp at $520K ACV ? our largest deal ever \(18 months, 2,000+ pipelines\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 551.2 Td
+(  ? NRR held at 134% ? 3 expansions this month totaling $45K net new MRR) Tj
+ET
+BT
+/F1 10.0 Tf
+54 534.2 Td
+(  ? Hired VP Marketing \(ex-Fivetran\) ? starts March 15) Tj
+ET
+BT
+/F1 10.0 Tf
+54 517.2 Td
+(  ? Self-healing engine now resolves 88% of pipeline failures automatically \(up from 85%\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 494.2 Td
+(Lowlights) Tj
+ET
+BT
+/F1 10.0 Tf
+54 471.3 Td
+(  ? Lost 1 customer \(SmallCo, $1.8K MRR\) ? churned to Airflow OSS, cited budget cuts) Tj
+ET
+BT
+/F1 10.0 Tf
+54 454.3 Td
+(  ? Sales cycle for enterprise extending to 55 days \(was 42 in Q3\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 437.3 Td
+(  ? 2 senior engineers gave notice ? competing offers from Databricks. Need to revisit comp bands) Tj
+ET
+BT
+/F1 10.0 Tf
+54 420.3 Td
+(  ? Pipeline generation slowed in Jan \(seasonality?\) ? only $1.2M new qualified pipe vs $2.1M target) Tj
+ET
+BT
+/F1 13.0 Tf
+54 397.3 Td
+(Key Metrics) Tj
+ET
+BT
+/F1 8.5 Tf
+54 368.4 Td
+(| Metric | Jan 2026 | Feb 2026 | MoM Change |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 355.4 Td
+(|--------|----------|----------|------------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 342.3 Td
+(| MRR | $380K | $425K | +11.8% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 329.3 Td
+(| ARR | $4.56M | $5.10M | +11.8% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 316.2 Td
+(| Customers | 71 | 75 | +4 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 303.2 Td
+(| NRR \(trailing\) | 135% | 134% | -1pp |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 290.1 Td
+(| Gross Margin | 82% | 81.5% | -0.5pp |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 277.1 Td
+(| Monthly Burn | $720K | $750K | +4.2% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 264.0 Td
+(| Cash | $15.8M | $15.2M | -$600K |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 250.9 Td
+(| Runway | 22 months | 20 months | -2 months |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 237.9 Td
+(| Headcount | 33 | 35 | +2 |) Tj
+ET
+BT
+/F1 13.0 Tf
+54 218.8 Td
+(Pipeline & Sales) Tj
+ET
+BT
+/F1 10.0 Tf
+54 189.9 Td
+(  ? Total Qualified Pipeline: $16.5M \(down from $18M ? net of closed deals\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 172.9 Td
+(  ? Win Rate \(trailing 90 days\): 33% \(down from 35%\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 155.9 Td
+(  ? Average Deal Size: $102K ACV \(up from $96K\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 138.9 Td
+(  ? Deals in Final Stage: 5 \($1.8M total value\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 115.9 Td
+(Product Updates) Tj
+ET
+BT
+/F1 10.0 Tf
+54 93.0 Td
+(  ? Launched v2.3: dbt integration, improved streaming support) Tj
+ET
+BT
+/F1 10.0 Tf
+54 76.0 Td
+(  ? Self-healing accuracy improved to 88% \(target: 92% by Q2\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 1202 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? 3 new data source connectors: Salesforce, HubSpot, Marketo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? Beta: Natural language pipeline debugging \("why did this pipeline fail?"\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 698.0 Td
+(Asks) Tj
+ET
+BT
+/F1 10.0 Tf
+54 675.1 Td
+(  1. Warm intro to VP Data at [Large Retailer] ? they're evaluating data platforms) Tj
+ET
+BT
+/F1 10.0 Tf
+54 658.1 Td
+(  2. Referral for senior ML engineer ? need to backfill departures quickly) Tj
+ET
+BT
+/F1 10.0 Tf
+54 641.1 Td
+(  3. Feedback on pricing ? considering usage-based component. Worth a call?) Tj
+ET
+BT
+/F1 13.0 Tf
+54 618.1 Td
+(Cash & Runway) Tj
+ET
+BT
+/F1 10.0 Tf
+54 595.2 Td
+(  ? Starting cash: $15.8M) Tj
+ET
+BT
+/F1 10.0 Tf
+54 578.2 Td
+(  ? February burn: $750K \(COGS $77K, S&M $320K, R&D $290K, G&A $63K\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 561.2 Td
+(  ? Ending cash: $15.2M \(including $150K AR collected\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 544.2 Td
+(  ? Runway at current burn: 20 months) Tj
+ET
+BT
+/F1 10.0 Tf
+54 527.2 Td
+(  ? Next raise target: Series B in Q4 2026 at $20M+ ARR) Tj
+ET
+BT
+/F1 10.0 Tf
+54 504.2 Td
+(Best,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 487.2 Td
+(Sarah Chen) Tj
+ET
+BT
+/F1 10.0 Tf
+54 470.2 Td
+(CEO, DataSync AI) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000003275 00000 n 
+0000003401 00000 n 
+0000004655 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4781
+%%EOF

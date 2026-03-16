@@ -1,0 +1,783 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 3033 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(MedScribe AI - Series B Pitch Deck) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(The AI Scribe That Gives Clinicians Their Time Back) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 667.1 m 558 667.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 653.1 Td
+(Slide 1: Title) Tj
+ET
+BT
+/F1 10.0 Tf
+54 625.6 Td
+(MedScribe AI ? AI Clinical Documentation for Hospitals and Health Systems) Tj
+ET
+BT
+/F1 10.0 Tf
+54 608.6 Td
+(Series B Fundraise: $45M at $350M pre-money valuation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 591.6 Td
+(Founded 2021 | Boston, MA) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 564.6 m 558 564.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 550.6 Td
+(Slide 2: The Crisis) Tj
+ET
+BT
+/F1 10.0 Tf
+54 523.1 Td
+(  ? Physicians spend 2 hours on documentation for every 1 hour of patient care \(AMA 2025 survey\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 506.1 Td
+(  ? Clinical burnout has reached 63% ? documentation burden is the #1 cited cause) Tj
+ET
+BT
+/F1 10.0 Tf
+54 489.1 Td
+(  ? Medical scribes cost $36-45/hr and have 78% annual turnover) Tj
+ET
+BT
+/F1 10.0 Tf
+54 472.1 Td
+(  ? EHR documentation errors contribute to 250,000 adverse events annually \(Johns Hopkins\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 455.1 Td
+(  ? Health systems lose $150K+ per physician annually to documentation overhead and burnout-driven) Tj
+ET
+BT
+/F1 10.0 Tf
+54 442.1 Td
+(attrition) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 415.1 m 558 415.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 401.1 Td
+(Slide 3: Solution) Tj
+ET
+BT
+/F1 10.0 Tf
+54 373.6 Td
+(MedScribe AI is an ambient AI scribe that listens to patient encounters and generates:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 356.6 Td
+(  ? SOAP notes, H&P documentation, and procedure notes in real-time) Tj
+ET
+BT
+/F1 10.0 Tf
+54 339.6 Td
+(  ? Structured data fields for EHR auto-population \(Epic, Cerner, Meditech, athenahealth\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 322.6 Td
+(  ? ICD-10 and CPT coding suggestions with 96.7% accuracy) Tj
+ET
+BT
+/F1 10.0 Tf
+54 305.6 Td
+(  ? Patient-facing visit summaries in plain language \(12 languages\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 288.6 Td
+(  ? Clinical decision support alerts surfaced during documentation) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 261.6 m 558 261.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 247.6 Td
+(Slide 4: Why Now) Tj
+ET
+BT
+/F1 10.0 Tf
+54 220.1 Td
+(  ? Ambient AI speech recognition hit 97.8% accuracy for medical terminology in 2025 \(up from 89% in) Tj
+ET
+BT
+/F1 10.0 Tf
+54 207.1 Td
+(2022\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 190.1 Td
+(  ? CMS expanded reimbursement for AI-assisted documentation in October 2025) Tj
+ET
+BT
+/F1 10.0 Tf
+54 173.1 Td
+(  ? Epic and Cerner both opened documentation APIs in 2024 ? integration is finally possible) Tj
+ET
+BT
+/F1 10.0 Tf
+54 156.1 Td
+(  ? Hospital systems are desperate: 34% of health systems have standing RFPs for scribe solutions \(KLAS) Tj
+ET
+BT
+/F1 10.0 Tf
+54 143.1 Td
+(2025\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 126.1 Td
+(  ? FDA issued draft guidance for AI clinical documentation tools in January 2026 ? regulatory path is) Tj
+ET
+BT
+/F1 10.0 Tf
+54 113.1 Td
+(clarifying) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 86.10000000000002 m 558 86.10000000000002 l S
+0 0 0 RG
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 3539 >>
+stream
+BT
+/F1 15.0 Tf
+54 738.0 Td
+(Slide 5: Market Size) Tj
+ET
+BT
+/F1 10.0 Tf
+54 710.5 Td
+(  ? TAM: $47B ? Clinical documentation and coding market \(US + EU\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 693.5 Td
+(  ? SAM: $18B ? AI-assisted clinical documentation for hospitals and large practices) Tj
+ET
+BT
+/F1 10.0 Tf
+54 676.5 Td
+(  ? SOM: $4.2B ? Acute care hospitals and multi-specialty groups \(100+ physicians\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 659.5 Td
+(  ? Growing at 38% CAGR ? fastest-growing segment in health IT) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 632.5 m 558 632.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 618.5 Td
+(Slide 6: Product Deep Dive) Tj
+ET
+BT
+/F1 10.0 Tf
+54 591.0 Td
+(  ? Ambient Capture: Always-on microphone with HIPAA-compliant on-device processing ? no audio leaves the) Tj
+ET
+BT
+/F1 10.0 Tf
+54 578.0 Td
+(exam room) Tj
+ET
+BT
+/F1 10.0 Tf
+54 561.0 Td
+(  ? SmartNote Engine: Generates specialty-specific notes \(deployed across 23 medical specialties\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 544.0 Td
+(  ? EHR Sync: Bi-directional integration with Epic \(certified\), Cerner \(certified\), athenahealth,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 531.0 Td
+(Meditech) Tj
+ET
+BT
+/F1 10.0 Tf
+54 514.0 Td
+(  ? Coding Copilot: Suggests ICD-10 and CPT codes; has captured $18.4M in previously missed reimbursement) Tj
+ET
+BT
+/F1 10.0 Tf
+54 501.0 Td
+(for clients) Tj
+ET
+BT
+/F1 10.0 Tf
+54 484.0 Td
+(  ? Quality Module: Flags documentation gaps that affect quality measures \(HEDIS, MIPS\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 467.0 Td
+(  ? PENDING: AI diagnostic suggestion feature awaiting FDA 510\(k\) clearance \(submitted August 2025,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 454.0 Td
+(expected decision Q3 2026\). This feature is NOT included in current revenue projections) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 427.0 m 558 427.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 413.0 Td
+(Slide 7: Business Model) Tj
+ET
+BT
+/F1 10.0 Tf
+54 385.5 Td
+(  ? SaaS subscription ? per-provider-per-month pricing) Tj
+ET
+BT
+/F1 10.0 Tf
+54 368.5 Td
+(  ? Core \(ambient scribe + EHR sync\): $399/provider/mo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 351.5 Td
+(  ? Professional \(+ coding copilot + quality\): $649/provider/mo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 334.5 Td
+(  ? Enterprise \(+ analytics + custom workflows\): $899/provider/mo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 317.5 Td
+(  ? Average revenue per provider: $587/mo \($7,044/yr\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 300.5 Td
+(  ? Average contract size: 24 providers \($169,056 ACV\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 283.5 Td
+(  ? Gross margin: 78% \(after cloud compute, medical NLP model costs, and EHR integration maintenance\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 256.5 m 558 256.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 242.5 Td
+(Slide 8: Traction) Tj
+ET
+BT
+/F1 10.0 Tf
+54 215.0 Td
+(  ? ARR: $28M \(as of January 2026\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 198.0 Td
+(  ? Growth: $11.2M ARR in January 2025 -> $28M in January 2026 \(150% YoY\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 181.0 Td
+(  ? NRR: 112% ? expansion driven by departments adding providers after successful pilots) Tj
+ET
+BT
+/F1 10.0 Tf
+54 164.0 Td
+(  ? Customers: 340 hospital and health system contracts) Tj
+ET
+BT
+/F1 10.0 Tf
+54 147.0 Td
+(  ? Providers on platform: 3,978 active physicians and APPs) Tj
+ET
+BT
+/F1 10.0 Tf
+54 130.0 Td
+(  ? Notes generated: 8.4M+ clinical notes to date) Tj
+ET
+BT
+/F1 10.0 Tf
+54 113.0 Td
+(  ? Time saved: Average of 1.8 hours/provider/day in documentation time) Tj
+ET
+BT
+/F1 10.0 Tf
+54 96.0 Td
+(  ? Logo retention: 96.2% \(lost 13 contracts in 2025 ? 8 due to health system M&A, 5 competitive\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 79.0 Td
+(  ? Pipeline: $72M qualified \(weighted pipeline $31M\)) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 3819 >>
+stream
+0.75 0.75 0.75 RG
+0.5 w
+54 734 m 558 734 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 720.0 Td
+(Slide 9: Clinical Outcomes) Tj
+ET
+BT
+/F1 10.0 Tf
+54 692.5 Td
+(  ? Documentation completeness improved by 34% \(measured by EHR quality scoring\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 675.5 Td
+(  ? Coding accuracy: 96.7% match with certified coder review) Tj
+ET
+BT
+/F1 10.0 Tf
+54 658.5 Td
+(  ? Previously missed charges captured: $18.4M aggregate across client base) Tj
+ET
+BT
+/F1 10.0 Tf
+54 641.5 Td
+(  ? Average provider satisfaction score: 4.6/5.0 \(n=2,847\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 624.5 Td
+(  ? Physician burnout scores improved 28% \(Maslach Burnout Inventory, pre/post study at 3 health systems\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 607.5 Td
+(  ? Patient satisfaction unchanged \(not worse\) ? ? = +0.3 points on Press Ganey \(not statistically) Tj
+ET
+BT
+/F1 10.0 Tf
+54 594.5 Td
+(significant\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 567.5 m 558 567.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 553.5 Td
+(Slide 10: Competition) Tj
+ET
+BT
+/F1 8.5 Tf
+54 526.0 Td
+(| Feature | MedScribe AI | Nuance DAX | Abridge | DeepScribe | Suki |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 513.0 Td
+(|---------|-------------|------------|---------|------------|------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 499.9 Td
+(| Ambient Capture | Yes | Yes | Yes | Yes | No \(push-to-talk\) |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 486.9 Td
+(| Specialty Coverage | 23 | 18 | 12 | 15 | 10 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 473.8 Td
+(| EHR Integration Depth | Deep \(bidirectional\) | Deep \(Epic only\) | Moderate | Moderate | Light |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 460.8 Td
+(| Coding Suggestions | Yes | Yes | No | Partial | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 447.7 Td
+(| On-Device Processing | Yes | No \(cloud\) | No \(cloud\) | No \(cloud\) | No \(cloud\) |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 434.6 Td
+(| Average Contract Size | $169K | $320K | $85K | $95K | $48K |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 421.6 Td
+(| Clients | 340 | 500+ | 120 | 200 | 300 |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 402.5 Td
+(Nuance DAX \(Microsoft\) is the incumbent; we differentiate on multi-EHR support, on-device privacy, and) Tj
+ET
+BT
+/F1 10.0 Tf
+54 389.5 Td
+(specialty depth. Their Epic-only deep integration is a moat for Epic shops but a limitation everywhere) Tj
+ET
+BT
+/F1 10.0 Tf
+54 376.5 Td
+(else.) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 349.54999999999995 m 558 349.54999999999995 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 335.5 Td
+(Slide 11: Team) Tj
+ET
+BT
+/F1 10.0 Tf
+54 308.0 Td
+(  ? CEO: Dr. Jonathan Whitfield ? Practicing internist \(part-time at MGH\). Previously Chief Medical) Tj
+ET
+BT
+/F1 10.0 Tf
+54 295.0 Td
+(Informatics Officer at Partners HealthCare. MD Harvard Medical School, MBA HBS) Tj
+ET
+BT
+/F1 10.0 Tf
+54 278.0 Td
+(  ? CTO: Sarah Huang ? Ex-Principal Engineer at Nuance \(Dragon Medical team, 2017-2022\). Led team that) Tj
+ET
+BT
+/F1 10.0 Tf
+54 265.0 Td
+(built first ambient medical scribe. MS EE MIT) Tj
+ET
+BT
+/F1 10.0 Tf
+54 248.0 Td
+(  ? VP Sales: Michael Torres ? Ex-VP Sales at Veeva Systems. Scaled health IT sales from $40M to $180M) Tj
+ET
+BT
+/F1 10.0 Tf
+54 235.0 Td
+(ARR. 16 years in health IT enterprise sales) Tj
+ET
+BT
+/F1 10.0 Tf
+54 218.0 Td
+(  ? VP Clinical: Dr. Ananya Reddy ? Ex-CMIO at Intermountain Health. Board-certified in clinical) Tj
+ET
+BT
+/F1 10.0 Tf
+54 205.0 Td
+(informatics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 188.0 Td
+(  ? VP Engineering: Chris Nakamura ? Ex-Engineering Director at Epic \(clinical documentation platform\).) Tj
+ET
+BT
+/F1 10.0 Tf
+54 175.0 Td
+(14 years at Epic) Tj
+ET
+BT
+/F1 10.0 Tf
+54 158.0 Td
+(  ? 187 employees: 72 engineering, 34 sales, 28 clinical/medical affairs, 22 customer success, 16 ops, 15) Tj
+ET
+BT
+/F1 10.0 Tf
+54 145.0 Td
+(G&A) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 118.04999999999995 m 558 118.04999999999995 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 104.0 Td
+(Slide 12: Financials) Tj
+ET
+BT
+/F1 8.5 Tf
+54 76.5 Td
+(| Metric | 2023A | 2024A | 2025A | 2026E | 2027E | 2028E |) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 3613 >>
+stream
+BT
+/F1 8.5 Tf
+54 738.0 Td
+(|--------|-------|-------|-------|-------|-------|-------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 725.0 Td
+(| ARR | $3.2M | $11.2M | $28M | $62M | $115M | $190M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 711.9 Td
+(| Revenue | $2.1M | $8.7M | $24M | $54M | $100M | $170M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 698.9 Td
+(| Gross Margin | 71% | 75% | 78% | 80% | 82% | 83% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 685.8 Td
+(| Providers on Platform | 480 | 1,620 | 3,978 | 8,800 | 16,300 | 27,000 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 672.8 Td
+(| Operating Expenses | $14M | $28M | $46M | $68M | $88M | $105M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 659.7 Td
+(| Burn Rate/mo | $920K | $1.6M | $1.8M | $1.2M | Breakeven | Cash positive |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 646.7 Td
+(| Cash on Hand | $8M | $18M | $14.2M | $55M | $40M | $65M+ |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 627.6 Td
+(*Includes $22M Series A \(raised March 2024 at $120M pre\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 610.6 Td
+(**Includes $45M Series B proceeds) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 583.6000000000004 m 558 583.6000000000004 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 569.6 Td
+(Slide 13: The Ask) Tj
+ET
+BT
+/F1 10.0 Tf
+54 542.1 Td
+(  ? Raising: $45 million Series B) Tj
+ET
+BT
+/F1 10.0 Tf
+54 525.1 Td
+(  ? Pre-money valuation: $350 million \(12.5x trailing ARR\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 508.1 Td
+(  ? Existing investors: Andreessen Horowitz \(Series A lead\), GV, Flare Capital Partners) Tj
+ET
+BT
+/F1 10.0 Tf
+54 491.1 Td
+(  ? Use of funds:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 474.1 Td
+(  ? 35% ? Engineering and R&D \(scale to 120 engineers, expand specialty models, pursue FDA clearance\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 457.1 Td
+(  ? 25% ? Sales \(scale to 60 AEs, build channel partnerships with EHR vendors\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 440.1 Td
+(  ? 20% ? Customer success \(reduce churn further, build implementation team for 500-bed+ systems\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 423.1 Td
+(  ? 10% ? International expansion \(UK NHS pilot, Germany ? KBV integration\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 406.1 Td
+(  ? 10% ? G&A, legal \(FDA regulatory counsel, HIPAA auditing\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 389.1 Td
+(  ? Key upcoming milestone: FDA 510\(k\) decision on diagnostic suggestion feature expected Q3 2026 ? this) Tj
+ET
+BT
+/F1 10.0 Tf
+54 376.1 Td
+(unlocks an estimated $8-12B additional market opportunity but is NOT required for our core business) Tj
+ET
+BT
+/F1 10.0 Tf
+54 359.1 Td
+(  ? Path to profitability: Breakeven projected Q2 2027 at $100M ARR run rate) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 332.10000000000036 m 558 332.10000000000036 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 318.1 Td
+(Appendix: Regulatory Status) Tj
+ET
+BT
+/F1 10.0 Tf
+54 290.6 Td
+(  ? HIPAA: Fully compliant. SOC 2 Type II certified. Annual third-party penetration testing) Tj
+ET
+BT
+/F1 10.0 Tf
+54 273.6 Td
+(  ? EHR Certifications: Epic App Orchard \(certified\), Cerner App Gallery \(certified\), athenahealth) Tj
+ET
+BT
+/F1 10.0 Tf
+54 260.6 Td
+(Marketplace \(listed\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 243.6 Td
+(  ? FDA Status: Core ambient scribe product is exempt from FDA regulation \(documentation aid, not) Tj
+ET
+BT
+/F1 10.0 Tf
+54 230.6 Td
+(diagnostic\). Diagnostic suggestion feature \(submitted August 2025 under 510\(k\)\) is pending ? class II) Tj
+ET
+BT
+/F1 10.0 Tf
+54 217.6 Td
+(medical device pathway. Decision expected Q3 2026) Tj
+ET
+BT
+/F1 10.0 Tf
+54 200.6 Td
+(  ? CMS Reimbursement: AI-assisted documentation eligible for reimbursement under updated 2026 MPFS) Tj
+ET
+BT
+/F1 10.0 Tf
+54 187.6 Td
+(guidelines) Tj
+ET
+BT
+/F1 10.0 Tf
+54 170.6 Td
+(  ? State regulations: Compliant in all 50 states. Two-party consent states handled via patient consent) Tj
+ET
+BT
+/F1 10.0 Tf
+54 157.6 Td
+(workflow at check-in) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000140 00000 n 
+0000000237 00000 n 
+0000003322 00000 n 
+0000003448 00000 n 
+0000007039 00000 n 
+0000007165 00000 n 
+0000011036 00000 n 
+0000011162 00000 n 
+0000014828 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+14956
+%%EOF

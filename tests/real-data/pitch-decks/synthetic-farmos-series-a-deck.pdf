@@ -1,0 +1,879 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 3133 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(FarmOS - Series A Pitch Deck) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(Precision Agriculture That Mid-Size Farms Can Actually Afford) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 667.1 m 558 667.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 653.1 Td
+(Slide 1: Title) Tj
+ET
+BT
+/F1 10.0 Tf
+54 625.6 Td
+(FarmOS ? Precision Ag SaaS + Sensors for the 90% of Farms That Aren't Giant) Tj
+ET
+BT
+/F1 10.0 Tf
+54 608.6 Td
+(Series A Fundraise: $10M at $40M pre-money valuation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 591.6 Td
+(Founded 2022 | Des Moines, IA) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 564.6 m 558 564.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 550.6 Td
+(Slide 2: Problem) Tj
+ET
+BT
+/F1 10.0 Tf
+54 523.1 Td
+(  ? Precision agriculture promises 15-25% yield improvements, but 88% of farms under 2,000 acres can't) Tj
+ET
+BT
+/F1 10.0 Tf
+54 510.1 Td
+(afford it) Tj
+ET
+BT
+/F1 10.0 Tf
+54 493.1 Td
+(  ? John Deere's precision stack costs $180K+ per tractor ? designed for mega-farms, out of reach for) Tj
+ET
+BT
+/F1 10.0 Tf
+54 480.1 Td
+(mid-size operations) Tj
+ET
+BT
+/F1 10.0 Tf
+54 463.1 Td
+(  ? Soil data is collected once per season \(if at all\) ? by the time lab results return, planting) Tj
+ET
+BT
+/F1 10.0 Tf
+54 450.1 Td
+(decisions are already made) Tj
+ET
+BT
+/F1 10.0 Tf
+54 433.1 Td
+(  ? Weather and irrigation decisions rely on county-level data, not field-level microclimate information) Tj
+ET
+BT
+/F1 10.0 Tf
+54 416.1 Td
+(  ? Mid-size farms \(200-2,000 acres\) produce 38% of US crop value but receive <5% of precision ag) Tj
+ET
+BT
+/F1 10.0 Tf
+54 403.1 Td
+(investment) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 376.1 m 558 376.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 362.1 Td
+(Slide 3: Solution) Tj
+ET
+BT
+/F1 10.0 Tf
+54 334.6 Td
+(FarmOS provides affordable, sensor-backed precision agriculture for mid-size farms:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 317.6 Td
+(  ? FarmOS Pods: Low-cost wireless sensor clusters \($280/unit\) measuring soil moisture, temperature,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 304.6 Td
+(nitrogen, phosphorus, and pH at 3 depths) Tj
+ET
+BT
+/F1 10.0 Tf
+54 287.6 Td
+(  ? FarmOS Dashboard: Real-time field-level insights ? irrigation scheduling, fertilizer recommendations,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 274.6 Td
+(pest risk alerts) Tj
+ET
+BT
+/F1 10.0 Tf
+54 257.6 Td
+(  ? FarmOS Forecast: Hyperlocal weather and microclimate predictions using sensor data + satellite) Tj
+ET
+BT
+/F1 10.0 Tf
+54 244.6 Td
+(imagery + NOAA models) Tj
+ET
+BT
+/F1 10.0 Tf
+54 227.6 Td
+(  ? FarmOS Advisor: AI agronomist ? upload a photo of crop stress, get diagnosis and treatment) Tj
+ET
+BT
+/F1 10.0 Tf
+54 214.6 Td
+(recommendations) Tj
+ET
+BT
+/F1 10.0 Tf
+54 197.6 Td
+(  ? FarmOS Marketplace: Input purchasing at group-discount pricing \(seed, fertilizer, crop protection\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 170.60000000000002 m 558 170.60000000000002 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 156.6 Td
+(Slide 4: Why Now) Tj
+ET
+BT
+/F1 10.0 Tf
+54 129.1 Td
+(  ? IoT sensor costs dropped 72% since 2020 ? our sensor pod costs $94 to manufacture \(vs. $340) Tj
+ET
+BT
+/F1 10.0 Tf
+54 116.1 Td
+(equivalent in 2020\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 99.1 Td
+(  ? LoRaWAN and satellite IoT connectivity now reaches 94% of US farmland ? no WiFi needed) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 3826 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? USDA EQIP program expanded in 2025 to cover 50% of precision ag sensor costs for farms under 1,500) Tj
+ET
+BT
+/F1 10.0 Tf
+54 725.0 Td
+(acres) Tj
+ET
+BT
+/F1 10.0 Tf
+54 708.0 Td
+(  ? Climate volatility is making data-driven decisions essential, not optional ? 2025 had record crop) Tj
+ET
+BT
+/F1 10.0 Tf
+54 695.0 Td
+(insurance payouts \($18.2B\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 678.0 Td
+(  ? Farmer demographics shifting: 41% of farm operators under 45 are "tech-comfortable" \(USDA Census) Tj
+ET
+BT
+/F1 10.0 Tf
+54 665.0 Td
+(2025\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 638.0 m 558 638.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 624.0 Td
+(Slide 5: Market Size) Tj
+ET
+BT
+/F1 10.0 Tf
+54 596.5 Td
+(  ? TAM: $12.8B ? US precision agriculture market) Tj
+ET
+BT
+/F1 10.0 Tf
+54 579.5 Td
+(  ? SAM: $4.6B ? Precision ag for farms 200-2,000 acres \(software + sensors\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 562.5 Td
+(  ? SOM: $1.1B ? Sensor-backed precision ag SaaS for row crop and specialty crop farms) Tj
+ET
+BT
+/F1 10.0 Tf
+54 545.5 Td
+(  ? Growing at 16% CAGR, accelerating with EQIP subsidies and climate pressure) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 518.5 m 558 518.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 504.5 Td
+(Slide 6: Product Details) Tj
+ET
+BT
+/F1 10.0 Tf
+54 477.0 Td
+(  ? FarmOS Pod: Solar-powered sensor cluster, 3-year battery life, LoRaWAN + satellite backup) Tj
+ET
+BT
+/F1 10.0 Tf
+54 464.0 Td
+(connectivity. Measures: soil moisture \(3 depths\), soil temperature, nitrogen, phosphorus, pH, ambient) Tj
+ET
+BT
+/F1 10.0 Tf
+54 451.0 Td
+(temperature, humidity, wind speed. Recommended density: 1 pod per 40 acres) Tj
+ET
+BT
+/F1 10.0 Tf
+54 434.0 Td
+(  ? FarmOS Gateway: Hub that aggregates pod data and transmits via cellular. 1 gateway covers 200+ pods) Tj
+ET
+BT
+/F1 10.0 Tf
+54 421.0 Td
+(\(8,000+ acres\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 404.0 Td
+(  ? Dashboard: Field maps with overlay layers \(moisture, nutrients, yield prediction\). Irrigation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 391.0 Td
+(scheduling engine saves average of 18% water usage. Variable-rate fertilizer recommendations) Tj
+ET
+BT
+/F1 10.0 Tf
+54 374.0 Td
+(  ? FarmOS Advisor: Crop disease identification from smartphone photos ? 93.4% accuracy across 47 common) Tj
+ET
+BT
+/F1 10.0 Tf
+54 361.0 Td
+(diseases for corn, soybean, wheat, and cotton) Tj
+ET
+BT
+/F1 10.0 Tf
+54 344.0 Td
+(  ? Seasonal Reports: End-of-season analytics showing ROI per field, input cost vs. yield correlation,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 331.0 Td
+(and multi-year trend analysis) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 304.0 m 558 304.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 290.0 Td
+(Slide 7: Business Model) Tj
+ET
+BT
+/F1 10.0 Tf
+54 262.5 Td
+(  ? Hardware: FarmOS Pod $280/unit \(COGS: $94, 66% hardware margin\). Average farm buys 12 pods \($3,360) Tj
+ET
+BT
+/F1 10.0 Tf
+54 249.5 Td
+(initial hardware purchase\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 232.5 Td
+(  ? SaaS subscription: $89/mo base + $4.50/acre/mo for monitored acreage. Average farm: 640 acres = $89 +) Tj
+ET
+BT
+/F1 10.0 Tf
+54 219.5 Td
+($2,880/mo = $2,969/mo \($35,628/yr\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 202.5 Td
+(  ? Wait ? actual pricing is: $89/mo platform fee + $0.375/acre/month. Average farm: 640 acres monitored) Tj
+ET
+BT
+/F1 10.0 Tf
+54 189.5 Td
+(= $89 + $240/mo = $329/mo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 172.5 Td
+(  ? ACV: $12,808 \(includes $3,360 hardware amortized over 3 years + $329/mo × 12 = $3,948 SaaS + $7,740) Tj
+ET
+BT
+/F1 10.0 Tf
+54 159.5 Td
+(average input marketplace revenue\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 142.5 Td
+(  ? Let me be precise: ACV \(SaaS only\): $3,948. ACV \(including hardware amortization\): $5,068. ACV) Tj
+ET
+BT
+/F1 10.0 Tf
+54 129.5 Td
+(\(including marketplace\): $12,808) Tj
+ET
+BT
+/F1 10.0 Tf
+54 112.5 Td
+(  ? Gross margin: 58% blended \(SaaS: 82%, Hardware: 66%, Marketplace: 12%\). Hardware drags overall margin) Tj
+ET
+BT
+/F1 10.0 Tf
+54 99.5 Td
+(significantly) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 4105 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? Marketplace: Group-buying discounts on seed, fertilizer, crop protection. 8% take rate on $2.1M) Tj
+ET
+BT
+/F1 10.0 Tf
+54 725.0 Td
+(volume) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 698.0 m 558 698.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 684.0 Td
+(Slide 8: Traction) Tj
+ET
+BT
+/F1 10.0 Tf
+54 656.5 Td
+(  ? ARR \(SaaS\): $2.3M \(as of January 2026\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 639.5 Td
+(  ? Total revenue \(incl. hardware + marketplace\): $4.1M trailing 12 months) Tj
+ET
+BT
+/F1 10.0 Tf
+54 622.5 Td
+(  ? Growth: SaaS ARR up from $820K in January 2025 \(180% YoY\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 605.5 Td
+(  ? Farms: 180 active farm customers across 12 states) Tj
+ET
+BT
+/F1 10.0 Tf
+54 588.5 Td
+(  ? Acres monitored: 115,200 \(avg 640 acres/farm\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 571.5 Td
+(  ? Pods deployed: 2,880 active sensor pods) Tj
+ET
+BT
+/F1 10.0 Tf
+54 554.5 Td
+(  ? SEASONALITY WARNING: 70% of new bookings occur in Q2 and Q3 \(pre-planting and growing season\). Q4 and) Tj
+ET
+BT
+/F1 10.0 Tf
+54 541.5 Td
+(Q1 are essentially flat for new sales. This creates lumpy revenue recognition and cash flow challenges) Tj
+ET
+BT
+/F1 10.0 Tf
+54 524.5 Td
+(  ? Retention: 97% annual \(lost 5 farms in 2025 ? 3 sold their operations, 1 switched to Deere, 1 went) Tj
+ET
+BT
+/F1 10.0 Tf
+54 511.5 Td
+(out of business\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 494.5 Td
+(  ? Yield improvement: Customers report average 14.3% yield increase in first full season \(self-reported,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 481.5 Td
+(n=112\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 464.5 Td
+(  ? Water savings: 18% average reduction in irrigation water usage \(verified by 3 university extension) Tj
+ET
+BT
+/F1 10.0 Tf
+54 451.5 Td
+(studies\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 424.5 m 558 424.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 410.5 Td
+(Slide 9: Competition) Tj
+ET
+BT
+/F1 8.5 Tf
+54 383.0 Td
+(| Feature | FarmOS | John Deere Ops Center | Climate \(Bayer\) | Farmers Edge | Agworld |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 369.9 Td
+(|---------|--------|----------------------|-----------------|--------------|---------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 356.9 Td
+(| Affordable Sensors | Yes \($280/pod\) | No \($180K+ tractor\) | No sensors | $500+/sensor | No sensors |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 343.8 Td
+(| Software + Hardware | Yes | Yes \(tractor-locked\) | Software only | Yes | Software only |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 330.8 Td
+(| Farm Size Target | 200-2,000 acres | 2,000+ acres | 1,000+ acres | 1,000+ acres | Any |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 317.7 Td
+(| EQIP Subsidy Eligible | Yes | No | No | Partial | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 304.7 Td
+(| AI Crop Advisor | Yes | Partial | Yes | No | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 291.6 Td
+(| Input Marketplace | Yes | Via dealer | Via Bayer | No | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 278.6 Td
+(| Annual Cost \(640 acres\) | $5,068 | $25,000+ | $8,400 | $12,000 | $3,600 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 265.5 Td
+(| Connectivity | LoRaWAN + satellite | Cellular \(tractor\) | N/A | Cellular | N/A |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 246.5 Td
+(Our moat: we're the only company combining affordable sensors with SaaS for mid-size farms. Deere) Tj
+ET
+BT
+/F1 10.0 Tf
+54 233.5 Td
+(dominates large farms but their economics don't scale down. Climate FieldView lost 30% of market share) Tj
+ET
+BT
+/F1 10.0 Tf
+54 220.5 Td
+(after Bayer acquisition created conflicts of interest with input recommendations.) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 193.4999999999999 m 558 193.4999999999999 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 179.5 Td
+(Slide 10: Team) Tj
+ET
+BT
+/F1 10.0 Tf
+54 152.0 Td
+(  ? CEO/Co-founder: Tom Hendricks ? 4th-generation Iowa farmer \(still farms 480 acres on weekends\).) Tj
+ET
+BT
+/F1 10.0 Tf
+54 139.0 Td
+(Agricultural Engineering, Iowa State. MBA Kellogg. Previously worked at John Deere \(5 years, product) Tj
+ET
+BT
+/F1 10.0 Tf
+54 126.0 Td
+(development\) and left frustrated by their focus on mega-farms only) Tj
+ET
+BT
+/F1 10.0 Tf
+54 109.0 Td
+(  ? CTO/Co-founder: Dr. Wei Liu ? Ex-Senior Hardware Engineer at Particle.io \(IoT platform\). Designed) Tj
+ET
+BT
+/F1 10.0 Tf
+54 96.0 Td
+(sensor hardware for 3 commercial IoT products. PhD EE, Purdue. Grew up on a rice farm in Hunan, China) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 3765 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? VP Agronomy: Dr. Maria Gonzalez ? Ex-Extension Agronomist at University of Nebraska. Published 40+) Tj
+ET
+BT
+/F1 10.0 Tf
+54 725.0 Td
+(papers on precision agriculture. PhD Crop Science) Tj
+ET
+BT
+/F1 10.0 Tf
+54 708.0 Td
+(  ? Head of Sales: Brett Olson ? Ran Midwest territory for Climate FieldView \(Bayer\). 8 years selling ag) Tj
+ET
+BT
+/F1 10.0 Tf
+54 695.0 Td
+(tech to farmers. Knows every co-op and equipment dealer in a 6-state radius) Tj
+ET
+BT
+/F1 10.0 Tf
+54 678.0 Td
+(  ? VP Engineering: Kwame Asante ? Ex-Senior Engineer at Samsara \(fleet IoT\). Built sensor data pipeline) Tj
+ET
+BT
+/F1 10.0 Tf
+54 665.0 Td
+(processing 2B+ events/day) Tj
+ET
+BT
+/F1 10.0 Tf
+54 648.0 Td
+(  ? 22 employees: 8 engineering, 4 hardware/manufacturing, 3 agronomy, 3 sales, 2 support, 2 G&A) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 621.0 m 558 621.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 607.0 Td
+(Slide 11: Financials) Tj
+ET
+BT
+/F1 8.5 Tf
+54 579.5 Td
+(| Metric | 2023A | 2024A | 2025A | 2026E | 2027E | 2028E |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 566.5 Td
+(|--------|-------|-------|-------|-------|-------|-------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 553.4 Td
+(| SaaS ARR | $110K | $820K | $2.3M | $5.8M | $12M | $22M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 540.4 Td
+(| Hardware Revenue | $180K | $640K | $1.2M | $2.4M | $3.8M | $5.2M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 527.3 Td
+(| Marketplace GMV | $0 | $380K | $2.1M | $6.5M | $15M | $30M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 514.3 Td
+(| Total Revenue | $310K | $1.5M | $4.1M | $10M | $22M | $42M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 501.2 Td
+(| Blended Gross Margin | 48% | 53% | 58% | 63% | 68% | 72% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 488.2 Td
+(| Farms | 28 | 95 | 180 | 380 | 700 | 1,200 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 475.1 Td
+(| Acres Monitored | 16,800 | 60,800 | 115,200 | 243,200 | 448,000 | 768,000 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 462.1 Td
+(| Burn Rate/mo | $80K | $145K | $240K | $320K | $280K | Breakeven |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 449.0 Td
+(| Cash on Hand | $1.5M | $2.8M | $1.9M | $10.6M | $7.1M | $7M |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 430.0 Td
+(*Includes $2M seed \(2024\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 413.0 Td
+(**Includes $10M Series A proceeds) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 385.95000000000016 m 558 385.95000000000016 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 372.0 Td
+(Slide 12: The Ask) Tj
+ET
+BT
+/F1 10.0 Tf
+54 344.5 Td
+(  ? Raising: $10 million Series A) Tj
+ET
+BT
+/F1 10.0 Tf
+54 327.5 Td
+(  ? Pre-money valuation: $40 million \(17.4x trailing SaaS ARR, or 9.8x total revenue\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 310.5 Td
+(  ? Use of funds:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 293.5 Td
+(  ? 30% ? Engineering \(scale platform, add livestock monitoring, improve AI advisor\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 276.5 Td
+(  ? 25% ? Hardware R&D and manufacturing \(next-gen pod with 5-year battery, add weather station\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 259.5 Td
+(  ? 20% ? Sales \(expand to 20 states, hire 6 field sales reps, build dealer channel\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 242.5 Td
+(  ? 15% ? Agronomy \(add specialty crops: almonds, grapes, citrus ? higher ACV\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 225.5 Td
+(  ? 10% ? Ops and G&A) Tj
+ET
+BT
+/F1 10.0 Tf
+54 208.5 Td
+(  ? 18-month milestones: $6M SaaS ARR, 380 farms, 240K+ monitored acres, expand to specialty crops) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 181.45000000000016 m 558 181.45000000000016 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 167.5 Td
+(Slide 13: The Farmer Economics Case) Tj
+ET
+BT
+/F1 10.0 Tf
+54 140.0 Td
+(Why a mid-size farmer pays $5,068/yr for FarmOS \(SaaS + hardware amortized\):) Tj
+ET
+BT
+/F1 10.0 Tf
+54 117.0 Td
+(640-acre corn/soybean rotation, central Iowa) Tj
+ET
+BT
+/F1 10.0 Tf
+54 100.0 Td
+(  ? Average yield without FarmOS: 198 bu/acre corn, 56 bu/acre soybean) Tj
+ET
+BT
+/F1 10.0 Tf
+54 83.0 Td
+(  ? Average yield with FarmOS \(14.3% improvement\): 226 bu/acre corn, 64 bu/acre soybean) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+12 0 obj
+<< /Length 1090 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? Additional revenue at current prices: $28/acre corn + $21/acre soybean = ~$24.50/acre blended) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? Total additional revenue: 640 acres × $24.50 = $15,680/yr) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? FarmOS annual cost: $5,068) Tj
+ET
+BT
+/F1 10.0 Tf
+54 687.0 Td
+(  ? Net ROI: $10,612/yr \(209% return on investment\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 670.0 Td
+(  ? Payback period: 3.9 months) Tj
+ET
+BT
+/F1 10.0 Tf
+54 647.0 Td
+(Additional savings not included above:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 630.0 Td
+(  ? Water savings \(18%\): ~$3,200/yr for irrigated farms) Tj
+ET
+BT
+/F1 10.0 Tf
+54 613.0 Td
+(  ? Fertilizer optimization: ~$4,800/yr \(15% reduction in nitrogen application through precision timing\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 596.0 Td
+(  ? Reduced crop insurance claims: Qualifies for USDA precision ag discount \(5% premium reduction\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 573.0 Td
+(This is why retention is 97%. Farmers are pragmatic ? when something clearly pays for itself in 4 months,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 560.0 Td
+(they don't switch.) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000147 00000 n 
+0000000244 00000 n 
+0000003429 00000 n 
+0000003555 00000 n 
+0000007433 00000 n 
+0000007559 00000 n 
+0000011716 00000 n 
+0000011842 00000 n 
+0000015660 00000 n 
+0000015788 00000 n 
+0000016931 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+17059
+%%EOF

@@ -1,0 +1,121 @@
+# KPI Report: CrowdStrike Holdings (CRWD)
+
+**Company Type**: SaaS (Cybersecurity)
+**Reporting Period**: FY2025 (ended January 31, 2025) & Q4 FY2025
+**Data Source**: Official Earnings Press Release, March 4, 2025
+
+## Key Metrics Summary
+
+| Metric | Value | Benchmark | Status |
+|--------|-------|-----------|--------|
+| ARR | $4.24B (23% YoY) | Stage: public-scale | Healthy |
+| Revenue (FY) | $3.95B (29% YoY) | 25-50% YoY = median range | Healthy |
+| Subscription Revenue % | 95.2% | >90% best-in-class | Healthy |
+| Subscription Gross Margin (GAAP) | 78% | >75% SaaS standard | Healthy |
+| Subscription Gross Margin (Non-GAAP) | 80% | >80% premium | Healthy |
+| Gross Retention Rate | 97% | >95% excellent | Healthy |
+| Net New ARR (FY25) | ~$793M | — | Healthy |
+| Non-GAAP Operating Margin | 21.2% | >20% strong for growth | Healthy |
+| FCF Margin | 27.1% | >25% excellent | Healthy |
+| Rule of 40 | 56.1 | >40 healthy | Healthy |
+| Burn Multiple | N/A (FCF positive) | <1x excellent | Healthy |
+| Cash & Equivalents | $4.32B | >12mo runway | Healthy |
+| GAAP Operating Margin | -3.0% | Profitable on non-GAAP | Watch |
+| GAAP Net Loss (FY) | -$19.3M | — | Watch |
+
+## Detailed Analysis
+
+### Growth Metrics
+
+| Metric | Q4 FY25 | Full Year FY25 | Trend |
+|--------|---------|----------------|-------|
+| Total Revenue Growth (YoY) | 25% | 29% | Slight deceleration Q4 vs. FY |
+| Subscription Revenue Growth (YoY) | 27% | 31% | Subscription outpacing total |
+| ARR Growth (YoY) | 23% | — | Healthy at scale |
+| Q4 Net New ARR | $224.3M | — | Solid quarterly addition |
+
+**Assessment**: CrowdStrike is sustaining ~25-30% growth at $4B+ ARR scale, which is exceptional. The slight Q4 deceleration (25% vs. 29% full-year) is natural at this scale. Subscription revenue growing faster than total revenue (31% vs. 29%) signals improving revenue quality.
+
+**FY26 Guidance**: $4.744-$4.806B revenue implies ~20-22% growth — a controlled deceleration consistent with scale.
+
+### Unit Economics
+
+| Metric | Value | Assessment |
+|--------|-------|------------|
+| Gross Retention | 97% | Elite-tier retention; only 3% annual logo churn |
+| Module Adoption (5+) | 67% | Strong platform stickiness |
+| Module Adoption (8+) | 21% | Significant cross-sell runway remains |
+| Emerging Products ARR | $1.3B+ | ~31% of total ARR from newer products |
+
+**Assessment**: The 97% gross retention signals extremely low involuntary and voluntary churn, among the best in enterprise SaaS. Module adoption data (67% at 5+ modules) demonstrates strong platform consolidation. The $1.3B+ in Next-Gen SIEM, Cloud Security, and Identity Protection shows successful expansion beyond core endpoint.
+
+**NRR (estimated)**: Not explicitly reported, but with 97% gross retention and 23% ARR growth at this scale, implied NRR is likely **115-120%+**, indicating healthy expansion revenue from the existing base.
+
+### Efficiency Metrics
+
+| Metric | Value | Benchmark | Assessment |
+|--------|-------|-----------|------------|
+| Rule of 40 | **56.1** | >40 healthy | **Well above threshold** |
+| Non-GAAP Operating Margin | 21.2% | >20% strong | Profitable growth |
+| FCF Margin | 27.1% | >25% excellent | Cash machine |
+| Operating Cash Flow (FY) | $1.381B | — | Record year |
+| Free Cash Flow (FY) | $1.07B | — | Record year |
+
+**Assessment**: CrowdStrike scores 56.1 on the Rule of 40 (29% growth + 27.1% FCF margin), placing it firmly in the top tier of public SaaS companies. The business generates substantial free cash flow ($1.07B) while still growing ~29% — this is a rare and powerful combination at scale.
+
+**Burn Multiple**: Not applicable — the company is FCF positive. It generated $1.07B in free cash flow while adding ~$793M in net new ARR, effectively a **negative burn multiple** (generating $1.35 in FCF per $1 of net new ARR). This is best-in-class capital efficiency.
+
+### Profitability Bridge
+
+| Metric | GAAP | Non-GAAP | Delta |
+|--------|------|----------|-------|
+| Operating Income (FY) | -$120.4M | $837.7M | $958.1M SBC + amortization |
+| Net Income (FY) | -$19.3M | $987.6M | $1.007B adjustment |
+| EPS (diluted) | -$0.08 | $3.93 | — |
+
+**Assessment**: The GAAP/Non-GAAP gap ($958M+) is driven by stock-based compensation, which is common but significant at this scale. GAAP losses are narrowing rapidly (-$19.3M FY25 vs. likely larger loss FY24), suggesting the company is approaching GAAP profitability.
+
+## Flags
+
+### Healthy
+- **Rule of 40 at 56**: Exceptional balance of growth and profitability — top-decile among public SaaS
+- **97% gross retention**: Near-zero involuntary churn indicates mission-critical product
+- **27% FCF margin**: Generating over $1B in free cash flow while growing 29%
+- **95% subscription mix**: Highly predictable, recurring revenue base
+- **80% subscription gross margin**: Premium SaaS margins sustained at scale
+- **$4.3B cash**: Fortress balance sheet provides strategic flexibility
+
+### Watch
+- **ARR growth decelerating**: 23% Q4 YoY vs. higher prior periods — natural at $4B+ but worth tracking against FY26 guidance
+- **GAAP profitability**: Still GAAP net-loss (-$19.3M), though the gap is closing rapidly
+- **SBC magnitude**: ~$958M+ in stock-based compensation creates significant GAAP/Non-GAAP divergence and real shareholder dilution
+- **Professional services declining share**: $50M Q4 (~4.7% of revenue) — not a concern per se, but monitor for customer implementation support adequacy
+
+## Recommendation
+
+CrowdStrike presents an **elite SaaS financial profile** at scale. The combination of 29% revenue growth, 27% FCF margins, 97% gross retention, and 80% subscription gross margins places it among the highest-quality SaaS businesses globally. The Rule of 40 score of 56 and $1B+ FCF generation demonstrate that growth and profitability are not in tension.
+
+**Key areas to monitor:**
+1. **ARR growth trajectory** — FY26 guidance implies ~20-22% growth; watch for stabilization vs. further deceleration
+2. **NRR disclosure** — the company hasn't explicitly reported NRR in this release; request this metric for a complete unit economics picture
+3. **Module adoption** — the 21% at 8+ modules represents significant remaining cross-sell opportunity
+4. **GAAP convergence** — at -$19.3M net loss, the company is quarters away from sustained GAAP profitability
+
+From a valuation perspective, at 29% growth with 80% gross margins, CrowdStrike commands premium SaaS multiples (high-end of EV/ARR 6-30x range per industry benchmarks). The strong FCF generation increasingly supports EBITDA-based valuation as well.
+
+---
+DISCLAIMER: This valuation/terms analysis is a mathematical exercise
+using publicly available methodologies. It is not an appraisal, fairness
+opinion, or professional valuation. Actual company valuations depend on
+factors not captured in this analysis. This tool does not provide legal
+advice regarding term sheet provisions. Engage qualified legal and
+financial professionals for all investment and securities matters.
+
+Canada: This tool does not provide advice within the meaning of the
+Securities Act (Ontario) or National Instrument 31-103. No registration
+exemption is relied upon.
+
+United States: This tool does not provide advice within the meaning of
+the Investment Advisers Act of 1940.
+
+---

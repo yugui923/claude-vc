@@ -1,0 +1,559 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 2789 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(DataSync AI - Series A Pitch Deck) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(Intelligent Data Pipeline Orchestration for the AI Era) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 667.1 m 558 667.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 653.1 Td
+(Slide 1: Title) Tj
+ET
+BT
+/F1 10.0 Tf
+54 625.6 Td
+(DataSync AI ? The AI-Native Data Pipeline Platform) Tj
+ET
+BT
+/F1 10.0 Tf
+54 608.6 Td
+(Series A Fundraise: $15M at $60M pre-money valuation) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 581.6 m 558 581.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 567.6 Td
+(Slide 2: Problem) Tj
+ET
+BT
+/F1 10.0 Tf
+54 540.1 Td
+(  ? 73% of ML/AI projects fail due to poor data quality and pipeline reliability) Tj
+ET
+BT
+/F1 10.0 Tf
+54 523.1 Td
+(  ? Enterprise data teams spend 60% of time on pipeline maintenance, not innovation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 506.1 Td
+(  ? Existing tools \(Airflow, dbt, Fivetran\) are fragmented ? no unified orchestration) Tj
+ET
+BT
+/F1 10.0 Tf
+54 489.1 Td
+(  ? Average enterprise runs 500+ pipelines across 12+ data sources with no single pane of glass) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 462.1 m 558 462.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 448.1 Td
+(Slide 3: Solution) Tj
+ET
+BT
+/F1 10.0 Tf
+54 420.6 Td
+(DataSync AI provides an AI-native data pipeline orchestration platform that:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 403.6 Td
+(  ? Auto-detects data quality issues before they propagate) Tj
+ET
+BT
+/F1 10.0 Tf
+54 386.6 Td
+(  ? Self-heals broken pipelines using LLM-powered remediation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 369.6 Td
+(  ? Unifies ETL, reverse ETL, and streaming in one platform) Tj
+ET
+BT
+/F1 10.0 Tf
+54 352.6 Td
+(  ? Reduces pipeline maintenance time by 80%) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 325.6 m 558 325.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 311.6 Td
+(Slide 4: Why Now) Tj
+ET
+BT
+/F1 10.0 Tf
+54 284.1 Td
+(  ? Explosion of AI/ML workloads creates unprecedented data pipeline complexity) Tj
+ET
+BT
+/F1 10.0 Tf
+54 267.1 Td
+(  ? LLM capabilities now mature enough for autonomous pipeline management) Tj
+ET
+BT
+/F1 10.0 Tf
+54 250.1 Td
+(  ? Data teams overwhelmed ? average data engineer manages 200+ pipelines) Tj
+ET
+BT
+/F1 10.0 Tf
+54 233.1 Td
+(  ? $50B+ spent annually on data integration and quality) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 206.10000000000002 m 558 206.10000000000002 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 192.1 Td
+(Slide 5: Market Size) Tj
+ET
+BT
+/F1 10.0 Tf
+54 164.6 Td
+(  ? TAM: $78B ? Total data integration and management market \(Gartner 2025\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 147.6 Td
+(  ? SAM: $22B ? Cloud-native data pipeline orchestration and quality) Tj
+ET
+BT
+/F1 10.0 Tf
+54 130.6 Td
+(  ? SOM: $3.2B ? Mid-market and enterprise AI-driven pipeline management) Tj
+ET
+BT
+/F1 10.0 Tf
+54 113.6 Td
+(  ? Market growing at 24% CAGR through 2028) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 86.60000000000002 m 558 86.60000000000002 l S
+0 0 0 RG
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 2982 >>
+stream
+BT
+/F1 15.0 Tf
+54 738.0 Td
+(Slide 6: Product) Tj
+ET
+BT
+/F1 10.0 Tf
+54 710.5 Td
+(Key features:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 693.5 Td
+(  ? AI Pipeline Builder: Natural language to pipeline definition) Tj
+ET
+BT
+/F1 10.0 Tf
+54 676.5 Td
+(  ? Smart Monitoring: Anomaly detection across all pipelines) Tj
+ET
+BT
+/F1 10.0 Tf
+54 659.5 Td
+(  ? Self-Healing Engine: Automatic remediation of 85% of common failures) Tj
+ET
+BT
+/F1 10.0 Tf
+54 642.5 Td
+(  ? Unified Orchestration: ETL, streaming, and reverse ETL in one platform) Tj
+ET
+BT
+/F1 10.0 Tf
+54 625.5 Td
+(  ? Data Quality Score: Real-time quality metrics for every dataset) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 598.5 m 558 598.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 584.5 Td
+(Slide 7: Business Model) Tj
+ET
+BT
+/F1 10.0 Tf
+54 557.0 Td
+(  ? SaaS subscription pricing ? tiered by data volume and pipelines) Tj
+ET
+BT
+/F1 10.0 Tf
+54 540.0 Td
+(  ? Starter: $2,000/mo \(up to 50 pipelines, 500GB/mo\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 523.0 Td
+(  ? Professional: $8,000/mo \(up to 200 pipelines, 5TB/mo\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 506.0 Td
+(  ? Enterprise: $25,000+/mo \(unlimited pipelines, custom volume\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 489.0 Td
+(  ? Average contract value \(ACV\): $96,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 472.0 Td
+(  ? Gross margin: 82%) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 445.0 m 558 445.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 431.0 Td
+(Slide 8: Traction) Tj
+ET
+BT
+/F1 10.0 Tf
+54 403.5 Td
+(  ? ARR: $4.2M \(as of December 2025\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 386.5 Td
+(  ? Growth: 280% YoY ARR growth) Tj
+ET
+BT
+/F1 10.0 Tf
+54 369.5 Td
+(  ? Customers: 68 paying customers \(up from 12 at start of year\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 352.5 Td
+(  ? Logo retention: 96%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 335.5 Td
+(  ? NRR: 135%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 318.5 Td
+(  ? Pipeline: $18M qualified pipeline) Tj
+ET
+BT
+/F1 10.0 Tf
+54 301.5 Td
+(  ? Key logos: 3 Fortune 500 companies, 12 mid-market enterprises) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 274.5 m 558 274.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 260.5 Td
+(Slide 9: Competition) Tj
+ET
+BT
+/F1 8.5 Tf
+54 233.0 Td
+(| Feature | DataSync AI | Airflow | dbt | Fivetran | Dagster |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 219.9 Td
+(|---------|------------|---------|-----|----------|---------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 206.9 Td
+(| AI-Native | ? | ? | ? | ? | ? |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 193.8 Td
+(| Self-Healing | ? | ? | ? | Partial | ? |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 180.8 Td
+(| Unified ETL+Streaming | ? | ? | ? | ? | Partial |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 167.7 Td
+(| Data Quality Built-in | ? | ? | Partial | ? | ? |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 154.7 Td
+(| No-Code Pipeline Builder | ? | ? | ? | ? | ? |) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 131.64999999999992 m 558 131.64999999999992 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 117.6 Td
+(Slide 10: Team) Tj
+ET
+BT
+/F1 10.0 Tf
+54 90.1 Td
+(  ? CEO: Sarah Chen ? Ex-VP Engineering at Snowflake, 15 years in data infrastructure) Tj
+ET
+BT
+/F1 10.0 Tf
+54 73.1 Td
+(  ? CTO: Marcus Williams ? Ex-Staff Engineer at Google \(BigQuery team\), PhD CS Stanford) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 2692 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? VP Sales: Jennifer Park ? Ex-Director of Sales at Fivetran, scaled $0 to $50M ARR) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? VP Product: David Kumar ? Ex-PM Lead at Databricks, 10 years in data tools) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? 32 employees total \(18 engineering, 6 sales, 4 product, 4 operations\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 677.0 m 558 677.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 663.0 Td
+(Slide 11: Financials) Tj
+ET
+BT
+/F1 8.5 Tf
+54 635.5 Td
+(| Metric | 2024A | 2025A | 2026E | 2027E | 2028E |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 622.5 Td
+(|--------|-------|-------|-------|-------|-------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 609.4 Td
+(| ARR | $1.1M | $4.2M | $14M | $35M | $70M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 596.4 Td
+(| Revenue | $0.8M | $3.6M | $12M | $30M | $62M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 583.3 Td
+(| Gross Margin | 78% | 82% | 83% | 84% | 85% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 570.3 Td
+(| Operating Expenses | $5.2M | $12M | $22M | $38M | $55M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 557.2 Td
+(| Burn Rate \(mo\) | $350K | $700K | $830K | $670K | Breakeven |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 544.2 Td
+(| Cash on Hand | $2.1M | $3.8M | $16.8M* | $8.8M | $7M |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 525.1 Td
+(*Includes $15M Series A proceeds) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 498.10000000000036 m 558 498.10000000000036 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 484.1 Td
+(Slide 12: The Ask) Tj
+ET
+BT
+/F1 10.0 Tf
+54 456.6 Td
+(  ? Raising: $15 million Series A) Tj
+ET
+BT
+/F1 10.0 Tf
+54 439.6 Td
+(  ? Pre-money valuation: $60 million) Tj
+ET
+BT
+/F1 10.0 Tf
+54 422.6 Td
+(  ? Use of funds:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 405.6 Td
+(  ? 50% ? Engineering \(expand team to 40 engineers\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 388.6 Td
+(  ? 30% ? Sales & Marketing \(scale GTM, hire 10 AEs\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 371.6 Td
+(  ? 15% ? Product \(new AI capabilities, enterprise features\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 354.6 Td
+(  ? 5% ? G&A) Tj
+ET
+BT
+/F1 10.0 Tf
+54 337.6 Td
+(  ? Target milestones by Series B \(18 months\):) Tj
+ET
+BT
+/F1 10.0 Tf
+54 320.6 Td
+(  ? $20M+ ARR) Tj
+ET
+BT
+/F1 10.0 Tf
+54 303.6 Td
+(  ? 200+ customers) Tj
+ET
+BT
+/F1 10.0 Tf
+54 286.6 Td
+(  ? Positive unit economics at scale) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 259.60000000000036 m 558 259.60000000000036 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 245.6 Td
+(Slide 13: Appendix ? Unit Economics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 218.1 Td
+(  ? CAC: $45,000 \(blended\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 201.1 Td
+(  ? LTV: $384,000 \(4-year average lifetime ◊ $96K ACV\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 184.1 Td
+(  ? LTV/CAC ratio: 8.5x) Tj
+ET
+BT
+/F1 10.0 Tf
+54 167.1 Td
+(  ? CAC payback period: 8 months) Tj
+ET
+BT
+/F1 10.0 Tf
+54 150.1 Td
+(  ? Magic Number: 1.4) Tj
+ET
+BT
+/F1 10.0 Tf
+54 133.1 Td
+(  ? Burn Multiple: 1.9x) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000133 00000 n 
+0000000230 00000 n 
+0000003071 00000 n 
+0000003197 00000 n 
+0000006231 00000 n 
+0000006357 00000 n 
+0000009101 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+9227
+%%EOF

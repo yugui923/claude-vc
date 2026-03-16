@@ -1,0 +1,587 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 2899 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(VaultSync ? Cap Table Scenario for Series A) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(Company Type: Enterprise Security \(Secrets Management / Vault) Tj
+ET
+BT
+/F1 15.0 Tf
+54 685.1 Td
+(Orchestration\)) Tj
+ET
+BT
+/F1 15.0 Tf
+54 657.6 Td
+(Date: March 2026) Tj
+ET
+BT
+/F1 13.0 Tf
+54 624.1 Td
+(Background) Tj
+ET
+BT
+/F1 10.0 Tf
+54 601.2 Td
+(VaultSync was founded in June 2023 by three co-founders with unequal equity splits.) Tj
+ET
+BT
+/F1 10.0 Tf
+54 584.2 Td
+(The company raised pre-seed via SAFEs from multiple investors at different caps, took) Tj
+ET
+BT
+/F1 10.0 Tf
+54 567.2 Td
+(a convertible note bridge, and is now negotiating a $15M Series A at $65M pre-money.) Tj
+ET
+BT
+/F1 10.0 Tf
+54 544.2 Td
+(One co-founder departed after 8 months, creating a partial vesting situation.) Tj
+ET
+BT
+/F1 13.0 Tf
+54 521.2 Td
+(Founders ? Common Stock) Tj
+ET
+BT
+/F1 10.0 Tf
+54 492.3 Td
+(Active Founders:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 475.3 Td
+(  ? Alex Rivera \(CEO\): 5,000,000 shares \(50% of founder pool\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 458.3 Td
+(  ? 4-year vest, 1-year cliff, monthly thereafter) Tj
+ET
+BT
+/F1 10.0 Tf
+54 441.3 Td
+(  ? Fully vested \(started June 2023, cliff passed, 33 months elapsed\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 424.3 Td
+(  ? Jordan Osei \(CTO\): 3,000,000 shares \(30% of founder pool\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 407.3 Td
+(  ? 4-year vest, 1-year cliff, monthly thereafter) Tj
+ET
+BT
+/F1 10.0 Tf
+54 390.3 Td
+(  ? Fully vested through month 33 of 48) Tj
+ET
+BT
+/F1 10.0 Tf
+54 373.3 Td
+(  ? Vested shares: 2,062,500 \(33/48 x 3,000,000\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 356.3 Td
+(  ? Unvested shares: 937,500) Tj
+ET
+BT
+/F1 10.0 Tf
+54 333.3 Td
+(Departed Founder:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 316.3 Td
+(  ? Taylor Nguyen \(former VP Eng\): 2,000,000 shares \(20% of founder pool\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 299.3 Td
+(  ? 4-year vest, 1-year cliff, monthly thereafter) Tj
+ET
+BT
+/F1 10.0 Tf
+54 282.3 Td
+(  ? Departed after 8 months \(before cliff\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 265.3 Td
+(  ? Vested shares: 0 \(cliff not reached\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 248.3 Td
+(  ? Forfeited shares: 2,000,000 \(returned to company pool\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 231.3 Td
+(  ? Note: Taylor's departure triggered anti-dilution provision in SAFE #2 ? see below) Tj
+ET
+BT
+/F1 13.0 Tf
+54 208.3 Td
+(Employee Stock Option Pool \(ESOP\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 185.4 Td
+(  ? Original pool: 1,000,000 shares) Tj
+ET
+BT
+/F1 10.0 Tf
+54 168.4 Td
+(  ? Granted options: 620,000 shares \(to 8 employees\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 151.4 Td
+(  ? Average strike price: $0.15/share \(409A at time of grant\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 134.4 Td
+(  ? Average vesting: 28 months remaining) Tj
+ET
+BT
+/F1 10.0 Tf
+54 117.4 Td
+(  ? Forfeited from Taylor Nguyen: 2,000,000 shares returned to pool) Tj
+ET
+BT
+/F1 10.0 Tf
+54 100.4 Td
+(  ? Unallocated pool: 2,380,000 shares) Tj
+ET
+BT
+/F1 10.0 Tf
+54 83.4 Td
+(  ? Total ESOP reserved: 3,000,000 shares) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 2438 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? Target post-Series A ESOP: 12% of fully diluted) Tj
+ET
+BT
+/F1 13.0 Tf
+54 715.0 Td
+(Outstanding SAFEs \(4 Investors, Different Caps\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 686.1 Td
+(SAFE #1 ? Horizon Ventures) Tj
+ET
+BT
+/F1 10.0 Tf
+54 669.1 Td
+(  ? Amount: $300,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 652.1 Td
+(  ? Type: Post-money SAFE) Tj
+ET
+BT
+/F1 10.0 Tf
+54 635.1 Td
+(  ? Valuation Cap: $10,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 618.1 Td
+(  ? Discount: None) Tj
+ET
+BT
+/F1 10.0 Tf
+54 601.1 Td
+(  ? Date: September 2023) Tj
+ET
+BT
+/F1 10.0 Tf
+54 584.1 Td
+(  ? Pro rata rights: Yes) Tj
+ET
+BT
+/F1 10.0 Tf
+54 561.1 Td
+(SAFE #2 ? Nexus Angels) Tj
+ET
+BT
+/F1 10.0 Tf
+54 544.1 Td
+(  ? Amount: $250,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 527.1 Td
+(  ? Type: Post-money SAFE) Tj
+ET
+BT
+/F1 10.0 Tf
+54 510.1 Td
+(  ? Valuation Cap: $15,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 493.1 Td
+(  ? Discount: None) Tj
+ET
+BT
+/F1 10.0 Tf
+54 476.1 Td
+(  ? Date: January 2024) Tj
+ET
+BT
+/F1 10.0 Tf
+54 459.1 Td
+(  ? Pro rata rights: Yes) Tj
+ET
+BT
+/F1 10.0 Tf
+54 442.1 Td
+(  ? Special provision: Anti-dilution adjustment if any founder departs before cliff) Tj
+ET
+BT
+/F1 10.0 Tf
+54 425.1 Td
+(\(triggered by Taylor's departure ? cap adjusts down to $13,500,000\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 402.1 Td
+(SAFE #3 ? Individual Angel \(Dana Park\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 385.1 Td
+(  ? Amount: $150,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 368.1 Td
+(  ? Type: Post-money SAFE) Tj
+ET
+BT
+/F1 10.0 Tf
+54 351.1 Td
+(  ? Valuation Cap: $20,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 334.1 Td
+(  ? Discount: None) Tj
+ET
+BT
+/F1 10.0 Tf
+54 317.1 Td
+(  ? Date: April 2024) Tj
+ET
+BT
+/F1 10.0 Tf
+54 300.1 Td
+(  ? Pro rata rights: No) Tj
+ET
+BT
+/F1 10.0 Tf
+54 283.1 Td
+(  ? MFN provision: Yes \(can adopt terms of any later SAFE if more favorable\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 260.1 Td
+(SAFE #4 ? TechStars Fund) Tj
+ET
+BT
+/F1 10.0 Tf
+54 243.1 Td
+(  ? Amount: $100,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 226.1 Td
+(  ? Type: Post-money SAFE) Tj
+ET
+BT
+/F1 10.0 Tf
+54 209.1 Td
+(  ? Valuation Cap: $10,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 192.1 Td
+(  ? Discount: None) Tj
+ET
+BT
+/F1 10.0 Tf
+54 175.1 Td
+(  ? Date: June 2024) Tj
+ET
+BT
+/F1 10.0 Tf
+54 158.1 Td
+(  ? Pro rata rights: No) Tj
+ET
+BT
+/F1 13.0 Tf
+54 135.1 Td
+(Convertible Note) Tj
+ET
+BT
+/F1 10.0 Tf
+54 106.2 Td
+(Bridge Note ? Cascade Capital) Tj
+ET
+BT
+/F1 10.0 Tf
+54 89.2 Td
+(  ? Principal: $300,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 72.2 Td
+(  ? Interest Rate: 6% annual \(simple interest\)) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 3143 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? Issue Date: December 2024) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? Outstanding Period: 15 months \(as of March 2026\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? Accrued Interest: $22,500 \(300K x 6% x 15/12\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 687.0 Td
+(  ? Total Converting Amount: $322,500) Tj
+ET
+BT
+/F1 10.0 Tf
+54 670.0 Td
+(  ? Valuation Cap: $12,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 653.0 Td
+(  ? Discount: 20%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 636.0 Td
+(  ? Conversion trigger: Qualified financing of $5M+) Tj
+ET
+BT
+/F1 10.0 Tf
+54 619.0 Td
+(  ? Maturity: December 2026) Tj
+ET
+BT
+/F1 13.0 Tf
+54 596.0 Td
+(Series A Terms) Tj
+ET
+BT
+/F1 10.0 Tf
+54 567.1 Td
+(Lead Investor: Granite Ventures) Tj
+ET
+BT
+/F1 10.0 Tf
+54 550.1 Td
+(  ? Pre-money Valuation: $65,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 533.1 Td
+(  ? Investment Amount: $15,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 516.1 Td
+(  ? Post-money Valuation: $80,000,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 499.1 Td
+(  ? Price per share: TBD based on fully diluted pre-money share count) Tj
+ET
+BT
+/F1 10.0 Tf
+54 482.1 Td
+(  ? ESOP expansion: increase to 12% of post-money \(before pricing round\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 459.1 Td
+(Series A Investor Syndicate:) Tj
+ET
+BT
+/F1 8.5 Tf
+54 442.1 Td
+(| Investor | Amount | Notes |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 429.1 Td
+(|----------|--------|-------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 416.0 Td
+(| Granite Ventures \(Lead\) | $10,000,000 | Board seat, standard protective provisions |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 402.9 Td
+(| Stratos Capital | $3,000,000 | |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 389.9 Td
+(| Horizon Ventures \(pro rata\) | $1,200,000 | Exercising pro rata from SAFE |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 376.8 Td
+(| Nexus Angels \(pro rata\) | $800,000 | Exercising pro rata from SAFE |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 357.8 Td
+(Series A Preferred Terms:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 340.8 Td
+(  ? 1x non-participating liquidation preference) Tj
+ET
+BT
+/F1 10.0 Tf
+54 323.8 Td
+(  ? Board: 2 common \(founders\), 1 preferred \(Granite\), 2 independent) Tj
+ET
+BT
+/F1 10.0 Tf
+54 306.8 Td
+(  ? Protective provisions: standard \(veto on new equity, debt >$500K, M&A\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 289.8 Td
+(  ? Anti-dilution: broad-based weighted average) Tj
+ET
+BT
+/F1 10.0 Tf
+54 272.8 Td
+(  ? Drag-along: 60% of preferred + majority of common) Tj
+ET
+BT
+/F1 13.0 Tf
+54 249.8 Td
+(Requested Analysis) Tj
+ET
+BT
+/F1 10.0 Tf
+54 226.9 Td
+(  1. Calculate SAFE conversion prices \(accounting for Nexus adjusted cap and MFN\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 209.9 Td
+(  2. Calculate convertible note conversion \(price vs discount ? use more favorable to holder\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 192.9 Td
+(  3. Determine ESOP expansion shares needed to reach 12% post-money) Tj
+ET
+BT
+/F1 10.0 Tf
+54 175.9 Td
+(  4. Build fully diluted cap table post-Series A with all ownership percentages) Tj
+ET
+BT
+/F1 10.0 Tf
+54 158.9 Td
+(  5. Run waterfall analysis at exit values: $100M, $250M, $500M, $1B) Tj
+ET
+BT
+/F1 10.0 Tf
+54 141.9 Td
+(  6. Show founder dilution progression: founding -> post-SAFE -> post-note -> post-Series A) Tj
+ET
+BT
+/F1 10.0 Tf
+54 124.9 Td
+(  7. Model the impact if Dana Park exercises MFN to match SAFE #1 terms \($10M cap\)) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000133 00000 n 
+0000000230 00000 n 
+0000003181 00000 n 
+0000003307 00000 n 
+0000005797 00000 n 
+0000005923 00000 n 
+0000009118 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+9244
+%%EOF

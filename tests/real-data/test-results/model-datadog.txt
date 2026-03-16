@@ -1,0 +1,86 @@
+## Datadog (DDOG) — 5-Year Financial Model
+
+### Key Assumptions
+
+| Parameter | Value | Rationale |
+|-----------|-------|-----------|
+| Base revenue (FY2025) | $3.39B | Midpoint of FY2025 guidance ($3,386-$3,390M) |
+| Revenue growth | 24% → 20% → 17% → 14% → 12% | Deceleration from current 28% as scale increases |
+| Gross margin | 75.0% → 77.0% | Slight improvement from infrastructure efficiency |
+| S&M % of revenue | 22% declining | Leverage from brand and land-and-expand motion |
+| R&D % of revenue | 22% declining | Continued investment but improving leverage |
+| G&A % of revenue | 8% declining | Administrative scale economies |
+| Tax rate | 15% | Blended effective rate (R&D credits, intl structure) |
+| Starting liquid assets | $4.1B | Cash + marketable securities per Q3 2025 |
+| AR days / AP days | 45 / 30 | Typical enterprise B2B SaaS |
+| CapEx | 3% of revenue | Data center + capitalized software |
+
+---
+
+### Income Statement ($M)
+
+| Line Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+|-----------|-------:|-------:|-------:|-------:|-------:|
+| **Revenue** | 4,201 | 5,041 | 5,898 | 6,724 | 7,531 |
+| COGS | (1,050) | (1,235) | (1,416) | (1,580) | (1,732) |
+| **Gross Profit** | 3,151 | 3,806 | 4,483 | 5,144 | 5,799 |
+| *Gross Margin* | *75.0%* | *75.5%* | *76.0%* | *76.5%* | *77.0%* |
+| Sales & Marketing | (924) | (1,059) | (1,180) | (1,278) | (1,356) |
+| Research & Development | (924) | (1,079) | (1,227) | (1,358) | (1,476) |
+| General & Admin | (336) | (383) | (425) | (457) | (482) |
+| **EBITDA** | 966 | 1,286 | 1,652 | 2,051 | 2,485 |
+| *EBITDA Margin* | *23.0%* | *25.5%* | *28.0%* | *30.5%* | *33.0%* |
+| Depreciation | (84) | (101) | (118) | (134) | (151) |
+| **Net Income** | 750 | 1,007 | 1,304 | 1,629 | 1,984 |
+
+---
+
+### Balance Sheet ($M)
+
+| Line Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+|-----------|-------:|-------:|-------:|-------:|-------:|
+| Cash | 4,376 | 5,244 | 6,398 | 7,872 | 9,694 |
+| Accounts Receivable | 518 | 622 | 727 | 829 | 928 |
+| Other Assets | 500 | 500 | 500 | 500 | 500 |
+| **Total Assets** | 5,394 | 6,366 | 7,625 | 9,201 | 11,122 |
+| Accounts Payable | 86 | 102 | 116 | 130 | 142 |
+| **Equity** | 5,308 | 6,264 | 7,509 | 9,071 | 10,980 |
+
+---
+
+### Cash Flow Statement ($M)
+
+| Line Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+|-----------|-------:|-------:|-------:|-------:|-------:|
+| Operating Cash Flow | 402 | 1,019 | 1,331 | 1,675 | 2,048 |
+| CapEx | (126) | (151) | (177) | (202) | (226) |
+| **Net Change in Cash** | 276 | 868 | 1,154 | 1,473 | 1,822 |
+| **Ending Cash** | 4,376 | 5,244 | 6,398 | 7,872 | 9,694 |
+
+---
+
+### Analysis
+
+**Profitability**: Datadog is already profitable on a non-GAAP basis. The model shows EBITDA margins expanding from 23% to 33% over 5 years as operating leverage kicks in — consistent with the trajectory of scaled SaaS companies like CrowdStrike and ServiceNow.
+
+**Cash generation**: Year 1 operating CF appears lower ($402M) because of the large initial AR build from a zero base in the model. Normalizing for that, steady-state OCF grows from ~$1.0B (Year 2) to ~$2.0B (Year 5). This aligns with Datadog's current run-rate of ~$830M/year annualized FCF (9-month figure: $624M).
+
+**Cash position**: Starting from $4.1B in liquid assets, cash grows to $9.7B by Year 5 with no acquisitions or buybacks — significant capital allocation optionality. In practice, Datadog will likely deploy capital toward M&A (AI observability, security) and share repurchases.
+
+**Margin progression**: Gross margin improves modestly (75% → 77%) reflecting infrastructure optimization. The real story is operating leverage: total OpEx as a % of revenue drops from ~52% to ~44%, driving EBITDA margin expansion of ~200bps/year.
+
+**Key sensitivities**:
+- **Growth deceleration rate**: Each 2pp faster deceleration reduces Year 5 revenue by ~$600M and EBITDA by ~$200M
+- **Gross margin**: Each 1pp change flows through ~$75M in Year 5 EBITDA
+- **AI adoption**: Datadog's AI native customer cohort (12% of revenue, doubling YoY) could accelerate or sustain growth rates above model assumptions
+- **Competition**: Pricing pressure from Grafana/open-source alternatives could compress margins below forecast
+
+**Note**: This model excludes stock-based compensation (~$1B+ annually), which is the primary difference between Datadog's GAAP and non-GAAP results. GAAP operating margins would be materially lower.
+
+---
+
+DISCLAIMER: This valuation/terms analysis is a mathematical exercise using publicly available methodologies. It is not an appraisal, fairness opinion, or professional valuation. Actual company valuations depend on factors not captured in this analysis. This tool does not provide legal advice regarding term sheet provisions. Engage qualified legal and financial professionals for all investment and securities matters.
+
+Canada: This tool does not provide advice within the meaning of the Securities Act (Ontario) or National Instrument 31-103. No registration exemption is relied upon.
+
+United States: This tool does not provide advice within the meaning of the Investment Advisers Act of 1940.

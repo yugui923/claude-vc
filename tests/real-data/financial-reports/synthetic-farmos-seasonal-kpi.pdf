@@ -1,0 +1,602 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 3299 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(FarmOS Intelligence ? FY2025 Annual KPI Report) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(Period: January 1 ? December 31, 2025) Tj
+ET
+BT
+/F1 15.0 Tf
+54 677.1 Td
+(Company Type: AgTech \(Precision Agriculture IoT + Analytics Platform\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 643.6 Td
+(Revenue Summary) Tj
+ET
+BT
+/F1 10.0 Tf
+54 620.7 Td
+(  ? Total Annual Revenue: $2,300,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 603.7 Td
+(  ? YoY Revenue Growth: 72%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 586.7 Td
+(  ? Revenue Breakdown:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 569.7 Td
+(  ? Software Subscription: $1,495,000 \(65% of total\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 552.7 Td
+(  ? Hardware \(IoT Sensors\): $805,000 \(35% of total\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 529.7 Td
+(Seasonal Revenue Distribution) Tj
+ET
+BT
+/F1 8.5 Tf
+54 506.8 Td
+(| Quarter | Software Rev | Hardware Rev | Total Rev | % of Annual |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 493.8 Td
+(|---------|-------------|-------------|-----------|-------------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 480.7 Td
+(| Q1 \(Jan-Mar\) | $90,000 | $90,000 | $180,000 | 7.8% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 467.7 Td
+(| Q2 \(Apr-Jun\) | $340,000 | $280,000 | $620,000 | 27.0% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 454.6 Td
+(| Q3 \(Jul-Sep\) | $530,000 | $360,000 | $890,000 | 38.7% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 441.6 Td
+(| Q4 \(Oct-Dec\) | $535,000 | $75,000 | $610,000 | 26.5% |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 422.5 Td
+(Seasonality Note: Revenue is driven by the agricultural calendar in North) Tj
+ET
+BT
+/F1 10.0 Tf
+54 405.5 Td
+(American row crop farming. Q1 is pre-season \(minimal activity\). Q2 is planting) Tj
+ET
+BT
+/F1 10.0 Tf
+54 388.5 Td
+(season \(sensor deployments + new subscriptions\). Q3 is growing season \(peak) Tj
+ET
+BT
+/F1 10.0 Tf
+54 371.5 Td
+(platform usage, in-season upsells, and sensor add-ons for crop scouting\).) Tj
+ET
+BT
+/F1 10.0 Tf
+54 354.5 Td
+(Q4 is harvest/post-harvest \(subscription renewals happen, but hardware sales) Tj
+ET
+BT
+/F1 10.0 Tf
+54 337.5 Td
+(drop as fields are cleared\). Hardware revenue is almost zero in Q4 and Q1.) Tj
+ET
+BT
+/F1 13.0 Tf
+54 314.5 Td
+(Gross Margin Analysis ? Blended vs Segment) Tj
+ET
+BT
+/F1 8.5 Tf
+54 291.6 Td
+(| Segment | Revenue | COGS | Gross Profit | Gross Margin |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 278.6 Td
+(|---------|---------|------|-------------|-------------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 265.5 Td
+(| Software Subscription | $1,495,000 | $269,100 | $1,225,900 | 82.0% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 252.4 Td
+(| Hardware \(Sensors\) | $805,000 | $579,600 | $225,400 | 28.0% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 239.4 Td
+(| Blended Total | $2,300,000 | $848,700 | $1,451,300 | 63.1% |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 220.3 Td
+(Hardware COGS Breakdown:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 203.3 Td
+(  ? Sensor manufacturing \(contract\): $402,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 186.3 Td
+(  ? Cellular connectivity \(annual data plans\): $96,600) Tj
+ET
+BT
+/F1 10.0 Tf
+54 169.3 Td
+(  ? Shipping & logistics: $48,300) Tj
+ET
+BT
+/F1 10.0 Tf
+54 152.3 Td
+(  ? Warranty/replacements \(8% failure rate\): $32,700) Tj
+ET
+BT
+/F1 10.0 Tf
+54 135.3 Td
+(  ? Note: Sensor failure rate of 8% is above 5% target ? primarily moisture) Tj
+ET
+BT
+/F1 10.0 Tf
+54 118.3 Td
+(ingress in flood-irrigated fields. New IP68 housing in v3 sensor expected Q2 2026) Tj
+ET
+BT
+/F1 13.0 Tf
+54 95.3 Td
+(Customer Metrics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 72.4 Td
+(  ? Total Farm Customers: 380) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 3214 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? New Customers \(FY2025\): 142) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? Churned Customers \(FY2025\): 12) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? Annual Retention Rate: 96.8%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 687.0 Td
+(  ? Net Revenue Retention \(NRR\): 105%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 670.0 Td
+(  ? Average Farm Size \(customers\): 2,400 acres) Tj
+ET
+BT
+/F1 10.0 Tf
+54 653.0 Td
+(  ? Average Revenue per Customer: $6,053/year) Tj
+ET
+BT
+/F1 10.0 Tf
+54 636.0 Td
+(  ? Average Sensors per Farm: 18) Tj
+ET
+BT
+/F1 10.0 Tf
+54 619.0 Td
+(  ? Total Deployed Sensors: 6,840) Tj
+ET
+BT
+/F1 13.0 Tf
+54 596.0 Td
+(NRR Detail ? Why Only 105%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 573.1 Td
+(  ? Farmers expand slowly ? adding sensors to new fields is a physical deployment) Tj
+ET
+BT
+/F1 10.0 Tf
+54 556.1 Td
+(  ? Typical expansion: 2-4 additional sensors per year \($180-$360 hardware + $120-$240 software\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 539.1 Td
+(  ? No usage-based pricing to drive natural expansion) Tj
+ET
+BT
+/F1 10.0 Tf
+54 522.1 Td
+(  ? Considering pivot to per-acre pricing model to improve NRR \(target: 115%\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 499.1 Td
+(Unit Economics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 476.2 Td
+(  ? Customer Acquisition Cost \(CAC\): $2,800 \(blended\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 459.2 Td
+(  ? Field sales \(60% of new customers\): $3,600 CAC) Tj
+ET
+BT
+/F1 10.0 Tf
+54 442.2 Td
+(  ? Dealer/co-op channel \(30%\): $1,800 CAC) Tj
+ET
+BT
+/F1 10.0 Tf
+54 425.2 Td
+(  ? Direct/inbound \(10%\): $900 CAC) Tj
+ET
+BT
+/F1 10.0 Tf
+54 408.2 Td
+(  ? Average Customer Lifetime: 8.2 years \(based on 96.8% annual retention\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 391.2 Td
+(  ? Lifetime Value \(LTV\): $31,400 \(8.2 years x $6,053/year x 63.1% blended margin\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 374.2 Td
+(  ? LTV/CAC: 11.2x) Tj
+ET
+BT
+/F1 10.0 Tf
+54 357.2 Td
+(  ? CAC Payback Period: 14 months \(on contribution margin\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 340.2 Td
+(  ? Note: Long payback is acceptable given high retention ? farmers who adopt rarely leave) Tj
+ET
+BT
+/F1 13.0 Tf
+54 317.2 Td
+(Quarterly Operating Metrics) Tj
+ET
+BT
+/F1 8.5 Tf
+54 294.3 Td
+(| Metric | Q1 | Q2 | Q3 | Q4 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 281.3 Td
+(|--------|-----|-----|-----|-----|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 268.2 Td
+(| Revenue | $180K | $620K | $890K | $610K |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 255.2 Td
+(| Gross Margin | 71% | 58% | 62% | 72% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 242.1 Td
+(| Operating Expense | $320K | $380K | $410K | $350K |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 229.1 Td
+(| Operating Income/\(Loss\) | $\(192K\) | $\(18K\) | $142K | $69K |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 216.0 Td
+(| Headcount | 22 | 26 | 28 | 26 |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 196.9 Td
+(Note: Company only operates cash-flow positive in Q3-Q4. Q1 is deeply) Tj
+ET
+BT
+/F1 10.0 Tf
+54 179.9 Td
+(negative. Seasonal hiring of 4-6 field deployment technicians in Q2-Q3.) Tj
+ET
+BT
+/F1 13.0 Tf
+54 156.9 Td
+(Cash & Runway) Tj
+ET
+BT
+/F1 10.0 Tf
+54 134.0 Td
+(  ? Cash on Hand \(Dec 31\): $1,850,000) Tj
+ET
+BT
+/F1 10.0 Tf
+54 117.0 Td
+(  ? Average Monthly Burn \(annualized\): $82,000 \(net of revenue\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 100.0 Td
+(  ? Q1 Projected Monthly Burn: $140,000 \(seasonal trough\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 83.0 Td
+(  ? Full-Year Operating Loss: $\(989,000\)) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 2921 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? Raised: $4.5M Seed \(March 2024\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? Runway: ~14 months at average burn, ~9 months at Q1 burn rate) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? Break-even target: FY2027 \(at $4.2M revenue\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 681.0 Td
+(Headcount \(Year-End\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 658.1 Td
+(  ? Total \(Dec 31\): 26) Tj
+ET
+BT
+/F1 10.0 Tf
+54 641.1 Td
+(  ? Engineering \(firmware + platform\): 10) Tj
+ET
+BT
+/F1 10.0 Tf
+54 624.1 Td
+(  ? Field Operations/Deployment: 4 \(plus 4-6 seasonal\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 607.1 Td
+(  ? Sales & Partnerships: 5) Tj
+ET
+BT
+/F1 10.0 Tf
+54 590.1 Td
+(  ? Agronomy/Customer Success: 4) Tj
+ET
+BT
+/F1 10.0 Tf
+54 573.1 Td
+(  ? G&A: 3) Tj
+ET
+BT
+/F1 10.0 Tf
+54 556.1 Td
+(  ? Revenue per Employee: $88,462) Tj
+ET
+BT
+/F1 13.0 Tf
+54 533.1 Td
+(Product Metrics) Tj
+ET
+BT
+/F1 10.0 Tf
+54 510.2 Td
+(  ? Platform Uptime: 99.7%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 493.2 Td
+(  ? Average Data Points per Sensor per Day: 288 \(every 5 minutes\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 476.2 Td
+(  ? Total Data Points Stored: 1.2 billion) Tj
+ET
+BT
+/F1 10.0 Tf
+54 459.2 Td
+(  ? AI Yield Prediction Accuracy: 91% \(within 5% of actual yield\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 442.2 Td
+(  ? Irrigation Recommendation Adoption Rate: 74% \(farmers follow 74% of suggestions\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 425.2 Td
+(  ? Estimated Water Savings per Customer: 18% reduction in irrigation usage) Tj
+ET
+BT
+/F1 10.0 Tf
+54 408.2 Td
+(  ? Estimated Yield Improvement: 7-12% \(self-reported by customers\)) Tj
+ET
+BT
+/F1 13.0 Tf
+54 385.2 Td
+(Crop Coverage) Tj
+ET
+BT
+/F1 8.5 Tf
+54 362.3 Td
+(| Crop | % of Customer Acreage | Avg Revenue/Acre |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 349.3 Td
+(|------|----------------------|-----------------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 336.2 Td
+(| Corn | 42% | $2.20 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 323.2 Td
+(| Soybeans | 28% | $2.10 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 310.1 Td
+(| Wheat | 15% | $1.80 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 297.1 Td
+(| Cotton | 10% | $2.60 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 284.0 Td
+(| Other \(specialty\) | 5% | $3.40 |) Tj
+ET
+BT
+/F1 13.0 Tf
+54 264.9 Td
+(Key Risks) Tj
+ET
+BT
+/F1 10.0 Tf
+54 242.0 Td
+(  1. Extreme seasonality creates Q1 cash crunch every year ? may need credit facility) Tj
+ET
+BT
+/F1 10.0 Tf
+54 225.0 Td
+(  2. Hardware margin at 28% drags blended margin below SaaS benchmarks) Tj
+ET
+BT
+/F1 10.0 Tf
+54 208.0 Td
+(  3. NRR of 105% limits organic growth ? per-acre pricing could help but risks churn) Tj
+ET
+BT
+/F1 10.0 Tf
+54 191.0 Td
+(  4. Field sales model is expensive \($3,600 CAC\) ? need to scale dealer channel) Tj
+ET
+BT
+/F1 10.0 Tf
+54 174.0 Td
+(  5. Sensor failure rate of 8% drives warranty costs and customer frustration) Tj
+ET
+BT
+/F1 10.0 Tf
+54 157.0 Td
+(  6. Climate volatility \(drought, flooding\) can delay deployments and reduce farmer budgets) Tj
+ET
+BT
+/F1 10.0 Tf
+54 140.0 Td
+(  7. Competitor risk: John Deere and CNH Industrial building integrated solutions) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000133 00000 n 
+0000000230 00000 n 
+0000003581 00000 n 
+0000003707 00000 n 
+0000006973 00000 n 
+0000007099 00000 n 
+0000010072 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+10198
+%%EOF

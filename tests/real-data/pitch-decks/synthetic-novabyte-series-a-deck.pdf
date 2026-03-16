@@ -1,0 +1,684 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 3111 >>
+stream
+BT
+/F1 18.0 Tf
+54 738.0 Td
+(NovaByte - Series A Pitch Deck) Tj
+ET
+BT
+/F1 15.0 Tf
+54 704.6 Td
+(AI Code Review That Catches What Humans Miss) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 667.1 m 558 667.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 653.1 Td
+(Slide 1: Title) Tj
+ET
+BT
+/F1 10.0 Tf
+54 625.6 Td
+(NovaByte ? AI-Powered Code Review for Engineering Teams) Tj
+ET
+BT
+/F1 10.0 Tf
+54 608.6 Td
+(Series A Fundraise: $12M at $50M pre-money valuation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 591.6 Td
+(Founded 2023 | San Francisco, CA) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 564.6 m 558 564.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 550.6 Td
+(Slide 2: Problem) Tj
+ET
+BT
+/F1 10.0 Tf
+54 523.1 Td
+(  ? Engineering teams merge 340+ PRs per week at scale ? human review can't keep up) Tj
+ET
+BT
+/F1 10.0 Tf
+54 506.1 Td
+(  ? 37% of production incidents trace back to code review gaps \(our analysis of 12,000 post-mortems from) Tj
+ET
+BT
+/F1 10.0 Tf
+54 493.1 Td
+(public data\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 476.1 Td
+(  ? Senior engineers spend 31% of their time on code reviews, not building) Tj
+ET
+BT
+/F1 10.0 Tf
+54 459.1 Td
+(  ? Existing static analysis tools flag noise ? 68% of alerts are false positives \(Forrester 2025\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 442.1 Td
+(  ? Security vulnerabilities slip through: average dwell time from merge to CVE discovery is 214 days) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 415.1 m 558 415.1 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 401.1 Td
+(Slide 3: Solution) Tj
+ET
+BT
+/F1 10.0 Tf
+54 373.6 Td
+(NovaByte is an AI code review agent that integrates into GitHub/GitLab and provides:) Tj
+ET
+BT
+/F1 10.0 Tf
+54 356.6 Td
+(  ? Multi-model review: combines static analysis, LLM reasoning, and runtime simulation) Tj
+ET
+BT
+/F1 10.0 Tf
+54 339.6 Td
+(  ? Context-aware feedback ? understands your codebase architecture, not just syntax) Tj
+ET
+BT
+/F1 10.0 Tf
+54 322.6 Td
+(  ? Auto-generated test suggestions for uncovered code paths) Tj
+ET
+BT
+/F1 10.0 Tf
+54 305.6 Td
+(  ? Security scanning with 94.3% precision \(vs. 41% industry average for static tools\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 288.6 Td
+(  ? Learns team patterns ? adapts to your style guide and conventions within 2 weeks) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 261.6 m 558 261.6 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 247.6 Td
+(Slide 4: Why Now) Tj
+ET
+BT
+/F1 10.0 Tf
+54 220.1 Td
+(  ? LLM code understanding crossed the threshold for production-grade review in late 2024) Tj
+ET
+BT
+/F1 10.0 Tf
+54 203.1 Td
+(  ? Developer shortage worsening ? 1.4M unfilled software roles in US alone \(Bureau of Labor Statistics\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 186.1 Td
+(  ? AI-generated code \(Copilot, Cursor\) increases PR volume 2.3x, making human review even harder) Tj
+ET
+BT
+/F1 10.0 Tf
+54 169.1 Td
+(  ? GPU inference costs dropped 78% in 18 months ? unit economics now viable) Tj
+ET
+BT
+/F1 10.0 Tf
+54 152.1 Td
+(  ? Every major compliance framework \(SOC2, ISO 27001, HIPAA\) requires documented code review) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 125.10000000000002 m 558 125.10000000000002 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 111.1 Td
+(Slide 5: Market Size) Tj
+ET
+BT
+/F1 10.0 Tf
+54 83.6 Td
+(  ? TAM: $32B ? Developer tools and DevSecOps market \(IDC 2025\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 3193 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? SAM: $8.4B ? Code quality, review, and security scanning) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? SOM: $1.7B ? AI-assisted code review for teams with 20+ developers) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? DevSecOps growing at 28.4% CAGR through 2029) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 677.0 m 558 677.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 663.0 Td
+(Slide 6: Product) Tj
+ET
+BT
+/F1 10.0 Tf
+54 635.5 Td
+(  ? NovaByte Review: AI agent that reviews every PR, inline comments in GitHub/GitLab) Tj
+ET
+BT
+/F1 10.0 Tf
+54 618.5 Td
+(  ? NovaByte Scan: Deep security analysis on merge to main) Tj
+ET
+BT
+/F1 10.0 Tf
+54 601.5 Td
+(  ? NovaByte Coach: Junior developer mentoring ? explains why changes are suggested) Tj
+ET
+BT
+/F1 10.0 Tf
+54 584.5 Td
+(  ? NovaByte Comply: Auto-generates review audit trails for compliance) Tj
+ET
+BT
+/F1 10.0 Tf
+54 567.5 Td
+(  ? Supports: Python, TypeScript, Go, Java, Rust, C++ \(Kotlin and Swift in beta\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 550.5 Td
+(  ? Average review time: 47 seconds per PR \(vs. 23 minutes human average\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 523.5 m 558 523.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 509.5 Td
+(Slide 7: Business Model) Tj
+ET
+BT
+/F1 10.0 Tf
+54 482.0 Td
+(  ? SaaS subscription ? per-developer-seat pricing) Tj
+ET
+BT
+/F1 10.0 Tf
+54 465.0 Td
+(  ? Team \(10-50 devs\): $29/dev/mo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 448.0 Td
+(  ? Business \(51-500 devs\): $49/dev/mo ? includes security scanning + compliance) Tj
+ET
+BT
+/F1 10.0 Tf
+54 431.0 Td
+(  ? Enterprise \(500+ devs\): Custom pricing, starting at $42/dev/mo) Tj
+ET
+BT
+/F1 10.0 Tf
+54 414.0 Td
+(  ? Average contract value \(ACV\): $54,700) Tj
+ET
+BT
+/F1 10.0 Tf
+54 397.0 Td
+(  ? Gross margin: 67% \(below SaaS benchmark due to GPU inference costs ? see note\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 380.0 Td
+(  ? Note: GPU costs represent 28% of COGS; we expect margin improvement to 74% by Q4 2026 as we shift to) Tj
+ET
+BT
+/F1 10.0 Tf
+54 367.0 Td
+(fine-tuned smaller models) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 340.0 m 558 340.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 326.0 Td
+(Slide 8: Traction) Tj
+ET
+BT
+/F1 10.0 Tf
+54 298.5 Td
+(  ? ARR: $3.7M \(as of January 2026\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 281.5 Td
+(  ? Growth: 215% YoY ARR growth) Tj
+ET
+BT
+/F1 10.0 Tf
+54 264.5 Td
+(  ? Customers: 47 paying accounts) Tj
+ET
+BT
+/F1 10.0 Tf
+54 247.5 Td
+(  ? Seats: 3,180 active developer seats) Tj
+ET
+BT
+/F1 10.0 Tf
+54 230.5 Td
+(  ? Logo retention: 93%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 213.5 Td
+(  ? NRR: 128%) Tj
+ET
+BT
+/F1 10.0 Tf
+54 196.5 Td
+(  ? KEY RISK ? Revenue Concentration: Apex Systems \($1.67M ACV\) represents 45.1% of total ARR. Contract) Tj
+ET
+BT
+/F1 10.0 Tf
+54 183.5 Td
+(renewed in November 2025 for 24 months. 2nd largest customer is $310K ACV) Tj
+ET
+BT
+/F1 10.0 Tf
+54 166.5 Td
+(  ? PRs reviewed: 1.2M+ cumulative) Tj
+ET
+BT
+/F1 10.0 Tf
+54 149.5 Td
+(  ? Bugs caught pre-merge: 34,000+ \(customer-reported\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 122.5 m 558 122.5 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 108.5 Td
+(Slide 9: Competition) Tj
+ET
+BT
+/F1 8.5 Tf
+54 81.0 Td
+(| Feature | NovaByte | CodeRabbit | Codacy | Snyk Code | SonarQube |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 68.0 Td
+(|---------|----------|------------|--------|-----------|-----------|) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 3590 >>
+stream
+BT
+/F1 8.5 Tf
+54 738.0 Td
+(| LLM-Powered Review | Yes | Yes | No | No | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 725.0 Td
+(| Codebase Context Aware | Yes | Partial | No | No | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 711.9 Td
+(| Security Scanning | Yes | No | Partial | Yes | Partial |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 698.9 Td
+(| Auto-Test Generation | Yes | No | No | No | No |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 685.8 Td
+(| Compliance Audit Trail | Yes | No | No | No | Yes |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 672.8 Td
+(| False Positive Rate | 5.7% | ~18% | ~32% | ~24% | ~29% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 659.7 Td
+(| Languages Supported | 8 | 12 | 20+ | 15+ | 25+ |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 640.7 Td
+(Our narrower language support is intentional ? we go deep rather than wide, training dedicated models per) Tj
+ET
+BT
+/F1 10.0 Tf
+54 627.7 Td
+(language.) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 600.6500000000003 m 558 600.6500000000003 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 586.7 Td
+(Slide 10: Team) Tj
+ET
+BT
+/F1 10.0 Tf
+54 559.2 Td
+(  ? CEO/Co-founder: Raj Patel ? Ex-Staff Engineer at GitHub \(Copilot team, 2021-2023\). Led team of 14. MS) Tj
+ET
+BT
+/F1 10.0 Tf
+54 546.2 Td
+(CS UC Berkeley) Tj
+ET
+BT
+/F1 10.0 Tf
+54 529.2 Td
+(  ? CTO/Co-founder: Elena Voronova ? Ex-Research Scientist at DeepMind \(code generation group\). PhD ML,) Tj
+ET
+BT
+/F1 10.0 Tf
+54 516.2 Td
+(ETH Zurich) Tj
+ET
+BT
+/F1 10.0 Tf
+54 499.2 Td
+(  ? VP Engineering: James Okafor ? Ex-Engineering Manager at Datadog. 11 years in developer tools) Tj
+ET
+BT
+/F1 10.0 Tf
+54 482.2 Td
+(  ? Head of Product: Priya Sharma ? Ex-PM at GitLab \(code review product\). 8 years in DevTools PM) Tj
+ET
+BT
+/F1 10.0 Tf
+54 465.2 Td
+(  ? No dedicated sales leader ? Raj currently handles enterprise sales with 2 AEs. Key hire planned with) Tj
+ET
+BT
+/F1 10.0 Tf
+54 452.2 Td
+(Series A proceeds) Tj
+ET
+BT
+/F1 10.0 Tf
+54 435.2 Td
+(  ? 26 employees: 19 engineering \(incl. 6 ML researchers\), 2 sales, 3 product, 2 ops) Tj
+ET
+BT
+/F1 10.0 Tf
+54 418.2 Td
+(  ? Advisory: Dr. Michael Ernst \(UW professor, inventor of Daikon\), Lisa Qian \(ex-CRO Snyk\)) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 391.1500000000003 m 558 391.1500000000003 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 377.2 Td
+(Slide 11: Financials) Tj
+ET
+BT
+/F1 8.5 Tf
+54 349.7 Td
+(| Metric | 2024A | 2025A | 2026E | 2027E | 2028E |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 336.6 Td
+(|--------|-------|-------|-------|-------|-------|) Tj
+ET
+BT
+/F1 8.5 Tf
+54 323.6 Td
+(| ARR | $1.17M | $3.7M | $11.5M | $29M | $58M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 310.5 Td
+(| Revenue | $0.85M | $3.1M | $9.8M | $25M | $52M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 297.5 Td
+(| Gross Margin | 61% | 67% | 74% | 78% | 80% |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 284.4 Td
+(| Headcount | 14 | 26 | 52 | 85 | 120 |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 271.4 Td
+(| Burn Rate/mo | $290K | $480K | $650K | $550K | Breakeven |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 258.3 Td
+(| Cash on Hand | $1.8M | $2.4M | $13.6M* | $6.4M | $5.8M |) Tj
+ET
+BT
+/F1 8.5 Tf
+54 245.3 Td
+(| GPU Costs/mo | $78K | $195K | $340K | $410K | $480K |) Tj
+ET
+BT
+/F1 10.0 Tf
+54 226.2 Td
+(*Includes $12M Series A proceeds) Tj
+ET
+BT
+/F1 10.0 Tf
+54 203.2 Td
+(Key assumption: GPU cost per review drops 40% by mid-2027 through model optimization.) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 176.20000000000022 m 558 176.20000000000022 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 162.2 Td
+(Slide 12: The Ask) Tj
+ET
+BT
+/F1 10.0 Tf
+54 134.7 Td
+(  ? Raising: $12 million Series A) Tj
+ET
+BT
+/F1 10.0 Tf
+54 117.7 Td
+(  ? Pre-money valuation: $50 million \(13.5x trailing ARR\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 100.7 Td
+(  ? Lead investor: Seeking a lead with DevTools or AI portfolio expertise) Tj
+ET
+BT
+/F1 10.0 Tf
+54 83.7 Td
+(  ? Use of funds:) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 1775 >>
+stream
+BT
+/F1 10.0 Tf
+54 738.0 Td
+(  ? 45% ? Engineering + ML research \(scale to 40 engineers, fine-tune proprietary models\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 721.0 Td
+(  ? 25% ? Sales & Marketing \(hire VP Sales, 6 additional AEs, demand gen\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 704.0 Td
+(  ? 20% ? Infrastructure \(GPU capacity, reduce latency, expand language support\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 687.0 Td
+(  ? 10% ? G&A and operations) Tj
+ET
+BT
+/F1 10.0 Tf
+54 670.0 Td
+(  ? Critical hire: VP Sales ? we need a go-to-market leader to diversify revenue away from Apex Systems) Tj
+ET
+0.75 0.75 0.75 RG
+0.5 w
+54 643.0 m 558 643.0 l S
+0 0 0 RG
+BT
+/F1 15.0 Tf
+54 629.0 Td
+(Slide 13: Risks and Mitigations) Tj
+ET
+BT
+/F1 10.0 Tf
+54 601.5 Td
+(  ? Revenue concentration \(45% single customer\): Active pipeline of 8 enterprise deals \($200K+ ACV each\)) Tj
+ET
+BT
+/F1 10.0 Tf
+54 588.5 Td
+(expected to close in H1 2026. Apex contract locked for 24 months) Tj
+ET
+BT
+/F1 10.0 Tf
+54 571.5 Td
+(  ? Gross margin below SaaS benchmarks: Roadmap to 74%+ by Q4 2026 via model distillation and caching.) Tj
+ET
+BT
+/F1 10.0 Tf
+54 558.5 Td
+(Each 5% improvement adds $185K/yr to bottom line at current scale) Tj
+ET
+BT
+/F1 10.0 Tf
+54 541.5 Td
+(  ? No VP Sales: Board-level search underway. Raj has closed all enterprise deals to date. Two strong) Tj
+ET
+BT
+/F1 10.0 Tf
+54 528.5 Td
+(candidates in final rounds) Tj
+ET
+BT
+/F1 10.0 Tf
+54 511.5 Td
+(  ? GPU dependency: Multi-cloud \(AWS, GCP\) with reserved instances. Exploring on-prem inference for) Tj
+ET
+BT
+/F1 10.0 Tf
+54 498.5 Td
+(largest customers) Tj
+ET
+BT
+/F1 10.0 Tf
+54 481.5 Td
+(  ? Competitive moat: Our codebase-context engine and compliance layer are hard to replicate. 8 months of) Tj
+ET
+BT
+/F1 10.0 Tf
+54 468.5 Td
+(proprietary training data from 1.2M reviews) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000140 00000 n 
+0000000237 00000 n 
+0000003400 00000 n 
+0000003526 00000 n 
+0000006771 00000 n 
+0000006897 00000 n 
+0000010539 00000 n 
+0000010665 00000 n 
+0000012493 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+12621
+%%EOF

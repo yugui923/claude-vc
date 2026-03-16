@@ -1,0 +1,163 @@
+# SAFE Agreement Analysis — YC Post-Money Valuation Cap Only
+
+## Document Identification
+
+| Field | Value |
+|-------|-------|
+| **Instrument** | SAFE (Simple Agreement for Future Equity) |
+| **Variant** | YC Post-Money, Valuation Cap Only (no discount) |
+| **Form** | Standard YC template — unmodified (per Section 6, line 6) |
+| **Blanks** | Company name, investor name, purchase amount, date, valuation cap, state of incorporation, governing law — all TBD |
+
+---
+
+## Extracted Terms
+
+### Economics
+
+| Term | Value |
+|------|-------|
+| Post-Money Valuation Cap | $[TBD] |
+| Discount Rate | **None** (cap-only variant) |
+| Purchase Amount | $[TBD] |
+| Qualified Financing Threshold | None — any "bona fide" Equity Financing triggers conversion (Sec. 1(a), 2 "Equity Financing") |
+| Liquidation Priority | Non-participating preferred equivalent (Sec. 1(d)) |
+| Dividends | Pass-through: if common receives dividends, SAFE holder gets proportional Dividend Amount (Sec. 5(c)) |
+
+### Conversion Mechanics (Sec. 1(a))
+
+On Equity Financing, SAFE converts to the **greater** of:
+1. Purchase Amount / lowest price per share of Standard Preferred Stock (round price)
+2. Purchase Amount / Safe Price, where **Safe Price = Post-Money Valuation Cap / Company Capitalization**
+
+This gives the investor the better of the round price or the capped price.
+
+### Liquidity Event (Sec. 1(b))
+
+Investor receives the **greater** of:
+- **Cash-Out Amount**: Return of Purchase Amount (1x)
+- **Conversion Amount**: As-converted share of proceeds (Purchase Amount / Liquidity Price)
+
+### Dissolution Event (Sec. 1(c))
+
+Investor receives the **Cash-Out Amount** only (1x return of investment).
+
+### Liquidation Priority (Sec. 1(d))
+
+| Priority | Claim |
+|----------|-------|
+| Senior | Debt, creditor claims, unconverted notes |
+| Pari passu | Other SAFEs and Preferred Stock |
+| Junior | Common Stock |
+
+### Control & Governance
+
+- **Voting rights**: None until conversion (Sec. 5(c))
+- **Board seat**: None
+- **Information rights**: None specified
+- **Pro-rata rights**: Not included in this variant
+
+### Amendment (Sec. 5(a))
+
+Modifiable by Company + Investor consent, **or** by Company + majority-in-interest of SAFEs with the same cap/discount terms. Purchase Amount cannot be amended by majority vote.
+
+### Transferability (Sec. 5(d))
+
+Not transferable without consent, except to: estate/heirs (death/disability) or affiliates/controlled entities.
+
+### Tax Treatment (Sec. 5(g))
+
+Treated as common stock for U.S. federal and state income tax purposes (Sections 304, 305, 306, 354, 368, 1036, 1202 IRC).
+
+---
+
+## Comparison Against Market Baseline
+
+| Term | This SAFE | Market Standard | Assessment |
+|------|-----------|----------------|------------|
+| SAFE variant | Post-money (2018+) | Post-money | **Standard** |
+| Valuation cap | Cap only, no discount | Cap only is standard for post-money | **Standard** |
+| Conversion trigger | Any bona fide Equity Financing | No minimum threshold (post-money) | **Standard** |
+| Liquidation priority | 1x non-participating equivalent | 1x non-participating | **Standard** |
+| Dissolution payout | 1x return of Purchase Amount | 1x return | **Standard** |
+| Anti-dilution | N/A (sets price at conversion) | N/A for SAFEs | **Standard** |
+| Dividend pass-through | Yes (Dividend Amount) | Standard on YC SAFEs | **Standard** |
+| Pro-rata rights | **Not included** | Often included for >$250K | **Investor-unfavorable** |
+| Information rights | None | None typical for SAFEs | **Standard** |
+| Amendment | Majority-in-interest mechanism | Standard YC | **Standard** |
+| Transfer restrictions | Affiliate/estate exceptions | Standard YC | **Standard** |
+| Tax treatment | Common stock characterization | Standard YC (QSBS eligibility) | **Standard** |
+| MFN clause | Not included | Only on MFN variant | **Standard** (correct for cap-only) |
+| Governing law | State TBD (Delaware typical) | Delaware standard | **Standard** (pending fill-in) |
+
+---
+
+## Non-Standard Provisions Flagged
+
+### 1. No Pro-Rata Rights — **Medium Impact**
+
+**What it says**: This SAFE does not include a side letter or provision granting the investor the right to participate in the next priced round.
+
+**Why it matters**: Without pro-rata rights, the investor cannot maintain their ownership percentage when a Series A occurs. For investors writing checks >$250K, this is typically expected.
+
+**Market context**: The standard YC post-money SAFE template intentionally omits pro-rata — YC provides it via a separate side letter (the "Pro Rata Side Letter"). This is a template design choice, not a red flag.
+
+**Action**: If the investor wants pro-rata rights, negotiate a separate YC Pro Rata Side Letter. This is common practice and does not require modifying the SAFE itself.
+
+### 2. No Discount Rate — **Low Impact**
+
+**What it says**: This is the cap-only variant; there is no discount applied to the priced round price.
+
+**Why it matters**: In the pre-money SAFE era, discounts (15-25%) were common alongside or instead of caps. Post-money SAFEs typically use cap-only, making this standard.
+
+**Assessment**: This is the intended design of this YC variant. No action needed unless the investor specifically wants a discount, in which case the "Valuation Cap and Discount" variant should be used instead.
+
+---
+
+## Overall Assessment
+
+**Balanced (Standard YC Form)**
+
+This is the unmodified YC Post-Money SAFE (Valuation Cap Only) — the most widely used SAFE template in early-stage venture. The document explicitly states at line 6 that neither party has modified the form. All provisions match the standard YC template.
+
+### Top 3 Negotiation Points
+
+1. **Valuation cap amount** — The single most important economic term to negotiate. Compare against current market valuations for the company's stage, traction, and sector
+2. **Pro-rata side letter** — If the investor wants the right to maintain ownership in future rounds, negotiate a separate YC Pro Rata Side Letter alongside this SAFE
+3. **Purchase amount** — Size the investment relative to the cap to understand implied ownership (ownership % = purchase amount / valuation cap)
+
+### Terms That Are Standard (Reassurance)
+- Post-money structure with clear ownership math
+- 1x non-participating liquidation preference equivalent
+- Greater-of conversion (investor gets better of round price or cap price)
+- Standard liquidation priority waterfall
+- Standard company representations
+- Standard accredited investor requirement
+- Tax treatment as common stock (QSBS eligibility preserved)
+- Amendment requires majority-in-interest (can't be changed without broad consent)
+
+### Missing Terms to Add (If Desired)
+- **Pro-rata side letter** — standard companion document for institutional investors
+- **Information rights side letter** — if investor wants quarterly/annual financials
+- **Board observer rights** — not typical at SAFE stage, but sometimes requested by lead investors
+
+---
+
+> This analysis identifies terms that deviate from market norms but does not constitute legal advice. Engage qualified legal counsel before signing any term sheet or SAFE agreement.
+
+---
+DISCLAIMER: This valuation/terms analysis is a mathematical exercise
+using publicly available methodologies. It is not an appraisal, fairness
+opinion, or professional valuation. Actual company valuations depend on
+factors not captured in this analysis. This tool does not provide legal
+advice regarding term sheet provisions. Engage qualified legal and
+financial professionals for all investment and securities matters.
+
+Canada: This tool does not provide advice within the meaning of the
+Securities Act (Ontario) or National Instrument 31-103. No registration
+exemption is relied upon.
+
+United States: This tool does not provide advice within the meaning of
+the Investment Advisers Act of 1940.
+
+---
