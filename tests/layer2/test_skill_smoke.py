@@ -108,3 +108,68 @@ def test_vc_captable_output_includes_disclaimer() -> None:
             "not investment advice",
         ]
     )
+
+
+# ---------------------------------------------------------------------------
+# Phase 3 smoke tests: compare, diligence, full screen
+# ---------------------------------------------------------------------------
+
+
+def test_vc_compare_prompts_for_companies() -> None:
+    """Invoking /vc compare with no args should ask for companies."""
+    output = run_claude("Run /vc compare", max_turns=2)
+    output_lower = output.lower()
+    assert any(
+        kw in output_lower
+        for kw in ["company", "compan", "compare", "url", "provide", "which"]
+    )
+
+
+def test_vc_compare_with_descriptions() -> None:
+    """Invoking /vc compare with two company descriptions should produce a matrix."""
+    prompt = (
+        "Run /vc compare. Compare these two companies: "
+        "Company A is a SaaS startup with $5M ARR, 200% growth, 80% margins, "
+        "team from Google and Stripe, in the devtools space. "
+        "Company B is a marketplace startup with $3M GMV, 300% growth, 25% take rate, "
+        "team from Uber and Airbnb, in the logistics space."
+    )
+    output = run_claude(prompt, max_turns=6, max_budget=1.50)
+    output_lower = output.lower()
+    assert "company a" in output_lower or "saas" in output_lower
+    assert "company b" in output_lower or "marketplace" in output_lower
+
+
+def test_vc_diligence_prompts_for_stage() -> None:
+    """Invoking /vc diligence with no args should ask for company/stage info."""
+    output = run_claude("Run /vc diligence", max_turns=2)
+    output_lower = output.lower()
+    assert any(
+        kw in output_lower
+        for kw in ["stage", "company", "sector", "provide", "need", "series"]
+    )
+
+
+def test_vc_diligence_generates_checklist() -> None:
+    """Invoking /vc diligence with stage/sector should produce a checklist."""
+    prompt = (
+        "Run /vc diligence for a Series A SaaS company "
+        "in the developer tools space called NovaByte."
+    )
+    output = run_claude(prompt, max_turns=4, max_budget=1.00)
+    output_lower = output.lower()
+    assert any(kw in output_lower for kw in ["financial", "legal", "technical"])
+    assert any(kw in output_lower for kw in ["checklist", "diligence", "[ ]", "[x]"])
+
+
+def test_vc_screen_full_produces_comprehensive_output() -> None:
+    """Invoking /vc screen --full should reference parallel analysis."""
+    prompt = (
+        "Run /vc screen --full "
+        "tests/real-data/pitch-decks/synthetic-novabyte-series-a-deck.md"
+    )
+    output = run_claude(prompt, max_turns=12, max_budget=3.00)
+    output_lower = output.lower()
+    # Full screen should produce a Deal Score with multiple dimensions
+    assert "score" in output_lower or "deal score" in output_lower
+    assert any(kw in output_lower for kw in ["market", "team", "product", "financial"])

@@ -61,12 +61,12 @@ Goal: Concurrent subagent analysis for comprehensive deal evaluation.
 
 ### Deliverables
 
-- [ ] 6 parallel subagents: `vc-financial`, `vc-market`, `vc-technical`, `vc-legal`, `vc-competitive`, `vc-team`
-- [ ] Full screening mode (`/vc screen --full`) with parallel orchestration
-- [ ] Company comparison sub-skill (`vc-compare/SKILL.md`) -- parallel per-company agents
-- [ ] Aggregated Deal Score with dimension breakdown
-- [ ] Due diligence sub-skill (`vc-diligence/SKILL.md`)
-- [ ] Reference file: `due-diligence-checklist.md`
+- [x] 6 parallel subagents: `vc-financial`, `vc-market`, `vc-technical`, `vc-legal`, `vc-competitive`, `vc-team`
+- [x] Full screening mode (`/vc screen --full`) with parallel orchestration
+- [x] Company comparison sub-skill (`vc-compare/SKILL.md`) -- parallel per-company agents
+- [x] Aggregated Deal Score with dimension breakdown
+- [x] Due diligence sub-skill (`vc-diligence/SKILL.md`)
+- [x] Reference file: `due-diligence-checklist.md`
 
 ### Success Criteria
 
