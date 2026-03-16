@@ -11,7 +11,7 @@
       "name": "claude-vc",
       "source": "./",
       "description": "Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio reporting.",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "author": {
         "name": "Yuri Gui"
       },
