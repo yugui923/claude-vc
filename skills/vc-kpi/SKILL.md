@@ -179,16 +179,19 @@ Assign each metric a status:
 [brief synthesis of KPI health and areas to monitor]
 ```
 
-## XLSX Export (`--xlsx`)
+## XLSX Export (default)
 
-If `--xlsx` or `--xlsx <filename>` is present in arguments:
+By default, generate both markdown output **and** an Excel workbook.
+Skip XLSX export only if `--no-xlsx` is present in arguments.
 
 1. Generate the KPI report as markdown normally
 2. Generate an Excel workbook (.xlsx) with:
    - **Key Metrics** worksheet: all computed KPIs with health assessment
    - **Benchmarks** worksheet: industry benchmarks by company type
    - Header rows with bold formatting, conditional formatting for health
-3. Default filename: `kpi-report-<YYYY-MM-DD>.xlsx`
+3. If `--xlsx <filename>` is given, use that filename. Otherwise default to
+   `kpi-report-<YYYY-MM-DD>.xlsx` in the current directory.
+   Tell the user where the file was saved.
 
 ## Disclaimer
 

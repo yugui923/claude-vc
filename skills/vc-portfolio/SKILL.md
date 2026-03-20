@@ -27,9 +27,10 @@ Parse `$ARGUMENTS` and conversation context to determine the data source:
    objects or an object with a `companies` key.
 3. **Typed data in conversation**: Parse structured data from the user's
    message (table, bullet list, or inline JSON).
-4. **`--docx [filename]`**: After generating the report, also export it
-   as a formatted Word document (see DOCX Export below).
-5. **No input**: Ask the user to provide portfolio data in CSV, JSON, or
+4. **`--no-docx`**: Skip the default DOCX export.
+5. **`--no-xlsx`**: Skip the default XLSX export.
+6. **`--docx <filename>`** / **`--xlsx <filename>`**: Override default filenames.
+7. **No input**: Ask the user to provide portfolio data in CSV, JSON, or
    typed format. Show the expected input fields as a reference.
 
 ## Firm Customization
@@ -298,16 +299,17 @@ statement on portfolio positioning.
 [2-3 paragraph narrative]
 ```
 
-## DOCX Export (`--docx`)
+## Office Format Exports (default)
 
-If `--docx` or `--docx <filename>` is present in arguments:
+By default, generate markdown output **and** both a DOCX report and an
+XLSX workbook. Skip with `--no-docx` or `--no-xlsx`.
 
-1. Generate the report as markdown normally (displayed in terminal).
-2. Use Claude's native file-writing capabilities to generate a formatted
-   Word document (.docx) directly. Apply professional formatting: Calibri
-   font, structured headings, tables with header styling, and appropriate
-   spacing. Do not use any external scripts for DOCX generation.
-3. If no filename is given, default to
+### DOCX Export
+
+1. Generate a formatted Word document (.docx) with the full portfolio report.
+   Apply professional formatting: Calibri font, structured headings, tables
+   with header styling, and appropriate spacing.
+2. If `--docx <filename>` is given, use that filename. Otherwise default to
    `portfolio-report-<YYYY-MM-DD>.docx` in the current directory.
    Tell the user where the file was saved.
 
@@ -341,18 +343,17 @@ If `--docx` or `--docx <filename>` is present in arguments:
   top/bottom performers and aggregate metrics. Do not attempt to
   discuss every company individually in the LP summary.
 
-## XLSX Export (`--xlsx`)
+### XLSX Export
 
-If `--xlsx` or `--xlsx <filename>` is present in arguments:
-
-1. Generate the portfolio report as markdown normally
-2. Generate an Excel workbook (.xlsx) with:
+1. Generate an Excel workbook (.xlsx) with:
    - **Summary** worksheet: fund-level metrics and dashboard
    - **Composition** worksheet: per-company holdings table
    - **Cohorts** worksheet: vintage year analysis
    - **Risk** worksheet: concentration and loss analysis
    - Header rows with bold formatting, number formatting for dollars and multiples
-3. Default filename: `portfolio-<YYYY-MM-DD>.xlsx`
+2. If `--xlsx <filename>` is given, use that filename. Otherwise default to
+   `portfolio-<YYYY-MM-DD>.xlsx` in the current directory.
+   Tell the user where the file was saved.
 
 ## Disclaimer
 

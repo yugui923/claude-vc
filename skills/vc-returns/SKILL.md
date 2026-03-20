@@ -101,16 +101,19 @@ Provide context for the return metrics:
 | MOIC   | >3.0x        | 2.0-3.0x   | <1.5x           |
 | DPI    | >1.0x        | 0.5-1.0x   | <0.3x           |
 
-## XLSX Export (`--xlsx`)
+## XLSX Export (default)
 
-If `--xlsx` or `--xlsx <filename>` is present in arguments:
+By default, generate both markdown output **and** an Excel workbook.
+Skip XLSX export only if `--no-xlsx` is present in arguments.
 
 1. Generate the returns analysis as markdown normally
 2. Generate an Excel workbook with:
    - **Investments** worksheet: per-investment metrics table
    - **Portfolio Summary** worksheet: aggregate metrics
    - **Cash Flows** worksheet: all dated cash flows for audit trail
-3. Default filename: `returns-<YYYY-MM-DD>.xlsx`
+3. If `--xlsx <filename>` is given, use that filename. Otherwise default to
+   `returns-<YYYY-MM-DD>.xlsx` in the current directory.
+   Tell the user where the file was saved.
 
 ## Disclaimer
 

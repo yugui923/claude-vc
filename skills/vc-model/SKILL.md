@@ -25,8 +25,9 @@ Determine the data source from `$ARGUMENTS` and conversation context:
 3. **URL**: Fetch the company website for public financials or pricing data.
 4. **Verbal description**: User provides key assumptions directly.
 5. **No input**: Ask for the minimum required inputs (see below).
-6. **`--docx [filename]`**: After generating the model, export as a formatted
-   Word document using Claude's native DOCX generation capabilities.
+6. **`--no-docx`**: Skip the default DOCX export.
+7. **`--no-xlsx`**: Skip the default XLSX export.
+8. **`--docx <filename>`** / **`--xlsx <filename>`**: Override default filenames.
 
 ### Minimum Required Inputs
 
@@ -132,17 +133,26 @@ After presenting the tables, add a brief analysis:
 If the user asks for scenarios (bull/base/bear), run three models with
 different growth and margin assumptions and present side-by-side.
 
-## XLSX Export (`--xlsx`)
+## Office Format Exports (default)
 
-If `--xlsx` or `--xlsx <filename>` is present in arguments:
+By default, generate markdown output **and** both a DOCX report and an
+XLSX workbook. Skip with `--no-docx` or `--no-xlsx`.
 
-1. Generate the financial model as markdown normally
-2. Generate an Excel workbook (.xlsx) with:
+### DOCX Export
+
+1. Generate a formatted Word document with the 3-statement tables and
+   analysis narrative. Professional formatting: Calibri font, structured
+   headings, tables with header styling.
+2. Default filename: `financial-model-<YYYY-MM-DD>.docx`
+
+### XLSX Export
+
+1. Generate an Excel workbook (.xlsx) with:
    - **Income Statement** worksheet: revenue through net income
    - **Balance Sheet** worksheet: assets, liabilities, equity
    - **Cash Flow** worksheet: operating, investing, financing activities
    - Header rows with bold formatting, number formatting for dollar amounts
-3. Default filename: `financial-model-<YYYY-MM-DD>.xlsx`
+2. Default filename: `financial-model-<YYYY-MM-DD>.xlsx`
 
 ## Disclaimer
 

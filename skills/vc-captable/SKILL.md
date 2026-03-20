@@ -156,9 +156,10 @@ After presenting results, verify:
 - Share counts are internally consistent
 - MFN SAFEs resolved to the correct cap
 
-## XLSX Export (`--xlsx`)
+## XLSX Export (default)
 
-If `--xlsx` or `--xlsx <filename>` is present in arguments:
+By default, generate both markdown output **and** an Excel workbook.
+Skip XLSX export only if `--no-xlsx` is present in arguments.
 
 1. Generate the cap table output as markdown normally
 2. Generate an Excel workbook (.xlsx) with:
@@ -166,7 +167,9 @@ If `--xlsx` or `--xlsx <filename>` is present in arguments:
    - **Waterfall** worksheet: liquidation payout distribution (if computed)
    - **Scenarios** worksheet: multi-exit comparison matrix (if computed)
    - Header rows with bold formatting, number formatting for shares and dollars
-3. Default filename: `captable-<YYYY-MM-DD>.xlsx`
+3. If `--xlsx <filename>` is given, use that filename. Otherwise default to
+   `captable-<YYYY-MM-DD>.xlsx` in the current directory.
+   Tell the user where the file was saved.
 
 ## Disclaimers
 
