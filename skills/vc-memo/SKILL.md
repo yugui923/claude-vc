@@ -22,6 +22,30 @@ Determine the input source from `$ARGUMENTS` and conversation context:
 5. **No arguments and no prior context**: Ask the user for the company name and any available information.
 6. **`--docx [filename]`**: After generating the memo, also export it as a formatted Word document (see DOCX Export below).
 
+## Data Source Priority
+
+When researching the company, prefer data sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for funding history, investor profiles, comparable valuations. Use
+   SEC EDGAR (`vc-edgar`) tools for public filings.
+2. **Company-provided materials**: Pitch deck, website, investor updates.
+3. **Institutional sources**: Published reports, SEC filings, press releases.
+4. **Web search**: Use WebSearch as a supplement. Cross-reference results.
+
+Do NOT require any MCP data source -- the memo works without them.
+
+## Firm Customization
+
+Before generating output, check if firm config files exist:
+
+- `${CLAUDE_SKILL_DIR}/../vc/config/firm-criteria.md`: Use firm's custom
+  scoring weights and thresholds instead of defaults.
+- `${CLAUDE_SKILL_DIR}/../vc/config/firm-templates.md`: Use firm's custom
+  section headers, ordering, and required fields for the memo.
+
+If these files do not exist, use the defaults.
+
 ## Memo Structure
 
 Generate all 12 sections in order. Adjust depth based on available information -- flag sections where data is limited rather than speculating.

@@ -52,6 +52,13 @@ if compgen -G "${SCRIPT_DIR}/agents/*.md" >/dev/null 2>&1; then
     cp "${SCRIPT_DIR}"/agents/*.md "${AGENTS_DIR}/"
 fi
 
+# Copy commands (if any .md files exist)
+COMMANDS_DIR="${CLAUDE_DIR}/commands"
+if compgen -G "${SCRIPT_DIR}/commands/*.md" >/dev/null 2>&1; then
+    mkdir -p "${COMMANDS_DIR}"
+    cp "${SCRIPT_DIR}"/commands/*.md "${COMMANDS_DIR}/"
+fi
+
 # Write version marker
 echo "${VERSION} ${GIT_SHA}" > "${VERSION_FILE}"
 

@@ -28,6 +28,19 @@ outright:
 Refer to `${CLAUDE_SKILL_DIR}/../vc/references/investment-criteria.md` for
 the full rubrics on both dimensions.
 
+## Data Source Priority
+
+When researching the competitive landscape, prefer sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for competitor funding data, valuations, and investor profiles.
+2. **Company-provided materials**: Pitch deck competitive slides, product docs.
+3. **Institutional sources**: Published reports, analyst coverage, press releases.
+4. **Web search**: Use WebSearch for competitor websites, product comparisons,
+   and market analysis. Cross-reference results.
+
+Do NOT require any MCP data source -- the analysis works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Identify Competitors

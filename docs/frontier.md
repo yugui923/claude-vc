@@ -35,7 +35,7 @@ combination of tools, even where
 - **Enabler**[^1]: The AI advancement or product that made or would make this
   possible
 
-Last reviewed: 2026-03-16
+Last reviewed: 2026-03-18
 
 ---
 
@@ -219,6 +219,8 @@ or feature shipped, not when adoption reached maturity.
 | 2025-11 | AI-accessible private market data at scale    | Private company data access                    | WIP -> Can Do   | PitchBook Navigator MCP              |
 | 2026-02 | Full data room in single context              | Systematic data room cross-referencing         | Human -> Can Do | 1M token context (Claude 4.6)        |
 | 2026-03 | PitchBook data in conversational AI           | Comparable company analysis, precedent txns    | WIP -> Can Do   | PitchBook + Perplexity MCP           |
+| 2026-03 | Fund-level return metric calculations          | IRR, MOIC, DPI, TVPI, PME computation          | Human -> Can Do | claude-vc v1.5.0 returns command     |
+| 2026-03 | XLSX export for financial outputs               | Spreadsheet generation for cap tables, models   | Human -> Can Do | Native file generation + skill flags |
 | 2026-03 | claude-vc v1.2.0 baseline                     | --                                             | --              | Initial AI Frontier assessment       |
 | 2026-03 | Parallel multi-agent deal screening           | Full screening with 6 concurrent agents        | WIP -> Can Do   | claude-vc v1.3.0 parallel agents     |
 | 2026-03 | Side-by-side company comparison               | Structured comparison of 2-4 companies         | WIP -> Can Do   | claude-vc v1.3.0 vc-compare          |

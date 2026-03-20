@@ -22,6 +22,17 @@ benchmark comparisons and health assessments.
 4. **After a screening or memo**: Use metrics already in context.
 5. **No input**: Ask for the company type and key metrics.
 
+## Firm Customization
+
+Before generating output, check if firm config files exist:
+
+- `${CLAUDE_SKILL_DIR}/../vc/config/firm-criteria.md`: Use firm's custom
+  benchmarks and thresholds for health assessments.
+- `${CLAUDE_SKILL_DIR}/../vc/config/firm-templates.md`: Use firm's custom
+  required metrics and report formatting.
+
+If these files do not exist, use the defaults.
+
 ### Auto-Detection
 
 Determine the company type from the data provided:
@@ -167,6 +178,17 @@ Assign each metric a status:
 
 [brief synthesis of KPI health and areas to monitor]
 ```
+
+## XLSX Export (`--xlsx`)
+
+If `--xlsx` or `--xlsx <filename>` is present in arguments:
+
+1. Generate the KPI report as markdown normally
+2. Generate an Excel workbook (.xlsx) with:
+   - **Key Metrics** worksheet: all computed KPIs with health assessment
+   - **Benchmarks** worksheet: industry benchmarks by company type
+   - Header rows with bold formatting, conditional formatting for health
+3. Default filename: `kpi-report-<YYYY-MM-DD>.xlsx`
 
 ## Disclaimer
 

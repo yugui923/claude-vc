@@ -1,0 +1,34 @@
+{
+  "investments": [
+    {
+      "name": "AlphaWidget",
+      "investment_date": "2022-01-15",
+      "investment_amount": 500000,
+      "distributions": [
+        {"date": "2024-06-15", "amount": 200000},
+        {"date": "2025-06-15", "amount": 1500000}
+      ],
+      "current_nav": 0,
+      "as_of_date": "2025-06-15"
+    },
+    {
+      "name": "BetaCloud",
+      "investment_date": "2023-03-01",
+      "investment_amount": 750000,
+      "distributions": [],
+      "current_nav": 1800000,
+      "as_of_date": "2026-03-18"
+    },
+    {
+      "name": "GammaAI",
+      "investment_date": "2023-09-01",
+      "investment_amount": 250000,
+      "distributions": [
+        {"date": "2025-03-01", "amount": 50000}
+      ],
+      "current_nav": 600000,
+      "as_of_date": "2026-03-18"
+    }
+  ],
+  "benchmark_irr": 0.15
+}

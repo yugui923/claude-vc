@@ -132,6 +132,18 @@ After presenting the tables, add a brief analysis:
 If the user asks for scenarios (bull/base/bear), run three models with
 different growth and margin assumptions and present side-by-side.
 
+## XLSX Export (`--xlsx`)
+
+If `--xlsx` or `--xlsx <filename>` is present in arguments:
+
+1. Generate the financial model as markdown normally
+2. Generate an Excel workbook (.xlsx) with:
+   - **Income Statement** worksheet: revenue through net income
+   - **Balance Sheet** worksheet: assets, liabilities, equity
+   - **Cash Flow** worksheet: operating, investing, financing activities
+   - Header rows with bold formatting, number formatting for dollar amounts
+3. Default filename: `financial-model-<YYYY-MM-DD>.xlsx`
+
 ## Disclaimer
 
 Read `${CLAUDE_SKILL_DIR}/../vc/references/disclaimers.md` and append

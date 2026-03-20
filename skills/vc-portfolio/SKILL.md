@@ -32,6 +32,13 @@ Parse `$ARGUMENTS` and conversation context to determine the data source:
 5. **No input**: Ask the user to provide portfolio data in CSV, JSON, or
    typed format. Show the expected input fields as a reference.
 
+## Firm Customization
+
+Before generating output, check if a firm templates file exists at
+`${CLAUDE_SKILL_DIR}/../vc/config/firm-templates.md`. If it exists,
+use the firm's custom section headers, summary format, and required
+fields for the portfolio report. If it does not exist, use the defaults.
+
 ### Input Fields Per Company
 
 | Field              | Required | Type      | Description                                      |
@@ -333,6 +340,19 @@ If `--docx` or `--docx <filename>` is present in arguments:
 - **Very large portfolio** (>50 companies): Focus the narrative on
   top/bottom performers and aggregate metrics. Do not attempt to
   discuss every company individually in the LP summary.
+
+## XLSX Export (`--xlsx`)
+
+If `--xlsx` or `--xlsx <filename>` is present in arguments:
+
+1. Generate the portfolio report as markdown normally
+2. Generate an Excel workbook (.xlsx) with:
+   - **Summary** worksheet: fund-level metrics and dashboard
+   - **Composition** worksheet: per-company holdings table
+   - **Cohorts** worksheet: vintage year analysis
+   - **Risk** worksheet: concentration and loss analysis
+   - Header rows with bold formatting, number formatting for dollars and multiples
+3. Default filename: `portfolio-<YYYY-MM-DD>.xlsx`
 
 ## Disclaimer
 

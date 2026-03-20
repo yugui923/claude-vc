@@ -28,6 +28,19 @@ the full rubric:
 | 6-10  | Inexperienced team, significant skill gaps, no domain expertise                            |
 | 0-5   | Solo founder with no relevant experience, no advisory support                              |
 
+## Data Source Priority
+
+When researching the founding team, prefer sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for founder histories, prior exits, investor connections.
+2. **Company-provided materials**: Pitch deck team slides, bios.
+3. **Professional profiles**: LinkedIn, personal websites, conference talks.
+4. **Web search**: Use WebSearch for press coverage, interviews, prior
+   company performance. Cross-reference results.
+
+Do NOT require any MCP data source -- the analysis works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Gather Team Data

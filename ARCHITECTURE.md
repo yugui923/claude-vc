@@ -23,6 +23,7 @@ The system is installed into `~/.claude/` and invoked via `/vc` slash commands. 
 │              /vc kpi                                        │
 │              /vc compare <url1> <url2>                      │
 │              /vc portfolio                                  │
+│              /vc returns                                    │
 └─────────────────┬───────────────────────────────────────────┘
                   │
                   ▼
@@ -79,6 +80,11 @@ claude-vc/
 ├── .claude-plugin/
 │   ├── plugin.json                     # Plugin manifest
 │   └── marketplace.json                # Marketplace catalog
+├── commands/                           # SLASH COMMAND WRAPPERS
+│   ├── screen.md                      # /screen → vc-screen skill
+│   ├── memo.md                        # /memo → vc-memo skill
+│   ├── terms.md, captable.md, ...     # One per user-facing command
+│   └── returns.md                     # /returns → vc-returns skill
 ├── skills/                             # ALL SKILLS
 │   ├── vc/                             # ORCHESTRATOR
 │   │   ├── SKILL.md                    # Entry point + routing table
@@ -90,9 +96,13 @@ claude-vc/
 │   │   │   ├── industry-multiples.md
 │   │   │   ├── investment-criteria.md
 │   │   │   └── disclaimers.md
-│   │   └── scripts/                    # Python computation
-│   │       ├── financial_model.py
-│   │       └── captable.py
+│   │   ├── scripts/                    # Python computation
+│   │   │   ├── financial_model.py
+│   │   │   └── captable.py
+│   │   └── config/                     # Firm customization (user-managed)
+│   │       ├── README.md
+│   │       ├── firm-criteria.md.example
+│   │       └── firm-templates.md.example
 │   ├── vc-screen/SKILL.md              # SUB-SKILLS
 │   ├── vc-memo/SKILL.md
 │   ├── vc-terms/SKILL.md
@@ -101,7 +111,8 @@ claude-vc/
 │   ├── vc-kpi/SKILL.md
 │   ├── vc-compare/SKILL.md
 │   ├── vc-diligence/SKILL.md
-│   └── vc-portfolio/SKILL.md
+│   ├── vc-portfolio/SKILL.md
+│   └── vc-returns/SKILL.md
 ├── agents/                             # PARALLEL SUBAGENTS
 │   ├── vc-financial.md
 │   ├── vc-market.md
@@ -149,7 +160,10 @@ The repository's `skills/` directory maps directly to the installed layout. The 
 │   ├── vc-kpi/SKILL.md
 │   ├── vc-compare/SKILL.md
 │   ├── vc-diligence/SKILL.md
-│   └── vc-portfolio/SKILL.md
+│   ├── vc-portfolio/SKILL.md
+│   └── vc-returns/SKILL.md
+├── commands/
+│   └── *.md                           # Thin command wrappers
 └── agents/
     ├── vc-financial.md
     ├── vc-market.md
@@ -177,7 +191,26 @@ Only skill names and descriptions load into context at session start. Full SKILL
 
 Financial modeling, cap table calculations, and data fetching are implemented as CLI Python scripts. Claude invokes them via the Bash tool. Scripts use `argparse` for CLI interface and output JSON for structured results.
 
-### 5. Extension System
+### 5. Data Source Hierarchy
+
+All research-oriented skills follow a consistent priority when gathering information:
+
+1. **MCP data sources** (if available): Octagon AI, SEC EDGAR, or other MCP tools provide the most reliable structured data.
+2. **Company-provided materials**: Pitch decks, websites, data room documents.
+3. **Institutional sources**: Published reports, SEC filings, press releases.
+4. **Web search**: Last resort, always cross-referenced.
+
+No MCP data source is ever required -- all analysis works without them. This pattern ensures data quality improves automatically as MCP integrations come online without changing skill logic.
+
+### 6. Commands Directory
+
+Thin `.md` wrapper files in `commands/` provide discoverability and metadata for each user-facing command. Each file contains YAML frontmatter (`description`, `argument-hint`) and a one-line body that routes to the corresponding skill. This follows the emerging plugin standard from Anthropic's financial-services-plugins.
+
+### 7. Firm Customization
+
+Users can drop firm-specific config files into `skills/vc/config/` to override default scoring criteria, output templates, and formatting. Skills check for config files before loading defaults. See `skills/vc/config/README.md` for details.
+
+### 8. Extension System
 
 Optional extensions integrate external data via MCP servers. **Octagon AI** ($17/mo) is the priority extension -- it provides private company data, funding rounds, investor profiles, and SEC analysis through a single MCP server. SEC EDGAR is free for raw filing access. Each extension has its own installer, skills, agents, and MCP configuration. Extensions are fully independent -- the core system works without them.
 
@@ -258,6 +291,13 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 2. Each subagent independently analyzes its company
 3. Results are aggregated into a side-by-side comparison matrix
 4. Dimensions compared: market, team, product, financials, competitive position
+
+### Returns Analysis (`/vc returns`)
+
+1. Sub-skill loads, parses investment data (CSV, JSON, verbal, or prior portfolio context)
+2. Claude builds a JSON scenario with investment dates, amounts, distributions, and NAV
+3. Invokes `skills/vc/scripts/financial_model.py returns` for computation
+4. Returns per-investment and portfolio-level IRR, MOIC, DPI, TVPI, PME with benchmarks
 
 ### Pitch Deck Analysis (`/vc screen <file.pdf>`)
 

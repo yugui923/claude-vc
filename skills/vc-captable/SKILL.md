@@ -156,6 +156,18 @@ After presenting results, verify:
 - Share counts are internally consistent
 - MFN SAFEs resolved to the correct cap
 
+## XLSX Export (`--xlsx`)
+
+If `--xlsx` or `--xlsx <filename>` is present in arguments:
+
+1. Generate the cap table output as markdown normally
+2. Generate an Excel workbook (.xlsx) with:
+   - **Cap Table** worksheet: ownership table with share counts, percentages
+   - **Waterfall** worksheet: liquidation payout distribution (if computed)
+   - **Scenarios** worksheet: multi-exit comparison matrix (if computed)
+   - Header rows with bold formatting, number formatting for shares and dollars
+3. Default filename: `captable-<YYYY-MM-DD>.xlsx`
+
 ## Disclaimers
 
 Read `${CLAUDE_SKILL_DIR}/../vc/references/disclaimers.md` and append

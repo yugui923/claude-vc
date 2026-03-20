@@ -10,8 +10,8 @@
     {
       "name": "claude-vc",
       "source": "./",
-      "description": "Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, and portfolio reporting.",
-      "version": "1.4.0",
+      "description": "Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, portfolio reporting, and fund returns analysis.",
+      "version": "1.5.0",
       "author": {
         "name": "Yuri Gui"
       },
@@ -23,7 +23,8 @@
         "cap-table",
         "term-sheet",
         "financial-model",
-        "kpi"
+        "kpi",
+        "returns-analysis"
       ],
       "category": "finance",
       "tags": ["vc", "finance", "startup", "investment"]

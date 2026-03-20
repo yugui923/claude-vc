@@ -61,16 +61,27 @@ Each subagent prompt should include:
 - The specific analysis dimension to focus on
 - Instructions to output structured findings as markdown with a score (0 to the dimension max)
 
-## Octagon AI Enhancement
+## Data Source Priority
 
-If the `octagon-agent` MCP tool is available, use it to enrich the analysis:
+When gathering information, prefer data sources in this order:
 
-- Look up the company's funding history and investors
-- Find comparable company valuations and deal sizes
-- Research investor profiles for any known backers
-- Pull SEC filings if the company or key competitors are public
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for funding history, comparable valuations, investor profiles. Use
+   SEC EDGAR (`vc-edgar`) tools for public company filings.
+2. **Company-provided materials**: Pitch deck, website, data room documents.
+3. **Institutional sources**: Published reports, SEC filings, press releases.
+4. **Web search**: Use WebSearch as a supplement for market sizing,
+   competitor mapping, and team backgrounds. Cross-reference results.
 
-Integrate Octagon data into the relevant dimension analysis. Do NOT require Octagon -- the screening works without it.
+Do NOT require any MCP data source -- the screening works without them.
+
+## Firm Customization
+
+Before loading the default investment criteria, check if a firm-specific
+criteria file exists at `${CLAUDE_SKILL_DIR}/../vc/config/firm-criteria.md`.
+If it exists, read it and use the firm's custom weights, thresholds, and
+red flags instead of the defaults in `investment-criteria.md`. If it does
+not exist, use the defaults.
 
 ## Output Format
 

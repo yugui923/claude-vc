@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Financial modeling: DCF, unit economics, revenue projections.
+"""Financial modeling: DCF, unit economics, revenue projections, returns.
 
 Usage:
     python3 financial_model.py <command> [options]
@@ -9,6 +9,8 @@ Commands:
     unit_economics  CAC, LTV, payback period, margins
     projections     Revenue and expense projections
     multiples       Comparable company valuation via multiples
+    three_statement 3-statement financial model
+    returns         Fund-level return metrics (IRR, MOIC, DPI, TVPI, PME)
 
 Input is always a JSON file (--input). Output is JSON to stdout.
 """
@@ -18,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
 from typing import Any
 
@@ -655,17 +658,271 @@ def calc_three_statement(scenario: dict[str, Any]) -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
+# Fund Returns (IRR, MOIC, DPI, TVPI, PME)
+# ---------------------------------------------------------------------------
+
+
+def _parse_date(s: str) -> date:
+    return date.fromisoformat(s)
+
+
+def _years_between(d1: date, d2: date) -> Decimal:
+    return _d((d2 - d1).days) / _d(365)
+
+
+def _xirr(
+    cash_flows: list[tuple[date, Decimal]], max_iter: int = 200
+) -> Decimal | None:
+    """Compute IRR for irregular cash flows via Newton-Raphson.
+
+    cash_flows: list of (date, amount) tuples.  Negative = outflow, positive = inflow.
+    Returns annualized rate or None if no convergence.
+    """
+    if not cash_flows:
+        return None
+
+    t0 = cash_flows[0][0]
+
+    def _npv(rate: Decimal) -> Decimal:
+        total = Decimal(0)
+        for dt, amt in cash_flows:
+            years = _years_between(t0, dt)
+            if years == 0:
+                total += amt
+            else:
+                total += amt / (1 + rate) ** years
+        return total
+
+    def _npv_deriv(rate: Decimal) -> Decimal:
+        total = Decimal(0)
+        for dt, amt in cash_flows:
+            years = _years_between(t0, dt)
+            if years == 0:
+                continue
+            total -= years * amt / (1 + rate) ** (years + 1)
+        return total
+
+    rate = Decimal("0.10")
+    for _ in range(max_iter):
+        npv = _npv(rate)
+        deriv = _npv_deriv(rate)
+        if deriv == 0:
+            return None
+        new_rate = rate - npv / deriv
+        if abs(new_rate - rate) < Decimal("0.0000001"):
+            return new_rate
+        rate = new_rate
+        if rate <= Decimal("-1"):
+            return None
+    return None
+
+
+def calc_returns(scenario: dict[str, Any]) -> dict[str, Any]:
+    """Calculate fund-level return metrics.
+
+    Expected JSON:
+    {
+        "investments": [
+            {
+                "name": "Company A",
+                "investment_date": "2022-06-15",
+                "investment_amount": 500000,
+                "distributions": [
+                    {"date": "2024-01-15", "amount": 100000}
+                ],
+                "current_nav": 1500000,
+                "as_of_date": "2026-03-18"
+            }
+        ],
+        "benchmark_irr": 0.15
+    }
+    """
+    investments = scenario.get("investments", [])
+    benchmark_irr = (
+        _d(scenario["benchmark_irr"]) if "benchmark_irr" in scenario else None
+    )
+
+    results: list[dict[str, Any]] = []
+    total_invested = Decimal(0)
+    total_distributions = Decimal(0)
+    total_nav = Decimal(0)
+    all_cash_flows: list[tuple[date, Decimal]] = []
+
+    for inv in investments:
+        name = inv["name"]
+        inv_date = _parse_date(inv["investment_date"])
+        inv_amount = _d(inv["investment_amount"])
+        distributions = inv.get("distributions", [])
+        nav = _d(inv.get("current_nav", 0))
+        as_of = _parse_date(inv.get("as_of_date", inv["investment_date"]))
+
+        dist_total = Decimal(0)
+        inv_cash_flows: list[tuple[date, Decimal]] = [(inv_date, -inv_amount)]
+
+        for dist in distributions:
+            d_amount = _d(dist["amount"])
+            d_date = _parse_date(dist["date"])
+            dist_total += d_amount
+            inv_cash_flows.append((d_date, d_amount))
+
+        # Add NAV as terminal cash flow
+        if nav > 0:
+            inv_cash_flows.append((as_of, nav))
+
+        total_value = dist_total + nav
+        moic = total_value / inv_amount if inv_amount > 0 else Decimal(0)
+        dpi = dist_total / inv_amount if inv_amount > 0 else Decimal(0)
+        tvpi = total_value / inv_amount if inv_amount > 0 else Decimal(0)
+
+        # IRR
+        irr = _xirr(inv_cash_flows)
+        if irr is None:
+            # Fallback: MOIC^(1/years) - 1
+            years = _years_between(inv_date, as_of)
+            if years > 0 and moic > 0:
+                # Use float for fractional exponent, then convert back
+                irr = _d(float(moic) ** (1.0 / float(years)) - 1.0)
+            else:
+                irr = Decimal(0)
+
+        # PME (Public Market Equivalent)
+        pme: str | None = None
+        if benchmark_irr is not None:
+            # What would the same cash flows return at the benchmark rate?
+            bench_fv = Decimal(0)
+            for dt, amt in inv_cash_flows:
+                years = _years_between(dt, as_of)
+                if amt < 0:
+                    bench_fv += (-amt) * (1 + benchmark_irr) ** years
+                else:
+                    bench_fv += amt
+            # PME = actual total value / benchmark total value
+            if bench_fv > 0:
+                pme_ratio = total_value / bench_fv
+                pme = _fmt(pme_ratio, 2)
+
+        inv_result: dict[str, Any] = {
+            "name": name,
+            "invested": _fmt(inv_amount),
+            "distributions": _fmt(dist_total),
+            "current_nav": _fmt(nav),
+            "total_value": _fmt(total_value),
+            "moic": _fmt(moic, 2) + "x",
+            "dpi": _fmt(dpi, 2) + "x",
+            "tvpi": _fmt(tvpi, 2) + "x",
+            "irr": _fmt(irr * 100, 1) + "%",
+        }
+        if pme is not None:
+            inv_result["pme"] = pme + "x"
+
+        results.append(inv_result)
+
+        total_invested += inv_amount
+        total_distributions += dist_total
+        total_nav += nav
+        all_cash_flows.extend(inv_cash_flows)
+
+    # Portfolio aggregate
+    portfolio_total_value = total_distributions + total_nav
+    portfolio_moic = (
+        portfolio_total_value / total_invested if total_invested > 0 else Decimal(0)
+    )
+    portfolio_dpi = (
+        total_distributions / total_invested if total_invested > 0 else Decimal(0)
+    )
+    portfolio_tvpi = (
+        portfolio_total_value / total_invested if total_invested > 0 else Decimal(0)
+    )
+
+    portfolio_irr = _xirr(all_cash_flows)
+    if portfolio_irr is None:
+        if total_invested > 0 and portfolio_moic > 0 and all_cash_flows:
+            first_date = min(dt for dt, _ in all_cash_flows)
+            last_date = max(dt for dt, _ in all_cash_flows)
+            years = _years_between(first_date, last_date)
+            if years > 0:
+                portfolio_irr = _d(float(portfolio_moic) ** (1.0 / float(years)) - 1.0)
+            else:
+                portfolio_irr = Decimal(0)
+        else:
+            portfolio_irr = Decimal(0)
+
+    portfolio: dict[str, Any] = {
+        "total_invested": _fmt(total_invested),
+        "total_distributions": _fmt(total_distributions),
+        "total_nav": _fmt(total_nav),
+        "total_value": _fmt(portfolio_total_value),
+        "moic": _fmt(portfolio_moic, 2) + "x",
+        "dpi": _fmt(portfolio_dpi, 2) + "x",
+        "tvpi": _fmt(portfolio_tvpi, 2) + "x",
+        "irr": _fmt(portfolio_irr * 100, 1) + "%",
+    }
+
+    # Portfolio-level PME
+    if benchmark_irr is not None and all_cash_flows:
+        last_date = max(dt for dt, _ in all_cash_flows)
+        bench_fv = Decimal(0)
+        for dt, amt in all_cash_flows:
+            years = _years_between(dt, last_date)
+            if amt < 0:
+                bench_fv += (-amt) * (1 + benchmark_irr) ** years
+            else:
+                bench_fv += amt
+        if bench_fv > 0:
+            portfolio["pme"] = _fmt(portfolio_total_value / bench_fv, 2) + "x"
+
+    assessment: dict[str, str] = {}
+    if portfolio_moic >= Decimal("3"):
+        assessment["moic"] = "Exceptional (3x+)"
+    elif portfolio_moic >= Decimal("2"):
+        assessment["moic"] = "Strong (2-3x)"
+    elif portfolio_moic >= Decimal("1"):
+        assessment["moic"] = "Positive (1-2x)"
+    else:
+        assessment["moic"] = "Below cost (<1x)"
+
+    if portfolio_irr >= Decimal("0.25"):
+        assessment["irr"] = "Top quartile (25%+)"
+    elif portfolio_irr >= Decimal("0.15"):
+        assessment["irr"] = "Above median (15-25%)"
+    elif portfolio_irr >= Decimal("0.08"):
+        assessment["irr"] = "Below median (8-15%)"
+    else:
+        assessment["irr"] = "Underperforming (<8%)"
+
+    if portfolio_dpi >= Decimal("1"):
+        assessment["dpi"] = "Fully returned capital (1x+)"
+    elif portfolio_dpi >= Decimal("0.5"):
+        assessment["dpi"] = "Partial return (0.5-1x)"
+    else:
+        assessment["dpi"] = "Early stage (<0.5x)"
+
+    return {
+        "investments": results,
+        "portfolio": portfolio,
+        "assessment": assessment,
+    }
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Financial modeling: DCF, unit economics, projections, multiples, 3-statement."
+        description="Financial modeling: DCF, unit economics, projections, multiples, 3-statement, returns."
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    for cmd in ["dcf", "unit_economics", "projections", "multiples", "three_statement"]:
+    for cmd in [
+        "dcf",
+        "unit_economics",
+        "projections",
+        "multiples",
+        "three_statement",
+        "returns",
+    ]:
         p = sub.add_parser(cmd)
         p.add_argument("--input", required=True, help="Path to JSON scenario file")
 
@@ -680,6 +937,7 @@ def main() -> None:
         "projections": calc_projections,
         "multiples": calc_multiples,
         "three_statement": calc_three_statement,
+        "returns": calc_returns,
     }
 
     result = commands[args.command](scenario)

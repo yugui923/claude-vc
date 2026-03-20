@@ -27,6 +27,19 @@ the full rubric:
 | 5-8   | Pre-product or prototype only, no clear technical advantage                                |
 | 0-4   | Idea stage, no technical feasibility demonstrated                                          |
 
+## Data Source Priority
+
+When gathering product and technical information, prefer sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for product and technology claims, patent data.
+2. **Company-provided materials**: Pitch deck, product demos, technical docs.
+3. **Institutional sources**: Patent databases, published reviews, analyst reports.
+4. **Web search**: Use WebSearch for product reviews, technical discussions,
+   and competitor features. Cross-reference results.
+
+Do NOT require any MCP data source -- the analysis works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Gather Product and Technical Data

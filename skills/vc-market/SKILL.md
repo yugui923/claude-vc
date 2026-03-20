@@ -28,6 +28,20 @@ the full rubric:
 | 6-10  | TAM <$500M or stagnant market, crowded space                   |
 | 0-5   | Shrinking market, heavy regulation blocking entry, unclear need |
 
+## Data Source Priority
+
+When gathering market information, prefer sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for market data, funding trends, comparable companies. Use SEC EDGAR
+   (`vc-edgar`) tools for public company filings and industry data.
+2. **Institutional sources**: Published reports (Gartner, IDC, CB Insights),
+   SEC filings, company press releases, investor presentations.
+3. **Web search**: Use WebSearch for market sizing, trends, and regulatory
+   landscape. Cross-reference results from multiple sources.
+
+Do NOT require any MCP data source -- the analysis works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Gather Market Data

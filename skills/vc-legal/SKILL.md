@@ -28,6 +28,21 @@ the red flags checklist that includes legal items.
 Refer to `${CLAUDE_SKILL_DIR}/../vc/references/term-sheet-terms.md` for
 standard deal structure benchmarks.
 
+## Data Source Priority
+
+When gathering legal and structural information, prefer sources in this order:
+
+1. **MCP data sources** (if available): Use SEC EDGAR (`vc-edgar`) tools
+   for regulatory filings, corporate disclosures. Use Octagon AI
+   (`octagon-agent`) for corporate structure data.
+2. **Company-provided materials**: Data room documents, corporate filings.
+3. **Institutional sources**: State corporate registries, patent databases,
+   court records, SEC filings.
+4. **Web search**: Use WebSearch for litigation news, regulatory developments.
+   Cross-reference results.
+
+Do NOT require any MCP data source -- the analysis works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Gather Legal and Structural Data

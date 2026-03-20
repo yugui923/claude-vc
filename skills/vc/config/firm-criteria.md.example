@@ -1,0 +1,56 @@
+# Firm Investment Criteria
+
+> Remove the `.example` extension to activate. These settings override
+> the defaults in `references/investment-criteria.md`.
+
+## Dimension Weights
+
+Adjust weights to reflect your firm's investment thesis. Must sum to 100.
+
+| Dimension  | Weight | Notes                              |
+| ---------- | ------ | ---------------------------------- |
+| Market     | 30     | We are thesis-driven, market-first |
+| Team       | 25     | Founders matter at seed            |
+| Product    | 20     | Must have working prototype        |
+| Financials | 15     | Early-stage, revenue optional      |
+| Timing     | 10     | Why now matters                    |
+
+## Scoring Thresholds
+
+| Score Range | Decision    |
+| ----------- | ----------- |
+| 75-100      | Strong Pass |
+| 60-74       | Discuss     |
+| 40-59       | Weak Pass   |
+| 0-39        | Pass        |
+
+## Focus Areas
+
+### Target Stages
+
+- Seed, Pre-Seed
+
+### Target Sectors
+
+- Enterprise SaaS
+- Developer Tools
+- AI/ML Infrastructure
+
+### Check Size
+
+- $250K - $1M
+
+## Red Flags (Automatic Score Reduction)
+
+- No technical co-founder (-15 points)
+- Single founder (-10 points)
+- Pre-revenue with >$2M raise (-10 points)
+- Crowded market without clear differentiation (-10 points)
+- Regulatory risk without mitigation plan (-10 points)
+
+## Green Flags (Score Boost)
+
+- Repeat founder with prior exit (+10 points)
+- >$10K MRR at seed (+10 points)
+- Strong open-source traction (+5 points)
+- Notable angel investors (+5 points)

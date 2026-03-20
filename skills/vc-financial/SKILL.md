@@ -27,6 +27,18 @@ the full rubric:
 | 5-8   | Pre-revenue, unclear monetization, unproven business model                    |
 | 0-4   | No revenue model, unsustainable economics, unrealistic projections            |
 
+## Data Source Priority
+
+When gathering financial information, prefer sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for private company financials, funding history, comparable valuations.
+2. **Company-provided materials**: Pitch deck financials, data room docs.
+3. **Institutional sources**: Published reports, SEC filings.
+4. **Web search**: Last resort. Cross-reference results.
+
+Do NOT require any MCP data source -- the analysis works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Gather Financial Data

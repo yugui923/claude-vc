@@ -12,7 +12,8 @@ description: >
   "income statement", "balance sheet", "cash flow", "KPIs",
   "metrics", "SaaS metrics", "unit economics report",
   "burn multiple", "magic number", "Rule of 40",
-  or "KPI dashboard".
+  "KPI dashboard", "returns", "IRR", "MOIC", "DPI",
+  "TVPI", "PME", "fund returns", or "fund performance".
 ---
 
 # Claude-VC
@@ -32,12 +33,13 @@ Venture capital analysis toolkit. Routes to specialized sub-skills based on the 
 | `/vc compare <url1> <url2>` | Side-by-side company comparison                        |
 | `/vc diligence`             | Generate a due diligence checklist                     |
 | `/vc portfolio`             | Generate portfolio reports from provided data          |
+| `/vc returns`               | Calculate fund return metrics (IRR, MOIC, DPI, TVPI)   |
 
 ## Routing Logic
 
 When the user provides arguments after `/vc`, determine the command:
 
-1. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `model`, `kpi`, `compare`, `diligence`, `portfolio`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, `vc-model`, `vc-kpi`, etc.) using the Skill tool, passing any remaining arguments.
+1. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `model`, `kpi`, `compare`, `diligence`, `portfolio`, `returns`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, `vc-model`, `vc-kpi`, `vc-returns`, etc.) using the Skill tool, passing any remaining arguments.
 
 2. If no recognized command is given, analyze the user's intent:
    - URL or file path provided -> run the **default workflow** (see below)
@@ -48,7 +50,8 @@ When the user provides arguments after `/vc`, determine the command:
    - Mentions "KPIs", "metrics", "SaaS metrics", "unit economics report", "burn multiple", "magic number", "Rule of 40", "KPI dashboard" -> route to `vc-kpi`
    - Mentions "compare", "versus", "side by side" -> route to `vc-compare`
    - Mentions "diligence", "DD", "checklist" -> route to `vc-diligence`
-   - Mentions "portfolio", "LP report", "KPIs" -> route to `vc-portfolio`
+   - Mentions "portfolio", "LP report" -> route to `vc-portfolio`
+   - Mentions "returns", "IRR", "MOIC", "DPI", "TVPI", "PME", "fund performance" -> route to `vc-returns`
    - Otherwise, ask the user which workflow they need
 
 3. If the user invokes `/vc` with no arguments, display the commands table above and ask what they'd like to do.

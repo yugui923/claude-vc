@@ -1,0 +1,61 @@
+# Firm Output Templates
+
+> Remove the `.example` extension to activate. These settings override
+> the default output formatting in report-generating skills.
+
+## Investment Memo Sections
+
+Customize the section order and names for your IC process. Add or
+remove sections as needed. Sections not listed here will use defaults.
+
+1. Executive Summary
+2. Company Overview
+3. Market Opportunity
+4. Competitive Landscape
+5. Product & Technology
+6. Team Assessment
+7. Business Model & Unit Economics
+8. Financial Analysis
+9. Deal Terms & Valuation
+10. Key Risks & Mitigants
+11. Due Diligence Findings
+12. Investment Recommendation
+
+## Required IC Fields
+
+Every memo must include these fields for IC review:
+
+- Proposed check size
+- Ownership target
+- Expected holding period
+- Key milestones for next 12 months
+- Board seat / observer rights
+
+## KPI Report Format
+
+### Required Metrics (always show)
+
+- ARR / MRR
+- Burn rate and runway
+- Customer count and growth
+- Churn rate (logo and revenue)
+
+### Optional Metrics (show if available)
+
+- NPS score
+- Employee headcount
+- Pipeline value
+
+## Portfolio Report Format
+
+### Summary Section
+
+- Fund size and vintage year
+- Capital deployed vs committed
+- Number of active investments
+- MOIC, IRR, DPI at fund level
+
+### Company Detail
+
+- One row per company
+- Columns: name, stage, invested, current value, MOIC, status

@@ -28,6 +28,18 @@ Parse `$ARGUMENTS` to identify the companies to compare:
 
 If `--criteria <file>` is present, read that file for custom scoring weights instead of the defaults.
 
+## Data Source Priority
+
+When researching each company, prefer data sources in this order:
+
+1. **MCP data sources** (if available): Use Octagon AI (`octagon-agent`)
+   for funding data, comparable metrics, investor profiles.
+2. **Company-provided materials**: Pitch decks, websites, data rooms.
+3. **Institutional sources**: Published reports, SEC filings, press releases.
+4. **Web search**: Use WebSearch as a supplement. Cross-reference results.
+
+Do NOT require any MCP data source -- the comparison works without them.
+
 ## Analysis Workflow
 
 ### Step 1: Gather Company Information

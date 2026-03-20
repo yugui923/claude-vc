@@ -108,6 +108,28 @@ Goal: Production quality, documentation, and community readiness.
 - [x] Plugin marketplace submission
 - [ ] Community feedback integration
 
+## Phase 6: Patterns and Polish
+
+Goal: Adopt emerging plugin patterns, extend capabilities, improve customization.
+
+### Deliverables
+
+- [x] Data source hierarchy pattern across 9 research-oriented skills
+- [x] `commands/` directory with thin wrapper command files for discoverability
+- [x] Firm customization framework (`skills/vc/config/`)
+- [x] XLSX export support for tabular skills (captable, model, kpi, portfolio, returns)
+- [x] Returns analysis command (`/vc returns`) with IRR, MOIC, DPI, TVPI, PME
+- [x] MCP enhancement sections extended to all research-oriented skills
+- [x] Documentation updates (ARCHITECTURE.md, frontier.md, roadmap.md)
+
+### Success Criteria
+
+- All 9 research skills include data source priority section
+- `/vc returns` computes correct IRR within 0.1% of spreadsheet verification
+- Config framework documented and example files provided
+- `--xlsx` flag documented on captable, model, kpi, portfolio, and returns skills
+- All existing tests still pass, plus 9 new returns tests
+
 ## Future Considerations
 
 Items not currently planned but worth tracking:
