@@ -1,12 +1,8 @@
 ---
 name: vc-screen
 description: >
-  Screen a startup for investment potential. Accepts a company URL,
-  pitch deck PDF, or description. Produces a Deal Score (0-100) with
-  breakdown across market, team, product, financials, and timing.
-  Supports quick screen (single-agent) and full screen (parallel
-  agents). Use when user says "screen", "evaluate startup",
-  "deal flow", "should I invest", or "quick look".
+  Screen a startup for investment potential. Produces a Deal Score
+  (0-100) from a URL, pitch deck, or description.
 ---
 
 # Deal Screening

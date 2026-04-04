@@ -1,11 +1,8 @@
 ---
 name: vc-kpi
 description: >
-  Generate KPI reports from company data. Auto-detects company type
-  (SaaS, marketplace, consumer, fintech) and calculates relevant
-  metrics with industry benchmarks. Use when user says "KPIs",
-  "metrics", "SaaS metrics", "unit economics report", "burn multiple",
-  "magic number", "Rule of 40", or "KPI dashboard".
+  Generate KPI reports with industry benchmarks. Auto-detects
+  company type (SaaS, marketplace, consumer, fintech).
 ---
 
 # KPI Reporting

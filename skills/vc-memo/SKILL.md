@@ -1,10 +1,8 @@
 ---
 name: vc-memo
 description: >
-  Generate a structured investment memo. Can build from a completed
-  screening, existing notes, or from scratch. Follows standard VC
-  memo format with 12 sections. Use when user says "memo",
-  "investment memo", "write up", "IC memo", or "investment committee".
+  Generate a structured investment memo from screening results,
+  notes, or from scratch.
 ---
 
 # Investment Memo Generation

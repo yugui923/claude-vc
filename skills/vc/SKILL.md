@@ -1,19 +1,8 @@
 ---
 name: vc
 description: >
-  Venture capital analysis toolkit. Deal screening, investment memo
-  generation, cap table modeling, term sheet analysis, financial
-  modeling, KPI reporting, due diligence checklists, and portfolio
-  reporting. Use when user says "vc", "deal screening",
-  "investment memo", "cap table", "term sheet", "due diligence",
-  "portfolio", "compare", "pitch deck", "startup analysis",
-  "valuation", "SAFE", "convertible note", "funding round",
-  "financial model", "3-statement", "projections", "P&L",
-  "income statement", "balance sheet", "cash flow", "KPIs",
-  "metrics", "SaaS metrics", "unit economics report",
-  "burn multiple", "magic number", "Rule of 40",
-  "KPI dashboard", "returns", "IRR", "MOIC", "DPI",
-  "TVPI", "PME", "fund returns", or "fund performance".
+  Venture capital analysis toolkit. Give it a URL or pitch deck
+  and it runs a full analysis. Type "/vc help" for details.
 ---
 
 # Claude-VC
@@ -39,9 +28,11 @@ Venture capital analysis toolkit. Routes to specialized sub-skills based on the 
 
 When the user provides arguments after `/vc`, determine the command:
 
-1. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `model`, `kpi`, `compare`, `diligence`, `portfolio`, `returns`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, `vc-model`, `vc-kpi`, `vc-returns`, etc.) using the Skill tool, passing any remaining arguments.
+1. If the first argument is `help`, invoke the `vc-help` sub-skill using the Skill tool and stop.
 
-2. If no recognized command is given, analyze the user's intent:
+2. If the first argument is one of the command names above (`screen`, `memo`, `terms`, `captable`, `model`, `kpi`, `compare`, `diligence`, `portfolio`, `returns`), invoke the corresponding sub-skill by name (`vc-screen`, `vc-memo`, `vc-model`, `vc-kpi`, `vc-returns`, etc.) using the Skill tool, passing any remaining arguments.
+
+3. If no recognized command is given, analyze the user's intent:
    - URL or file path provided -> run the **default workflow** (see below)
    - Mentions "memo" or "write-up" -> route to `vc-memo`
    - Mentions "terms", "SAFE", "convertible" -> route to `vc-terms`
@@ -54,7 +45,7 @@ When the user provides arguments after `/vc`, determine the command:
    - Mentions "returns", "IRR", "MOIC", "DPI", "TVPI", "PME", "fund performance" -> route to `vc-returns`
    - Otherwise, ask the user which workflow they need
 
-3. If the user invokes `/vc` with no arguments, display the commands table above and ask what they'd like to do.
+4. If the user invokes `/vc` with no arguments, invoke the `vc-help` sub-skill using the Skill tool.
 
 ## Default Workflow (URL or Pitch Deck)
 

@@ -1,11 +1,8 @@
 ---
 name: vc-returns
 description: >
-  Calculate fund-level return metrics (IRR, MOIC, DPI, TVPI, PME) from
-  investment data. Accepts individual investments or portfolio-wide data.
-  Use when user says "returns", "IRR", "MOIC", "DPI", "TVPI", "PME",
-  "fund returns", "fund performance", "multiple on invested capital",
-  or "distributions to paid-in".
+  Calculate fund-level return metrics (IRR, MOIC, DPI, TVPI, PME)
+  from investment data.
 ---
 
 # Returns Analysis

@@ -1,12 +1,8 @@
 ---
 name: vc-compare
 description: >
-  Side-by-side company comparison for investment evaluation. Accepts
-  2-4 companies (URLs, pitch deck files, or descriptions) and produces
-  a structured comparison matrix across market, team, product,
-  financials, traction, and valuation dimensions. Use when user says
-  "compare", "versus", "side by side", "head to head", "which company",
-  or "compare deals".
+  Side-by-side comparison of 2-4 companies across market, team,
+  product, financials, traction, and valuation.
 ---
 
 # Company Comparison

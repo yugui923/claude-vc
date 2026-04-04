@@ -1,12 +1,8 @@
 ---
 name: vc-diligence
 description: >
-  Generate a customized due diligence checklist for a startup
-  investment. Tailors items by company stage (seed, Series A,
-  Series B+), sector (SaaS, fintech, deeptech, consumer, healthtech,
-  marketplace), and company-specific context. Use when user says
-  "diligence", "due diligence", "DD checklist", "diligence items",
-  "what to check", or "investigation checklist".
+  Generate a due diligence checklist tailored by company stage
+  and sector.
 ---
 
 # Due Diligence Checklist Generator

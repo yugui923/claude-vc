@@ -1,11 +1,8 @@
 ---
 name: vc-model
 description: >
-  Generate a simplified 3-statement financial model (income statement,
-  balance sheet, cash flow). Accepts pitch deck data, company financials,
-  or assumptions. Projects 3-5 years forward. Use when user says
-  "financial model", "3-statement", "projections", "P&L",
-  "income statement", "balance sheet", or "cash flow".
+  Generate a 3-statement financial model (income statement, balance
+  sheet, cash flow) with 3-5 year projections.
 ---
 
 # Financial Model Generation

@@ -1,12 +1,8 @@
 ---
 name: vc-portfolio
 description: >
-  Generate LP-ready portfolio reports from provided company data. Accepts
-  CSV, JSON, or typed portfolio data and produces a one-shot report with
-  performance metrics, composition analysis, cohort breakdowns, risk
-  concentration, and an LP executive summary. Use when user says
-  "portfolio", "LP report", "portfolio summary", "MOIC", "portfolio
-  performance", "fund report", or "portfolio review".
+  Generate LP-ready portfolio reports with performance metrics,
+  composition analysis, and cohort breakdowns.
 ---
 
 # Portfolio Reporting
