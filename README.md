@@ -25,12 +25,18 @@ claude plugin marketplace add yugui923/claude-vc
 claude plugin install claude-vc@claude-vc
 ```
 
+Or install via the [Agent Skills](https://agentskills.io) CLI:
+
+```
+npx skills add yugui923/claude-vc
+```
+
 ### Try it
 
 Once installed, type this into Claude:
 
 ```
-/vc https://example-startup.com
+/vc https://stripe.com
 ```
 
 Claude will automatically screen the company, write an investment memo, and
@@ -105,7 +111,6 @@ to your project's `.claude/settings.json`:
 - **[User Guide](docs/user-guide.md)** — detailed docs for every command
 - **[AI Frontier](docs/frontier.md)** — what AI can and cannot do in VC today
 - **[Contributing](CONTRIBUTING.md)** — how to contribute (for developers)
-- **[Roadmap](docs/roadmap.md)** — what's coming next
 
 ## Disclaimer
 

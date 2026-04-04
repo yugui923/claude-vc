@@ -131,11 +131,11 @@ claude-vc/
 │       └── agents/vc-edgar.md
 ├── install.sh                          # Unix/macOS installer (fallback)
 ├── uninstall.sh
+├── package.json                        # npm metadata for npx skills distribution
 ├── docs/                               # Documentation
 │   ├── decisions/                      # ADRs
 │   ├── specs/                          # Skill specifications
-│   ├── plans/                          # Implementation plans
-│   └── roadmap.md
+│   └── plans/                          # Implementation plans
 ├── ARCHITECTURE.md                     # This file
 ├── LICENSE                             # MIT
 └── README.md
@@ -313,7 +313,7 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 | Skills & agents | Markdown + YAML frontmatter      | Claude Cowork / Code native format              |
 | Computation     | Python 3.10+ (stdlib only)       | Financial calculations Claude can't do natively |
 | Extensions      | MCP servers                      | Standard Claude Cowork / Code extension pattern |
-| Distribution    | Plugin marketplace, `install.sh` | Marketplace preferred; shell script as fallback |
+| Distribution    | Plugin marketplace, `npx skills`, `install.sh` | Marketplace preferred; `npx skills add` for cross-agent compat; shell script as fallback |
 | License         | MIT                              | Matches claude-seo precedent                    |
 
 ## Constraints
@@ -332,4 +332,3 @@ See [ADR-004](docs/decisions/004-scope-boundaries.md) for the full analysis.
 - [ADR-003: Regulatory Disclaimers](docs/decisions/003-regulatory-disclaimers.md)
 - [ADR-004: Scope Boundaries](docs/decisions/004-scope-boundaries.md)
 - [Skill System Spec](docs/specs/skill-system.md)
-- [Roadmap](docs/roadmap.md)

@@ -1,0 +1,29 @@
+# Dev-only files
+tests/
+docs/
+.github/
+.claude/
+.claude-plugin/marketplace.json
+ruff.toml
+pyproject.toml
+uv.lock
+install.sh
+uninstall.sh
+update.sh
+CONTRIBUTING.md
+ARCHITECTURE.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# Environment
+.env
+.env.*

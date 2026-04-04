@@ -14,7 +14,7 @@ command.
 - `skills/vc-*/SKILL.md` — sub-skills (screen, memo, captable, terms, model, kpi)
 - `skills/vc/references/` — reference files loaded by skills
 - `tests/` — two-layer test suite (see `tests/TESTING.md`)
-- `docs/` — specs, ADRs, plans, roadmap
+- `docs/` — specs, ADRs, plans
 
 ## The AI Frontier
 
