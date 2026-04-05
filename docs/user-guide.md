@@ -81,9 +81,11 @@ Landscape, Traction & Metrics, Financial Projections, Key Risks, Terms &
 Structure, Recommendation.
 
 **Options**:
+
 - `--comprehensive` — runs a full screening first, then writes the memo.
   Equivalent to `/vc screen --full` followed by `/vc memo`.
-- `--docx` — saves the memo as a Word document you can share or edit.
+- `--no-docx` — skip the Word document; output markdown only. By default,
+  both a markdown file and a DOCX are generated.
 
 ---
 
@@ -156,7 +158,9 @@ reaches profitability, how long the cash lasts, and which assumptions
 matter most.
 
 **Options**:
-- `--docx` — saves the model as a Word document.
+
+- `--no-docx` — skip the Word document; output markdown only. By default,
+  both a markdown file and a DOCX are generated.
 
 ---
 
@@ -258,4 +262,6 @@ status (active, exited, or written off), and investment date.
 8. **LP Summary** — a professional narrative paragraph for your update letter
 
 **Options**:
-- `--docx` — saves the report as a Word document.
+
+- `--no-docx` — skip the Word document; output markdown only. By default,
+  both a markdown file and a DOCX are generated.

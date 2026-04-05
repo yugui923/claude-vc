@@ -22,7 +22,7 @@ Determine the data source from `$ARGUMENTS` and conversation context:
 3. **URL**: Fetch the company website for public financials or pricing data.
 4. **Verbal description**: User provides key assumptions directly.
 5. **No input**: Ask for the minimum required inputs (see below).
-6. **`--no-docx`**: Skip the default DOCX export.
+6. **`--no-docx`**: Skip DOCX export; output markdown only.
 7. **`--no-xlsx`**: Skip the default XLSX export.
 8. **`--docx <filename>`** / **`--xlsx <filename>`**: Override default filenames.
 
@@ -130,17 +130,22 @@ After presenting the tables, add a brief analysis:
 If the user asks for scenarios (bull/base/bear), run three models with
 different growth and margin assumptions and present side-by-side.
 
-## Office Format Exports (default)
+## Output Formats (default: markdown + DOCX + XLSX)
 
-By default, generate markdown output **and** both a DOCX report and an
-XLSX workbook. Skip with `--no-docx` or `--no-xlsx`.
+By default, generate **both** a markdown file **and** a DOCX report and an
+XLSX workbook. If `--no-docx` is present, generate markdown only (skip
+DOCX). Skip XLSX with `--no-xlsx`.
+
+1. Generate the model as markdown and save it to
+   `financial-model-<YYYY-MM-DD>.md` in the current directory. Also display
+   the content in the terminal.
 
 ### DOCX Export
 
-1. Generate a formatted Word document with the 3-statement tables and
-   analysis narrative. Professional formatting: Calibri font, structured
-   headings, tables with header styling.
-2. Default filename: `financial-model-<YYYY-MM-DD>.docx`
+2. Unless `--no-docx` is specified, generate a formatted Word document with
+   the 3-statement tables and analysis narrative. Professional formatting:
+   Calibri font, structured headings, tables with header styling.
+3. Default filename: `financial-model-<YYYY-MM-DD>.docx`
 
 ### XLSX Export
 

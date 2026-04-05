@@ -23,7 +23,7 @@ Parse `$ARGUMENTS` and conversation context to determine the data source:
    objects or an object with a `companies` key.
 3. **Typed data in conversation**: Parse structured data from the user's
    message (table, bullet list, or inline JSON).
-4. **`--no-docx`**: Skip the default DOCX export.
+4. **`--no-docx`**: Skip DOCX export; output markdown only.
 5. **`--no-xlsx`**: Skip the default XLSX export.
 6. **`--docx <filename>`** / **`--xlsx <filename>`**: Override default filenames.
 7. **No input**: Ask the user to provide portfolio data in CSV, JSON, or
@@ -295,19 +295,25 @@ statement on portfolio positioning.
 [2-3 paragraph narrative]
 ```
 
-## Office Format Exports (default)
+## Output Formats (default: markdown + DOCX + XLSX)
 
-By default, generate markdown output **and** both a DOCX report and an
-XLSX workbook. Skip with `--no-docx` or `--no-xlsx`.
+By default, generate **both** a markdown file **and** a DOCX report and an
+XLSX workbook. If `--no-docx` is present, generate markdown only (skip
+DOCX). Skip XLSX with `--no-xlsx`.
+
+1. Generate the report as markdown and save it to
+   `portfolio-report-<YYYY-MM-DD>.md` in the current directory. Also display
+   the content in the terminal.
 
 ### DOCX Export
 
-1. Generate a formatted Word document (.docx) with the full portfolio report.
-   Apply professional formatting: Calibri font, structured headings, tables
-   with header styling, and appropriate spacing.
-2. If `--docx <filename>` is given, use that filename. Otherwise default to
+2. Unless `--no-docx` is specified, generate a formatted Word document
+   (.docx) with the full portfolio report. Apply professional formatting:
+   Calibri font, structured headings, tables with header styling, and
+   appropriate spacing.
+3. If `--docx <filename>` is given, use that filename. Otherwise default to
    `portfolio-report-<YYYY-MM-DD>.docx` in the current directory.
-   Tell the user where the file was saved.
+4. Tell the user where each file was saved.
 
 ## Formatting Guidelines
 

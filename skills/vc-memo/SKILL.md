@@ -18,7 +18,7 @@ Determine the input source from `$ARGUMENTS` and conversation context:
 3. **URL**: Fetch the company website, then build the memo from public information supplemented by web research.
 4. **`--comprehensive`**: Triggers full parallel analysis (same as `/vc screen --full`) before generating the memo.
 5. **No arguments and no prior context**: Ask the user for the company name and any available information.
-6. **`--no-docx`**: Skip the default DOCX export (see DOCX Export below).
+6. **`--no-docx`**: Skip DOCX export; output markdown only.
 7. **`--docx <filename>`**: Override the default DOCX filename.
 
 ## Data Source Priority
@@ -155,21 +155,23 @@ Include: market risks, execution risks, technical risks, regulatory risks, compe
 - Keep each section concise. The full memo should be readable in 10-15 minutes
 - Use tables for structured data (metrics, comparisons, risks)
 
-## DOCX Export (default)
+## Output Formats (default: markdown + DOCX)
 
-By default, generate both markdown output (displayed in terminal) **and**
-a formatted Word document (.docx).
+By default, generate **both** a markdown file **and** a formatted Word
+document (.docx). If `--no-docx` is present in arguments, generate
+markdown only.
 
-Skip DOCX export only if `--no-docx` is present in arguments.
-
-1. Generate the memo as markdown normally (displayed in terminal)
-2. Use Claude's native file-writing capabilities to generate a formatted
-   Word document (.docx) directly. Apply professional formatting: Calibri
-   font, structured headings, tables with header styling, and appropriate
-   spacing. Do not use any external scripts for DOCX generation.
+1. Generate the memo as markdown and save it to
+   `sourcing-memo-<company-name>-<YYYY-MM-DD>.md` in the current directory.
+   Also display the content in the terminal.
+2. Unless `--no-docx` is specified, use Claude's native file-writing
+   capabilities to generate a formatted Word document (.docx) directly.
+   Apply professional formatting: Calibri font, structured headings, tables
+   with header styling, and appropriate spacing. Do not use any external
+   scripts for DOCX generation.
 3. If `--docx <filename>` is given, use that filename. Otherwise default to
    `sourcing-memo-<company-name>-<YYYY-MM-DD>.docx` in the current directory.
-   Tell the user where the file was saved.
+4. Tell the user where each file was saved.
 
 ## Disclaimer
 
