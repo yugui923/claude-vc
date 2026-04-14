@@ -1,6 +1,10 @@
 # ADR-001: Adopt Claude-SEO Skill Architecture Pattern
 
-**Status**: Accepted
+**Status**: Accepted (partially superseded by
+[ADR-005](005-slash-command-consolidation.md) — the logical pattern is
+preserved, but as of v2.0.0 the sub-skills and parallel agents live as
+prompt files under `skills/vc/commands/` and `skills/vc/agents/` rather
+than as separately registered `skills/vc-*/` directories)
 **Date**: 2026-03-13
 **Deciders**: Yuri Gui
 

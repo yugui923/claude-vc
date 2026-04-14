@@ -3,12 +3,17 @@
 Everything you need to know about each Claude-VC command. For installation,
 see the [README](../README.md).
 
+Claude-VC has **six commands** plus help, organized around how a VC actually
+works a deal. Each command takes one or more inputs (a URL, a pitch deck, a
+CSV, or a description) and produces the analysis.
+
 ---
 
 ## `/vc` — Analyze a Company (All-in-One)
 
 The simplest way to use Claude-VC. Give it a company and it does the rest —
-screens the deal, writes an investment memo, and creates a diligence checklist.
+screens the deal and writes an investment memo with a tailored due diligence
+checklist built in.
 
 ```
 /vc https://example-startup.com
@@ -21,18 +26,21 @@ no arguments, it shows a list of all available commands.
 
 ---
 
-## `/vc screen` — Score a Startup
+## `/vc screen` — Score a Startup (or Compare Several)
 
-Evaluates a company across five dimensions and gives it a Deal Score from
-0 to 100.
+Evaluates one company across five dimensions and gives it a Deal Score from
+0 to 100. If you pass 2-4 inputs, it produces a side-by-side comparison
+instead.
 
 ```
 /vc screen https://company.com
 /vc screen /path/to/deck.pdf
+/vc screen https://company-a.com https://company-b.com       # comparison
+/vc screen /path/to/deck-a.pdf /path/to/deck-b.pdf /path/to/deck-c.pdf
 ```
 
-**What you get**: a scoring table, key findings, red flags, a recommendation
-(Pass / Cautious / Further Diligence / Strong Interest), and a list of
+**Single-company output**: scoring table, key findings, red flags, a
+recommendation (Pass / Cautious / Further Diligence / Strong Interest), and
 comparable companies.
 
 The five scoring dimensions:
@@ -54,18 +62,24 @@ What the scores mean:
 | 40-59 | Cautious | Significant issues — only pursue if strategic fit |
 | 0-39 | Pass | Does not meet investment criteria |
 
+**Comparison output** (2-4 inputs): side-by-side matrix across six
+dimensions (market, team, product, financials, traction, valuation), with a
+winner highlighted per dimension and an overall recommendation.
+
 **Options**:
-- `--full` — runs a deeper analysis using 6 specialist agents in parallel
+
+- `--full` — deeper analysis using 6 specialist agents in parallel
   (financial, market, technical, legal, competitive, team). More thorough,
-  uses more tokens.
+  uses more tokens. Works in both single-company and comparison mode.
 - `--criteria <file>` — use your own scoring weights instead of the defaults.
 
 ---
 
-## `/vc memo` — Write an Investment Memo
+## `/vc memo` — Write an Investment Memo (with DD Checklist)
 
 Generates a structured investment memo — the kind you'd present to an
-investment committee.
+investment committee — and ends with a due diligence checklist tailored to
+the company's stage and sector.
 
 ```
 /vc memo
@@ -78,14 +92,33 @@ draws on the screening results, so you don't need to re-enter company info.
 **The 12 sections**: Executive Summary, Company Overview, Market Opportunity,
 Product & Technology, Team, Business Model & Unit Economics, Competitive
 Landscape, Traction & Metrics, Financial Projections, Key Risks, Terms &
-Structure, Recommendation.
+Structure, and **Due Diligence Checklist** (tailored to stage and sector).
 
 **Options**:
 
-- `--comprehensive` — runs a full screening first, then writes the memo.
-  Equivalent to `/vc screen --full` followed by `/vc memo`.
+- `--comprehensive` — runs a full screening first (6 parallel agents), then
+  writes the memo. Equivalent to `/vc screen --full` followed by the memo.
+- `--diligence-only` — emit only the DD checklist (Section 12) as a
+  standalone document. Use this when you already have a memo and just want
+  the checklist refreshed for a specific stage or sector.
+- `--stage <stage>` — explicit stage override for the DD checklist (seed,
+  series-a, series-b, growth).
+- `--sector <sector>` — explicit sector override for the DD checklist
+  (saas, fintech, deeptech, consumer, healthtech, marketplace).
 - `--no-docx` — skip the Word document; output markdown only. By default,
   both a markdown file and a DOCX are generated.
+
+### The Due Diligence Checklist
+
+Six categories: Financial, Legal, Technical, Commercial, Team & HR, and
+Regulatory. Each item is marked by priority:
+
+- **[!] Critical** — must complete before closing
+- **[*] Important** — should complete; flag if not possible
+- **[-] Nice-to-have** — complete if time allows
+
+If you've already run `/vc screen`, any red flags from the screening are
+automatically added as company-specific checklist items.
 
 ---
 
@@ -159,82 +192,18 @@ matter most.
 
 **Options**:
 
-- `--no-docx` — skip the Word document; output markdown only. By default,
-  both a markdown file and a DOCX are generated.
+- `--no-docx` — skip the Word document; output markdown only.
+- `--no-xlsx` — skip the Excel workbook.
+- By default, both markdown, DOCX, and XLSX are generated.
 
 ---
 
-## `/vc kpi` — Create a KPI Dashboard
+## `/vc portfolio` — Portfolio Analytics
 
-Generates a metrics report with industry benchmarks and a health check for
-each metric (Healthy, Watch, or Concerning).
+Post-investment analytics on portfolio data. Produces one of three artifacts
+depending on the flags:
 
-```
-/vc kpi
-/vc kpi /path/to/metrics.md
-```
-
-Claude automatically detects the type of company and picks the right
-metrics:
-
-| Company Type | Example Metrics |
-| --- | --- |
-| **SaaS** (software subscriptions) | ARR, churn, net retention, CAC, LTV, burn multiple, Rule of 40 |
-| **Marketplace** | GMV, take rate, liquidity, repeat rate |
-| **Consumer** | DAU/MAU, retention curves, viral coefficient |
-| **Fintech** | Net interest margin, default rate, take rate |
-
-Each metric is compared against benchmarks for the company's stage and
-sector, so you can quickly spot what's strong and what needs attention.
-
----
-
-## `/vc compare` — Compare Companies Side by Side
-
-Evaluates 2-4 companies in parallel and produces a comparison matrix.
-
-```
-/vc compare https://company-a.com https://company-b.com
-/vc compare /path/to/deck-a.pdf /path/to/deck-b.pdf
-```
-
-Compares across six dimensions: market, team, product, financials, traction,
-and valuation. Highlights a winner for each dimension and gives an overall
-recommendation.
-
-**Options**:
-- `--criteria <file>` — use your own scoring weights.
-
----
-
-## `/vc diligence` — Generate a Due Diligence Checklist
-
-Creates a customized checklist of everything you should verify before
-investing, tailored to the company's stage and industry.
-
-```
-/vc diligence
-/vc diligence --stage seed --sector fintech
-```
-
-Covers six areas: Financial, Legal, Technical, Commercial, Team & HR, and
-Regulatory. Each item is marked by priority:
-
-- **[!] Critical** — must complete before closing
-- **[*] Important** — should complete; flag if not possible
-- **[-] Nice-to-have** — complete if time allows
-
-If you've already run `/vc screen`, any red flags from the screening are
-automatically added as company-specific checklist items.
-
-**Options**:
-- `--stage <stage>` — seed, series-a, series-b, or growth
-- `--sector <sector>` — saas, fintech, deeptech, consumer, healthtech, or
-  marketplace
-
----
-
-## `/vc portfolio` — Create a Portfolio Report
+### Default: Portfolio Report
 
 Generates a professional portfolio report suitable for LP (limited partner)
 updates.
@@ -261,7 +230,52 @@ status (active, exited, or written off), and investment date.
 7. **Exits & Write-Offs** — realized returns and losses
 8. **LP Summary** — a professional narrative paragraph for your update letter
 
-**Options**:
+### `--kpi` — KPI Dashboard
 
-- `--no-docx` — skip the Word document; output markdown only. By default,
-  both a markdown file and a DOCX are generated.
+Generates a metrics report for a single company with industry benchmarks
+and a health check for each metric (Healthy, Watch, or Concerning).
+
+```
+/vc portfolio /path/to/metrics.md --kpi
+/vc portfolio --kpi
+```
+
+Claude automatically detects the type of company and picks the right
+metrics:
+
+| Company Type | Example Metrics |
+| --- | --- |
+| **SaaS** (software subscriptions) | ARR, churn, net retention, CAC, LTV, burn multiple, Rule of 40 |
+| **Marketplace** | GMV, take rate, liquidity, repeat rate |
+| **Consumer** | DAU/MAU, retention curves, viral coefficient |
+| **Fintech** | Net interest margin, default rate, take rate |
+
+Each metric is compared against benchmarks for the company's stage and
+sector, so you can quickly spot what's strong and what needs attention.
+
+### `--returns` — Fund Returns Analysis
+
+Calculates fund-level return metrics (IRR, MOIC, DPI, TVPI, PME) from your
+investment data.
+
+```
+/vc portfolio /path/to/investments.csv --returns
+```
+
+**What you get**: per-investment and portfolio-level metrics with benchmark
+comparisons (top quartile, median, bottom quartile).
+
+| Metric | What It Means |
+| --- | --- |
+| MOIC | Total multiple on invested capital |
+| DPI | Distributions / Invested (cash-on-cash return) |
+| TVPI | Total Value / Invested |
+| IRR | Annualized return (XIRR on actual cash flow dates) |
+| PME | Actual return vs. public market benchmark |
+
+### Options (all portfolio modes)
+
+- `--no-docx` — skip the Word document (portfolio report only)
+- `--no-xlsx` — skip the Excel workbook
+- By default, markdown + XLSX are generated (and DOCX for the default
+  portfolio report)

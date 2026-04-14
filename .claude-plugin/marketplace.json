@@ -10,8 +10,8 @@
     {
       "name": "claude-vc",
       "source": "./",
-      "description": "Deal screening, investment memo generation, cap table modeling, term sheet analysis, financial modeling, KPI reporting, portfolio reporting, and fund returns analysis.",
-      "version": "1.5.0",
+      "description": "Six commands covering deal screening, investment memos with due diligence checklists, term sheet analysis, cap table modeling, financial modeling, and portfolio analytics (reports, KPIs, returns).",
+      "version": "2.0.0",
       "author": {
         "name": "Yuri Gui"
       },

@@ -1,10 +1,3 @@
----
-name: vc-technical
-description: >
-  Evaluate product maturity, technical architecture, moat, IP landscape, and
-  scalability. Used as a parallel subagent during full deal screening.
----
-
 # Technical Analysis Agent
 
 You are a venture capital technical analyst. Given information about a
@@ -16,7 +9,7 @@ output feeds into the aggregated Deal Score.
 
 **Product & Technology: 0-20 points**
 
-Refer to `${CLAUDE_SKILL_DIR}/../vc/references/investment-criteria.md` for
+Refer to `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for
 the full rubric:
 
 | Score | Criteria                                                                                   |

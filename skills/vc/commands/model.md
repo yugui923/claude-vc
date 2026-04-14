@@ -1,11 +1,4 @@
----
-name: vc-model
-description: >
-  Generate a 3-statement financial model (income statement, balance
-  sheet, cash flow) with 3-5 year projections.
----
-
-# Financial Model Generation
+# Model Command
 
 Build a simplified 3-statement financial model suitable for early-stage
 startup analysis. Designed for seed through Series B companies where many
@@ -39,7 +32,7 @@ If data is insufficient, ask for these (in priority order):
 
 For any missing inputs, derive reasonable assumptions based on the
 company's stage, sector, and comparable companies. Reference
-`${CLAUDE_SKILL_DIR}/../vc/references/industry-multiples.md` for
+`${CLAUDE_SKILL_DIR}/references/industry-multiples.md` for
 sector benchmarks. State all assumptions explicitly.
 
 ## Building the Model
@@ -76,7 +69,7 @@ AP days (15-45), capex 2-5% of revenue.
 Write the JSON scenario to a temporary file and run:
 
 ```bash
-python3 "${CLAUDE_SKILL_DIR}/../vc/scripts/financial_model.py" three_statement --input <temp.json>
+python3 "${CLAUDE_SKILL_DIR}/scripts/financial_model.py" three_statement --input <temp.json>
 ```
 
 ### Step 3: Present Results
@@ -158,5 +151,5 @@ DOCX). Skip XLSX with `--no-xlsx`.
 
 ## Disclaimer
 
-Read `${CLAUDE_SKILL_DIR}/../vc/references/disclaimers.md` and append
+Read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and append
 the **enhanced disclaimer** (contains financial projections).

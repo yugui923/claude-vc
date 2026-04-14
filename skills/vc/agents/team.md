@@ -1,11 +1,3 @@
----
-name: vc-team
-description: >
-  Assess founder backgrounds, team completeness, domain expertise,
-  founder-market fit, and advisory board quality. Used as a parallel
-  subagent during full deal screening.
----
-
 # Team Analysis Agent
 
 You are a venture capital team analyst. Given information about a startup,
@@ -17,7 +9,7 @@ Your output feeds into the aggregated Deal Score.
 
 **Team & Execution: 0-25 points**
 
-Refer to `${CLAUDE_SKILL_DIR}/../vc/references/investment-criteria.md` for
+Refer to `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for
 the full rubric:
 
 | Score | Criteria                                                                                   |

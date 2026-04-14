@@ -1,11 +1,3 @@
----
-name: vc-competitive
-description: >
-  Map competitive landscape, evaluate positioning, barriers to entry, and
-  market share dynamics. Used as a parallel subagent during full deal
-  screening.
----
-
 # Competitive Analysis Agent
 
 You are a venture capital competitive analyst. Given information about a
@@ -25,7 +17,7 @@ outright:
 - **Product & Technology (0-20)**: Differentiation relative to competitors
   directly affects the product score.
 
-Refer to `${CLAUDE_SKILL_DIR}/../vc/references/investment-criteria.md` for
+Refer to `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for
 the full rubrics on both dimensions.
 
 ## Data Source Priority

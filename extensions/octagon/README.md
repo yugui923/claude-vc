@@ -67,15 +67,15 @@ lead investors, and participation details.
 
 ## Integration with VC Skills
 
-The following skills will check for Octagon tool availability and use it
-to enrich their analysis when present:
+The following `/vc` commands will check for Octagon tool availability and
+use it to enrich their analysis when present:
 
-| Skill            | Usage                                                     |
-| ---------------- | --------------------------------------------------------- |
-| `vc-screen`      | Enrich screening with private company financials and metrics |
-| `vc-memo`        | Pull funding history, investor profiles, and comparable data |
-| `vc-compare`     | Source metrics for side-by-side company comparison         |
-| `vc-diligence`   | Verify company claims against Octagon data                |
+| Command                     | Usage                                                        |
+| --------------------------- | ------------------------------------------------------------ |
+| `/vc screen`                | Enrich screening with private company financials and metrics |
+| `/vc screen <a> <b> ...`    | Source metrics for side-by-side company comparison           |
+| `/vc memo`                  | Pull funding history, investor profiles, and comparable data |
+| `/vc memo --diligence-only` | Verify company claims against Octagon data                   |
 
 ## Limitations
 

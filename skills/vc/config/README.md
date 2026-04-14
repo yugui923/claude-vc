@@ -41,9 +41,9 @@ Override the default output formatting. Customize:
 When present, skills that generate reports will use your templates
 for section structure and formatting.
 
-## Which Skills Check for Config
+## Which Commands Check for Config
 
-| Config File        | Skills That Use It                         |
-| ------------------ | ------------------------------------------ |
-| `firm-criteria.md` | vc-screen, vc-memo, vc-compare, vc-kpi     |
-| `firm-templates.md`| vc-memo, vc-kpi, vc-portfolio, vc-returns  |
+| Config File         | Commands That Use It                                         |
+| ------------------- | ------------------------------------------------------------ |
+| `firm-criteria.md`  | `/vc screen`, `/vc memo`, `/vc portfolio --kpi`              |
+| `firm-templates.md` | `/vc memo`, `/vc portfolio` (including `--kpi`, `--returns`) |

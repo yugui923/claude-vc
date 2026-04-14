@@ -1,7 +1,7 @@
 # SAFE Mechanics Reference
 
-> YC SAFE variants and conversion calculations. Used by vc-captable and
-> vc-terms sub-skills.
+> YC SAFE variants and conversion calculations. Used by the `/vc captable`
+> and `/vc terms` commands.
 
 ## SAFE Variants
 

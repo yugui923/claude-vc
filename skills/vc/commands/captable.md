@@ -1,12 +1,4 @@
----
-name: vc-captable
-description: >
-  Cap table modeling -- ownership, dilution, SAFE conversion,
-  multi-series liquidation waterfall, exit scenario analysis.
-  Informed by the Open Cap Table Format (OCF) standard.
----
-
-# Cap Table Modeling
+# Captable Command
 
 Model ownership structures, calculate dilution from new rounds, convert
 SAFEs/notes into priced rounds, and run liquidation waterfall analysis
@@ -53,14 +45,14 @@ If the user hasn't provided enough detail, ask for the minimum required:
 
 ## Running Calculations
 
-1. Read `${CLAUDE_SKILL_DIR}/../vc/references/safe-mechanics.md` if SAFEs
+1. Read `${CLAUDE_SKILL_DIR}/references/safe-mechanics.md` if SAFEs
    or notes are involved
 2. Construct a JSON scenario object matching the script's expected format
 3. Write the JSON to a temporary file
 4. Run the calculation:
 
 ```bash
-python3 "${CLAUDE_SKILL_DIR}/../vc/scripts/captable.py" <command> --input <temp.json>
+python3 "${CLAUDE_SKILL_DIR}/scripts/captable.py" <command> --input <temp.json>
 ```
 
 Commands: `model`, `dilution`, `waterfall`, `convert`, `scenarios`
@@ -173,6 +165,6 @@ Skip XLSX export only if `--no-xlsx` is present in arguments.
 
 ## Disclaimers
 
-Read `${CLAUDE_SKILL_DIR}/../vc/references/disclaimers.md` and append
+Read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and append
 the **enhanced disclaimer** (cap table outputs contain ownership
 percentages and financial figures).

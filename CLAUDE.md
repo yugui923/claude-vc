@@ -9,12 +9,18 @@ command.
 
 ## Key Paths
 
-- `skills/vc/SKILL.md` — orchestrator skill (entry point)
-- `skills/vc/scripts/` — Python computation scripts (captable.py, financial_model.py)
-- `skills/vc-*/SKILL.md` — sub-skills (screen, memo, captable, terms, model, kpi)
-- `skills/vc/references/` — reference files loaded by skills
-- `tests/` — two-layer test suite (see `tests/TESTING.md`)
-- `docs/` — specs, ADRs, plans
+- `skills/vc/SKILL.md` — orchestrator skill (entry point and routing table)
+- `skills/vc/commands/` — sub-command prompt files (screen, memo, terms,
+  captable, model, portfolio). Loaded via Read by the orchestrator, not
+  registered as separate skills.
+- `skills/vc/agents/` — sub-agent prompt files (team, financial, market,
+  technical, legal, competitive) for parallel screening via Agent/Task tool.
+- `skills/vc/references/` — domain reference files loaded on demand.
+- `skills/vc/scripts/` — Python computation scripts (captable.py,
+  financial_model.py).
+- `skills/vc/config/` — user-managed firm customization (criteria, templates).
+- `tests/` — two-layer test suite (see `tests/TESTING.md`).
+- `docs/` — specs, ADRs, plans.
 
 ## The AI Frontier
 

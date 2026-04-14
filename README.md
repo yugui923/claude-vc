@@ -39,9 +39,9 @@ Once installed, type this into Claude:
 /vc https://stripe.com
 ```
 
-Claude will automatically screen the company, write an investment memo, and
-generate a due diligence checklist. You can also give it a pitch deck PDF or
-just describe a company in your own words:
+Claude will automatically screen the company and write an investment memo
+(the memo already includes a tailored due diligence checklist). You can also
+give it a pitch deck PDF or describe a company in your own words:
 
 ```
 /vc /path/to/pitch-deck.pdf
@@ -49,24 +49,24 @@ just describe a company in your own words:
 ```
 
 That's the `/vc` command — it chains everything together. For more control,
-you can run each step individually (see below).
+use one of the six sub-commands below.
 
 ## What You Can Do
 
+Six commands cover the full VC workflow, organized by what you're doing:
+
 | Command | What It Does |
 | --- | --- |
-| `/vc` | The all-in-one command — screens, writes a memo, and creates a diligence checklist |
-| `/vc screen` | Scores a startup 0-100 across market, team, product, financials, and timing |
-| `/vc memo` | Writes a structured investment memo (the kind you'd present to an IC) |
-| `/vc terms` | Reviews a term sheet or SAFE and flags anything non-standard |
-| `/vc captable` | Models ownership, dilution, and who gets what at exit |
-| `/vc model` | Builds a financial model (income statement, balance sheet, cash flow) |
-| `/vc kpi` | Creates a KPI dashboard with industry benchmarks |
-| `/vc compare` | Compares 2-4 companies side by side |
-| `/vc diligence` | Generates a due diligence checklist tailored to the company's stage and sector |
-| `/vc portfolio` | Creates a portfolio report for LP updates |
+| `/vc` | All-in-one — screens and writes a memo (with DD checklist built in) |
+| `/vc screen <input(s)>` | Score one startup 0-100, or compare 2-4 side by side. `--full` spawns 6 specialist agents. |
+| `/vc memo <input>` | Write a structured investment memo with DD checklist. `--diligence-only` emits just the checklist. |
+| `/vc terms <file>` | Review a term sheet, SAFE, or convertible note and flag anything non-standard |
+| `/vc captable <input>` | Model ownership, dilution, waterfall payouts, and exit scenarios |
+| `/vc model <input>` | Build a 3-statement financial model with 3-5 year projections |
+| `/vc portfolio <data>` | Portfolio report by default. `--kpi` for a single-company dashboard, `--returns` for IRR/MOIC/DPI/TVPI/PME. |
 
-Every command is explained in detail in the **[User Guide](docs/user-guide.md)**.
+Type `/vc help` in Claude for the full argument reference, or see the
+**[User Guide](docs/user-guide.md)** for detailed usage of each command.
 
 ## Updating
 

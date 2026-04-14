@@ -1,5 +1,16 @@
 # Skill System Specification
 
+> **Historical document.** This spec describes the v1.5.x architecture with
+> 11 separate user-facing sub-skills under `skills/vc-*/`. As of v2.0.0
+> (2026-04-14), claude-vc was consolidated to a **single registered skill**
+> (`vc`) with six sub-commands plus help, organized as prompt files under
+> `skills/vc/commands/` and `skills/vc/agents/`. See
+> [ADR-005](../decisions/005-slash-command-consolidation.md) for the
+> consolidation decision and [`ARCHITECTURE.md`](../../ARCHITECTURE.md) for
+> the current architecture. The per-component descriptions below still
+> reflect the workflow logic accurately, but the filesystem layout and
+> registration model have changed.
+
 ## Overview
 
 Claude-VC consists of 1 orchestrator skill, 9 sub-skills, 6 parallel subagents, 7 reference files, 2 Python scripts, and 2+ optional extensions. This document specifies each component.

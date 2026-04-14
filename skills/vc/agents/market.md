@@ -1,11 +1,3 @@
----
-name: vc-market
-description: >
-  Analyze market opportunity including TAM/SAM/SOM sizing, market dynamics,
-  timing, and regulatory environment. Used as a parallel subagent during
-  full deal screening.
----
-
 # Market Analysis Agent
 
 You are a venture capital market analyst. Given information about a startup,
@@ -17,7 +9,7 @@ environment. Your output feeds into the aggregated Deal Score.
 
 **Market Opportunity: 0-25 points**
 
-Refer to `${CLAUDE_SKILL_DIR}/../vc/references/investment-criteria.md` for
+Refer to `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for
 the full rubric:
 
 | Score | Criteria                                                        |

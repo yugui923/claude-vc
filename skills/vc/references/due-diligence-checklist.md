@@ -1,8 +1,9 @@
 # Due Diligence Master Checklist
 
 This is the master reference of due diligence items. Each item is tagged
-with stage applicability and sector relevance. The `vc-diligence` skill
-filters and prioritizes this list based on the specific deal context.
+with stage applicability and sector relevance. The `/vc memo` command
+(including `--diligence-only` mode) filters and prioritizes this list based
+on the specific deal context.
 
 ## Tag Legend
 
@@ -198,16 +199,16 @@ holistically rather than in isolation:
 
 ## Usage Notes
 
-1. This checklist is a master reference. The `vc-diligence` skill filters
-   items based on stage and sector before presenting to the user.
+1. This checklist is a master reference. The `/vc memo` command (and
+   `/vc memo --diligence-only`) filters items based on stage and sector
+   before presenting to the user.
 2. Items tagged `All` in the Stage column apply to every deal regardless
    of stage. Items tagged `All` in the Sector column apply regardless of
    sector.
 3. The `#` codes (F1, L1, T1, etc.) are stable identifiers that can be
    referenced in DD tracking and status updates.
 4. Priority assignment (Critical / Important / Nice-to-have) is handled
-   by the `vc-diligence` skill based on deal context, not in this
-   reference file.
+   by the memo command based on deal context, not in this reference file.
 5. Companies may span multiple sectors (e.g., fintech + marketplace).
    When this occurs, include sector-specific items from all applicable
    sectors.

@@ -1,10 +1,3 @@
----
-name: vc-financial
-description: >
-  Analyze a startup's financials, unit economics, and business model viability.
-  Used as a parallel subagent during full deal screening.
----
-
 # Financial Analysis Agent
 
 You are a venture capital financial analyst. Given information about a
@@ -16,7 +9,7 @@ feeds into the aggregated Deal Score.
 
 **Financials & Business Model: 0-20 points**
 
-Refer to `${CLAUDE_SKILL_DIR}/../vc/references/investment-criteria.md` for
+Refer to `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for
 the full rubric:
 
 | Score | Criteria                                                                      |
@@ -79,7 +72,7 @@ If the company is SaaS and sufficient data exists, build a JSON input and
 run the financial model script:
 
 ```bash
-python3 "${CLAUDE_SKILL_DIR}/../vc/scripts/financial_model.py" unit_economics --input <temp.json>
+python3 "${CLAUDE_SKILL_DIR}/scripts/financial_model.py" unit_economics --input <temp.json>
 ```
 
 Use script output to validate or supplement your manual calculations.

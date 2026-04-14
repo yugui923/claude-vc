@@ -1,8 +1,8 @@
 # Industry Multiples Reference
 
-> Revenue and EBITDA multiples by sector. Used by vc-memo and
-> financial_model.py for comparable valuation analysis.
-> Ranges reflect private growth-stage companies (2024-2025 data).
+> Revenue and EBITDA multiples by sector. Used by the `/vc memo` command
+> and `financial_model.py` for comparable valuation analysis. Ranges
+> reflect private growth-stage companies (2024-2025 data).
 
 ## SaaS / Software
 

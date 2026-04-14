@@ -78,14 +78,14 @@ sheet, cash flow statement) for the requested number of periods.
 
 ## Integration with VC Skills
 
-The following skills will check for EDGAR tool availability and use it
-to enrich their analysis when present:
+The following `/vc` commands will check for EDGAR tool availability and
+use it to enrich their analysis when present:
 
-| Skill            | Usage                                                     |
-| ---------------- | --------------------------------------------------------- |
-| `vc-screen`      | Pull public filing data for companies with SEC filings    |
-| `vc-memo`        | Reference 10-K/S-1 data for market analysis and financials|
-| `vc-model`       | Use historical financial statements as model inputs       |
+| Command         | Usage                                                      |
+| --------------- | ---------------------------------------------------------- |
+| `/vc screen`    | Pull public filing data for companies with SEC filings     |
+| `/vc memo`      | Reference 10-K/S-1 data for market analysis and financials |
+| `/vc model`     | Use historical financial statements as model inputs        |
 
 EDGAR data is most useful for:
 

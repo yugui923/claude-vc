@@ -35,7 +35,7 @@ combination of tools, even where
 - **Enabler**[^1]: The AI advancement or product that made or would make this
   possible
 
-Last reviewed: 2026-03-18
+Last reviewed: 2026-04-14
 
 ---
 
@@ -226,6 +226,7 @@ or feature shipped, not when adoption reached maturity.
 | 2026-03 | Side-by-side company comparison               | Structured comparison of 2-4 companies         | WIP -> Can Do   | claude-vc v1.3.0 vc-compare          |
 | 2026-03 | Customizable due diligence checklists         | Stage+sector-specific DD checklist generation  | Cannot -> Can Do | claude-vc v1.3.0 vc-diligence       |
 | 2026-03 | One-shot portfolio reporting for LPs          | LP-ready portfolio summary from provided data  | Cannot -> Can Do | claude-vc v1.3.0 vc-portfolio       |
+| 2026-04 | Single-skill consolidation (6 sub-commands)    | Organizational change — no capability shift    | --              | claude-vc v2.0.0 slash command consolidation |
 
 ---
 

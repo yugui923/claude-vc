@@ -1,13 +1,8 @@
----
-name: vc-terms
-description: Term sheet analysis -- flag non-standard provisions against NVCA baseline
----
+# Terms Command
 
-# Term Sheet Analysis
-
-Analyze term sheets, SAFE agreements, and convertible notes against
-NVCA model terms and market norms. Flag non-standard provisions and
-explain implications.
+Analyze term sheets, SAFE agreements, and convertible notes against NVCA
+model terms and market norms. Flag non-standard provisions and explain
+implications.
 
 ## Input Handling
 
@@ -23,8 +18,8 @@ explain implications.
 
 Load these reference files (on-demand, not all at once):
 
-- `${CLAUDE_SKILL_DIR}/../vc/references/term-sheet-terms.md` — NVCA baseline and market norms
-- `${CLAUDE_SKILL_DIR}/../vc/references/safe-mechanics.md` — if analyzing a SAFE or convertible note
+- `${CLAUDE_SKILL_DIR}/references/term-sheet-terms.md` — NVCA baseline and market norms
+- `${CLAUDE_SKILL_DIR}/references/safe-mechanics.md` — if analyzing a SAFE or convertible note
 
 ### Step 2: Extract Terms
 
@@ -155,8 +150,9 @@ overall.
 
 ## Disclaimers
 
-Read `${CLAUDE_SKILL_DIR}/../vc/references/disclaimers.md` and append the **enhanced disclaimer**
-(term sheet analysis involves legal and financial provisions).
+Read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and append the
+**enhanced disclaimer** (term sheet analysis involves legal and financial
+provisions).
 
 Remind the user: "This analysis identifies terms that deviate from market
 norms but does not constitute legal advice. Engage qualified legal counsel

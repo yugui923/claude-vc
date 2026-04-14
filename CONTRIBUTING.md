@@ -30,27 +30,46 @@ uv run pytest                  # Layer 1 tests (172 tests)
 
 All four must pass before submitting a PR.
 
-## Adding a New Sub-Skill
+## Adding a New Sub-Command
 
-1. Create `skills/vc-<name>/SKILL.md` with frontmatter:
+Claude-VC ships as a **single registered skill** (`vc`) with sub-commands
+and sub-agent prompts nested underneath. Do not add new `skills/vc-*/`
+directories — that pattern was retired in v2.0.0 (see
+[ADR-005](docs/decisions/005-slash-command-consolidation.md)).
 
-   ```yaml
-   ---
-   name: vc-<name>
-   description: >
-     Brief description with trigger phrases for the router.
-   ---
-   ```
+1. Create `skills/vc/commands/<name>.md` (no YAML frontmatter — these files
+   are loaded by the orchestrator via Read, not registered as skills).
 
-2. Define the workflow in the SKILL.md body: input handling, analysis steps,
+2. Define the workflow in the file body: input handling, analysis steps,
    output format, edge cases, and disclaimer requirement.
 
-3. Add reference files (if needed) to `skills/vc/references/`.
+3. Reference on-demand knowledge with
+   `${CLAUDE_SKILL_DIR}/references/<file>.md` (paths are relative to
+   `skills/vc/` because the orchestrator is the active skill).
 
-4. Register the route in `skills/vc/SKILL.md` (routing table and
-   intent-matching logic).
+4. Add reference files (if needed) to `skills/vc/references/`.
 
-5. Add a Layer 2 smoke test in `tests/layer2/test_skill_smoke.py`.
+5. Register the route in `skills/vc/SKILL.md` — add the command name to the
+   dispatch list and include its intent-matching keywords.
+
+6. Update the inlined help text in `skills/vc/SKILL.md` with the new command
+   and its arguments.
+
+7. Add a Layer 2 smoke test in `tests/layer2/test_skill_smoke.py`.
+
+## Adding a New Parallel Sub-Agent
+
+Sub-agents are spawned during full screening (`/vc screen --full`) to
+produce parallel dimension analyses.
+
+1. Create `skills/vc/agents/<name>.md` (no YAML frontmatter).
+
+2. Follow the existing sub-agent pattern: scoring dimension, data source
+   priority, analysis workflow, output format ending with a
+   `FINDINGS_SUMMARY` line.
+
+3. Reference it from `skills/vc/commands/screen.md` in the full-screening
+   Agent/Task spawn list.
 
 ## Adding a New Python Script Command
 

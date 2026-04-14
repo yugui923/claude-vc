@@ -1,7 +1,7 @@
 # Term Sheet Terms Reference
 
-> NVCA model term benchmarks and market commentary. Used by vc-terms
-> sub-skill to flag non-standard provisions.
+> NVCA model term benchmarks and market commentary. Used by the
+> `/vc terms` command to flag non-standard provisions.
 
 ## Economics
 
