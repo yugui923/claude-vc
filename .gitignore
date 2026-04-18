@@ -98,6 +98,7 @@ tests/real-data/test-results/
 .claude/todos.local.json
 .claude/mcp.json
 .claude/.mcp.json
+.claude/worktrees
 mcp.json
 .mcp.json
 
