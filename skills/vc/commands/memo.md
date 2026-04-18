@@ -321,6 +321,25 @@ document. Skip DOCX with `--no-docx`.
 - **International company**: Add cross-border items (foreign entity structure,
   tax treaties, currency risk, local regulation, data residency).
 
+## Next Steps
+
+After the memo output, suggest relevant follow-on commands:
+
+- **After a full memo**: Suggest `/vc terms <file>` if the user has a term
+  sheet, `/vc captable` to model ownership, or `/vc model` to build
+  financial projections.
+- **After `--diligence-only`**: Suggest `/vc memo <company>` for the full
+  memo, or `/vc terms <file>` if a term sheet is available.
+
+Format as a brief section at the end:
+
+```markdown
+**Next steps**
+- `/vc terms <term-sheet.pdf>` — analyze the term sheet against NVCA standards
+- `/vc captable` — model the cap table and dilution from this round
+- `/vc model` — build a 3-statement financial model
+```
+
 ## Disclaimer
 
 After the memo, read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and

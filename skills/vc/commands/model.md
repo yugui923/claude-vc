@@ -152,6 +152,20 @@ DOCX). Skip XLSX with `--no-xlsx`.
    - Header rows with bold formatting, number formatting for dollar amounts
 2. Default filename: `financial-model-<YYYY-MM-DD>.xlsx`
 
+## Next Steps
+
+After the financial model, suggest relevant follow-on commands:
+
+- `/vc captable` — model the cap table and see how a round affects ownership
+- `/vc portfolio <data> --kpi` — benchmark company KPIs against industry
+  standards
+
+```markdown
+**Next steps**
+- `/vc captable` — model ownership and dilution from the next round
+- `/vc portfolio <data> --kpi` — benchmark KPIs against industry standards
+```
+
 ## Disclaimer
 
 Read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and append

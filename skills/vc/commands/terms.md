@@ -150,6 +150,20 @@ If the user provides multiple term sheets (e.g., competing offers):
 Highlight which offer is most founder-friendly on each dimension and
 overall.
 
+## Next Steps
+
+After the term sheet analysis, suggest relevant follow-on commands:
+
+- `/vc captable` — model the cap table using these terms (ownership,
+  dilution, conversion scenarios)
+- `/vc memo <company>` — write the full investment memo if not done yet
+
+```markdown
+**Next steps**
+- `/vc captable` — model the cap table and dilution from these terms
+- `/vc memo <company>` — write the full investment memo
+```
+
 ## Disclaimers
 
 Read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and append the

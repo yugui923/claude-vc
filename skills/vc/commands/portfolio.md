@@ -477,6 +477,25 @@ conditional formatting for health (KPI).
 - **Very large portfolio** (>50 companies): Focus on top/bottom performers
   and aggregates. Do not discuss every company individually in the LP summary.
 
+## Next Steps
+
+After the portfolio output, suggest relevant follow-on commands based on
+the mode:
+
+- **After portfolio report**: Suggest `/vc portfolio <data> --returns` for
+  fund-level return metrics, or `/vc portfolio <data> --kpi` for a deep
+  dive into a specific company's KPIs.
+- **After `--kpi`**: Suggest `/vc model` to build financial projections, or
+  `/vc memo` for a full investment memo on the company.
+- **After `--returns`**: Suggest `/vc portfolio <data>` for the full LP
+  report if not done yet.
+
+```markdown
+**Next steps**
+- `/vc portfolio <data> --returns` — compute fund-level IRR, MOIC, DPI, TVPI
+- `/vc portfolio <data> --kpi` — deep dive into a single company's metrics
+```
+
 ## Disclaimer
 
 After the output, read `${CLAUDE_SKILL_DIR}/references/disclaimers.md`:

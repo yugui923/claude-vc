@@ -242,6 +242,28 @@ Adjust matrix columns based on input count (2, 3, or 4 companies).
 - **Different sectors**: Compare on general investability rather than
   sector-specific metrics; note the limit of direct comparison.
 
+## Next Steps
+
+After the main output, suggest relevant follow-on commands based on what
+was just produced:
+
+- **After a single-company quick screen**: Suggest `/vc memo` for the full
+  memo, `/vc screen --full` for deeper analysis, or `/vc terms` if the
+  user mentioned having a term sheet.
+- **After a single-company full screen**: Suggest `/vc memo` (which will
+  use the screening context), or `/vc captable` if terms were discussed.
+- **After a comparison**: Suggest `/vc memo <winner>` to write a memo for
+  the top-ranked company, or `/vc screen --full <company>` for deeper
+  analysis on a specific company.
+
+Format as a brief section at the end of the output:
+
+```markdown
+**Next steps**
+- `/vc memo [company]` — write the full investment memo with DD checklist
+- `/vc screen --full [company]` — run deep analysis with 6 parallel agents
+```
+
 ## Disclaimer
 
 After the output, read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and

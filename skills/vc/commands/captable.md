@@ -166,6 +166,21 @@ Skip XLSX export only if `--no-xlsx` is present in arguments.
    `captable-<YYYY-MM-DD>.xlsx` in the current directory.
    Tell the user where the file was saved.
 
+## Next Steps
+
+After cap table output, suggest relevant follow-on commands:
+
+- After `model` or `dilution`: Suggest `/vc captable` with `waterfall` or
+  `scenarios` to see payout distributions at different exit values.
+- After `waterfall` or `scenarios`: Suggest `/vc model` for full financial
+  projections, or `/vc memo` if screening hasn't been done.
+
+```markdown
+**Next steps**
+- `/vc captable` (scenarios) — compare payouts across multiple exit values
+- `/vc model` — build a 3-statement financial model
+```
+
 ## Disclaimers
 
 Read `${CLAUDE_SKILL_DIR}/references/disclaimers.md` and append
