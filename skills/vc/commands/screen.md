@@ -58,7 +58,12 @@ defaults in `${CLAUDE_SKILL_DIR}/references/investment-criteria.md`.
    team backgrounds)
 4. Score across 5 dimensions using the rubrics in the criteria file
 5. Identify red flags from the red flags checklist
-6. Generate the single-company output (see Output Format)
+6. Assess information completeness: for each of the 8 data points in the
+   Information Completeness table (revenue/financials, team bios, market
+   sizing, competitive intel, product details, funding history, unit
+   economics, customer traction), mark whether substantive data was found.
+   Rate confidence: 6-8 = High, 4-5 = Moderate, 0-3 = Limited.
+7. Generate the single-company output (see Output Format)
 
 ## Full Screen Workflow (Single Company, `--full`)
 
@@ -139,6 +144,21 @@ Also produce: top 3 strengths, top 3 risks, one-sentence thesis.
 | Financials & Biz Model | X     | 20  | [one-line summary]         |
 | Timing & Momentum      | X     | 10  | [one-line summary]         |
 | **Total**              | **X** |     | **[recommendation level]** |
+
+## Information Completeness
+
+| Data Point           | Available |
+| -------------------- | --------- |
+| Revenue / financials | Yes / No  |
+| Team bios            | Yes / No  |
+| Market sizing        | Yes / No  |
+| Competitive intel    | Yes / No  |
+| Product details      | Yes / No  |
+| Funding history      | Yes / No  |
+| Unit economics       | Yes / No  |
+| Customer traction    | Yes / No  |
+
+**[N]/8 data points available** — [High / Moderate / Limited] confidence
 
 ## Key Findings
 
