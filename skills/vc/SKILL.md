@@ -81,6 +81,10 @@ diligence checklist, so the chain is two steps instead of three:
    full memo using the screening results as context. The memo's Section 12
    is the tailored DD checklist.
 
+The default workflow always generates a DOCX export of the memo (per the
+memo command's default behavior). Do not skip DOCX unless the user
+explicitly passes `--no-docx`.
+
 ## Full Screening Orchestration
 
 When `/vc screen` is invoked with `--full`, or when `/vc memo` is used with
