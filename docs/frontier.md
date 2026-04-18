@@ -35,7 +35,7 @@ combination of tools, even where
 - **Enabler**[^1]: The AI advancement or product that made or would make this
   possible
 
-Last reviewed: 2026-04-14
+Last reviewed: 2026-04-18
 
 ---
 
@@ -94,10 +94,10 @@ Last reviewed: 2026-04-14
 | Capability                                     | Can Do | WIP | Cannot | Enabler                                |
 | ---------------------------------------------- | :----: | :-: | :----: | -------------------------------------- |
 | Burn rate and runway analysis                  |   ✓    |     |        | Python tool use                        |
-| 3-statement model generation (P&L, BS, CF)     |        |  ✓  |        | Python tool use, extended thinking     |
-| Unit economics computation (LTV, CAC, payback) |        |  ✓  |        | Python tool use                        |
+| 3-statement model generation (P&L, BS, CF)     |   ✓    |     |        | Python tool use, self-verification     |
+| Unit economics computation (LTV, CAC, payback) |   ✓    |     |        | Python tool use, self-verification     |
 | Revenue projections (3-5 year forward)         |        |  ✓  |        | Python tool use, extended thinking     |
-| KPI auto-detection and health assessment       |        |  ✓  |        | Extended thinking, industry benchmarks |
+| KPI auto-detection and health assessment       |   ✓    |     |        | Extended thinking, self-verification   |
 | Cohort and retention curve analysis            |        |  ✓  |        | Analytics MCPs, Python tool use        |
 | Bulk portfolio-wide financial analysis         |        |  ✓  |        | ChatFin, Chronograph, 1M context       |
 | Audit-grade financial statements               |        |     |   ✓    | Needs formal verification, licensing   |
@@ -108,7 +108,7 @@ Last reviewed: 2026-04-14
 | ---------------------------------------------- | :----: | :-: | :----: | ----------------------------------------------- |
 | Pre/post-money round modeling                  |   ✓    |     |        | Carta, Pulley, Python tool use                  |
 | Multiples-based valuation with industry ranges |        |  ✓  |        | Python tool use, reference data                 |
-| DCF analysis from user-provided assumptions    |        |  ✓  |        | Python tool use, extended thinking              |
+| DCF analysis from user-provided assumptions    |   ✓    |     |        | Python tool use, self-verification              |
 | Comparable company analysis with live data     |        |  ✓  |        | PitchBook comps, Grata deal data                |
 | Precedent transaction analysis                 |        |  ✓  |        | Grata (EBITDA/revenue multiples on 800K+ deals) |
 | Conviction weighting on valuation outputs      |        |     |   ✓    | Needs calibrated confidence, human judgment     |
@@ -154,7 +154,7 @@ Last reviewed: 2026-04-14
 | ------------------------------------------- | :----: | :-: | :----: | ------------------------------------------ |
 | Individual financial document analysis      |   ✓    |     |        | Hebbia Matrix, PDF vision                  |
 | Private company financial data              |   ✓    |     |        | PitchBook, Morningstar, Grata              |
-| Financial model internal consistency checks |        |  ✓  |        | Python tool use                            |
+| Financial model internal consistency checks |   ✓    |     |        | Python tool use, self-verification         |
 | Portfolio company data connectivity         |        |  ✓  |        | Standard Metrics, Chronograph MCPs         |
 | Data room systematic cross-referencing      |        |  ✓  |        | Hebbia Matrix, Luminance                   |
 | Historical financials verification          |        |     |   ✓    | Needs SEC EDGAR MCP, audit trail access    |
@@ -219,14 +219,18 @@ or feature shipped, not when adoption reached maturity.
 | 2025-11 | AI-accessible private market data at scale    | Private company data access                    | WIP -> Can Do   | PitchBook Navigator MCP              |
 | 2026-02 | Full data room in single context              | Systematic data room cross-referencing         | Human -> Can Do | 1M token context (Claude 4.6)        |
 | 2026-03 | PitchBook data in conversational AI           | Comparable company analysis, precedent txns    | WIP -> Can Do   | PitchBook + Perplexity MCP           |
-| 2026-03 | Fund-level return metric calculations          | IRR, MOIC, DPI, TVPI, PME computation          | Human -> Can Do | claude-vc v1.5.0 returns command     |
-| 2026-03 | XLSX export for financial outputs               | Spreadsheet generation for cap tables, models   | Human -> Can Do | Native file generation + skill flags |
+| 2026-03 | Fund-level return metric calculations         | IRR, MOIC, DPI, TVPI, PME computation          | Human -> Can Do | claude-vc v1.5.0 returns command     |
+| 2026-03 | XLSX export for financial outputs             | Spreadsheet generation for cap tables, models  | Human -> Can Do | Native file generation + skill flags |
 | 2026-03 | claude-vc v1.2.0 baseline                     | --                                             | --              | Initial AI Frontier assessment       |
 | 2026-03 | Parallel multi-agent deal screening           | Full screening with 6 concurrent agents        | WIP -> Can Do   | claude-vc v1.3.0 parallel agents     |
 | 2026-03 | Side-by-side company comparison               | Structured comparison of 2-4 companies         | WIP -> Can Do   | claude-vc v1.3.0 vc-compare          |
-| 2026-03 | Customizable due diligence checklists         | Stage+sector-specific DD checklist generation  | Cannot -> Can Do | claude-vc v1.3.0 vc-diligence       |
-| 2026-03 | One-shot portfolio reporting for LPs          | LP-ready portfolio summary from provided data  | Cannot -> Can Do | claude-vc v1.3.0 vc-portfolio       |
-| 2026-04 | Single-skill consolidation (6 sub-commands)    | Organizational change — no capability shift    | --              | claude-vc v2.0.0 slash command consolidation |
+| 2026-03 | Customizable due diligence checklists         | Stage+sector-specific DD checklist generation  | Cannot -> Can Do | claude-vc v1.3.0 vc-diligence        |
+| 2026-03 | One-shot portfolio reporting for LPs          | LP-ready portfolio summary from provided data  | Cannot -> Can Do | claude-vc v1.3.0 vc-portfolio        |
+| 2026-04 | Single-skill consolidation (6 sub-commands)   | Organizational change — no capability shift    | --              | claude-vc v2.0.0 consolidation       |
+| 2026-04 | Self-verified financial analysis (Opus 4.7)   | 3-stmt model, unit econ, DCF, consistency      | WIP -> Can Do   | Claude Opus 4.7 self-verification    |
+| 2026-04 | Opus 4.7 improved reasoning (GPQA 94.2%)      | KPI auto-detection and health assessment       | WIP -> Can Do   | Claude Opus 4.7 extended thinking    |
+| 2026-04 | Opus 4.7 3.75MP vision (3x prior resolution)  | High-res document and diagram analysis         | --              | Claude Opus 4.7 vision upgrade       |
+| 2026-04 | GPT-5.4 reaches 1.05M token context window    | Full data room in single context (non-Claude)  | --              | GPT-5.4 (OpenAI)                     |
 
 ---
 
@@ -238,5 +242,6 @@ or feature shipped, not when adoption reached maturity.
     _PDF vision_ (multimodal document understanding), _MCP_ (Model Context
     Protocol server integrations), _native file generation_ (DOCX/XLSX/PPTX
     output), _1M context_ (full data room ingestion), _structured output_
-    (reliable JSON schema adherence). Product names (Harmonic, PitchBook,
+    (reliable JSON schema adherence), _self-verification_ (model checks its
+    own outputs before reporting back). Product names (Harmonic, PitchBook,
     Spellbook, etc.) refer to best-in-class commercial tools.
