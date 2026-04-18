@@ -164,14 +164,17 @@ Commands:
   help                       Show this help message
 
 Examples:
-  /vc https://example.com
-  /vc /path/to/pitch-deck.pdf
-  /vc screen https://example.com --full
-  /vc screen https://a.com https://b.com   # comparison mode
-  /vc memo /path/to/deck.pdf
-  /vc memo --diligence-only --stage seed --sector fintech
-  /vc terms /path/to/term-sheet.pdf
-  /vc portfolio portfolio.csv
-  /vc portfolio metrics.json --kpi
-  /vc portfolio investments.csv --returns
+  /vc https://ramp.com                     Screen Ramp and write an investment memo
+  /vc pitch-deck.pdf                       Screen a startup from its pitch deck
+  /vc screen https://ramp.com --full       Deep screen with 6 parallel analysts
+  /vc screen a.pdf b.pdf c.pdf             Compare 3 companies side by side
+  /vc memo https://notion.so               Write a 12-section memo for Notion
+  /vc memo --diligence-only --stage seed   Generate just the DD checklist for a seed deal
+  /vc terms safe-agreement.pdf             Analyze a SAFE against NVCA standards
+  /vc captable                             Model your cap table interactively
+  /vc model --no-xlsx                      Build a 3-statement model (markdown only)
+  /vc portfolio portfolio.csv              LP-ready portfolio report from a CSV
+  /vc portfolio metrics.json --kpi         KPI dashboard for a single company
+  /vc portfolio investments.csv --returns  Fund-level IRR, MOIC, DPI, TVPI analysis
+  /vc status                               Check which data sources are connected
 ```
