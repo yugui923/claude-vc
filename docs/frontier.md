@@ -74,9 +74,9 @@ Last reviewed: 2026-04-18
 | Deal screening with structured scoring (0-100)     |   ✓    |     |        | Parallel subagents, extended thinking         |
 | Investment memo generation (10-section format)     |   ✓    |     |        | Parallel subagents, long-context generation   |
 | KPI benchmarking by auto-detected company type     |   ✓    |     |        | Python tool use, extended thinking            |
-| Comparable company analysis with market data       |        |  ✓  |        | PitchBook comps, Grata precedent transactions |
+| Comparable company analysis with market data       |   ✓    |     |        | PitchBook + Perplexity MCP                    |
 | Factual claim verification against primary sources |        |  ✓  |        | Web search with source citations              |
-| Systematic data room cross-referencing             |        |  ✓  |        | Hebbia Matrix, Luminance                      |
+| Systematic data room cross-referencing             |   ✓    |     |        | 1M context, self-verification                 |
 
 ### Product Assessment
 
@@ -96,7 +96,7 @@ Last reviewed: 2026-04-18
 | Burn rate and runway analysis                  |   ✓    |     |        | Python tool use                        |
 | 3-statement model generation (P&L, BS, CF)     |   ✓    |     |        | Python tool use, self-verification     |
 | Unit economics computation (LTV, CAC, payback) |   ✓    |     |        | Python tool use, self-verification     |
-| Revenue projections (3-5 year forward)         |        |  ✓  |        | Python tool use, extended thinking     |
+| Revenue projections (3-5 year forward)         |   ✓    |     |        | Python tool use, self-verification     |
 | KPI auto-detection and health assessment       |   ✓    |     |        | Extended thinking, self-verification   |
 | Cohort and retention curve analysis            |        |  ✓  |        | Analytics MCPs, Python tool use        |
 | Bulk portfolio-wide financial analysis         |        |  ✓  |        | ChatFin, Chronograph, 1M context       |
@@ -107,10 +107,10 @@ Last reviewed: 2026-04-18
 | Capability                                     | Can Do | WIP | Cannot | Enabler                                         |
 | ---------------------------------------------- | :----: | :-: | :----: | ----------------------------------------------- |
 | Pre/post-money round modeling                  |   ✓    |     |        | Carta, Pulley, Python tool use                  |
-| Multiples-based valuation with industry ranges |        |  ✓  |        | Python tool use, reference data                 |
+| Multiples-based valuation with industry ranges |   ✓    |     |        | Python tool use, web search                     |
 | DCF analysis from user-provided assumptions    |   ✓    |     |        | Python tool use, self-verification              |
-| Comparable company analysis with live data     |        |  ✓  |        | PitchBook comps, Grata deal data                |
-| Precedent transaction analysis                 |        |  ✓  |        | Grata (EBITDA/revenue multiples on 800K+ deals) |
+| Comparable company analysis with live data     |   ✓    |     |        | PitchBook + Perplexity MCP                      |
+| Precedent transaction analysis                 |   ✓    |     |        | Grata, PitchBook + Perplexity MCP               |
 | Conviction weighting on valuation outputs      |        |     |   ✓    | Needs calibrated confidence, human judgment     |
 
 ### Deal Structuring & Negotiation
@@ -156,7 +156,7 @@ Last reviewed: 2026-04-18
 | Private company financial data              |   ✓    |     |        | PitchBook, Morningstar, Grata              |
 | Financial model internal consistency checks |   ✓    |     |        | Python tool use, self-verification         |
 | Portfolio company data connectivity         |        |  ✓  |        | Standard Metrics, Chronograph MCPs         |
-| Data room systematic cross-referencing      |        |  ✓  |        | Hebbia Matrix, Luminance                   |
+| Data room systematic cross-referencing      |   ✓    |     |        | 1M context, self-verification              |
 | Historical financials verification          |        |     |   ✓    | Needs SEC EDGAR MCP, audit trail access    |
 | Tax and transfer pricing analysis           |        |     |   ✓    | Needs tax law MCPs, licensed professionals |
 
@@ -231,6 +231,8 @@ or feature shipped, not when adoption reached maturity.
 | 2026-04 | Opus 4.7 improved reasoning (GPQA 94.2%)      | KPI auto-detection and health assessment       | WIP -> Can Do   | Claude Opus 4.7 extended thinking    |
 | 2026-04 | Opus 4.7 3.75MP vision (3x prior resolution)  | High-res document and diagram analysis         | --              | Claude Opus 4.7 vision upgrade       |
 | 2026-04 | GPT-5.4 reaches 1.05M token context window    | Full data room in single context (non-Claude)  | --              | GPT-5.4 (OpenAI)                     |
+| 2026-04 | Resolve table/changelog inconsistencies       | Comps, precedent txns, data room, rev proj     | WIP -> Can Do   | See changelog 2026-02 and 2026-03    |
+| 2026-04 | Multiples valuation (simpler than DCF)        | Multiples-based valuation with industry ranges | WIP -> Can Do   | Python tool use, web search          |
 
 ---
 
