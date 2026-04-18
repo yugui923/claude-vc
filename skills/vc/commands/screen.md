@@ -63,7 +63,8 @@ defaults in `${CLAUDE_SKILL_DIR}/references/investment-criteria.md`.
 ## Full Screen Workflow (Single Company, `--full`)
 
 1. Gather company information from the input
-2. Spawn 6 parallel sub-agents using the Agent/Task tool. For each, read the
+2. Tell the user: **"Launching 6 parallel analysts: financial, market, technical, legal, competitive, team..."**
+3. Spawn 6 parallel sub-agents using the Agent/Task tool. For each, read the
    corresponding prompt file and use it as the agent's instructions:
    - `${CLAUDE_SKILL_DIR}/agents/financial.md` — Revenue model, unit
      economics, burn, projections
@@ -77,17 +78,19 @@ defaults in `${CLAUDE_SKILL_DIR}/references/investment-criteria.md`.
      positioning, barriers to entry
    - `${CLAUDE_SKILL_DIR}/agents/team.md` — Founder backgrounds, team
      completeness, founder-market fit
-3. Each sub-agent prompt should include: the company name/description, the
+4. Each sub-agent prompt should include: the company name/description, the
    URL or key pitch deck information, and the dimension focus.
-4. Collect all sub-agent outputs (each ends with a `FINDINGS_SUMMARY` line).
-5. Read `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for scoring.
-6. Aggregate findings into a Deal Score (0-100) with dimension breakdown.
-7. Generate the single-company output with comprehensive dimension detail.
+5. Collect all sub-agent outputs (each ends with a `FINDINGS_SUMMARY` line).
+6. Tell the user: **"All 6 analyses complete. Aggregating Deal Score..."**
+7. Read `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for scoring.
+8. Aggregate findings into a Deal Score (0-100) with dimension breakdown.
+9. Generate the single-company output with comprehensive dimension detail.
 
 ## Comparison Mode (2-4 Companies)
 
-1. Gather information for each company (parallel WebFetches / Reads).
-2. For each company, spawn one Agent/Task to produce a focused scoring across
+1. Tell the user: **"Comparing [N] companies: [list names]..."**
+2. Gather information for each company (parallel WebFetches / Reads).
+3. For each company, spawn one Agent/Task to produce a focused scoring across
    6 dimensions (1-10 scale each). Use this agent prompt template:
 
 ```
@@ -108,13 +111,14 @@ Dimensions:
 Also produce: top 3 strengths, top 3 risks, one-sentence thesis.
 ```
 
-3. If `--full` is present, run the full 6-agent screen per company first,
+4. If `--full` is present, run the full 6-agent screen per company first,
    then build the comparison matrix from the aggregated findings.
-4. Read `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for rubrics.
-5. Assemble the comparison matrix. Normalize scores fairly — don't penalize
+5. Read `${CLAUDE_SKILL_DIR}/references/investment-criteria.md` for rubrics.
+6. Tell the user: **"All companies scored. Building comparison matrix..."**
+7. Assemble the comparison matrix. Normalize scores fairly — don't penalize
    a seed-stage company on revenue metrics against a Series A unless the
    user is intentionally comparing across stages.
-6. For each dimension, identify the winner. Produce an overall recommendation.
+8. For each dimension, identify the winner. Produce an overall recommendation.
 
 ## Single-Company Output Format
 

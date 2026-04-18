@@ -79,6 +79,9 @@ gaps in the report but proceed.
 
 Flag validation errors and ask for corrections. Proceed with valid rows.
 
+Tell the user: **"Validated [N] companies. Generating 8-section portfolio
+report..."**
+
 ### Report Sections
 
 Generate all 8 sections in order. Use the data provided — do not fabricate.
@@ -175,7 +178,8 @@ Generate a KPI report from a single company's data.
 
 ### Auto-Detection
 
-Determine company type from the data:
+Determine company type from the data and tell the user:
+**"Detected [type] company. Computing KPIs and benchmarking..."**
 
 - **SaaS**: ARR/MRR, churn, NRR, subscriptions mentioned
 - **Marketplace**: GMV, take rate, supply/demand mentioned
@@ -320,6 +324,9 @@ Compute fund-level return metrics from investment data.
 - **Benchmark IRR**: Public market benchmark for PME (default: 15%)
 
 ### Computation
+
+Tell the user: **"Computing fund-level returns for [N] investments (IRR,
+MOIC, DPI, TVPI, PME)..."**
 
 Build a JSON scenario and run:
 

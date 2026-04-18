@@ -69,9 +69,11 @@ When the user provides `/vc <url>` or `/vc <file>` without a command name,
 run screening and memo in serial. The memo now includes a tailored due
 diligence checklist, so the chain is two steps instead of three:
 
-1. **Screen**: Read `${CLAUDE_SKILL_DIR}/commands/screen.md` and perform a
+1. Tell the user: **"Step 1/2 — Screening [company/input]..."**
+2. **Screen**: Read `${CLAUDE_SKILL_DIR}/commands/screen.md` and perform a
    quick screen on the input. Present the Deal Score and screening results.
-2. **Memo**: Read `${CLAUDE_SKILL_DIR}/commands/memo.md` and generate the
+3. Tell the user: **"Step 2/2 — Writing investment memo with DD checklist..."**
+4. **Memo**: Read `${CLAUDE_SKILL_DIR}/commands/memo.md` and generate the
    full memo using the screening results as context. The memo's Section 12
    is the tailored DD checklist.
 
@@ -81,7 +83,8 @@ When `/vc screen` is invoked with `--full`, or when `/vc memo` is used with
 `--comprehensive`, orchestrate parallel analysis per `commands/screen.md`:
 
 1. Gather the company information.
-2. Spawn 6 parallel sub-agents using the Agent/Task tool. For each, read the
+2. Tell the user: **"Launching 6 parallel analysts: financial, market, technical, legal, competitive, team..."**
+3. Spawn 6 parallel sub-agents using the Agent/Task tool. For each, read the
    prompt file at `${CLAUDE_SKILL_DIR}/agents/<name>.md` and use it as the
    sub-agent's instructions:
    - `agents/financial.md` — Revenue, unit economics, burn, projections
@@ -90,9 +93,10 @@ When `/vc screen` is invoked with `--full`, or when `/vc memo` is used with
    - `agents/legal.md` — Corporate structure, regulatory, contracts, litigation
    - `agents/competitive.md` — Competitor mapping, positioning, barriers
    - `agents/team.md` — Founder backgrounds, completeness, founder-market fit
-3. Collect all results (each sub-agent ends with a `FINDINGS_SUMMARY` line).
-4. Aggregate into a Deal Score (0-100) with dimension breakdown.
-5. Proceed with the requesting command's output format.
+4. Collect all results (each sub-agent ends with a `FINDINGS_SUMMARY` line).
+5. Tell the user: **"All 6 analyses complete. Aggregating Deal Score..."**
+6. Aggregate into a Deal Score (0-100) with dimension breakdown.
+7. Proceed with the requesting command's output format.
 
 ## Reference Files
 

@@ -45,6 +45,9 @@ If the user hasn't provided enough detail, ask for the minimum required:
 
 ## Running Calculations
 
+Tell the user: **"Running cap table calculations..."** (For `scenarios`,
+say: **"Running [N] exit scenarios..."**)
+
 1. Read `${CLAUDE_SKILL_DIR}/references/safe-mechanics.md` if SAFEs
    or notes are involved
 2. Construct a JSON scenario object matching the script's expected format

@@ -37,6 +37,9 @@ sector benchmarks. State all assumptions explicitly.
 
 ## Building the Model
 
+Tell the user: **"Building [N]-year financial model — constructing
+assumptions, running projections, generating 3 statements..."**
+
 ### Step 1: Construct Assumptions
 
 Build a JSON scenario matching the script's expected format. Key

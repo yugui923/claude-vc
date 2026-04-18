@@ -20,7 +20,10 @@ Determine the input source from `$ARGUMENTS` and conversation context:
 ### Flags
 
 - `--comprehensive`: Trigger full parallel analysis (same 6 agents as
-  `/vc screen --full`) before generating the memo.
+  `/vc screen --full`) before generating the memo. Tell the user:
+  **"Running comprehensive analysis before memo — launching 6 parallel
+  analysts..."** Then, after agents complete: **"Analysis complete.
+  Writing investment memo..."**
 - `--diligence-only`: Emit **only** the due diligence checklist (Section 12
   below). Skip sections 1-11. Use this when the user already has a memo and
   just wants the DD checklist.

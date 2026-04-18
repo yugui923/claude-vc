@@ -14,6 +14,8 @@ implications.
 
 ## Analysis Process
 
+Tell the user: **"Analyzing term sheet — extracting terms, comparing against NVCA baseline, flagging non-standard provisions..."**
+
 ### Step 1: Read References
 
 Load these reference files (on-demand, not all at once):
