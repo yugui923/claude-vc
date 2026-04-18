@@ -21,6 +21,7 @@ equity, build financials, and monitor portfolios.
 | `/vc captable <input>`     | Model cap table, dilution, waterfall, exit scenarios     |
 | `/vc model <input>`        | Generate a 3-statement financial model with projections  |
 | `/vc portfolio <data>`     | Portfolio report, KPI dashboard, or returns analysis     |
+| `/vc status`               | Check connected data sources and extensions               |
 | `/vc help`                 | Show help                                                |
 
 ## Routing Logic
@@ -29,7 +30,10 @@ When the user invokes `/vc`, parse `$ARGUMENTS`:
 
 1. If the first argument is `help`, display the Help section (below) and stop.
 
-2. If the first argument is one of the command names (`screen`, `memo`,
+2. If the first argument is `status`, display the Status output (see
+   Status section below) and stop.
+
+3. If the first argument is one of the command names (`screen`, `memo`,
    `terms`, `captable`, `model`, `portfolio`), **read the corresponding
    command file and follow its instructions**, passing any remaining arguments:
 
@@ -40,7 +44,7 @@ When the user invokes `/vc`, parse `$ARGUMENTS`:
    - `model` → `${CLAUDE_SKILL_DIR}/commands/model.md`
    - `portfolio` → `${CLAUDE_SKILL_DIR}/commands/portfolio.md`
 
-3. If no recognized command is given, analyze the user's intent:
+4. If no recognized command is given, analyze the user's intent:
    - URL or file path provided → run the **default workflow** (see below)
    - Mentions "memo" or "write-up" → follow `commands/memo.md`
    - Mentions "terms", "SAFE", "convertible" → follow `commands/terms.md`
@@ -61,7 +65,7 @@ When the user invokes `/vc`, parse `$ARGUMENTS`:
    - Mentions "portfolio", "LP report" → follow `commands/portfolio.md`
    - Otherwise, ask the user which workflow they need
 
-4. If the user invokes `/vc` with no arguments, display the Help section.
+5. If the user invokes `/vc` with no arguments, display the Help section.
 
 ## Default Workflow (URL or Pitch Deck)
 
@@ -138,6 +142,55 @@ them to enrich analysis:
 - **SEC EDGAR**: If `vc-edgar` tools are available, use them for raw public
   company filing access
 
+## Status
+
+When the user types `/vc status`, check which data sources and extensions
+are available and report a summary. This helps users understand what's
+connected and what they could add for richer analysis.
+
+**Check these in order**:
+
+1. **Python scripts**: Verify the calculation scripts are accessible by
+   checking that `${CLAUDE_SKILL_DIR}/scripts/captable.py` and
+   `${CLAUDE_SKILL_DIR}/scripts/financial_model.py` exist (Read tool).
+2. **Octagon AI**: Check if an `octagon-agent` MCP tool is available.
+3. **SEC EDGAR**: Check if `vc-edgar` MCP tools are available.
+4. **Firm customization**: Check if `${CLAUDE_SKILL_DIR}/config/firm-criteria.md`
+   or `${CLAUDE_SKILL_DIR}/config/firm-templates.md` exist.
+5. **Web search**: Check if WebSearch tool is available.
+
+**Output format**:
+
+```markdown
+# Claude-VC Status
+
+## Core
+
+| Component          | Status      |
+| ------------------ | ----------- |
+| Cap table engine   | Ready / Missing |
+| Financial model engine | Ready / Missing |
+| Web search         | Available / Not available |
+
+## Data Source Extensions
+
+| Extension          | Status          | What it adds                          |
+| ------------------ | --------------- | ------------------------------------- |
+| Octagon AI         | Connected / Not connected | Private company data, funding rounds, investor profiles |
+| SEC EDGAR          | Connected / Not connected | Public company filings (10-K, 10-Q, S-1) |
+
+## Firm Customization
+
+| Config File        | Status          | What it does                          |
+| ------------------ | --------------- | ------------------------------------- |
+| firm-criteria.md   | Active / Not set up | Custom scoring weights and thresholds |
+| firm-templates.md  | Active / Not set up | Custom memo sections and formatting   |
+
+**Tip**: To add an extension, install its MCP server and restart Claude.
+To customize scoring or templates, copy the example files in
+`config/` and rename them (remove `.example`).
+```
+
 ## Help
 
 When the user types `/vc help` or `/vc` with no arguments, display the
@@ -165,6 +218,7 @@ Commands:
                                Flags: --kpi (KPI dashboard for one company)
                                       --returns (fund-level IRR/MOIC/DPI/TVPI/PME)
                                       --no-docx, --no-xlsx
+  status                     Check connected data sources and extensions
   help                       Show this help message
 
 Examples:
