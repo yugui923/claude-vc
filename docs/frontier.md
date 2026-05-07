@@ -2,39 +2,23 @@
 
 > Where AI capability ends and human judgment begins — a living record.
 
-This document tracks what AI can and cannot reliably do in venture capital
-analysis. It reflects the **state of the art across all AI tools on the
-market** — not only what [claude-vc](https://github.com/yugui923/claude-vc)
-provides.
+What AI can and cannot reliably do in venture capital, across **all AI tools on the market** — not only [claude-vc](https://github.com/yugui923/claude-vc).
 
 ## Scope of [claude-vc](https://github.com/yugui923/claude-vc)
 
-[Claude-vc](https://github.com/yugui923/claude-vc) is an open-source Claude
-Code skill plugin focused on deal screening, investment memos, cap table
-modeling, term sheet analysis, financial modeling, and KPI reporting. It does
-not intend to be an all-encompassing VC platform. It will gradually expand, but
-it does not aim to replicate proprietary tools like Harmonic (deal sourcing),
-Affinity (CRM), PitchBook (data), Luminance (legal review), or Standard
-Metrics (portfolio monitoring).
+[Claude-vc](https://github.com/yugui923/claude-vc) is an open-source Claude Code plugin for deal screening, investment memos, cap tables, term sheets, financial models, and KPI reports. It does not aim to replicate proprietary platforms like Harmonic (sourcing), Affinity (CRM), PitchBook (data), Luminance (legal), or Standard Metrics (portfolio monitoring).
 
-Achieving state-of-the-art performance in venture capital AI today requires
-integrating a dozen or more MCP servers, proprietary data subscriptions, and
-specialized platforms. Without a larger maintainer community, it is not feasible
-for a single open-source plugin to maintain those integrations. This document
-therefore serves as a map — it tells you what is possible with the right
-combination of tools, even where
-[claude-vc](https://github.com/yugui923/claude-vc) does not yet cover it.
+Frontier-grade VC AI today requires a dozen+ MCP servers, data subscriptions, and specialized platforms — beyond what one open-source plugin can maintain. This document maps the full landscape, including capabilities claude-vc doesn't cover.
 
 ## Status key
 
-- **Can Do**: AI handles this reliably today (human quick review, not a rewrite)
-- **WIP**: AI can attempt this, but outputs need substantive human rework
-- **Cannot (capability)**: No viable AI path today
-- **Cannot (regulatory)**: Blocked by licensing or institutional requirements,
-  not AI capability
-- **Enabler**[^1]: The AI advancement or product that made this possible
+- **Can Do** — AI handles reliably; reviewer sanity-checks, doesn't rewrite. For quantitative outputs, arithmetic and structure are correct given inputs; assumption quality is still human judgment.
+- **WIP** — outputs need substantive rework, or simple cases work but edges/hybrids fail.
+- **Cannot (capability)** — no viable AI path today.
+- **Cannot (regulatory)** — technically possible, but licensing or fiduciary requirements prevent AI reliance. Marked with "Regulatory:" prefix in enabler; won't advance until regulation changes.
+- **Enabler**[^1] — the AI advancement or product that made (or would make) this possible.
 
-Last reviewed: 2026-04-18
+Last reviewed: 2026-05-07
 
 ---
 
@@ -187,107 +171,79 @@ Last reviewed: 2026-04-18
 
 ## Changelog
 
-Dates reflect when the enabling product shipped, not when adoption matured.
+Dates reflect when the enabler **shipped**, not when adoption matured.
 
-| Date    | Change                                        | Capability affected                            | Direction        | Enabler                              |
-| ------- | --------------------------------------------- | ---------------------------------------------- | ---------------- | ------------------------------------ |
-| 2022-09 | AI contract drafting and review               | Common provision pattern flagging              | Human -> WIP     | Spellbook launch                     |
-| 2022-11 | AI-powered deal sourcing signals              | New investment opportunity identification      | Human -> WIP     | Harmonic Series A, early product     |
-| 2022-11 | Basic memo drafting and market summaries      | Investment memo generation                     | Human -> WIP     | ChatGPT (GPT-3.5)                    |
-| 2023-03 | Professional-grade investment analysis        | Industry landscape synthesis                   | WIP -> Can Do    | GPT-4 reasoning quality              |
-| 2023-06 | Structured API tool calling for data access   | KPI benchmarking, financial model checks       | Human -> WIP     | OpenAI function calling              |
-| 2023-07 | Full document analysis (100K context)         | Pitch deck data extraction                     | Human -> Can Do  | Claude 2                             |
-| 2023-09 | AI relationship intelligence in CRM           | Founder relationship tracking                  | Human -> WIP     | Affinity AI features                 |
-| 2023-11 | Reliable structured data extraction           | KPI benchmarking, deal screening               | WIP -> Can Do    | GPT-4 Turbo, JSON mode, 128K context |
-| 2024-03 | Pitch deck and chart visual analysis          | Pitch deck data extraction, product claims     | Human -> Can Do  | Claude 3 vision + 200K context       |
-| 2024-05 | AI-orchestrated multi-tool workflows          | Deal screening, financial model generation     | Human -> WIP     | Claude tool use GA                   |
-| 2024-06 | Cost-effective AI analysis at pipeline scale  | Inbound pitch triage                           | WIP -> Can Do    | Claude 3.5 Sonnet                    |
-| 2024-08 | Perfect structured extraction (100% schema)   | KPI benchmarking, financial model checks       | WIP -> Can Do    | OpenAI structured outputs            |
-| 2024-09 | Native PDF document processing                | Pitch deck data extraction, document analysis  | Human -> Can Do  | Claude PDF support                   |
-| 2024-10 | Computer-use automation for legacy tools      | Technical architecture assessment              | Human -> WIP     | Claude computer use beta             |
-| 2024-10 | Multi-agent due diligence workflows           | Systematic data room cross-referencing         | Human -> WIP     | CrewAI maturity, AutoGen             |
-| 2024-11 | Natural-language private company data queries | Private company data access                    | Human -> WIP     | PitchBook Navigator + OpenAI         |
-| 2024-11 | Standardized AI-to-data connectivity          | Portfolio company data connectivity            | Human -> WIP     | MCP (Model Context Protocol)         |
-| 2025-02 | Deep financial reasoning on demand            | 3-statement model generation, DCF analysis     | Human -> WIP     | Extended thinking (Claude 3.7)       |
-| 2025-02 | Agentic coding for custom VC tools            | Unit economics computation, burn rate analysis | Human -> WIP     | Claude Code research preview         |
-| 2025-03 | Real-time market intelligence in AI           | Sector trend analysis, competitive mapping     | Human -> Can Do  | Claude web search                    |
-| 2025-05 | Production-grade agentic VC tooling           | Report generation, exit scenario modeling      | WIP -> Can Do    | Claude Code GA                       |
-| 2025-09 | End-to-end document production                | Report generation (DOCX), board deck prep      | Human -> Can Do  | Native file generation               |
-| 2025-11 | AI-accessible private market data at scale    | Private company data access                    | WIP -> Can Do    | PitchBook Navigator MCP              |
-| 2026-02 | Full data room in single context              | Systematic data room cross-referencing         | Human -> Can Do  | 1M token context (Claude 4.6)        |
-| 2026-03 | PitchBook data in conversational AI           | Comparable company analysis, precedent txns    | WIP -> Can Do    | PitchBook + Perplexity MCP           |
-| 2026-03 | Fund-level return metric calculations         | IRR, MOIC, DPI, TVPI, PME computation          | Human -> Can Do  | claude-vc v1.5.0 returns command     |
-| 2026-03 | XLSX export for financial outputs             | Spreadsheet generation for cap tables, models  | Human -> Can Do  | Native file generation + skill flags |
-| 2026-03 | claude-vc v1.2.0 baseline                     | --                                             | --               | Initial AI Frontier assessment       |
-| 2026-03 | Parallel multi-agent deal screening           | Full screening with 6 concurrent agents        | WIP -> Can Do    | claude-vc v1.3.0 parallel agents     |
-| 2026-03 | Side-by-side company comparison               | Structured comparison of 2-4 companies         | WIP -> Can Do    | claude-vc v1.3.0 vc-compare          |
-| 2026-03 | Customizable due diligence checklists         | Stage+sector-specific DD checklist generation  | Cannot -> Can Do | claude-vc v1.3.0 vc-diligence        |
-| 2026-03 | One-shot portfolio reporting for LPs          | LP-ready portfolio summary from provided data  | Cannot -> Can Do | claude-vc v1.3.0 vc-portfolio        |
-| 2026-04 | Single-skill consolidation (6 sub-commands)   | Organizational change — no capability shift    | --               | claude-vc v2.0.0 consolidation       |
-| 2026-04 | Self-verified financial analysis (Opus 4.7)   | 3-stmt model, unit econ, DCF, consistency      | WIP -> Can Do    | Claude Opus 4.7 self-verification    |
-| 2026-04 | Opus 4.7 improved reasoning (GPQA 94.2%)      | KPI auto-detection and health assessment       | WIP -> Can Do    | Claude Opus 4.7 extended thinking    |
-| 2026-04 | Opus 4.7 3.75MP vision (3x prior resolution)  | High-res document and diagram analysis         | --               | Claude Opus 4.7 vision upgrade       |
-| 2026-04 | GPT-5.4 reaches 1.05M token context window    | Full data room in single context (non-Claude)  | --               | GPT-5.4 (OpenAI)                     |
-| 2026-04 | Resolve table/changelog inconsistencies       | Comps, precedent txns, data room, rev proj     | WIP -> Can Do    | See changelog 2026-02 and 2026-03    |
-| 2026-04 | Multiples valuation (simpler than DCF)        | Multiples-based valuation with industry ranges | WIP -> Can Do    | Python tool use, web search          |
+| Date    | Change                                       | Capability affected                             | Direction        | Enabler                                                                              |
+| ------- | -------------------------------------------- | ----------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------ |
+| 2022-09 | AI contract drafting and review              | Common provision pattern flagging               | Human -> WIP     | Spellbook launch                                                                     |
+| 2022-11 | AI-powered deal sourcing signals             | New investment opportunity identification       | Human -> WIP     | Harmonic Series A                                                                    |
+| 2022-11 | Basic memo drafting and market summaries     | Investment memo generation                      | Human -> WIP     | ChatGPT (GPT-3.5)                                                                    |
+| 2023-03 | Professional-grade investment analysis       | Industry landscape synthesis                    | WIP -> Can Do    | GPT-4 reasoning quality                                                              |
+| 2023-06 | Structured API tool calling                  | KPI benchmarking, financial model checks        | Human -> WIP     | OpenAI function calling                                                              |
+| 2023-07 | Full document analysis (100K context)        | Pitch deck data extraction                      | Human -> Can Do  | Claude 2                                                                             |
+| 2023-09 | AI relationship intelligence in CRM          | Founder relationship tracking                   | Human -> WIP     | Affinity AI                                                                          |
+| 2023-11 | Reliable structured data extraction          | KPI benchmarking, deal screening                | WIP -> Can Do    | GPT-4 Turbo, JSON mode, 128K context                                                 |
+| 2024-03 | Pitch deck and chart visual analysis         | Pitch deck data extraction, product claims      | Human -> Can Do  | Claude 3 vision + 200K context                                                       |
+| 2024-05 | AI-orchestrated multi-tool workflows         | Deal screening, financial model generation      | Human -> WIP     | Claude tool use GA                                                                   |
+| 2024-06 | Cost-effective AI analysis at pipeline scale | Inbound pitch triage                            | WIP -> Can Do    | Claude 3.5 Sonnet                                                                    |
+| 2024-08 | Perfect structured extraction (100% schema)  | KPI benchmarking, financial model checks        | WIP -> Can Do    | OpenAI structured outputs                                                            |
+| 2024-09 | Native PDF document processing               | Pitch deck data extraction, document analysis   | Human -> Can Do  | Claude PDF support                                                                   |
+| 2024-10 | Computer-use automation for legacy tools     | Technical architecture assessment               | Human -> WIP     | Claude computer use beta                                                             |
+| 2024-10 | Multi-agent due diligence workflows          | Systematic data room cross-referencing          | Human -> WIP     | CrewAI maturity, AutoGen                                                             |
+| 2024-11 | Natural-language private company queries     | Private company data access                     | Human -> WIP     | PitchBook Navigator + OpenAI                                                         |
+| 2024-11 | Standardized AI-to-data connectivity         | Portfolio company data connectivity             | Human -> WIP     | MCP (Model Context Protocol)                                                         |
+| 2025-02 | Deep financial reasoning on demand           | 3-statement model generation, DCF analysis      | Human -> WIP     | Extended thinking (Claude 3.7)                                                       |
+| 2025-02 | Agentic coding for custom VC tools           | Unit economics computation, burn rate analysis  | Human -> WIP     | Claude Code research preview                                                         |
+| 2025-03 | Real-time market intelligence in AI          | Sector trend analysis, competitive mapping      | Human -> Can Do  | Claude web search                                                                    |
+| 2025-05 | Production-grade agentic VC tooling          | Report generation, exit scenario modeling       | WIP -> Can Do    | Claude Code GA                                                                       |
+| 2025-07 | Standard Metrics MCP                         | Portfolio company data connectivity             | --               | Lookup-only; no anomaly detection or cross-fund aggregation                          |
+| 2025-09 | End-to-end document production               | Report generation (DOCX), board deck prep       | Human -> Can Do  | Native file generation                                                               |
+| 2025-11 | Private market data at scale via MCP         | Private company data access                     | WIP -> Can Do    | PitchBook Navigator MCP                                                              |
+| 2026-02 | Full data room in single context             | Systematic data room cross-referencing          | Human -> Can Do  | 1M token context (Claude 4.6)                                                        |
+| 2026-03 | PitchBook data in conversational AI          | Comparable analysis, precedent transactions     | WIP -> Can Do    | PitchBook + Perplexity MCP                                                           |
+| 2026-03 | Fund-level return metrics                    | IRR, MOIC, DPI, TVPI, PME computation           | Human -> Can Do  | Python tool use, native file generation                                              |
+| 2026-03 | XLSX export for financial outputs            | Spreadsheet generation for cap tables, models   | Human -> Can Do  | Native file generation + skill flags                                                 |
+| 2026-03 | Parallel multi-agent deal screening          | Full screening with 6 concurrent agents         | WIP -> Can Do    | Multi-agent orchestration via subagents                                              |
+| 2026-03 | Side-by-side company comparison              | Structured comparison of 2-4 companies          | WIP -> Can Do    | Long-context reasoning, structured output                                            |
+| 2026-03 | Customizable due diligence checklists        | Stage+sector-specific DD checklist              | Cannot -> Can Do | Long-context generation, structured prompting                                        |
+| 2026-03 | One-shot portfolio reporting for LPs         | LP-ready portfolio summary                      | Cannot -> Can Do | Extended thinking, native file generation                                            |
+| 2026-04 | Multiples valuation                          | Multiples-based valuation with industry ranges  | WIP -> Can Do    | Python tool use, web search                                                          |
+| 2026-04 | Self-verified financial analysis             | 3-stmt model, unit econ, DCF, consistency       | WIP -> Can Do    | Claude Opus 4.7 self-verification                                                    |
+| 2026-04 | Improved reasoning (GPQA 94.2%)              | KPI auto-detection and health assessment        | WIP -> Can Do    | Claude Opus 4.7 extended thinking                                                    |
+| 2026-04 | Opus 4.7 vision (3.75MP, 3x prior)           | High-res document and diagram analysis          | --               | Claude Opus 4.7                                                                      |
+| 2026-04 | GPT-5.4 reaches 1.05M token context          | Full data room in single context (non-Claude)   | --               | GPT-5.4 (OpenAI)                                                                     |
+| 2026-04 | Carta Plugins for Claude                     | Cap table platform sync via MCP                 | --               | Carta-hosted only; Pulley/AngelList/Eqvista excluded                                 |
+| 2026-04 | Gemini Deep Research Max preview             | Long-horizon research synthesis with native MCP | --               | Gemini 3.1 Pro + announced (not GA) FactSet/S&P/PitchBook MCPs                       |
+| 2026-04 | GPT-5.5 GA                                   | Frontier baseline                               | --               | 1M ctx, ARC-AGI-2 85%; AA-Omniscience: 86% confab on errors → Opus 4.7 for citations |
+| 2026-04 | 1M-context reasoning on open weights         | Self-hosted full-data-room reasoning            | --               | DeepSeek V4-Pro                                                                      |
+| 2026-04 | Affinity hosted MCP (beta)                   | Founder relationship tracking                   | --               | Scale+ tiers; internal signals only; no external discovery                           |
+| 2026-04 | Agentic finance AI at 250+ institutions      | Systematic data room cross-referencing          | --               | Rogo Felix                                                                           |
+| 2026-04 | AI contract redlining bundled in Word        | Common provision pattern flagging               | --               | Microsoft Legal Agent for Word (early-access)                                        |
+| 2026-05 | GPT-5.5 Instant default in ChatGPT           | Investment memo quality                         | --               | OpenAI claims 52.5% fewer hallucinations; AA-Omniscience contradicts                 |
+| 2026-05 | SEC EDGAR MCP servers in production          | Public comparables / IPO filings only           | --               | sec-edgar-mcp, EdgarTools — does NOT cover private companies                         |
 
 ---
 
 ## Methodology
 
-### Status definitions (expanded)
-
-- **Can Do** means a domain-knowledgeable reviewer can accept or correct the
-  output with a quick sanity check — not a substantive rewrite. For
-  quantitative outputs (financial models, cap tables), "reliable" means the
-  arithmetic and structure are correct given inputs. It does **not** mean the
-  AI selects good assumptions — assumption quality depends on input data and
-  human judgment.
-- **WIP** means outputs need substantive rework, the integration is still
-  maturing, or the capability works for simple cases but fails on edge cases
-  or hybrid scenarios.
-- **Cannot (capability)** means no AI tool produces useful output today.
-- **Cannot (regulatory)** means AI could technically perform the task, but
-  licensing, fiduciary duties, or institutional requirements prevent reliance
-  on AI output. These items will not advance regardless of model improvements
-  until the regulatory landscape changes. Enabler entries prefixed with
-  "Regulatory:" mark these items in the tables.
-
 ### Changelog conventions
 
-- Dates reflect when the enabling product **shipped**, not when adoption
-  matured.
-- **Industry** entries reflect a model or product release by any provider.
-  **claude-vc** entries reflect a release of this plugin specifically.
-- **Regressions**: If a capability degrades, log it as `Can Do → WIP` or
-  `WIP → Cannot` with the date and root cause. No regressions have been
-  recorded yet — this reflects the document's youth (baseline March 2026),
-  not an assumption that the frontier only moves forward.
+- Entries reflect industry-wide capability shifts, attributed to the model release, product, or integration that enabled them.
+- **Regressions** logged as `Can Do → WIP` or `WIP → Cannot` with date and cause. None recorded yet — reflects the doc's youth (March 2026 baseline), not an assumption of one-way progress.
 
 ### Known limitations
 
-1. **Enabler attribution is best-effort, not causal proof.** We mean the
-   capability became reliable around the time that enabler shipped.
-2. **Anthropic-weighted perspective.** The changelog skews toward Anthropic
-   releases because those are what we test directly. We include other
-   providers when their releases materially change the frontier, but coverage
-   is not symmetric.
-3. **Self-verification** (introduced as a distinct pattern in Opus 4.7,
-   April 2026) means the model devises checks for its own outputs — writing
-   test assertions, re-reading generated files, cross-checking calculations —
-   before reporting back. It catches arithmetic and structural errors but not
-   bad assumptions.
+1. **Enabler attribution is best-effort, not causal.** A capability became reliable around the time the enabler shipped.
+2. **Anthropic-skewed.** The changelog over-indexes on Anthropic releases (what we test directly); other providers covered when materially frontier-changing.
+3. **Self-verification** (Opus 4.7, April 2026) means the model writes checks for its own outputs — test assertions, re-reads, cross-checks — before reporting. Catches arithmetic and structural errors, not bad assumptions.
 
 ---
 
 [^1]:
-    **Enabler** = the AI product, feature, or integration that made (or would
-    make) this capability possible. Enablers are either _intrinsic_ (available
-    to any user of the model) or _integration-gated_ (requires a third-party
-    subscription or MCP). Common intrinsic enablers: _extended thinking,
-    Python tool use, web search, PDF vision, native file generation, 1M
-    context, structured output, self-verification_. Common integration-gated
-    enablers: _PitchBook Navigator, Carta/Pulley, Spellbook, Harmonic,
-    Grata, Standard Metrics/Chronograph, Hebbia Matrix_. A "Can Do" item
-    with an integration-gated enabler requires that subscription — it is not
-    universally available.
+    **Enabler** = the AI product, feature, or integration that made (or would make) a capability possible. Either _intrinsic_ (available to any user of the model) or _integration-gated_ (requires third-party subscription or MCP).
+
+    Common intrinsic: extended thinking, Python tool use, web search, PDF vision, native file generation, 1M context, structured output, self-verification.
+
+    Common integration-gated: PitchBook Navigator, Carta/Pulley, Spellbook, Harmonic, Grata, Standard Metrics/Chronograph, Hebbia Matrix.
+
+    A "Can Do" with an integration-gated enabler requires that subscription — it is not universally available.
