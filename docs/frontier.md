@@ -18,7 +18,7 @@ Frontier-grade VC AI today requires a dozen+ MCP servers, data subscriptions, an
 - **Cannot (regulatory)** — technically possible, but licensing or fiduciary requirements prevent AI reliance. Marked with "Regulatory:" prefix in enabler; won't advance until regulation changes.
 - **Enabler**[^1] — the AI advancement or product that made (or would make) this possible.
 
-Last reviewed: 2026-05-07
+Last reviewed: 2026-06-14
 
 ---
 
@@ -221,6 +221,8 @@ Dates reflect when the enabler **shipped**, not when adoption matured.
 | 2026-04 | AI contract redlining bundled in Word        | Common provision pattern flagging               | --               | Microsoft Legal Agent for Word (early-access)                                        |
 | 2026-05 | GPT-5.5 Instant default in ChatGPT           | Investment memo quality                         | --               | OpenAI claims 52.5% fewer hallucinations; AA-Omniscience contradicts                 |
 | 2026-05 | SEC EDGAR MCP servers in production          | Public comparables / IPO filings only           | --               | sec-edgar-mcp, EdgarTools — does NOT cover private companies                         |
+| 2026-06 | Fable 5 — most powerful public model         | Frontier baseline                               | --               | Anthropic Fable 5 (June 9); SOTA, but high-risk queries fall back to Opus 4.8        |
+| 2026-06 | Fable 5 / Mythos 5 access suspended          | Frontier baseline                               | --               | US gov directive barred foreign-national access; Anthropic disabled both June 12     |
 
 ---
 
