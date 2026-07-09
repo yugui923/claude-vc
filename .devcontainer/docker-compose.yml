@@ -9,13 +9,17 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     init: true
+    shm_size: "4gb"
     hostname: "claude-vc"
     volumes:
       - ..:/workspace
       - claude-code-data:/home/vscode/.claude
+      - codex-data:/home/vscode/.codex
     network_mode: host
     command: sleep infinity
 
 volumes:
   claude-code-data:
     name: claude-vc-claude-code-data
+  codex-data:
+    name: claude-vc-codex-data
